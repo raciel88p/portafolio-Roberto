@@ -1,0 +1,25 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Desarrollo Web & Apps",
+  description: "Creamos experiencias digitales robustas, escalables y optimizadas para ofrecer el mejor rendimiento en cualquier dispositivo.",
+  icon: "💻",
+  details: [
+    {
+      title: "Desarrollo Web a Medida",
+      text: "Sitios web modernos utilizando las últimas tecnologías para garantizar velocidad y seguridad."
+    },
+    {
+      title: "Aplicaciones Web (SPA/PWA)",
+      text: "Desarrollo de aplicaciones web interactivas que ofrecen una experiencia de usuario fluida y nativa."
+    },
+    {
+      title: "Optimización de Conversión (CRO)",
+      text: "Interfaces diseñadas no solo para verse bien, sino para guiar al usuario hacia la acción deseada."
+    }
+  ]
+};
+---
+
+<ServiceLayout title={service.title} description={service.description} icon={service.icon} details={service.details} />

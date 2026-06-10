@@ -1,0 +1,25 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Consultoría SEO",
+  description: "Asesoramiento estratégico integral diseñado para potenciar tu visibilidad orgánica y dominar tu nicho de mercado.",
+  icon: "📈",
+  details: [
+    {
+      title: "Auditoría SEO 360°",
+      text: "Análisis técnico exhaustivo, de contenido y de perfil de enlaces para identificar oportunidades de crecimiento."
+    },
+    {
+      title: "Estrategia de Contenidos",
+      text: "Planificación de contenido basada en intención de búsqueda para atraer tráfico cualificado y convertir visitantes."
+    },
+    {
+      title: "SEO On-Page & Técnico",
+      text: "Optimización de la arquitectura web, velocidad de carga y metadatos para una indexación perfecta."
+    }
+  ]
+};
+---
+
+<ServiceLayout title={service.title} description={service.description} icon={service.icon} details={service.details} />

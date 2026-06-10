@@ -30,10 +30,13 @@ Estrategias de SEO técnico para arquitecturas web modernas y desacopladas.
 ### 6. Ai Growth Engineer
 Automatización y escalado de procesos de adquisición mediante ingeniería de crecimiento con IA.
 
-### 7. Consultoría SEO & Desarrollo
-Consultoría integral y desarrollo de sitios web/aplicaciones de alto rendimiento.
+### 7. Consultoría SEO
+Asesoramiento estratégico integral para posicionar negocios en la cima de los resultados de búsqueda.
 
-### 8. Programmatic SEO
+### 8. Desarrollo Web & Apps
+Diseño y desarrollo de páginas web y aplicaciones móviles de alto rendimiento y enfocadas a conversión.
+
+### 9. Programmatic SEO
 Escalado masivo de tráfico orgánico mediante la generación automatizada de landing pages basadas en datos.
 
 ## Estándares SEO Implementados
