@@ -12,9 +12,21 @@ interface Props {
 }
 
 const { title, description, details, icon } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": title,
+  "description": description,
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  }
+};
 ---
 
 <Layout>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Navbar />
   <main class="pt-32">
     <section class="py-20">
