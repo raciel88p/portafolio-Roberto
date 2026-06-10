@@ -1,0 +1,152 @@
+---
+import IndustryLayout from '../../layouts/IndustryLayout.astro';
+
+export async function getStaticPaths() {
+  const industries = [
+    {
+      slug: "industria-tech",
+      name: "Industria Tech",
+      icon: "💻",
+      description: "Estrategias SEO avanzadas para empresas de tecnología, hardware y software que buscan liderar el mercado global.",
+      details: [
+        { title: "SEO Técnico para SaaS", text: "Optimización de arquitecturas complejas y mejora de la indexación para plataformas de software." },
+        { title: "Autoridad en el Sector", text: "Construcción de perfiles de enlaces de alta calidad en medios tecnológicos líderes." }
+      ]
+    },
+    {
+      slug: "real-state",
+      name: "Real State",
+      icon: "🏠",
+      description: "Posicionamiento local y nacional para agencias inmobiliarias y promotoras que desean captar leads cualificados.",
+      details: [
+        { title: "SEO Local Dominante", text: "Optimización de Google Business Profile y búsquedas por zona geográfica." },
+        { title: "Captación de Leads", text: "Landing pages optimizadas para convertir visitantes en compradores potenciales." }
+      ]
+    },
+    {
+      slug: "salud",
+      name: "Salud",
+      icon: "🏥",
+      description: "SEO ético y especializado para clínicas, profesionales de la salud y farmacéuticas, cumpliendo con los estándares de Google E-E-A-T.",
+      details: [
+        { title: "Autoridad Médica", text: "Optimización de contenido basada en evidencia y perfiles profesionales verificados." },
+        { title: "SEO Local para Clínicas", text: "Atracción de pacientes locales mediante búsquedas de proximidad." }
+      ]
+    },
+    {
+      slug: "startups",
+      name: "Startups",
+      icon: "🚀",
+      description: "Crecimiento acelerado para empresas emergentes mediante estrategias de SEO ágil y Growth Hacking.",
+      details: [
+        { title: "Escalabilidad Orgánica", text: "Cimentación de una estructura SEO preparada para el crecimiento masivo." },
+        { title: "Validación de Mercado", text: "Uso de datos orgánicos para refinar el product-market fit." }
+      ]
+    },
+    {
+      slug: "betting",
+      name: "Betting",
+      icon: "🎲",
+      description: "Navegamos en mercados altamente competitivos y regulados para posicionar plataformas de apuestas de forma segura y efectiva.",
+      details: [
+        { title: "Compliance SEO", text: "Estrategias adaptadas a las regulaciones publicitarias de cada región." },
+        { title: "Link Building de Nicho", text: "Adquisición de enlaces en medios deportivos y de juego con alta autoridad." }
+      ]
+    },
+    {
+      slug: "poker-online",
+      name: "Poker Online",
+      icon: "🃏",
+      description: "Estrategias de visibilidad para salas de poker y escuelas, enfocadas en atraer jugadores recurrentes y de alto valor.",
+      details: [
+        { title: "Contenido Especializado", text: "Guías, tutoriales y reseñas que atraen tráfico de intención informativa y transaccional." },
+        { title: "SEO para Afiliación", text: "Optimización de portales de comparación y reseñas de salas de poker." }
+      ]
+    },
+    {
+      slug: "espiritual",
+      name: "Espiritual",
+      icon: "🧘",
+      description: "Conectamos tu propósito con las personas adecuadas a través de un SEO consciente y empático.",
+      details: [
+        { title: "Búsqueda Semántica", text: "Identificación de las palabras clave que resuenan con la intención emocional del usuario." },
+        { title: "Marca Personal", text: "Potenciamos la voz de guías y mentores en el ecosistema digital." }
+      ]
+    },
+    {
+      slug: "tiendas-electrónicas",
+      name: "Tiendas Electrónicas",
+      icon: "🛍️",
+      description: "Maximiza las ventas de tu eCommerce con una arquitectura optimizada y una visibilidad de producto impecable.",
+      details: [
+        { title: "SEO para Productos", text: "Optimización de fichas de producto y categorías para búsquedas transaccionales." },
+        { title: "Mejora de la Tasa de Conversión", text: "Análisis del embudo de ventas orgánico para reducir abandonos de carrito." }
+      ]
+    },
+    {
+      slug: "saas",
+      name: "Saas",
+      icon: "⚙️",
+      description: "Estrategias de Product-Led Growth impulsadas por SEO para reducir el CAC y aumentar el LTV de tus clientes.",
+      details: [
+        { title: "Keyword Research de Producto", text: "Enfoque en 'Jobs-to-be-done' para atraer usuarios con necesidades específicas." },
+        { title: "SEO de Integraciones", text: "Visibilidad para tus aplicaciones en los marketplaces más relevantes." }
+      ]
+    },
+    {
+      slug: "ciber-seguridad",
+      name: "Ciber Seguridad",
+      icon: "🛡️",
+      description: "Posicionamos servicios de seguridad informática y protección de datos ante tomadores de decisiones corporativos.",
+      details: [
+        { title: "Thought Leadership", text: "Posicionamiento como referente técnico en un mercado basado en la confianza." },
+        { title: "SEO B2B", text: "Estrategias enfocadas a captar cuentas Enterprise y directores de IT." }
+      ]
+    },
+    {
+      slug: "investigación-y-desarrollo",
+      name: "Investigación y desarrollo",
+      icon: "🔬",
+      description: "Visibilidad para centros de I+D, laboratorios y proyectos innovadores que buscan inversión o colaboración.",
+      details: [
+        { title: "Divulgación Científica", text: "Optimización de papers y resultados de investigación para audiencias técnicas y académicas." },
+        { title: "SEO Institucional", text: "Mejora de la autoridad de dominio mediante colaboraciones con entidades educativas." }
+      ]
+    },
+    {
+      slug: "seguros",
+      name: "Seguros",
+      icon: "📜",
+      description: "Competimos por las palabras clave más rentables del sector seguros mediante autoridad y confianza.",
+      details: [
+        { title: "Comparativas y Reseñas", text: "Contenido comparativo que ayuda al usuario en la decisión final de compra." },
+        { title: "SEO de Proximidad", text: "Atracción de clientes para corredurías y agentes locales." }
+      ]
+    },
+    {
+      slug: "turismo",
+      name: "Turismo",
+      icon: "✈️",
+      description: "Captamos la atención de viajeros en todas las etapas del funnel, desde la inspiración hasta la reserva final.",
+      details: [
+        { title: "SEO Estacional", text: "Planificación de campañas orgánicas basadas en las tendencias de viaje anuales." },
+        { title: "Optimización de Destinos", text: "Estrategias para hoteles, guías y portales turísticos regionales." }
+      ]
+    }
+  ];
+
+  return industries.map((industry) => ({
+    params: { slug: industry.slug },
+    props: { industry },
+  }));
+}
+
+const { industry } = Astro.props;
+---
+
+<IndustryLayout
+  industry={industry.name}
+  description={industry.description}
+  icon={industry.icon}
+  details={industry.details}
+/>
