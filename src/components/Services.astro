@@ -1,0 +1,64 @@
+---
+const services = [
+  {
+    title: "LLMs Optimization",
+    description: "Optimizamos tu contenido para que sea la fuente preferida de los Modelos de Lenguaje de Inteligencia Artificial.",
+    slug: "llm-optimization",
+    icon: "🤖"
+  },
+  {
+    title: "Local SEO",
+    description: "Domina los resultados de búsqueda locales y atrae clientes listos para comprar en tu zona geográfica.",
+    slug: "local-seo",
+    icon: "📍"
+  },
+  {
+    title: "Youtube SEO",
+    description: "Posicionamos tus videos en el segundo buscador más grande del mundo para maximizar tu alcance orgánico.",
+    slug: "youtube-seo",
+    icon: "🎬"
+  },
+  {
+    title: "Wordpress SEO",
+    description: "Especialistas en exprimir el potencial de Wordpress para alcanzar las primeras posiciones de Google.",
+    slug: "wordpress-seo",
+    icon: "🌐"
+  },
+  {
+    title: "Headless CMS SEO",
+    description: "Estrategias de SEO técnico avanzadas para arquitecturas web modernas y desacopladas.",
+    slug: "headless-cms-seo",
+    icon: "⚡"
+  },
+  {
+    title: "Ai Growth Engineer",
+    description: "Ingeniería de crecimiento impulsada por IA para automatizar y escalar tus procesos de adquisición.",
+    slug: "ai-growth-engineer",
+    icon: "🚀"
+  }
+];
+---
+<section id="servicios" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Servicios de <span class="text-blue-600">Nueva Generación</span></h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">Soluciones estratégicas diseñadas para el panorama digital actual, impulsadas por tecnología y resultados.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-all group">
+          <div class="text-4xl mb-6">{service.icon}</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            {service.description}
+          </p>
+          <a href={`/servicios/${service.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
+            Saber más
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

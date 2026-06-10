@@ -1,0 +1,14 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Wordpress SEO",
+  icon: "🌐",
+  description: "Wordpress es una plataforma potente, pero mal configurada puede ser un lastre. Auditamos y optimizamos tu sitio Wordpress para garantizar una carga ultra rápida y una estructura impecable para los buscadores.",
+  details: [
+    { title: "Arquitectura de la Información", text: "Organizamos tu contenido mediante silos y jerarquías que Google ama." },
+    { title: "WPO y Rendimiento", text: "Mejoramos tus Core Web Vitals para una experiencia de usuario superior y mejor ranking." }
+  ]
+};
+---
+<ServiceLayout {...service} />

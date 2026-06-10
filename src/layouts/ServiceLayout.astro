@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  details: { title: string; text: string }[];
+}
+
+const { title, description, details, icon } = Astro.props;
+---
+
+<Layout>
+  <Navbar />
+  <main class="pt-32">
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-2/3">
+            <div class="text-6xl mb-8">{icon}</div>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">{title}</h1>
+            <p class="text-xl text-slate-600 leading-relaxed mb-8">
+              {description}
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+          {details.map((detail) => (
+            <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">{detail.title}</h3>
+              <p class="text-slate-600 leading-relaxed">{detail.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Youtube SEO",
+  icon: "🎬",
+  description: "Youtube es el segundo buscador más grande del mundo. No dejes que tus videos se pierdan. Aplicamos técnicas avanzadas de posicionamiento de video para aumentar tus vistas, suscriptores y conversiones.",
+  details: [
+    { title: "Investigación de Keywords", text: "Encontramos los términos de búsqueda que tu audiencia realmente está usando en Youtube." },
+    { title: "Optimización de Metadatos", text: "Títulos, descripciones y etiquetas diseñadas para el algoritmo y para el clic humano." }
+  ]
+};
+---
+<ServiceLayout {...service} />
