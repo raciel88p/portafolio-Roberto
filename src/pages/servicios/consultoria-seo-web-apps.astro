@@ -1,0 +1,25 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Consultoría SEO & Desarrollo",
+  description: "Consultoría SEO integral junto con desarrollo de páginas web y aplicaciones modernas de alto rendimiento.",
+  icon: "💻",
+  details: [
+    {
+      title: "Consultoría SEO Estratégica",
+      text: "Análisis profundo y estrategias personalizadas para dominar los buscadores."
+    },
+    {
+      title: "Desarrollo Web Moderno",
+      text: "Creación de sitios web rápidos, seguros y optimizados para la conversión."
+    },
+    {
+      title: "Desarrollo de Aplicaciones",
+      text: "Aplicaciones web y móviles diseñadas para escalar tu negocio."
+    }
+  ]
+};
+---
+
+<ServiceLayout title={service.title} description={service.description} icon={service.icon} details={service.details} />

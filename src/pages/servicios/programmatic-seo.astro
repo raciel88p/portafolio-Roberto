@@ -1,0 +1,25 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Programmatic SEO",
+  description: "Escala tu tráfico orgánico mediante la creación masiva y automatizada de páginas de aterrizaje optimizadas y basadas en datos.",
+  icon: "📊",
+  details: [
+    {
+      title: "Arquitectura de Datos",
+      text: "Diseñamos bases de datos estructuradas para alimentar miles de páginas únicas y relevantes."
+    },
+    {
+      title: "Generación Automática de Contenido",
+      text: "Implementamos sistemas que generan contenido de alta calidad a escala, evitando el contenido duplicado."
+    },
+    {
+      title: "Indexación Masiva",
+      text: "Estrategias avanzadas para asegurar que Google descubra e indexe cada una de tus nuevas páginas rápidamente."
+    }
+  ]
+};
+---
+
+<ServiceLayout title={service.title} description={service.description} icon={service.icon} details={service.details} />
