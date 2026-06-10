@@ -18,5 +18,9 @@
     "astro": "^6.4.6",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3"
   }
 }
