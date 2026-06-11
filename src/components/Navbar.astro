@@ -4,6 +4,18 @@ const industries = [
   "Poker Online", "Espiritual", "Tiendas Electrónicas", "Saas",
   "Ciber Seguridad", "Investigación y desarrollo", "Seguros", "Turismo"
 ];
+
+const services = [
+  { title: "LLMs Optimization", slug: "llm-optimization" },
+  { title: "Local SEO", slug: "local-seo" },
+  { title: "Youtube SEO", slug: "youtube-seo" },
+  { title: "Wordpress SEO", slug: "wordpress-seo" },
+  { title: "Headless CMS SEO", slug: "headless-cms-seo" },
+  { title: "Ai Growth Engineer", slug: "ai-growth-engineer" },
+  { title: "Consultoría SEO", slug: "consultor-seo" },
+  { title: "Desarrollo Web & Apps", slug: "desarrollo-web-apps" },
+  { title: "Programmatic SEO", slug: "programmatic-seo" }
+];
 ---
 <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,14 +35,33 @@ const industries = [
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {industries.map(industry => (
-                  <a href={`/industrias/${industry.toLowerCase().replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href={`/industrias/${industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     {industry}
                   </a>
                 ))}
               </div>
             </div>
           </div>
-          <a href="/#servicios" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Servicios</a>
+
+          <div class="relative group">
+            <button class="flex items-center text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
+              Servicios
+              <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
+              <div class="grid grid-cols-1 gap-1 px-2">
+                {services.map(service => (
+                  <a href={`/servicios/${service.slug}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                    {service.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <a href="/nearshore" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Nearshore</a>
           <a href="/#sobre-mi" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Sobre Mí</a>
           <a href="/#proyectos" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Proyectos</a>
           <a href="/#contacto" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 ml-4">Trabajemos Juntos</a>
