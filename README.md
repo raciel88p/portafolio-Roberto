@@ -1,46 +1,51 @@
-# Astro Starter Kit: Basics
+# Portafolio Profesional - Roberto Pérez Salazar
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este proyecto es un portafolio profesional de alto rendimiento y optimizado para SEO, construido con **Astro v6** y **Tailwind CSS v4**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Características
+- **Astro v6:** Generación de sitio estático para máxima velocidad.
+- **Tailwind CSS v4:** Estilizado moderno y eficiente.
+- **SEO Avanzado:** Sitemap automático, robots.txt y Schema.org (JSON-LD).
+- **Contenido Especializado:** 9 servicios y 13 sectores industriales con páginas dedicadas.
+- **Responsive:** Totalmente adaptado a dispositivos móviles.
 
-## 🚀 Project Structure
+## 🛠️ Comandos
+| Comando | Acción |
+| :--- | :--- |
+| `npm install` | Instala las dependencias. |
+| `npm run dev` | Inicia el servidor de desarrollo en `localhost:4321`. |
+| `npm run build` | Construye el sitio para producción en `./dist/`. |
+| `npm run astro check` | Ejecuta comprobaciones de tipos y diagnóstico. |
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🌐 Despliegue en Vercel
+Para desplegar este proyecto en Vercel y conectar tu dominio de Hostinger, sigue estos pasos:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### 1. Desplegar en Vercel
+1. Sube este código a un repositorio de GitHub, GitLab o Bitbucket.
+2. Importa el proyecto en tu panel de Vercel.
+3. Vercel detectará automáticamente que es un proyecto de Astro.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### 2. Configurar Dominio de Hostinger en Vercel
+1. En tu proyecto de Vercel, ve a **Settings > Domains**.
+2. Añade tu dominio (ej. `tu-dominio.com`).
 
-## 🧞 Commands
+### 3. Configurar DNS en Hostinger (hPanel)
+Tienes dos opciones:
 
-All commands are run from the root of the project, from a terminal:
+#### Opción A: Recomendada (Registros A y CNAME)
+Mantienes tus correos y otros servicios en Hostinger.
+- **Registro A:**
+  - Nombre/Host: `@`
+  - Valor: `76.76.21.21`
+- **Registro CNAME:**
+  - Nombre/Host: `www`
+  - Valor: `cname.vercel-dns.com`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+#### Opción B: Nameservers de Vercel
+Vercel gestionará todos tus registros DNS.
+- Cambia los Nameservers en Hostinger por:
+  - `ns1.vercel-dns.com`
+  - `ns2.vercel-dns.com`
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Desarrollado para Roberto Pérez Salazar - Consultor SEO y de Marketing Digital.*
