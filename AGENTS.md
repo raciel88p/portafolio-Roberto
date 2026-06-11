@@ -7,7 +7,7 @@
 
 ## Tecnologías
 - **Framework:** Astro (Generación de sitios estáticos para máximo rendimiento SEO)
-- **Estilos:** Tailwind CSS (Arquitectura utility-first)
+- **Estilos:** Tailwind CSS v4 (Arquitectura utility-first)
 - **Despliegue:** Optimizado para renderizado HTML estático.
 
 ## Servicios Ofrecidos
@@ -39,9 +39,29 @@ Diseño y desarrollo de páginas web y aplicaciones móviles de alto rendimiento
 ### 9. Programmatic SEO
 Escalado masivo de tráfico orgánico mediante la generación automatizada de landing pages basadas en datos.
 
+### 10. Nearshore Services
+Servicios de SEO y desarrollo especializados bajo un modelo nearshore eficiente, aprovechando la alineación horaria y afinidad cultural.
+
+## Industrias Especializadas
+El portafolio incluye estrategias personalizadas para 13 sectores clave:
+- Industria Tech
+- Real State
+- Salud
+- Startups
+- Betting
+- Poker Online
+- Espiritual
+- Tiendas Electrónicas
+- Saas
+- Ciber Seguridad
+- Investigación y desarrollo
+- Seguros
+- Turismo
+
 ## Estándares SEO Implementados
-- Sitemap XML automático.
-- Robots.txt configurado.
-- Schema.org (JSON-LD) para Persona y Servicios.
-- Etiquetas Meta optimizadas (Título, Descripción, Viewport).
+- Sitemap XML automático (`sitemap-index.xml`).
+- Robots.txt configurado apuntando al sitemap.
+- Schema.org (JSON-LD) para Persona, Servicios e Industrias.
+- Etiquetas Meta optimizadas.
 - Renderizado HTML 100% estático para máxima velocidad e indexabilidad.
+- Slugs de URL optimizados (ASCII-only).
