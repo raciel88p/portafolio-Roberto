@@ -4,43 +4,50 @@ const projects = [
     title: "GolabsTech",
     description: "Caso de Estudio SEO y GEO Consultant. Estrategia de posicionamiento global y optimización de visibilidad local.",
     tag: "SEO & GEO",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://golabstech.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgolabstech.com%2F?w=600&h=400"
   },
   {
     title: "Mj estética Wellness Center",
     description: "Caso de Ai growth Engineer. Implementación de sistemas de IA para automatizar la adquisición de pacientes y escalar el centro.",
     tag: "AI Growth",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://www.mjfisioesteticayspa.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.mjfisioesteticayspa.com%2F?w=600&h=400"
   },
   {
     title: "IngeniaCr",
     description: "Caso de Estudio de SEM y Web Analytics. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
     tag: "SEM & Analytics",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://ingeniacr.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400"
   },
   {
     title: "Ferretería EPA",
     description: "Consultoría estratégica para el gigante del retail en construcción. Optimización de arquitectura web y SEO técnico.",
     tag: "Consultoría SEO",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://cr.epaenlinea.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400"
   },
   {
     title: "Instituto Nacional de Seguros",
     description: "Estrategia integral de visibilidad orgánica para la principal aseguradora de la región.",
     tag: "Consultor SEO",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://www.segurosdelins.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.segurosdelins.com%2F?w=600&h=400"
   },
   {
     title: "Sapiens Devlopement",
     description: "Consultoría SEO estratégica para Sapiens Development, impulsando su crecimiento tecnológico y visibilidad en el sector de desarrollo.",
     tag: "Consultoría SEO",
-    image: "https://via.placeholder.com/600x400"
+    url: "https://sapiensdev.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400"
   },
   {
     title: "Consultor SEO Personal",
     description: "Mentoría personalizada para marcas personales y figuras públicas que buscan dominar su nicho digital.",
     tag: "Consultoría",
-    image: "https://via.placeholder.com/600x400"
+    url: "#",
+    image: "https://via.placeholder.com/600x400?text=Personal+Brand"
   }
 ];
 ---
@@ -69,10 +76,18 @@ const projects = [
           <div class="p-8">
             <h3 class="text-2xl font-bold text-slate-900 mb-3">{project.title}</h3>
             <p class="text-slate-600 mb-6">{project.description}</p>
-            <a href="#" class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
-              Explorar Caso de Estudio
-              <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </a>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
+                    Explorar Caso
+                    <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                {project.url !== "#" && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-400 hover:text-blue-600 transition-colors flex items-center">
+                        Visitar web
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                )}
+            </div>
           </div>
         </div>
       ))}
