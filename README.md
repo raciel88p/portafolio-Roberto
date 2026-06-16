@@ -48,4 +48,13 @@ Vercel gestionará todos tus registros DNS.
   - `ns2.vercel-dns.com`
 
 ---
+
+## 🛠️ Solución de Problemas (DNS)
+Si tu dominio no se conecta después de configurar los DNS, verifica lo siguiente:
+
+1. **Borra Registros Antiguos:** Asegúrate de eliminar cualquier otro registro **A** o **CNAME** que existiera previamente en Hostinger para `@` y `www`. No debe haber duplicados.
+2. **Propagación:** Los cambios pueden tardar hasta 48 horas. Verifica el estado en [whatsmydns.net](https://www.whatsmydns.net/).
+3. **Ambas Versiones:** En Vercel, asegúrate de añadir tanto `tudominio.com` como `www.tudominio.com`.
+4. **No Mezcles Métodos:** Si usas los registros A/CNAME (Opción A), mantén los nameservers originales de Hostinger. Si usas los de Vercel (Opción B), no necesitas configurar registros A.
+
 *Desarrollado para Roberto Pérez Salazar - Consultor SEO y de Marketing Digital.*
