@@ -1,9 +1,9 @@
 # Portafolio Profesional - Roberto Pérez Salazar
 
-Este proyecto es un portafolio profesional de alto rendimiento y optimizado para SEO, construido con **Astro v6** y **Tailwind CSS v4**.
+Este proyecto es un portafolio profesional de alto rendimiento y optimizado para SEO, construido con **Astro v5** y **Tailwind CSS v4**.
 
 ## 🚀 Características
-- **Astro v6:** Generación de sitio estático para máxima velocidad.
+- **Astro v5:** Generación de sitio estático para máxima velocidad.
 - **Tailwind CSS v4:** Estilizado moderno y eficiente.
 - **SEO Avanzado:** Sitemap automático, robots.txt y Schema.org (JSON-LD).
 - **Contenido Especializado:** 9 servicios y 13 sectores industriales con páginas dedicadas.

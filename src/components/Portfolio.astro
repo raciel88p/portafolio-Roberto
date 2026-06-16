@@ -1,69 +1,5 @@
 ---
-const projects = [
-  {
-    title: "GolabsTech",
-    description: "Caso de Estudio SEO y GEO Consultant. Estrategia de posicionamiento global y optimización de visibilidad local.",
-    tag: "SEO & GEO",
-    url: "https://golabstech.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgolabstech.com%2F?w=600&h=400"
-  },
-  {
-    title: "Mj estética Wellness Center",
-    description: "Caso de Ai growth Engineer. Implementación de sistemas de IA para automatizar la adquisición de pacientes y escalar el centro.",
-    tag: "AI Growth",
-    url: "https://www.mjfisioesteticayspa.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.mjfisioesteticayspa.com%2F?w=600&h=400"
-  },
-  {
-    title: "IngeniaCr",
-    description: "Caso de Estudio de SEM y Web Analytics. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
-    tag: "SEM & Analytics",
-    url: "https://ingeniacr.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400"
-  },
-  {
-    title: "Ferretería EPA",
-    description: "Consultoría estratégica para el gigante del retail en construcción. Optimización de arquitectura web y SEO técnico.",
-    tag: "Consultoría SEO",
-    url: "https://cr.epaenlinea.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400"
-  },
-  {
-    title: "Instituto Nacional de Seguros",
-    description: "Estrategia integral de visibilidad orgánica para la principal aseguradora de la región.",
-    tag: "Consultor SEO",
-    url: "https://www.segurosdelins.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.segurosdelins.com%2F?w=600&h=400"
-  },
-  {
-    title: "Sapiens Devlopement",
-    description: "Consultoría SEO estratégica para Sapiens Development, impulsando su crecimiento tecnológico y visibilidad en el sector de desarrollo.",
-    tag: "Consultoría SEO",
-    url: "https://sapiensdev.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400"
-  },
-  {
-    title: "BluewaterProperties of Costa Rica",
-    description: "Estrategia de SEO para el sector inmobiliario de lujo, optimizando la visibilidad de propiedades exclusivas en el mercado internacional.",
-    tag: "SEO Specialist",
-    url: "https://bluewaterpropertiesofcostarica.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbluewaterpropertiesofcostarica.com%2F?w=600&h=400"
-  },
-  {
-    title: "interSources",
-    description: "Consultoría de visibilidad digital y SEO para servicios de Ciberseguridad y MSSP, impulsando su autoridad en el sector tech.",
-    tag: "Consultor SEO",
-    url: "https://www.intersourcesinc.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intersourcesinc.com%2F?w=600&h=400"
-  },
-  {
-    title: "Basha Bracelets",
-    description: "Optimización de E-commerce y posicionamiento orgánico para marca de joyería artesanal con enfoque en bienestar y espiritualidad.",
-    tag: "SEO & E-commerce",
-    url: "https://bashabracelet.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbashabracelet.com%2F?w=600&h=400"
-  }
-];
+import { projects } from '../data/projects';
 ---
 <section id="proyectos" class="py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,14 +8,14 @@ const projects = [
         <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Proyectos que Impulsan el <span class="text-blue-600">Cambio</span></h2>
         <p class="text-lg text-slate-600">Una selección de trabajos donde la estrategia se une con la ejecución impecable.</p>
       </div>
-      <a href="#" class="text-blue-600 font-bold flex items-center hover:text-blue-700 transition-colors">
+      <a href="/proyectos" class="text-blue-600 font-bold flex items-center hover:text-blue-700 transition-colors">
         Ver todos los proyectos
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
       </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map(project => (
+      {projects.slice(0, 6).map(project => (
         <div class="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <div class="aspect-[16/10] bg-slate-100 relative overflow-hidden">
              <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -91,7 +27,7 @@ const projects = [
             <h3 class="text-2xl font-bold text-slate-900 mb-3">{project.title}</h3>
             <p class="text-slate-600 mb-6">{project.description}</p>
             <div class="flex flex-wrap gap-4">
-                <a href="#" class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
+                <a href={`/proyectos/${project.slug}`} class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
                     Explorar Caso
                     <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
