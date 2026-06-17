@@ -1,0 +1,122 @@
+---
+import TechnologyLayout from '../../layouts/TechnologyLayout.astro';
+
+export function getStaticPaths() {
+  const technologies = [
+    {
+      name: "WordPress",
+      slug: "wordpress",
+      icon: "🌐",
+      description: "Optimización y desarrollo experto en WordPress para maximizar el rendimiento y el SEO.",
+      details: [
+        { title: "WPO Especializado", text: "Optimización de velocidad de carga y Core Web Vitals específica para arquitecturas WordPress." },
+        { title: "Seguridad y Escalabilidad", text: "Configuración robusta y despliegue de soluciones escalables para sitios corporativos y e-commerce." }
+      ]
+    },
+    {
+      name: "PHP",
+      slug: "php",
+      icon: "🐘",
+      description: "Desarrollo backend sólido y eficiente utilizando PHP para aplicaciones web personalizadas.",
+      details: [
+        { title: "Aplicaciones Robustas", text: "Construcción de lógica de negocio compleja y segura con las mejores prácticas de PHP." },
+        { title: "Integración de Sistemas", text: "Conexión fluida con bases de datos y servicios externos para funcionalidades avanzadas." }
+      ]
+    },
+    {
+      name: "Node js",
+      slug: "node-js",
+      icon: "🟢",
+      description: "Soluciones escalables y de alto rendimiento utilizando Node.js para entornos modernos.",
+      details: [
+        { title: "Arquitectura Event-Driven", text: "Desarrollo de aplicaciones altamente concurrentes y eficientes en tiempo real." },
+        { title: "APIs y Microservicios", text: "Construcción de servicios modulares y rápidos para ecosistemas digitales modernos." }
+      ]
+    },
+    {
+      name: "Python",
+      slug: "python",
+      icon: "🐍",
+      description: "Potencia tus datos y automatización con el lenguaje líder en IA y ciencia de datos.",
+      details: [
+        { title: "Automatización Avanzada", text: "Scripts inteligentes para optimizar procesos repetitivos y flujos de trabajo técnicos." },
+        { title: "IA y Procesamiento", text: "Implementación de lógica para modelos de lenguaje y análisis de grandes volúmenes de datos." }
+      ]
+    },
+    {
+      name: "Webflow",
+      slug: "webflow",
+      icon: "🎨",
+      description: "Diseño visual de alta gama combinado con potencia de desarrollo frontend limpia.",
+      details: [
+        { title: "No-Code High-End", text: "Desarrollo de experiencias web premium con animaciones sofisticadas y SEO integrado." },
+        { title: "CMS Flexible", text: "Estructuras de contenido dinámicas que permiten una gestión ágil y profesional." }
+      ]
+    },
+    {
+      name: "Hermes Agent",
+      slug: "hermes-agent",
+      icon: "🤖",
+      description: "Implementación de agentes inteligentes de alto rendimiento para automatización de negocios.",
+      details: [
+        { title: "Agentes Autónomos", text: "Despliegue de IA capaz de ejecutar tareas complejas y toma de decisiones lógica." },
+        { title: "Eficiencia Operativa", text: "Integración de Hermes para transformar la productividad de los equipos de trabajo." }
+      ]
+    },
+    {
+      name: "N8n",
+      slug: "n8n",
+      icon: "🔗",
+      description: "Automatización de flujos de trabajo complejos conectando todas tus herramientas digitales.",
+      details: [
+        { title: "Workflows Inteligentes", text: "Diseño de automatizaciones que eliminan la fricción entre diferentes plataformas SaaS." },
+        { title: "Integración Low-Code", text: "Conexiones robustas y personalizadas para escalar operaciones sin límites técnicos." }
+      ]
+    },
+    {
+      name: "Looker",
+      slug: "looker",
+      icon: "📊",
+      description: "Visualización de datos e inteligencia de negocios para decisiones basadas en evidencia.",
+      details: [
+        { title: "Dashboards Estratégicos", text: "Creación de tableros interactivos que revelan insights críticos para el crecimiento." },
+        { title: "Modelado de Datos", text: "Estructuración de información para una gobernanza de datos clara y accionable." }
+      ]
+    },
+    {
+      name: "Google Tag Manager",
+      slug: "google-tag-manager",
+      icon: "🏷️",
+      description: "Gestión avanzada de etiquetas para un tracking preciso sin intervención técnica constante.",
+      details: [
+        { title: "Tracking Avanzado", text: "Implementación de medición de eventos complejos para entender el comportamiento del usuario." },
+        { title: "Gobernanza de Marketing", text: "Control total sobre las herramientas de seguimiento y su impacto en el rendimiento web." }
+      ]
+    },
+    {
+      name: "Google Analytics 4",
+      slug: "google-analytics-4",
+      icon: "📈",
+      description: "Análisis profundo del usuario moderno a través de la última generación de Analytics.",
+      details: [
+        { title: "Atribución Multicanal", text: "Entendimiento completo del customer journey a través de diferentes dispositivos y canales." },
+        { title: "Análisis Predictivo", text: "Uso de las capacidades de IA de GA4 para anticipar tendencias y comportamientos de compra." }
+      ]
+    }
+  ];
+
+  return technologies.map((tech) => ({
+    params: { slug: tech.slug },
+    props: { tech },
+  }));
+}
+
+const { tech } = Astro.props;
+---
+
+<TechnologyLayout
+  title={`${tech.name} - Tecnología | Roberto Pérez Salazar`}
+  description={tech.description}
+  icon={tech.icon}
+  details={tech.details}
+/>
