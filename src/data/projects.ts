@@ -80,7 +80,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sapiens-development",
-    title: "Sapiens Devlopement",
+    title: "Sapiens Development",
     description: "Consultoría SEO estratégica para Sapiens Development, impulsando su crecimiento tecnológico y visibilidad en el sector de desarrollo.",
     tag: "Consultoría SEO",
     url: "https://sapiensdev.com/",
