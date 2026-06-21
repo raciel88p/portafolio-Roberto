@@ -81,6 +81,27 @@ const schema = {
                 {project.fullContent.strategy}
               </p>
             </div>
+
+            {project.fullContent.experience && project.fullContent.experience.length > 0 && (
+              <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
+                  <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">03</span>
+                  Experiencia Profesional
+                </h2>
+                <div class="bg-blue-50/50 rounded-3xl p-8 border border-blue-100">
+                  <ul class="space-y-4">
+                    {project.fullContent.experience.map(item => (
+                      <li class="flex items-start text-lg text-slate-700 leading-relaxed">
+                        <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
 
           <div class="lg:col-span-1">

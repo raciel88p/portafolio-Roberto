@@ -9,6 +9,7 @@ export interface Project {
     challenge: string;
     strategy: string;
     results: string[];
+    experience?: string[];
   };
 }
 
@@ -23,7 +24,18 @@ export const projects: Project[] = [
     fullContent: {
       challenge: "GolabsTech necesitaba una presencia global unificada mientras mantenía relevancia en mercados locales específicos.",
       strategy: "Implementamos una arquitectura multisitio con hreflang correctamente configurado y una estrategia de SEO local basada en entidades para cada sede.",
-      results: ["Aumento del 150% en tráfico orgánico global", "Posicionamiento en top 3 para términos clave de industria", "Mejora del 80% en la conversión de leads locales"]
+      results: ["Aumento del 150% en tráfico orgánico global", "Posicionamiento en top 3 para términos clave de industria", "Mejora del 80% en la conversión de leads locales"],
+      experience: [
+        "Led the design and execution of a revenue-focused organic growth strategy, positioning SEO as the primary acquisition channel over a 6-month period",
+        "Increased active users by 136% and new users by 139%, driving sustained growth through search-driven acquisition",
+        "Grew organic search traffic by 253.9%, significantly expanding visibility and inbound demand",
+        "Generated qualified pipeline through SEO (6 high-intent leads), validating organic as a revenue-generating channel",
+        "Implemented LLM search optimization (AEO) across platforms including ChatGPT, Perplexity AI, and Google AI Overviews, improving brand discoverability in AI-driven search environments",
+        "Conducted CRO and UX analysis, identifying conversion bottlenecks and implementing improvements to increase lead generation efficiency",
+        "Performed market share and competitive search analysis, identifying growth gaps and strategic keyword opportunities",
+        "Built a scalable organic acquisition framework, integrating technical SEO, content strategy, and AI search optimization",
+        "Positioned SEO as a core growth lever aligned with business outcomes, not just traffic metrics"
+      ]
     }
   },
   {
