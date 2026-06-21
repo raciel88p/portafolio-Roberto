@@ -108,7 +108,7 @@ export const projects: Project[] = [
     slug: "intersources",
     title: "InterSources",
     description: "Consultoría de visibilidad digital y SEO para servicios de Ciberseguridad y MSSP, impulsando su autoridad en el sector tech.",
-    tag: "Consultor SEO",
+    tag: "Consultor SEO and Team lead",
     url: "https://www.intersourcesinc.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intersourcesinc.com%2F?w=600&h=400",
     fullContent: {
