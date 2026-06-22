@@ -60,7 +60,7 @@ export const projects: Project[] = [
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
       challenge: "Empresa a punto de quebrar, sin sistemas de adquisición de nuevos clientes,",
-      strategy: "Auditamos el tracking de conversiones, implementamos GA4 con eventos personalizados y optimizamos las estructuras de campaña basadas en valor.",
+      strategy: "Desde identificar el buyer persona, crear landing page para probar la hipótesis en el mercado y lanzar anuncios para captar clientes",
       results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"],
       experience: [
         "Identificación de puntos de dolor de la marca, definición del buyer persona y selección de canales estratégicos.",

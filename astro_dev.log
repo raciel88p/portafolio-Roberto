@@ -1,0 +1,20 @@
+
+> app@0.0.1 dev
+> astro dev
+
+22:29:54 [types] Generated 1ms
+22:29:54 [content] Syncing content
+22:29:54 [content] Synced content
+22:29:54 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.3.0 ready in 886 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+22:29:54 watching for file changes...
+
+ update  ▶ New version of Astro available: 7.0.0
+  Run npx @astrojs/upgrade to update
+
+22:35:13 [200] /proyectos/ingeniacr 91ms
