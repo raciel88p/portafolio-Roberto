@@ -26,15 +26,15 @@ export const projects: Project[] = [
       strategy: "Implementamos una arquitectura multisitio con hreflang correctamente configurado y una estrategia de SEO local basada en entidades para cada sede.",
       results: ["Aumento del 150% en tráfico orgánico global", "Posicionamiento en top 3 para términos clave de industria", "Mejora del 80% en la conversión de leads locales"],
       experience: [
-        "Led the design and execution of a revenue-focused organic growth strategy, positioning SEO as the primary acquisition channel over a 6-month period",
-        "Increased active users by 136% and new users by 139%, driving sustained growth through search-driven acquisition",
-        "Grew organic search traffic by 253.9%, significantly expanding visibility and inbound demand",
-        "Generated qualified pipeline through SEO (6 high-intent leads), validating organic as a revenue-generating channel",
-        "Implemented LLM search optimization (AEO) across platforms including ChatGPT, Perplexity AI, and Google AI Overviews, improving brand discoverability in AI-driven search environments",
-        "Conducted CRO and UX analysis, identifying conversion bottlenecks and implementing improvements to increase lead generation efficiency",
-        "Performed market share and competitive search analysis, identifying growth gaps and strategic keyword opportunities",
-        "Built a scalable organic acquisition framework, integrating technical SEO, content strategy, and AI search optimization",
-        "Positioned SEO as a core growth lever aligned with business outcomes, not just traffic metrics"
+        "Lideré el diseño y ejecución de una estrategia de crecimiento orgánico enfocada en ingresos, posicionando el SEO como el principal canal de adquisición durante un período de 6 meses.",
+        "Incrementé los usuarios activos en un 136% y los nuevos usuarios en un 139%, impulsando un crecimiento sostenido a través de la adquisición basada en búsquedas.",
+        "Aumenté el tráfico de búsqueda orgánica en un 253.9%, expandiendo significativamente la visibilidad y la demanda entrante.",
+        "Generé un pipeline calificado a través de SEO (6 leads de alta intención), validando el canal orgánico como una fuente generadora de ingresos.",
+        "Implementé la optimización de búsqueda para LLM (AEO) en plataformas que incluyen ChatGPT, Perplexity AI y Google AI Overviews, mejorando la visibilidad de la marca en entornos de búsqueda impulsados por IA.",
+        "Realicé análisis de CRO y UX, identificando cuellos de botella en la conversión e implementando mejoras para aumentar la eficiencia en la generación de leads.",
+        "Llevé a cabo análisis de cuota de mercado y de búsqueda competitiva, identificando brechas de crecimiento y oportunidades estratégicas de palabras clave.",
+        "Construí un marco de adquisición orgánica escalable, integrando SEO técnico, estrategia de contenido y optimización de búsqueda con IA.",
+        "Posicioné el SEO como una palanca de crecimiento central alineada con los resultados de negocio, no solo con métricas de tráfico."
       ]
     }
   },
