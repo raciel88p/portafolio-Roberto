@@ -59,7 +59,7 @@ export const projects: Project[] = [
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Campañas de Google Ads con alto costo por adquisición y falta de visibilidad sobre el retorno real de la inversión.",
+      challenge: "Empresa a punto de quebrar, sin sistemas de adquisición de nuevos clientes,",
       strategy: "Auditamos el tracking de conversiones, implementamos GA4 con eventos personalizados y optimizamos las estructuras de campaña basadas en valor.",
       results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"],
       experience: [
