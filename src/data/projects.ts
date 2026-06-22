@@ -61,7 +61,14 @@ export const projects: Project[] = [
     fullContent: {
       challenge: "Campañas de Google Ads con alto costo por adquisición y falta de visibilidad sobre el retorno real de la inversión.",
       strategy: "Auditamos el tracking de conversiones, implementamos GA4 con eventos personalizados y optimizamos las estructuras de campaña basadas en valor.",
-      results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"]
+      results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"],
+      experience: [
+        "Identificación de puntos de dolor de la marca, definición del buyer persona y selección de canales estratégicos.",
+        "Investigación y desarrollo de la plataforma utilizando Astro, IA y despliegue en Vercel.",
+        "Integración con Web Analytics, Google Tag Manager y Google Ads para el testeo de hipótesis orientadas a la generación de SQLs y MQLs.",
+        "Incremento del 146.2% en usuarios de la landing page, con un 43.5% de tráfico orgánico.",
+        "Optimización continua de campañas de Ads para el escalado del negocio."
+      ]
     }
   },
   {
