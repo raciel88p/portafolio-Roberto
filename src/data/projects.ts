@@ -59,7 +59,7 @@ export const projects: Project[] = [
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Empresa a punto de quebrar, sin sistemas de adquisición de nuevos clientes,",
+      challenge: "Empresa a punto de quebrar, sin sistemas de adquisición de nuevos clientes. El reto fue la implementación de canales para captar clientes por medio de las búsquedas.",
       strategy: "Desde identificar el buyer persona, crear landing page para probar la hipótesis en el mercado y lanzar anuncios para captar clientes",
       results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"],
       experience: [
