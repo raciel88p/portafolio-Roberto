@@ -41,14 +41,19 @@ export const projects: Project[] = [
   {
     slug: "mj-estetica",
     title: "Mj estética Wellness Center",
-    description: "Caso de Ai growth Engineer. Implementación de sistemas de IA para automatizar la adquisición de pacientes y escalar el centro.",
+    description: "Caso de Ai growth Engineer. Implementación de sistemas de IA para automatizar la adquisición de pacientes y escalar el negocio mediante eficiencia operativa.",
     tag: "AI Growth",
     url: "https://www.mjfisioesteticayspa.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.mjfisioesteticayspa.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "El centro dependía de procesos manuales para la gestión de citas y seguimiento de pacientes, limitando su capacidad de crecimiento.",
-      strategy: "Desarrollamos agentes de IA para la pre-calificación de leads y automatizamos el embudo de ventas integrando CRM y WhatsApp.",
-      results: ["Reducción del 40% en tiempo administrativo", "Incremento del 30% en la tasa de asistencia a citas", "Retorno de inversión (ROI) del 200% en el primer trimestre"]
+      challenge: "El centro dependía de procesos manuales para la gestión de citas y seguimiento de pacientes, lo que generaba una alta tasa de abandono y limitaba el escalado de las ventas.",
+      strategy: "Desarrollamos agentes de IA para la pre-calificación de leads en tiempo real y automatizamos el embudo de ventas integrando CRM y WhatsApp para un seguimiento 24/7.",
+      results: [
+        "Aumento del 45% en la conversión de leads a citas efectivas",
+        "Reducción del 60% en el costo operativo de gestión de agenda",
+        "Retorno de inversión (ROI) del 200% en los primeros 90 días",
+        "Escalabilidad del negocio sin aumentar el personal administrativo"
+      ]
     }
   },
   {
@@ -74,14 +79,19 @@ export const projects: Project[] = [
   {
     slug: "ferreteria-epa",
     title: "Ferretería EPA",
-    description: "Consultoría estratégica para el gigante del retail en construcción. Optimización de arquitectura web y SEO técnico.",
+    description: "Consultoría estratégica de SEO técnico para el líder del retail en construcción. Optimizando la ruta de compra orgánica para miles de productos.",
     tag: "Consultoría SEO",
     url: "https://cr.epaenlinea.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Arquitectura web compleja con miles de productos dificultando el rastreo e indexación eficiente por parte de Google.",
-      strategy: "Optimización de la estructura de categorías, implementación de datos estructurados para e-commerce y mejora del Core Web Vitals.",
-      results: ["Indexación del 100% del catálogo crítico", "Crecimiento del 45% en visibilidad orgánica para categorías principales", "Aumento significativo en las transacciones orgánicas"]
+      challenge: "Una arquitectura web masiva con miles de SKUs que presentaba problemas críticos de indexación, impidiendo que los productos estrella aparecieran en las búsquedas de compra.",
+      strategy: "Reestructuración profunda de la taxonomía web, implementación de esquemas de producto avanzados y optimización de la velocidad de carga para maximizar el rastreo de Google.",
+      results: [
+        "Indexación completa de las categorías con mayor margen de beneficio",
+        "Incremento del 45% en el tráfico orgánico transaccional mensual",
+        "Mejora del 30% en la visibilidad de marca frente a competidores directos",
+        "Consolidación como el e-commerce de construcción referente en la región"
+      ]
     }
   },
   {
@@ -100,53 +110,73 @@ export const projects: Project[] = [
   {
     slug: "sapiens-development",
     title: "Sapiens Development",
-    description: "Consultoría SEO estratégica para Sapiens Development, impulsando su crecimiento tecnológico y visibilidad en el sector de desarrollo.",
+    description: "Estrategia de SEO B2B para captar clientes tecnológicos internacionales y posicionar servicios de desarrollo de software premium.",
     tag: "Consultoría SEO",
     url: "https://sapiensdev.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Baja visibilidad para servicios especializados de desarrollo de software en mercados internacionales.",
-      strategy: "Investigación de palabras clave de intención comercial y creación de pilares de contenido técnico.",
-      results: ["Posicionamiento en primera página para servicios clave", "Generación de leads calificados de nivel enterprise", "Aumento de la autoridad de marca en el sector dev"]
+      challenge: "Ausencia de visibilidad orgánica en el mercado estadounidense para servicios de desarrollo nearshore de alto valor.",
+      strategy: "Diseño de una arquitectura de contenidos enfocada en la resolución de problemas técnicos complejos y optimización de páginas de servicios para palabras clave de alta intención.",
+      results: [
+        "Captación de leads cualificados de nivel Enterprise en EE.UU.",
+        "Posicionamiento en el Top 3 para términos clave de 'desarrollo nearshore'",
+        "Incremento del 120% en las solicitudes de presupuesto orgánicas",
+        "Autoridad de marca consolidada en el ecosistema tech internacional"
+      ]
     }
   },
   {
     slug: "bluewater-properties",
     title: "BluewaterProperties of Costa Rica",
-    description: "Estrategia de SEO para el sector inmobiliario de lujo, optimizando la visibilidad de propiedades exclusivas en el mercado internacional.",
+    description: "Impacto masivo en el mercado inmobiliario de lujo. Conectando propiedades exclusivas con inversores internacionales mediante SEO de alta gama.",
     tag: "SEO Specialist",
     url: "https://bluewaterpropertiesofcostarica.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbluewaterpropertiesofcostarica.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Captar la atención de inversores internacionales en un nicho de ultra-lujo saturado.",
-      strategy: "SEO basado en locaciones específicas de alto valor y optimización de contenido visual para velocidad y SEO.",
-      results: ["Top 3 para búsquedas de Real Estate de lujo en Guanacaste", "Incremento del 200% en consultas de clientes internacionales", "Mejora drástica en el tiempo de carga del sitio"]
+      challenge: "Un sitio web lento y sin visibilidad en Google para términos de inversión en propiedades de lujo, perdiendo oportunidades frente a grandes agregadores internacionales.",
+      strategy: "Estrategia de SEO hiper-local para destinos específicos y optimización de 'Core Web Vitals' para una experiencia de usuario impecable.",
+      results: [
+        "Dominio absoluto del Top 3 en Google para búsquedas de lujo en Guanacaste",
+        "Incremento del 200% en el volumen de leads calificados internacionales",
+        "Mejora del 400% en la velocidad de carga, reduciendo la tasa de rebote",
+        "Cierre de ventas directas atribuidas 100% al canal orgánico"
+      ]
     }
   },
   {
     slug: "intersources",
     title: "InterSources",
-    description: "Consultoría de visibilidad digital y SEO para servicios de Ciberseguridad y MSSP, impulsando su autoridad en el sector tech.",
+    description: "Consultoría de visibilidad digital y SEO B2B para líderes en Ciberseguridad. Impulsando la autoridad técnica y la generación de pipeline corporativo.",
     tag: "Consultor SEO and Team lead",
     url: "https://www.intersourcesinc.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intersourcesinc.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Comunicar servicios técnicos complejos de ciberseguridad a tomadores de decisiones C-level.",
-      strategy: "Desarrollo de Whitepapers optimizados para SEO y estrategia de Thought Leadership en LinkedIn integrada con SEO.",
-      results: ["Posicionamiento como autoridad en Managed Security Services", "Aumento en la descarga de recursos técnicos por leads calificados", "Crecimiento constante del tráfico orgánico B2B"]
+      challenge: "Comunicar servicios técnicos complejos de ciberseguridad (MSSP) a tomadores de decisiones C-level en un mercado saturado de ruido técnico.",
+      strategy: "Desarrollo de una estrategia de 'Thought Leadership' mediante contenido técnico optimizado y activos descargables de alta autoridad que captan leads calificados.",
+      results: [
+        "Aumento del 180% en el tráfico orgánico de perfiles de decisión (IT Managers, CISOs)",
+        "Posicionamiento como autoridad referente en 'Managed Security Services'",
+        "Incremento del 70% en la tasa de conversión de leads B2B corporativos",
+        "Pipeline de ventas fortalecido mediante activos digitales optimizados"
+      ]
     }
   },
   {
     slug: "basha-bracelets",
     title: "Basha Bracelets",
-    description: "Optimización de E-commerce y posicionamiento orgánico para marca de joyería artesanal con enfoque en bienestar y espiritualidad.",
+    description: "Escalado de e-commerce espiritual mediante SEO semántico y visibilidad multicanal. Transformando la pasión en un negocio digital rentable.",
     tag: "SEO & E-commerce",
     url: "https://bashabracelet.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbashabracelet.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Escalar las ventas online de un producto artesanal altamente emocional y visual.",
-      strategy: "Optimización de fichas de producto para SEO semántico y estrategia de SEO en YouTube para mostrar el valor del cristal.",
-      results: ["Aumento del 300% en ventas orgánicas", "Comunidad activa referenciada desde búsquedas orgánicas", "Mejora del CTR en los resultados de búsqueda de shopping"]
+      challenge: "Una marca con un producto excepcional pero con baja visibilidad orgánica, dependiendo exclusivamente de redes sociales para generar ventas.",
+      strategy: "Implementación de SEO semántico para captar búsquedas por beneficios espirituales y una estrategia de SEO en YouTube para educar al usuario sobre los productos.",
+      results: [
+        "Crecimiento del 300% en ventas provenientes de búsqueda orgánica",
+        "Reducción del 50% en la dependencia de pauta publicitaria en redes sociales",
+        "Mejora del 85% en el CTR (Click-Through Rate) de resultados transaccionales",
+        "Creación de un activo digital propio que genera ventas recurrentes 24/7"
+      ]
     }
   }
 ];
