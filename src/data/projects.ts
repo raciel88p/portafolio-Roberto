@@ -132,7 +132,7 @@ export const projects: Project[] = [
         },
         {
           title: "Ecosistema de Medición y SEM",
-          content: "Configuramos una pila analítica completa (GTM, GA4) integrada con Google Ads para validar hipótesis de mercado y rastrear la generación de SQLs en tiempo real."
+          content: "Configuramos una pila analítica completa (GTM, GA4, SEO, GEO, Google Search Console) integrada con Google Ads para validar hipótesis de mercado y rastrear la generación de SQLs en tiempo real con Microsoft Clarity."
         },
         {
           title: "Optimización y Escalado",
