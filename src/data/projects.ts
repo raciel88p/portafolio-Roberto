@@ -14,6 +14,8 @@ export interface Project {
     results: string[];
     experience?: string[];
     metrics?: { label: string; value: string }[];
+    quote?: string;
+    story?: string;
   };
 }
 
@@ -64,20 +66,48 @@ export const projects: Project[] = [
   },
   {
     slug: "mj-estetica",
-    title: "Mj estética Wellness Center",
-    description: "Caso de Ai growth Engineer. Implementación de sistemas de IA para automatizar la adquisición de pacientes y escalar el negocio mediante eficiencia operativa.",
-    tag: "AI Growth",
+    title: "MJ Estética y SPA",
+    description: "Cómo convertimos una crisis en un laboratorio de crecimiento impulsado por IA. De una inversión de $1,000 a un equipo de 8 personas.",
+    tag: "AI Growth & pSEO",
     url: "https://www.mjfisioesteticayspa.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.mjfisioesteticayspa.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "El centro dependía de procesos manuales para la gestión de citas y seguimiento de pacientes, lo que generaba una alta tasa de abandono y limitaba el escalado de las ventas.",
-      strategy: "Desarrollamos agentes de IA para la pre-calificación de leads en tiempo real y automatizamos el embudo de ventas integrando CRM y WhatsApp para un seguimiento 24/7.",
+      company: "MJ Estética y SPA nació en 2023 tras un momento de incertidumbre familiar. Fundada con recursos mínimos, se convirtió en nuestra demostración de que una pyme puede competir al más alto nivel utilizando tecnología, datos e inteligencia artificial.",
+      challenge: "El reto inicial fue construir un negocio rentable desde cero con una inversión de apenas USD $1,000, compitiendo en un mercado local saturado y dependiendo inicialmente de procesos manuales y presupuestos publicitarios mínimos.",
+      solution: "Construimos un sistema de adquisición y gestión automatizado que evolucionó desde un catálogo digital sencillo hasta una plataforma avanzada basada en SEO Programático (pSEO) e Inteligencia Artificial.",
+      steps: [
+        {
+          title: "Medición y Datos desde el Día 1",
+          content: "Aunque la tecnología inicial era simple (Google Sites), implementamos una pila de medición completa: Google Tag Manager, Analytics y Microsoft Clarity con IA para analizar el comportamiento del usuario y detectar oportunidades de mejora."
+        },
+        {
+          title: "Escalado mediante SEO Programático (pSEO)",
+          content: "Migramos a una arquitectura moderna con Astro para generar automáticamente más de 100 páginas de servicios altamente segmentadas, logrando una cobertura de mercado masiva con un esfuerzo técnico optimizado."
+        },
+        {
+          title: "Automatización de Inbound Marketing",
+          content: "Implementamos flujos asistidos por IA y ManyChat para la pre-calificación de leads y atención 24/7, integrando lead magnets generados con IA para nutrir a los prospectos sin intervención manual."
+        },
+        {
+          title: "Optimización para la Era de la IA (GEO)",
+          content: "Más allá del SEO tradicional, optimizamos el contenido para que asistentes como ChatGPT y Perplexity recomienden la clínica como la primera referencia en su categoría."
+        }
+      ],
+      strategy: "Utilizamos nuestro propio negocio como un laboratorio de innovación, probando cada estrategia de IA y automatización antes de implementarlas en proyectos externos, enfocándonos en maximizar utilidades mediante la eficiencia operativa.",
+      metrics: [
+        { label: "Ventas (Año 1)", value: "$75k" },
+        { label: "Tráfico Orgánico", value: "+218.5%" },
+        { label: "Tráfico Referido", value: "+243%" },
+        { label: "Incremento Ventas", value: "+86%" }
+      ],
       results: [
-        "Aumento del 45% en la conversión de leads a citas efectivas",
-        "Reducción del 60% en el costo operativo de gestión de agenda",
-        "Retorno de inversión (ROI) del 200% en los primeros 90 días",
-        "Escalabilidad del negocio sin aumentar el personal administrativo"
-      ]
+        "Transformación de un proyecto de autoempleo en una empresa con un equipo de 8 personas.",
+        "Aumento del 86% en las ventas tras la migración a la plataforma optimizada con Astro e IA.",
+        "Aparición como referencia recomendada en asistentes de IA (ChatGPT, etc.) mediante técnicas de GEO.",
+        "Demostración de que una pyme puede operar con tecnología de nivel empresarial con una inversión mínima."
+      ],
+      quote: "La inteligencia artificial no reemplaza la visión de un emprendedor; amplifica su capacidad para construir negocios más eficientes, escalables y sostenibles.",
+      story: "MJ Estética y SPA nació cuando mi esposa y yo perdimos nuestros empleos en la misma semana. Con 37 años y una familia que mantener, apostamos por nosotros mismos. Lo que comenzó como una decisión en medio de la incertidumbre terminó siendo nuestro laboratorio de innovación más exitoso."
     }
   },
   {
