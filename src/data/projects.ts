@@ -118,15 +118,39 @@ export const projects: Project[] = [
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Empresa a punto de quebrar, sin sistemas de adquisición de nuevos clientes. El reto fue la implementación de canales para captar clientes por medio de las búsquedas.",
-      strategy: "Desde identificar el buyer persona, crear landing page para probar la hipótesis en el mercado y lanzar anuncios para captar clientes",
-      results: ["Reducción del 50% en el CPA", "Mejora del 120% en el ROAS", "Dashboard de datos en tiempo real para toma de decisiones"],
-      experience: [
-        "Identificación de puntos de dolor de la marca, definición del buyer persona y selección de canales estratégicos.",
-        "Investigación y desarrollo de la plataforma utilizando Astro, IA y despliegue en Vercel.",
-        "Integración con Web Analytics, Google Tag Manager y Google Ads para el testeo de hipótesis orientadas a la generación de SQLs y MQLs.",
-        "Incremento del 146.2% en usuarios de la landing page, con un 43.5% de tráfico orgánico.",
-        "Optimización continua de campañas de Ads para el escalado del negocio."
+      company: "IngeniaCr es una consultora especializada en ingeniería y soluciones técnicas que enfrentaba un momento crítico de sostenibilidad financiera debido a la falta de canales predecibles de adquisición de clientes.",
+      challenge: "La empresa se encontraba al borde del cierre técnico, operando sin un sistema de generación de demanda y dependiendo exclusivamente de recomendaciones esporádicas. El reto era construir, desde cero, una infraestructura digital capaz de captar clientes calificados de forma recurrente y rentable.",
+      solution: "Implementamos un ecosistema de adquisición híbrido basado en una landing page de alto rendimiento desarrollada con Astro, respaldada por una estrategia de SEM (Google Ads) y medición avanzada para iteración rápida.",
+      steps: [
+        {
+          title: "Análisis de Supervivencia y Perfilado",
+          content: "Identificamos los puntos de dolor críticos del negocio y definimos un Buyer Persona de alta urgencia para asegurar retornos rápidos sobre la inversión inicial."
+        },
+        {
+          title: "Desarrollo de Infraestructura de Conversión",
+          content: "Diseñamos y desplegamos una plataforma utilizando Astro e IA, enfocada 100% en la conversión de usuarios y optimizada para tiempos de carga mínimos, alojada en Vercel."
+        },
+        {
+          title: "Ecosistema de Medición y SEM",
+          content: "Configuramos una pila analítica completa (GTM, GA4) integrada con Google Ads para validar hipótesis de mercado y rastrear la generación de SQLs en tiempo real."
+        },
+        {
+          title: "Optimización y Escalado",
+          content: "Ajustamos continuamente las campañas de búsqueda pagas basándonos en los datos de comportamiento, mientras el SEO técnico de la plataforma empezaba a ganar tracción orgánica."
+        }
+      ],
+      strategy: "Combinamos la agilidad del tráfico pago con la eficiencia del desarrollo web moderno para rescatar un negocio en crisis, transformando su presencia digital en una máquina de generación de leads basada en datos.",
+      metrics: [
+        { label: "Nuevos Usuarios", value: "+146.2%" },
+        { label: "Tráfico Orgánico", value: "43.5%" },
+        { label: "Reducción CPA", value: "-50%" },
+        { label: "Mejora ROAS", value: "+120%" }
+      ],
+      results: [
+        "Rescate financiero del negocio mediante la activación de canales de venta predecibles.",
+        "Incremento masivo del 146.2% en la adquisición de usuarios calificados.",
+        "Consolidación de un 43.5% de tráfico orgánico como base de sostenibilidad a largo plazo.",
+        "Optimización radical de la inversión: reducción del 50% en CPA y mejora del 120% en ROAS."
       ]
     }
   },
