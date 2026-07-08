@@ -112,13 +112,13 @@ export const projects: Project[] = [
   },
   {
     slug: "ingeniacr",
-    title: "IngeniaCr",
+    title: "IngeniaCR",
     description: "Caso de Estudio de SEM y Web Analytics. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
     tag: "SEM & Analytics",
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
-      company: "IngeniaCr es una consultora especializada en ingeniería y soluciones técnicas que enfrentaba un momento crítico de sostenibilidad financiera debido a la falta de canales predecibles de adquisición de clientes.",
+      company: "IngeniaCR suple de uniformes profesionales a pymes y empresas medianas para brindar más confianza a los clientes y aumentar la presencia de marca",
       challenge: "La empresa se encontraba al borde del cierre técnico, operando sin un sistema de generación de demanda y dependiendo exclusivamente de recomendaciones esporádicas. El reto era construir, desde cero, una infraestructura digital capaz de captar clientes calificados de forma recurrente y rentable.",
       solution: "Implementamos un ecosistema de adquisición híbrido basado en una landing page de alto rendimiento desarrollada con Astro, respaldada por una estrategia de SEM (Google Ads) y medición avanzada para iteración rápida.",
       steps: [
