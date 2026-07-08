@@ -61,26 +61,65 @@ const schema = {
 
         <!-- Content Sections -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div class="lg:col-span-2 space-y-16">
+          <div class="lg:col-span-2 space-y-20">
+            {project.fullContent.company && (
+              <div>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Empresa</h2>
+                <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                  Expertise que genera confianza
+                </h3>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                  {project.fullContent.company}
+                </p>
+              </div>
+            )}
+
             <div>
-              <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
-                <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">01</span>
-                El Desafío
-              </h2>
-              <p class="text-lg text-slate-600 leading-relaxed">
+              <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">El Desafío</h2>
+              <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                El reto de escalar en un mercado saturado
+              </h3>
+              <p class="text-xl text-slate-600 leading-relaxed">
                 {project.fullContent.challenge}
               </p>
             </div>
 
-            <div>
-              <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
-                <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">02</span>
-                Nuestra Estrategia
-              </h2>
-              <p class="text-lg text-slate-600 leading-relaxed">
-                {project.fullContent.strategy}
-              </p>
-            </div>
+            {project.fullContent.solution && (
+              <div>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Solución</h2>
+                <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                  Estrategia integrada y ejecución técnica
+                </h3>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                  {project.fullContent.solution}
+                </p>
+              </div>
+            )}
+
+            {project.fullContent.steps && (
+              <div class="space-y-12">
+                {project.fullContent.steps.map((step, index) => (
+                  <div class="relative pl-8 border-l-2 border-blue-100">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
+                    <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Paso 0{index + 1}</h4>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed">{step.content}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {!project.fullContent.steps && (
+              <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
+                  <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">02</span>
+                  Nuestra Estrategia
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                  {project.fullContent.strategy}
+                </p>
+              </div>
+            )}
 
             {project.fullContent.experience && project.fullContent.experience.length > 0 && (
               <div>
@@ -106,6 +145,17 @@ const schema = {
 
           <div class="lg:col-span-1">
             <div class="bg-slate-50 rounded-3xl p-8 sticky top-32">
+              {project.fullContent.metrics && (
+                <div class="grid grid-cols-2 gap-4 mb-10">
+                  {project.fullContent.metrics.map(metric => (
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                      <div class="text-2xl font-bold text-blue-600">{metric.value}</div>
+                      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
                 <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Resultados Clave

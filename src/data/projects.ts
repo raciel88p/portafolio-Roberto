@@ -6,10 +6,14 @@ export interface Project {
   url: string;
   image: string;
   fullContent: {
+    company?: string;
     challenge: string;
+    solution?: string;
+    steps?: { title: string; content: string }[];
     strategy: string;
     results: string[];
     experience?: string[];
+    metrics?: { label: string; value: string }[];
   };
 }
 
@@ -17,24 +21,44 @@ export const projects: Project[] = [
   {
     slug: "golabstech",
     title: "GolabsTech",
-    description: "Caso de Estudio SEO y GEO Consultant. Estrategia de posicionamiento global y optimización de visibilidad local.",
+    description: "Estrategia de posicionamiento global y adquisición orgánica de alto impacto. Cómo disparamos la visibilidad y captación de leads en mercados internacionales.",
     tag: "SEO & GEO",
     url: "https://golabstech.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgolabstech.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "GolabsTech necesitaba una presencia global unificada mientras mantenía relevancia en mercados locales específicos.",
-      strategy: "Implementamos una arquitectura multisitio con hreflang correctamente configurado y una estrategia de SEO local basada en entidades para cada sede.",
-      results: ["Aumento del 150% en tráfico orgánico global", "Posicionamiento en top 3 para términos clave de industria", "Mejora del 80% en la conversión de leads locales"],
-      experience: [
-        "Lideré el diseño y ejecución de una estrategia de crecimiento orgánico enfocada en ingresos, posicionando el SEO como el principal canal de adquisición durante un período de 6 meses.",
-        "Incrementé los usuarios activos en un 136% y los nuevos usuarios en un 139%, impulsando un crecimiento sostenido a través de la adquisición basada en búsquedas.",
-        "Aumenté el tráfico de búsqueda orgánica en un 253.9%, expandiendo significativamente la visibilidad y la demanda entrante.",
-        "Generé un pipeline calificado a través de SEO (6 leads de alta intención), validando el canal orgánico como una fuente generadora de ingresos.",
-        "Implementé la optimización de búsqueda para LLM (AEO) en plataformas que incluyen ChatGPT, Perplexity AI y Google AI Overviews, mejorando la visibilidad de la marca en entornos de búsqueda impulsados por IA.",
-        "Realicé análisis de CRO y UX, identificando cuellos de botella en la conversión e implementando mejoras para aumentar la eficiencia en la generación de leads.",
-        "Llevé a cabo análisis de cuota de mercado y de búsqueda competitiva, identificando brechas de crecimiento y oportunidades estratégicas de palabras clave.",
-        "Construí un marco de adquisición orgánica escalable, integrando SEO técnico, estrategia de contenido y optimización de búsqueda con IA.",
-        "Posicioné el SEO como una palanca de crecimiento central alineada con los resultados de negocio, no solo con métricas de tráfico."
+      company: "GolabsTech es una empresa líder en soluciones de desarrollo e inteligencia artificial nearshore. Con sede en EE.UU. y centros de talento en Latinoamérica, ayudan a empresas tecnológicas a escalar sus equipos con ingenieros de alto nivel integrados en su misma zona horaria.",
+      challenge: "El reto principal era unificar una presencia global digital que reflejara su expertise técnico, mientras competían en un mercado de servicios de software altamente saturado. Necesitaban pasar de ser un proveedor más a una autoridad referente en adquisición orgánica de talento y soluciones de IA.",
+      solution: "Diseñamos un sistema de adquisición orgánica que combina SEO técnico avanzado, optimización para motores de respuesta de IA (AEO) y una arquitectura de contenidos diseñada para tomadores de decisiones C-level.",
+      steps: [
+        {
+          title: "Blueprint Estratégico y Auditoría",
+          content: "Realizamos un análisis profundo de la cuota de mercado y de búsqueda competitiva. Identificamos brechas críticas de crecimiento y oportunidades de palabras clave de alta intención que los competidores estaban ignorando."
+        },
+        {
+          title: "Optimización de la Arquitectura Global",
+          content: "Implementamos una estructura multisitio optimizada con configuraciones hreflang precisas. Esto permitió a GolabsTech mantener una autoridad de dominio global mientras servía contenido relevante y localizado a prospectos en diferentes regiones geográficas."
+        },
+        {
+          title: "Adquisición impulsada por IA (AEO)",
+          content: "Fuimos pioneros en la optimización de búsqueda para LLM. Estructuramos los activos digitales de la marca para asegurar recomendaciones positivas en plataformas como ChatGPT, Perplexity AI y Google AI Overviews."
+        },
+        {
+          title: "Optimización de Conversión (CRO)",
+          content: "Analizamos el comportamiento del usuario para identificar cuellos de botella. Rediseñamos los flujos de contacto y landing pages, convirtiendo el aumento de tráfico en un pipeline real de leads calificados."
+        }
+      ],
+      strategy: "Posicionamos el SEO como una palanca de crecimiento central alineada directamente con los resultados de negocio, integrando visibilidad técnica con una estrategia de contenido que genera demanda entrante de nivel Enterprise.",
+      metrics: [
+        { label: "Tráfico Orgánico", value: "+253.9%" },
+        { label: "Nuevos Usuarios", value: "+139%" },
+        { label: "Usuarios Activos", value: "+136%" },
+        { label: "Leads Calificados", value: "Enterprise" }
+      ],
+      results: [
+        "Crecimiento explosivo del 253.9% en tráfico orgánico en solo 6 meses.",
+        "Validación del canal orgánico como principal fuente generadora de ingresos y pipeline.",
+        "Autoridad consolidada en búsquedas relacionadas con IA y Nearshore Development.",
+        "Optimización total para la era de la búsqueda generativa (AEO)."
       ]
     }
   },
