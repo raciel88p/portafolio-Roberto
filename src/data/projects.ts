@@ -141,16 +141,16 @@ export const projects: Project[] = [
       ],
       strategy: "Combinamos la agilidad del tráfico pago con la eficiencia del desarrollo web moderno para rescatar un negocio en crisis, transformando su presencia digital en una máquina de generación de leads basada en datos.",
       metrics: [
-        { label: "Nuevos Usuarios", value: "+146.2%" },
-        { label: "Tráfico Orgánico", value: "43.5%" },
-        { label: "Reducción CPA", value: "-50%" },
-        { label: "Mejora ROAS", value: "+120%" }
+        { label: "Nuevos Usuarios", value: "1.3K (+124.7%)" },
+        { label: "Crecimiento Orgánico", value: "+188.2%" },
+        { label: "Paid Search", value: "+1,000%" },
+        { label: "Retención Usuarios", value: "+138.3%" }
       ],
       results: [
-        "Rescate financiero del negocio mediante la activación de canales de venta predecibles.",
-        "Incremento masivo del 146.2% en la adquisición de usuarios calificados.",
-        "Consolidación de un 43.5% de tráfico orgánico como base de sostenibilidad a largo plazo.",
-        "Optimización radical de la inversión: reducción del 50% en CPA y mejora del 120% en ROAS."
+        "Crecimiento exponencial en la adquisición de 1,300 nuevos usuarios en 28 días.",
+        "Incremento masivo del 188.2% en tráfico orgánico mediante estrategias de SEO técnico.",
+        "Escalado vertical de campañas pagas con un aumento del 1,000% en Paid Search.",
+        "Diversificación exitosa de canales incluyendo YouTube (+124.8%) y tráfico desde asistentes de IA (ChatGPT, Kaik.ai)."
       ]
     }
   },
