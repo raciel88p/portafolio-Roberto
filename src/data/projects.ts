@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     slug: "ingeniacr",
     title: "IngeniaCR",
-    description: "Caso de Estudio de SEM y Web Analytics. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
+    description: "Caso de Estudio de, SEO, SEM, Web Analytics y Astro. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
     tag: "SEM & Analytics",
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
