@@ -143,13 +143,13 @@ export const projects: Project[] = [
       metrics: [
         { label: "Nuevos Usuarios", value: "1.3K (+124.7%)" },
         { label: "Crecimiento Orgánico", value: "+188.2%" },
-        { label: "Paid Search", value: "+1,000%" },
+        { label: "Paid Search", value: "63%" },
         { label: "Retención Usuarios", value: "+138.3%" }
       ],
       results: [
         "Crecimiento exponencial en la adquisición de 1,300 nuevos usuarios en 28 días.",
         "Incremento masivo del 188.2% en tráfico orgánico mediante estrategias de SEO técnico.",
-        "Escalado vertical de campañas pagas con un aumento del 1,000% en Paid Search.",
+        "Escalado vertical de campañas pagas logrando que un 63% de la adquisición provenga de Paid Search.",
         "Diversificación exitosa de canales incluyendo YouTube (+124.8%) y tráfico desde asistentes de IA (ChatGPT).",
         "Potencial de ventas de $1,600/mes generado a través de canales digitales calificados."
       ]
