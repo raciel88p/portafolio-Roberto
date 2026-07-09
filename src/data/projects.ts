@@ -150,7 +150,8 @@ export const projects: Project[] = [
         "Crecimiento exponencial en la adquisición de 1,300 nuevos usuarios en 28 días.",
         "Incremento masivo del 188.2% en tráfico orgánico mediante estrategias de SEO técnico.",
         "Escalado vertical de campañas pagas con un aumento del 1,000% en Paid Search.",
-        "Diversificación exitosa de canales incluyendo YouTube (+124.8%) y tráfico desde asistentes de IA (ChatGPT, Kaik.ai)."
+        "Diversificación exitosa de canales incluyendo YouTube (+124.8%) y tráfico desde asistentes de IA (ChatGPT).",
+        "Potencial de ventas de $1,600/mes generado a través de canales digitales calificados."
       ]
     }
   },
