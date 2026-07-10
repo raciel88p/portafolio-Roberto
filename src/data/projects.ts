@@ -158,13 +158,13 @@ export const projects: Project[] = [
   {
     slug: "ferreteria-epa",
     title: "Ferretería EPA",
-    description: "Consultoría estratégica de SEO técnico para el líder del retail en construcción. Optimizando la ruta de compra orgánica para miles de productos.",
+    description: "Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
     tag: "Consultoría SEO",
     url: "https://cr.epaenlinea.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Una arquitectura web masiva con miles de SKUs que presentaba problemas críticos de indexación, impidiendo que los productos estrella aparecieran en las búsquedas de compra.",
-      strategy: "Reestructuración profunda de la taxonomía web, implementación de esquemas de producto avanzados y optimización de la velocidad de carga para maximizar el rastreo de Google: Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
+      challenge: "",
+      strategy: "Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
       results: [
         "Indexación completa de las categorías con mayor margen de beneficio",
         "Incremento del 45% en el tráfico orgánico transaccional mensual",
