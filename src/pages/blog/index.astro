@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { sanityClient } from 'sanity:client';
+import { urlFor } from '../../data/sanity';
+
+const posts = await sanityClient.fetch(`*[_type == "post"] | order(publishedAt desc)`);
+---
+
+<Layout title="Blog | Roberto Pérez Salazar - Consultor SEO y Marketing Digital">
+  <Navbar />
+
+  <main class="pt-32">
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mb-16">
+          <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            Blog: Estrategias de <span class="text-blue-600">SEO e Inteligencia Artificial</span>
+          </h1>
+          <p class="text-xl text-slate-600 leading-relaxed">
+            Comparto mi experiencia y conocimientos sobre cómo escalar negocios digitales utilizando las últimas tendencias en SEO, IA Generativa y marketing estratégico.
+          </p>
+        </div>
+
+        {posts.length > 0 ? (
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post: any) => (
+              <article class="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                {post.mainImage && (
+                  <div class="aspect-[16/10] bg-slate-100 relative overflow-hidden">
+                    <img
+                      src={urlFor(post.mainImage).width(800).height(500).url()}
+                      alt={post.title}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div class="p-8">
+                  <div class="flex items-center gap-4 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <span>{new Date(post.publishedAt).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                  </div>
+                  <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <div class="flex flex-wrap gap-4 mt-6">
+                    <a href={`/blog/${post.slug.current}`} class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
+                      Leer artículo
+                      <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
+            <p class="text-slate-500 text-lg">Próximamente nuevos artículos. ¡Vuelve pronto!</p>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

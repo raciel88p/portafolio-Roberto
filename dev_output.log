@@ -1,0 +1,33 @@
+
+> app@0.0.1 dev
+> astro dev
+
+20:44:54 [types] Generated 1ms
+20:44:54 [content] Syncing content
+20:44:54 [content] Synced content
+20:44:54 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.3.0 ready in 461 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+20:44:54 watching for file changes...
+
+ update  ▶ New version of Astro available: 7.0.7
+  Run npx @astrojs/upgrade to update
+
+20:45:57 [200] / 106ms
+20:45:59 [200] /blog 107ms
+20:47:02 Configuration file updated. Restarting...
+20:47:02 [vite] Re-optimizing dependencies because vite config has changed
+20:47:02 [content] Syncing content
+20:47:02 [content] Synced content
+20:47:02 [types] Generated 188ms
+20:47:02 [vite] Re-optimizing dependencies because vite config has changed
+20:47:35 Configuration file updated. Restarting...
+20:47:35 [vite] Re-optimizing dependencies because lockfile has changed
+20:47:35 [content] Syncing content
+20:47:36 [content] Synced content
+20:47:36 [types] Generated 114ms
+20:47:36 [vite] Re-optimizing dependencies because vite config has changed
