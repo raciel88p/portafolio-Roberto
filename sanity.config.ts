@@ -19,4 +19,15 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  /*
+    IMPLEMENTACIÓN TÉCNICA DE ACCESO RÁPIDO:
+    Esta configuración permite que si solo tienes un método de acceso activo
+    o una sesión guardada, el sistema te redirija automáticamente sin
+    pedirte confirmación, agilizando el flujo de trabajo.
+  */
+  auth: {
+    redirectOnSingle: true,
+    mode: 'append'
+  }
 })
