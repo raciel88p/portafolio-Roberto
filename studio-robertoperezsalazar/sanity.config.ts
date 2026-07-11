@@ -1,14 +1,18 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import { visionTool } from '@sanity/vision'
 
 export default defineConfig({
   name: 'default',
   title: 'Roberto Pérez Salazar Blog',
 
-  projectId: '2grwsc7l',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || '2grwsc7l',
+  dataset: process.env.SANITY_STUDIO_DATASET || 'production',
 
-  plugins: [structureTool()],
+  plugins: [
+    structureTool(),
+    visionTool(),
+  ],
 
   schema: {
     types: [
@@ -21,6 +25,7 @@ export default defineConfig({
             name: 'title',
             title: 'Título',
             type: 'string',
+            validation: (Rule: any) => Rule.required(),
           },
           {
             name: 'slug',
@@ -30,6 +35,7 @@ export default defineConfig({
               source: 'title',
               maxLength: 96,
             },
+            validation: (Rule: any) => Rule.required(),
           },
           {
             name: 'author',
@@ -49,11 +55,13 @@ export default defineConfig({
             name: 'publishedAt',
             title: 'Fecha de Publicación',
             type: 'datetime',
+            initialValue: (new Date()).toISOString(),
           },
           {
             name: 'body',
             title: 'Contenido',
             type: 'text',
+            validation: (Rule: any) => Rule.required(),
           },
         ],
       },
