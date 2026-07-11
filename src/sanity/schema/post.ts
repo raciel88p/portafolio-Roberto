@@ -1,15 +1,17 @@
-export default {
+import { defineType, defineField } from 'sanity'
+
+export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
   fields: [
-    {
+    defineField({
       name: 'title',
       title: 'Título',
       type: 'string',
-      validation: (Rule: any) => Rule.required(),
-    },
-    {
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -17,33 +19,33 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-      validation: (Rule: any) => Rule.required(),
-    },
-    {
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       title: 'Autor',
       type: 'string',
       initialValue: 'Roberto Pérez Salazar',
-    },
-    {
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Imagen Principal',
       type: 'image',
       options: {
         hotspot: true,
       },
-    },
-    {
+    }),
+    defineField({
       name: 'publishedAt',
       title: 'Fecha de Publicación',
       type: 'datetime',
-      initialValue: (new Date()).toISOString(),
-    },
-    {
+      initialValue: () => (new Date()).toISOString(),
+    }),
+    defineField({
       name: 'body',
       title: 'Contenido',
       type: 'text',
-      validation: (Rule: any) => Rule.required(),
-    },
+      validation: (Rule) => Rule.required(),
+    }),
   ],
-}
+})
