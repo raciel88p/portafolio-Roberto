@@ -31,3 +31,30 @@
 20:47:36 [content] Synced content
 20:47:36 [types] Generated 114ms
 20:47:36 [vite] Re-optimizing dependencies because vite config has changed
+19:17:37 Configuration file updated. Restarting...
+19:17:37 [vite] Re-optimizing dependencies because vite config has changed
+19:17:38 [content] Syncing content
+19:17:38 [content] Synced content
+19:17:38 [types] Generated 506ms
+19:17:38 [vite] Re-optimizing dependencies because vite config has changed
+19:17:39 [vite] ✨ optimized dependencies changed. reloading
+19:18:04 Configuration file updated. Restarting...
+19:18:04 [vite] Re-optimizing dependencies because vite config has changed
+19:18:05 [content] Syncing content
+19:18:05 [content] Synced content
+19:18:05 [types] Generated 127ms
+19:18:05 [vite] Re-optimizing dependencies because vite config has changed
+19:19:31 [vite] changed tsconfig file detected: /app/studio-robertoperezsalazar/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+19:22:35 Configuration file updated. Restarting...
+19:22:35 [vite] Re-optimizing dependencies because vite config has changed
+19:22:35 [content] Syncing content
+19:22:35 [content] Synced content
+19:22:35 [types] Generated 171ms
+19:22:35 [vite] Re-optimizing dependencies because vite config has changed
+19:22:36 Configuration file updated. Restarting...
+19:22:36 [vite] changed tsconfig file detected: /app/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+19:22:36 [vite] Re-optimizing dependencies because lockfile has changed
+19:22:36 [content] Syncing content
+19:22:36 [content] Synced content
+19:22:36 [types] Generated 246ms
+19:22:36 [vite] Re-optimizing dependencies because vite config has changed
