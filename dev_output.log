@@ -78,3 +78,9 @@
 22:27:37 [content] Synced content
 22:27:37 [types] Generated 443ms
 22:27:37 [vite] Re-optimizing dependencies because vite config has changed
+22:58:49 Configuration file updated. Restarting...
+22:58:50 [vite] Re-optimizing dependencies because vite config has changed
+22:58:51 [content] Syncing content
+22:58:51 [content] Synced content
+22:58:51 [types] Generated 1.00s
+22:58:51 [vite] Re-optimizing dependencies because vite config has changed
