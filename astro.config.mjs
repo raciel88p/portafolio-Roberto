@@ -5,13 +5,13 @@ import sitemap from '@astrojs/sitemap';
 import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 
-// En Vercel, process.env ya está disponible. En local, Astro maneja el .env automáticamente.
+// Sincronización con el dominio real del usuario
 const projectId = (process.env.PUBLIC_SANITY_PROJECT_ID || '2grwsc7l').trim();
 const dataset = (process.env.PUBLIC_SANITY_DATASET || 'production').trim();
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://robertoperez.com',
+  site: 'https://www.robertoperezsalazar.com',
   integrations: [
     sitemap(),
     sanity({
