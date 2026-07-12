@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { sanityClient } from 'sanity:client';
 import { urlFor } from '../../data/sanity';
 import { PortableText } from '@portabletext/react';
-import { components } from '../../components/PortableTextComponents';
+import { components } from './PortableTextComponents';
 
 export async function getStaticPaths() {
   const posts = await sanityClient.fetch(`*[_type == "post"]{ "slug": slug.current }`);
@@ -20,6 +20,8 @@ const post = await sanityClient.fetch(`*[_type == "post" && slug.current == $slu
 if (!post) {
   return Astro.redirect('/404');
 }
+
+const body = post.body;
 ---
 
 <Layout
@@ -62,8 +64,11 @@ if (!post) {
         )}
 
         <div class="prose prose-lg prose-slate max-w-none">
-          {/* Implementación optimizada de PortableText con componentes externos */}
-          <PortableText value={post.body} components={components} client:load />
+          <PortableText
+              value={body}
+              components={components}
+              client:load
+          />
         </div>
 
         <footer class="mt-20 pt-10 border-t border-slate-100">

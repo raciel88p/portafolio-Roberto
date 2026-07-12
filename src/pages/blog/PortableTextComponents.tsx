@@ -1,4 +1,4 @@
-import { urlFor } from '../data/sanity';
+import { urlFor } from '../../data/sanity';
 
 export const components = {
   types: {
