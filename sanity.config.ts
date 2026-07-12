@@ -19,4 +19,9 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  // Forzar que el estudio use cookies seguras y sea compatible con subdominios
+  auth: {
+    loginMethod: 'dual',
+  }
 })
