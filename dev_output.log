@@ -112,3 +112,15 @@ Error: ENOENT: no such file or directory, scandir '/app/src/pages/admin'
     at Object.readdirSync (node:fs:1590:26)
     [...] See full stack trace in the browser, or rerun with --verbose.
 00:59:54 [WARN] [config] This project contains server-rendered routes, but no adapter is installed. This is fine for development, but an adapter will be required to build your site for production.
+16:38:35 Configuration file updated. Restarting...
+16:38:35 [vite] Re-optimizing dependencies because vite config has changed
+16:38:37 [content] Syncing content
+16:38:37 [content] Synced content
+16:38:37 [types] Generated 1.43s
+16:38:37 [vite] Re-optimizing dependencies because vite config has changed
+16:39:26 Configuration file updated. Restarting...
+16:39:26 [vite] Re-optimizing dependencies because vite config has changed
+16:39:26 [content] Syncing content
+16:39:26 [content] Synced content
+16:39:26 [types] Generated 303ms
+16:39:26 [vite] Re-optimizing dependencies because vite config has changed

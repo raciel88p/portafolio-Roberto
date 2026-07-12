@@ -44,7 +44,8 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Contenido',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
       validation: (Rule) => Rule.required(),
     }),
   ],
