@@ -126,3 +126,4 @@ Error: ENOENT: no such file or directory, scandir '/app/src/pages/admin'
 16:39:26 [vite] Re-optimizing dependencies because vite config has changed
 18:30:00 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
 18:30:00 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:34:41 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
