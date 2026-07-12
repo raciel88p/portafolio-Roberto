@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { sanityClient } from 'sanity:client';
 import { urlFor } from '../../data/sanity';
 import { PortableText } from '@portabletext/react';
+import { components } from '../../components/PortableTextComponents';
 
 export async function getStaticPaths() {
   const posts = await sanityClient.fetch(`*[_type == "post"]{ "slug": slug.current }`);
@@ -19,15 +20,6 @@ const post = await sanityClient.fetch(`*[_type == "post" && slug.current == $slu
 if (!post) {
   return Astro.redirect('/404');
 }
-
-// Personalizar cómo se ven los componentes del PortableText
-const components = {
-  types: {
-    image: ({ value }: any) => {
-      return `<img src="${urlFor(value).width(800).url()}" alt="${value.alt || 'Imagen del blog'}" class="rounded-3xl my-8 shadow-lg" />`;
-    },
-  },
-};
 ---
 
 <Layout
@@ -69,8 +61,8 @@ const components = {
           </div>
         )}
 
-        <div class="prose prose-lg prose-slate max-w-none prose-headings:text-slate-900 prose-p:text-slate-600 prose-img:rounded-3xl">
-          {/* Implementación de PortableText para renderizar contenido rico de Sanity */}
+        <div class="prose prose-lg prose-slate max-w-none">
+          {/* Implementación optimizada de PortableText con componentes externos */}
           <PortableText value={post.body} components={components} client:load />
         </div>
 
