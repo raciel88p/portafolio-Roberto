@@ -1,23 +1,37 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { Studio } from 'sanity';
-import config from '../../../sanity.config';
-
-export function getStaticPaths() {
-  return [{ params: { } }];
-}
 ---
 
 <Layout title="Sanity Studio | Admin">
-  <div class="h-screen w-full">
-    <Studio config={config} client:only="react" />
+  <div class="h-screen w-full bg-gray-50">
+    <div id="sanity-studio-root" class="h-full">
+      {/* El panel se cargará aquí vía JavaScript puro para máxima estabilidad */}
+    </div>
   </div>
 </Layout>
 
+<script>
+  // Importación dinámica para evitar errores de renderizado en el servidor (React 130)
+  import { renderStudio } from 'sanity'
+  import config from '../../../sanity.config'
+
+  const target = document.getElementById('sanity-studio-root')
+  if (target) {
+    renderStudio(target, config)
+  }
+</script>
+
 <style is:global>
+  /* Reset total para el Studio */
   body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  #sanity-studio-root {
+    height: 100vh;
+    width: 100vw;
   }
 </style>
