@@ -41,5 +41,10 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.3"
+  },
+  "overrides": {
+    "sanity-plugin-vercel-deploy": {
+      "sanity": "$sanity"
+    }
   }
 }

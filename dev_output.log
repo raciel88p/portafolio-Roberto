@@ -145,3 +145,26 @@ Error: ENOENT: no such file or directory, scandir '/app/src/pages/admin'
 17:56:27 [vite] Port 4321 is in use, trying another one...
 18:31:37 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
 18:32:51 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:43:26 Configuration file updated. Restarting...
+18:43:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:43:27 [vite] Re-optimizing dependencies because vite config has changed
+18:43:29 [content] Syncing content
+18:43:29 [content] Synced content
+18:43:29 [types] Generated 1.96s
+18:43:29 [vite] Re-optimizing dependencies because lockfile has changed
+18:43:29 [vite] Port 4321 is in use, trying another one...
+18:43:44 [vite] ✨ optimized dependencies changed. reloading
+18:43:46 Configuration file updated. Restarting...
+18:43:46 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:43:47 [content] Syncing content
+18:43:47 [content] Synced content
+18:43:47 [types] Generated 389ms
+18:43:47 [vite] Re-optimizing dependencies because vite config has changed
+18:43:47 [vite] Port 4321 is in use, trying another one...
+18:43:53 [vite] ✨ optimized dependencies changed. reloading
+18:44:59 Configuration file updated. Restarting...
+18:44:59 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:44:59 [content] Syncing content
+18:44:59 [content] Synced content
+18:44:59 [types] Generated 294ms
+18:44:59 [vite] Re-optimizing dependencies because vite config has changed
