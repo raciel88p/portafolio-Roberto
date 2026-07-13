@@ -8,8 +8,8 @@ export default defineConfig({
   name: 'default',
   title: 'Roberto Pérez Salazar Blog',
 
-  projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID || '2grwsc7l',
-  dataset: import.meta.env.PUBLIC_SANITY_DATASET || 'production',
+  projectId: '2grwsc7l',
+  dataset: 'production',
   basePath: '/admin',
 
   plugins: [
