@@ -24,15 +24,9 @@ export default defineType({
     defineField({
       name: 'author',
       title: 'Autor',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'name',
-          title: 'Nombre',
-          type: 'string',
-          initialValue: 'Roberto Pérez Salazar',
-        })
-      ]
+      type: 'reference',
+      to: [{ type: 'author' }],
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'mainImage',

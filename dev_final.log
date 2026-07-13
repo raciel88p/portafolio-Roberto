@@ -23,3 +23,5 @@
 17:56:27 [content] Synced content
 17:56:27 [types] Generated 1.10s
 17:56:27 [vite] Re-optimizing dependencies because lockfile has changed
+18:31:37 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+18:32:51 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
