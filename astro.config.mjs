@@ -6,8 +6,8 @@ import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 
 // Sincronización con el dominio real del usuario
-const projectId = (import.meta.env.PUBLIC_SANITY_PROJECT_ID || '2grwsc7l').trim();
-const dataset = (import.meta.env.PUBLIC_SANITY_DATASET || 'production').trim();
+const projectId = '2grwsc7l';
+const dataset = 'production';
 
 // https://astro.build/config
 export default defineConfig({
