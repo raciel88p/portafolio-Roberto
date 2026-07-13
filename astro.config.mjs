@@ -6,12 +6,19 @@ import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 
 // Sincronización con el dominio real del usuario
-const projectId = (process.env.PUBLIC_SANITY_PROJECT_ID || '2grwsc7l').trim();
-const dataset = (process.env.PUBLIC_SANITY_DATASET || 'production').trim();
+const projectId = (import.meta.env.PUBLIC_SANITY_PROJECT_ID || '2grwsc7l').trim();
+const dataset = (import.meta.env.PUBLIC_SANITY_DATASET || 'production').trim();
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.robertoperezsalazar.com',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
   integrations: [
     sitemap(),
     sanity({
@@ -19,6 +26,7 @@ export default defineConfig({
       dataset,
       useCdn: true,
       apiVersion: '2023-05-03',
+      // @ts-ignore
       studioPath: '/admin',
     }),
     react()

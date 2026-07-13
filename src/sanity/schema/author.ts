@@ -51,5 +51,18 @@ export default defineType({
       title: 'URL de YouTube',
       type: 'url',
     }),
+    defineField({
+      name: 'language',
+      title: 'Idioma',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Español', value: 'es' },
+          { title: 'English', value: 'en' },
+        ],
+      },
+      initialValue: 'es',
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 })

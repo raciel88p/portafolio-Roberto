@@ -1,26 +1,26 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
 import { sanityClient } from 'sanity:client';
-import { urlFor } from '../../data/sanity';
-import BlogCard from '../../components/BlogCard.jsx';
+import { urlFor } from '../../../data/sanity';
+import BlogCard from '../../../components/BlogCard.jsx';
 
 export async function getStaticPaths() {
-  const authors = await sanityClient.fetch(`*[_type == "author" && (language == "es" || !defined(language))]{ "slug": slug.current }`);
+  const authors = await sanityClient.fetch(`*[_type == "author" && language == "en"]{ "slug": slug.current }`);
   return authors.map((author: any) => ({
     params: { slug: author.slug },
   }));
 }
 
-const lang = 'es';
+const lang = 'en';
 const { slug } = Astro.params;
 
 // Traer datos del autor y sus posts relacionados
 const data = await sanityClient.fetch(`
-  *[_type == "author" && slug.current == $slug && (language == "es" || !defined(language))][0]{
+  *[_type == "author" && slug.current == $slug && language == "en"][0]{
     ...,
-    "posts": *[_type == "post" && references(^._id) && (language == "es" || !defined(language))] | order(publishedAt desc)
+    "posts": *[_type == "post" && references(^._id) && language == "en"] | order(publishedAt desc)
   }
 `, { slug });
 
@@ -29,9 +29,9 @@ if (!data) {
 }
 
 const t = {
-  author_at: "Autor en",
-  published_by: "Artículos publicados por",
-  no_posts: "Este autor aún no ha publicado artículos."
+  author_at: "Author at",
+  published_by: "Articles published by",
+  no_posts: "This author hasn't published any articles yet."
 };
 ---
 

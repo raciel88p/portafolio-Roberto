@@ -21,12 +21,41 @@ const technologies = [
   "WordPress", "PHP", "Node js", "Python", "Webflow",
   "Automatizaciones agenticas", "Asistentes agenticos", "N8n", "Looker", "Google Tag Manager", "Google Analytics 4"
 ];
+
+const currentLang = Astro.currentLocale || 'es';
+const isEn = currentLang === 'en';
+
+const blogLink = isEn ? '/en/blog' : '/blog';
+const sobreMiLink = isEn ? '/en/sobre-mi' : '/sobre-mi';
+const homeLink = isEn ? '/en' : '/';
+
+// Traducciones básicas para el Navbar
+const navT = {
+  es: {
+    industries: "Industrias",
+    services: "Servicios",
+    tech: "Tecnología",
+    about: "Sobre Mí",
+    blog: "Blog",
+    projects: "Proyectos",
+    cta: "Trabajemos Juntos"
+  },
+  en: {
+    industries: "Industries",
+    services: "Services",
+    tech: "Technology",
+    about: "About Me",
+    blog: "Blog",
+    projects: "Projects",
+    cta: "Let's Work Together"
+  }
+}[currentLang as 'es' | 'en'];
 ---
 <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 items-center">
       <div class="flex-shrink-0">
-        <a href="/" class="text-2xl font-bold tracking-tighter text-slate-900">ROBERTO<span class="text-blue-600">PÉREZ</span></a>
+        <a href={homeLink} class="text-2xl font-bold tracking-tighter text-slate-900">ROBERTO<span class="text-blue-600">PÉREZ</span></a>
       </div>
       <!-- Mobile menu button -->
       <div class="flex items-center md:hidden">
@@ -43,7 +72,7 @@ const technologies = [
           <a href="/nearshore" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Nearshore</a>
           <div class="relative group">
             <button class="flex items-center text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
-              Industrias
+              {navT.industries}
               <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -61,7 +90,7 @@ const technologies = [
 
           <div class="relative group">
             <button class="flex items-center text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
-              Servicios
+              {navT.services}
               <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -79,7 +108,7 @@ const technologies = [
 
           <div class="relative group">
             <button class="flex items-center text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
-              Tecnología
+              {navT.tech}
               <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -95,10 +124,17 @@ const technologies = [
             </div>
           </div>
 
-          <a href="/sobre-mi" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Sobre Mí</a>
-          <a href="/blog" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
-          <a href="/proyectos" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Proyectos</a>
-          <a href="/#contacto" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 ml-4">Trabajemos Juntos</a>
+          <a href={sobreMiLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.about}</a>
+          <a href={blogLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.blog}</a>
+          <a href="/proyectos" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.projects}</a>
+
+          <div class="flex items-center border-l border-slate-100 ml-4 pl-4 gap-2">
+            <a href="/blog" class={`text-xs font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>ES</a>
+            <span class="text-slate-200">|</span>
+            <a href="/en/blog" class={`text-xs font-bold ${isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>EN</a>
+          </div>
+
+          <a href="/#contacto" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 ml-4">{navT.cta}</a>
         </div>
       </div>
     </div>
@@ -111,7 +147,7 @@ const technologies = [
       <!-- Industries Mobile -->
       <div class="py-2">
         <button id="mobile-industries-toggle" class="flex items-center justify-between w-full text-slate-900 font-bold text-lg py-2">
-          Industrias
+          {navT.industries}
           <svg class="ml-1 w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
@@ -128,7 +164,7 @@ const technologies = [
       <!-- Services Mobile -->
       <div class="py-2">
         <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-slate-900 font-bold text-lg py-2">
-          Servicios
+          {navT.services}
           <svg class="ml-1 w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
@@ -145,7 +181,7 @@ const technologies = [
       <!-- Tech Mobile -->
       <div class="py-2">
         <button id="mobile-tech-toggle" class="flex items-center justify-between w-full text-slate-900 font-bold text-lg py-2">
-          Tecnología
+          {navT.tech}
           <svg class="ml-1 w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
@@ -159,13 +195,18 @@ const technologies = [
         </div>
       </div>
 
-      <a href="/sobre-mi" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">Sobre Mí</a>
-      <a href="/blog" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">Blog</a>
-      <a href="/proyectos" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">Proyectos</a>
+      <a href={sobreMiLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.about}</a>
+      <a href={blogLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.blog}</a>
+      <a href="/proyectos" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.projects}</a>
+
+      <div class="flex gap-4 py-6 border-b border-slate-50">
+        <a href="/blog" class={`text-sm font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400'}`}>Español (ES)</a>
+        <a href="/en/blog" class={`text-sm font-bold ${isEn ? 'text-blue-600' : 'text-slate-400'}`}>English (EN)</a>
+      </div>
 
       <div class="pt-10">
         <a href="/#contacto" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-2xl font-bold shadow-lg">
-          Trabajemos Juntos
+          {navT.cta}
         </a>
       </div>
     </div>
