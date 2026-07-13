@@ -44,10 +44,11 @@ const body = post.body;
           </h1>
           <div class="flex items-center gap-4 py-6 border-y border-slate-100">
             <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-              RP
+              {post.author?.name ? post.author.name.substring(0, 2).toUpperCase() : 'RP'}
             </div>
             <div>
-              <p class="text-sm font-bold text-slate-900">Roberto Pérez Salazar</p>
+              {/* Implementación de la etiqueta solicitada para el nombre del autor */}
+              <p class="text-sm font-bold text-slate-900">{post.author?.name || 'Roberto Pérez Salazar'}</p>
               <p class="text-xs text-slate-500">Consultor SEO y Marketing Digital</p>
             </div>
           </div>
