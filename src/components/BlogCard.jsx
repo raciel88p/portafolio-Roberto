@@ -7,6 +7,10 @@ export default function BlogCard({ post }) {
     day: 'numeric'
   });
 
+  const lang = post.language || 'es';
+  const blogPath = lang === 'es' ? '/blog' : `/${lang}/blog`;
+  const readMoreText = lang === 'es' ? 'Leer artículo' : 'Read article';
+
   return (
     <article className="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
       {post.mainImage && (
@@ -28,10 +32,10 @@ export default function BlogCard({ post }) {
         </h3>
         <div className="mt-auto pt-6">
           <a
-            href={`/blog/${post.slug.current}`}
+            href={`${blogPath}/${post.slug.current}`}
             className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center"
           >
-            Leer artículo
+            {readMoreText}
             <svg
               className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1"
               fill="none"

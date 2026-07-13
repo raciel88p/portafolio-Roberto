@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
 import { sanityClient } from 'sanity:client';
-import BlogCard from "../../components/BlogCard.jsx";
+import BlogCard from "../../../components/BlogCard.jsx";
 import { Search } from "lucide-react";
 
-const lang = 'es';
+const lang = 'en';
 
 const posts = await sanityClient.fetch(
   `*[_type == "post" && language == $lang] | order(publishedAt desc)`,
@@ -14,12 +14,12 @@ const posts = await sanityClient.fetch(
 );
 
 const t = {
-  title: "Blog | Roberto Pérez Salazar - Consultor SEO y Marketing Digital",
-  h1: "Blog: Estrategias de ",
-  h1_span: "SEO e Inteligencia Artificial",
-  p: "Comparto mi experiencia y conocimientos sobre cómo escalar negocios digitales utilizando las últimas tendencias en SEO, IA Generativa y marketing estratégico.",
-  search_placeholder: "Buscar artículos...",
-  no_posts: "Próximamente nuevos artículos. ¡Vuelve pronto!"
+  title: "Blog | Roberto Pérez Salazar - SEO Consultant & Digital Marketing",
+  h1: "Blog: Strategies for ",
+  h1_span: "SEO and Artificial Intelligence",
+  p: "Sharing my experience and knowledge on how to scale digital businesses using the latest trends in SEO, Generative AI, and strategic marketing.",
+  search_placeholder: "Search articles...",
+  no_posts: "New articles coming soon. Stay tuned!"
 };
 ---
 

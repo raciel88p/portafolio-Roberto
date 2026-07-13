@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+
+const expertise = [
+  "Technical and International SEO",
+  "Growth Marketing",
+  "Digital Analytics and Data",
+  "AI Applied to Marketing",
+  "Process Automation",
+  "Web Development",
+  "CRO (Conversion Rate Optimization)",
+  "Local SEO",
+  "Web Architecture"
+];
+
+// JSON-LD schema for EEAT (Expert Person)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Roberto Pérez Salazar",
+  "jobTitle": "SEO and Digital Marketing Consultant",
+  "url": "https://www.robertoperezsalazar.com/en/sobre-mi",
+  "sameAs": [
+    "https://www.linkedin.com/in/roberto88/",
+    "https://www.youtube.com/@recursosparaemprendedores88"
+  ],
+  "description": "SEO Specialist and Growth Marketer with over 15 years of experience helping companies scale through AI and digital strategy.",
+  "knowsAbout": expertise
+};
+---
+
+<Layout
+  title="About Me - Roberto Pérez Salazar | Digital Strategy and Growth"
+  description="Meet Roberto Pérez Salazar, an specialist with over 15 years of experience in SEO, Growth Marketing, and AI. Discover how I help companies scale sustainably."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <Navbar />
+
+  <main class="pt-32 pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+          More than Traffic: <span class="text-blue-600">Real Growth Systems</span>
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed">
+          I am Roberto Pérez Salazar, an specialist in SEO, Growth Marketing, Artificial Intelligence, and Web Development, with over 15 years of experience helping companies transform their digital presence into real growth.
+        </p>
+      </header>
+
+      <!-- Content -->
+      <div class="prose prose-lg prose-slate max-w-none mb-20">
+        <p class="text-lg text-slate-600 leading-relaxed mb-8 border-l-4 border-blue-600 pl-6 py-2 bg-blue-50/30">
+          I don't just focus on increasing traffic. My goal is to build systems that generate customers, optimize processes, and grow a business sustainably.
+        </p>
+
+        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">My Journey: Resilience and Entrepreneurship</h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          My journey combines corporate experience with entrepreneurship. After my wife and I both lost our jobs in the same week, we decided to build our own company from scratch.
+        </p>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8">
+          With minimal investment, we developed a strategy based on SEO, automation, digital advertising, and conversion optimization that turned that project into a profitable business, generating employment and proving that a good strategy can change the course of a company and its people.
+        </p>
+
+        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">Experience and Specialization</h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          I have worked with national and international organizations developing strategies for:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {expertise.map(item => (
+            <div class="flex items-center space-x-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="font-bold text-slate-800">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">The Future of Business</h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          Today I am focused on the intersection between Marketing, Artificial Intelligence, and Automation. I believe the future belongs to companies capable of combining data, creativity, and AI agents to scale without proportionally increasing their costs.
+        </p>
+
+        <div class="bg-blue-600 text-white p-10 rounded-3xl my-16 shadow-2xl relative overflow-hidden">
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold mb-4 italic">My philosophy is simple:</h3>
+            <p class="text-3xl md:text-4xl font-bold leading-tight">
+              "Technology alone does not generate results. Strategy does."
+            </p>
+          </div>
+          <!-- Decoration -->
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">How can we work together?</h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          Every project I develop seeks to answer one single question:
+        </p>
+        <p class="text-2xl font-bold text-slate-900 bg-slate-50 p-6 rounded-2xl border-l-8 border-blue-600 mb-12">
+          How can we build a system that generates more customers, more efficiency, and more value for the business?
+        </p>
+
+        <div class="flex justify-center my-12">
+            <a href="/en/#contacto" class="bg-blue-600 text-white px-10 py-5 rounded-full font-bold hover:bg-blue-700 transition-all shadow-xl text-lg">
+                Schedule a Strategic Consultancy
+            </a>
+        </div>
+
+        <p class="text-xl font-bold text-slate-900 text-center">
+          I build digital systems that convert strategy, data, and artificial intelligence into measurable growth.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Contact />
+  <Footer />
+</Layout>

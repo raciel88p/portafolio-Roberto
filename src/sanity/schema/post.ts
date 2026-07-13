@@ -49,5 +49,18 @@ export default defineType({
       of: [{ type: 'block' }, { type: 'image' }],
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'language',
+      title: 'Idioma',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Español', value: 'es' },
+          { title: 'English', value: 'en' },
+        ],
+      },
+      initialValue: 'es',
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 })
