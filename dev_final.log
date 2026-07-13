@@ -1,0 +1,18 @@
+
+> app@0.0.1 dev
+> astro dev
+
+17:27:53 [types] Generated 1ms
+17:27:53 [content] Syncing content
+17:27:53 [content] Synced content
+17:27:53 [vite] Re-optimizing dependencies because vite config has changed
+17:27:53 [vite] Port 4321 is in use, trying another one...
+
+ astro  v5.3.0 ready in 456 ms
+
+┃ Local    http://localhost:4322/
+┃ Network  use --host to expose
+
+17:27:53 watching for file changes...
+17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
