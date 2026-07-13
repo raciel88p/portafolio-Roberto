@@ -16,3 +16,10 @@
 17:27:53 watching for file changes...
 17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
 17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+17:56:25 Configuration file updated. Restarting...
+17:56:25 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+17:56:26 [vite] Re-optimizing dependencies because vite config has changed
+17:56:27 [content] Syncing content
+17:56:27 [content] Synced content
+17:56:27 [types] Generated 1.10s
+17:56:27 [vite] Re-optimizing dependencies because lockfile has changed

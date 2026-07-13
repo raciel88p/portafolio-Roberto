@@ -136,3 +136,10 @@ Error: ENOENT: no such file or directory, scandir '/app/src/pages/admin'
 19:06:15 [vite] Re-optimizing dependencies because lockfile has changed
 17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
 17:29:27 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+17:56:25 Configuration file updated. Restarting...
+17:56:25 [WARN] Unsupported file type /app/src/pages/blog/PortableTextComponents.tsx found. Prefix filename with an underscore (`_`) to ignore.
+17:56:27 [content] Syncing content
+17:56:27 [content] Synced content
+17:56:27 [types] Generated 1.09s
+17:56:27 [vite] Re-optimizing dependencies because lockfile has changed
+17:56:27 [vite] Port 4321 is in use, trying another one...
