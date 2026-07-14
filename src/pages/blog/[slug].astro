@@ -23,10 +23,8 @@ const post = await sanityClient.fetch(`
       author._type == "reference" => author-> {
         ...
       },
-      author != null => {
-        "name": author,
-        "jobTitle": "Consultor SEO",
-        "bio": "Consultor especializado en SEO y Marketing Digital."
+      author != null => *[_type == "author" && name == ^.author][0] {
+        ...
       },
       null
     )
