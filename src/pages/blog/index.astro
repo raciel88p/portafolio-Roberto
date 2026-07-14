@@ -17,9 +17,10 @@ const posts = await sanityClient.fetch(
         image,
         jobTitle
       },
-      author != null => {
-        "name": author,
-        "jobTitle": "Consultor SEO"
+      author != null => *[_type == "author" && name == ^.author][0] {
+        name,
+        image,
+        jobTitle
       },
       null
     )
