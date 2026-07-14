@@ -135,52 +135,6 @@ const jsonLd = {
           />
         </div>
 
-        {/* Caja de autor optimizada para EEAT */}
-        {post.author && (
-          <footer class="mt-24 pt-10 border-t border-slate-100">
-            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-10 border border-slate-100 shadow-sm">
-              {post.author.image && (
-                <div class="relative">
-                    <img
-                      src={urlFor(post.author.image).width(200).height(200).url()}
-                      alt={post.author.name}
-                      class="w-32 h-32 rounded-full object-cover shadow-2xl border-4 border-white"
-                    />
-                    <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-full">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    </div>
-                </div>
-              )}
-              <div class="flex-1 text-center md:text-left">
-                <h3 class="text-2xl font-bold text-slate-900 mb-2">{t.about} {post.author.name}</h3>
-                <p class="text-blue-600 font-bold text-sm mb-4 uppercase tracking-widest">{post.author.jobTitle}</p>
-                <p class="text-slate-600 mb-8 leading-relaxed text-lg">
-                  {post.author.bio}
-                </p>
-
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 items-center">
-                  <a href={authorLink} class="inline-flex items-center font-bold text-slate-900 hover:text-blue-600 transition-colors group">
-                    {t.trajectory}
-                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                  </a>
-                  <span class="text-slate-300 hidden md:block">|</span>
-                  <div class="flex gap-4">
-                    {post.author.linkedin && (
-                      <a href={post.author.linkedin} target="_blank" class="text-slate-400 hover:text-blue-600 transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.732s.784-1.732 1.75-1.732 1.75.779 1.75 1.732-.784 1.732-1.75 1.732zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                      </a>
-                    )}
-                    {post.author.youtube && (
-                      <a href={post.author.youtube} target="_blank" class="text-slate-400 hover:text-red-600 transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer>
-        )}
       </div>
     </article>
   </main>
