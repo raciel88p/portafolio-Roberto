@@ -17,13 +17,21 @@ export async function getStaticPaths() {
 const lang = 'es';
 const { slug } = Astro.params;
 const post = await sanityClient.fetch(`
-  *[_type == "post" && slug.current == $slug && (language == "es" || !defined(language))][0]{
+  *[_type == "post" && slug.current == $slug && (language == $lang || !defined(language))][0]{
     ...,
-    "author": author-> {
-      ...
-    }
+    "author": select(
+      author._type == "reference" => author-> {
+        ...
+      },
+      author != null => {
+        "name": author,
+        "jobTitle": "Consultor SEO",
+        "bio": "Consultor especializado en SEO y Marketing Digital."
+      },
+      null
+    )
   }
-`, { slug });
+`, { slug, lang });
 
 if (!post) {
   return Astro.redirect('/404');
