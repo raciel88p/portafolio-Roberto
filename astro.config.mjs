@@ -24,7 +24,7 @@ export default defineConfig({
     sanity({
       projectId,
       dataset,
-      useCdn: true,
+      useCdn: false,
       apiVersion: '2023-05-03',
       // @ts-ignore
       studioPath: '/admin',

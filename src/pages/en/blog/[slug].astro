@@ -19,9 +19,17 @@ const { slug } = Astro.params;
 const post = await sanityClient.fetch(`
   *[_type == "post" && slug.current == $slug && language == "en"][0]{
     ...,
-    "author": author-> {
-      ...
-    }
+    "author": select(
+      author._type == "reference" => author-> {
+        ...
+      },
+      author != null => {
+        "name": author,
+        "jobTitle": "SEO Consultant",
+        "bio": "Specialized SEO and Digital Marketing Consultant."
+      },
+      null
+    )
   }
 `, { slug });
 

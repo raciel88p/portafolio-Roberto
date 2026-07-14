@@ -9,7 +9,21 @@ import { Search } from "lucide-react";
 const lang = 'es';
 
 const posts = await sanityClient.fetch(
-  `*[_type == "post" && language == $lang] | order(publishedAt desc)`,
+  `*[_type == "post" && (language == $lang || !defined(language))] | order(publishedAt desc) {
+    ...,
+    "author": select(
+      author._type == "reference" => author-> {
+        name,
+        image,
+        jobTitle
+      },
+      author != null => {
+        "name": author,
+        "jobTitle": "Consultor SEO"
+      },
+      null
+    )
+  }`,
   { lang }
 );
 

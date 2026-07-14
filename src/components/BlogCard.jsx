@@ -27,10 +27,31 @@ export default function BlogCard({ post }) {
         <div className="flex items-center gap-4 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
           <span>{publishedDate}</span>
         </div>
-        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+        <h3 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-blue-600 transition-colors line-clamp-2">
           {post.title}
         </h3>
-        <div className="mt-auto pt-6">
+
+        {post.author && (
+          <div className="flex items-center gap-3 mb-6">
+            {post.author.image ? (
+              <img
+                src={urlFor(post.author.image).width(40).height(40).url()}
+                alt={post.author.name}
+                className="w-10 h-10 rounded-full object-cover border border-slate-100"
+              />
+            ) : (
+              <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 font-bold text-xs">
+                {post.author.name.substring(0, 2).toUpperCase()}
+              </div>
+            )}
+            <div>
+              <p className="text-sm font-bold text-slate-900 leading-none mb-1">{post.author.name}</p>
+              <p className="text-xs text-slate-400 line-clamp-1">{post.author.jobTitle}</p>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-auto pt-6 border-t border-slate-50">
           <a
             href={`${blogPath}/${post.slug.current}`}
             className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center"
