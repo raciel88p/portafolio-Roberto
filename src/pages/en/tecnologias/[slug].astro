@@ -1,0 +1,132 @@
+---
+import TechnologyLayout from '../../../layouts/TechnologyLayout.astro';
+
+export function getStaticPaths() {
+  const technologies = [
+    {
+      name: "WordPress",
+      slug: "wordpress",
+      icon: "🌐",
+      description: "Expert WordPress optimization and development to maximize performance and SEO.",
+      details: [
+        { title: "Specialized WPO", text: "Loading speed and Core Web Vitals optimization specific to WordPress architectures." },
+        { title: "Security and Scalability", text: "Robust configuration and deployment of scalable solutions for corporate and e-commerce sites." }
+      ]
+    },
+    {
+      name: "PHP",
+      slug: "php",
+      icon: "🐘",
+      description: "Solid and efficient backend development using PHP for custom web applications.",
+      details: [
+        { title: "Robust Applications", text: "Building complex and secure business logic with PHP best practices." },
+        { title: "Systems Integration", text: "Seamless connection with databases and external services for advanced functionalities." }
+      ]
+    },
+    {
+      name: "Node js",
+      slug: "node-js",
+      icon: "🟢",
+      description: "Scalable and high-performance solutions using Node.js for modern environments.",
+      details: [
+        { title: "Event-Driven Architecture", text: "Development of highly concurrent and efficient real-time applications." },
+        { title: "APIs and Microservices", text: "Building modular and fast services for modern digital ecosystems." }
+      ]
+    },
+    {
+      name: "Python",
+      slug: "python",
+      icon: "🐍",
+      description: "Power your data and automation with the leading language in AI and data science.",
+      details: [
+        { title: "Advanced Automation", text: "Intelligent scripts to optimize repetitive processes and technical workflows." },
+        { title: "AI and Processing", text: "Implementation of logic for language models and analysis of large data volumes." }
+      ]
+    },
+    {
+      name: "Webflow",
+      slug: "webflow",
+      icon: "🎨",
+      description: "High-end visual design combined with clean frontend development power.",
+      details: [
+        { title: "High-End No-Code", text: "Development of premium web experiences with sophisticated animations and integrated SEO." },
+        { title: "Flexible CMS", text: "Dynamic content structures that allow agile and professional management." }
+      ]
+    },
+    {
+      name: "Agentic Automations",
+      slug: "automatizaciones-agenticas",
+      icon: "⚙️",
+      description: "Business process optimization through the strategic use of automation driven by autonomous agents.",
+      details: [
+        { title: "Autonomous Flows", text: "Process design that doesn't just follow rules but makes decisions to meet goals." },
+        { title: "Self-Managed Systems", text: "Integration of agents that monitor and adjust workflows in real-time." }
+      ]
+    },
+    {
+      name: "Agentic Assistants",
+      slug: "asistentes-agenticos",
+      icon: "🤝",
+      description: "Development of intelligent assistants designed to collaborate actively in complex tasks.",
+      details: [
+        { title: "Specialized Copilots", text: "Creation of assistants with deep context for specific business areas." },
+        { title: "Natural Interaction", text: "Conversational interfaces that execute actions and solve problems proactively." }
+      ]
+    },
+    {
+      name: "N8n",
+      slug: "n8n",
+      icon: "🔗",
+      description: "Automation of complex workflows connecting all your digital tools.",
+      details: [
+        { title: "Intelligent Workflows", text: "Design of automations that eliminate friction between different SaaS platforms." },
+        { title: "Low-Code Integration", text: "Robust and personalized connections to scale operations without technical limits." }
+      ]
+    },
+    {
+      name: "Looker",
+      slug: "looker",
+      icon: "📊",
+      description: "Data visualization and business intelligence for evidence-based decisions.",
+      details: [
+        { title: "Strategic Dashboards", text: "Creation of interactive dashboards that reveal critical insights for growth." },
+        { title: "Data Modeling", text: "Structuring information for clear and actionable data governance." }
+      ]
+    },
+    {
+      name: "Google Tag Manager",
+      slug: "google-tag-manager",
+      icon: "🏷️",
+      description: "Advanced tag management for precise tracking without constant technical intervention.",
+      details: [
+        { title: "Advanced Tracking", text: "Implementation of complex event measurement to understand user behavior." },
+        { title: "Marketing Governance", text: "Total control over tracking tools and their impact on web performance." }
+      ]
+    },
+    {
+      name: "Google Analytics 4",
+      slug: "google-analytics-4",
+      icon: "📈",
+      description: "Deep analysis of the modern user through the latest generation of Analytics.",
+      details: [
+        { title: "Multi-channel Attribution", text: "Complete understanding of the customer journey through different devices and channels." },
+        { title: "Predictive Analysis", text: "Using GA4's AI capabilities to anticipate trends and buying behaviors." }
+      ]
+    },
+  ];
+
+  return technologies.map((tech) => ({
+    params: { slug: tech.slug },
+    props: { tech },
+  }));
+}
+
+const { tech } = Astro.props;
+---
+
+<TechnologyLayout
+  title={`${tech.name} - Technology | Roberto Pérez Salazar`}
+  description={tech.description}
+  icon={tech.icon}
+  details={tech.details}
+/>

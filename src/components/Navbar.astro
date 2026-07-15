@@ -1,20 +1,27 @@
 ---
-const industries = [
+const currentLang = Astro.currentLocale || 'es';
+const isEn = currentLang === 'en';
+
+const industries = isEn ? [
+  "Tech Industry", "Real Estate", "Health", "Startups", "Betting",
+  "Online Poker", "Spiritual", "E-commerce", "SaaS",
+  "Cyber Security", "R&D", "Insurance", "Tourism"
+] : [
   "Industria Tech", "Real State", "Salud", "Startups", "Betting",
   "Poker Online", "Espiritual", "Tiendas Electrónicas", "Saas",
   "Ciber Seguridad", "Investigación y desarrollo", "Seguros", "Turismo"
 ];
 
 const services = [
-  { title: "LLMs Optimization", slug: "llm-optimization" },
-  { title: "Local SEO", slug: "local-seo" },
-  { title: "Youtube SEO", slug: "youtube-seo" },
-  { title: "Wordpress SEO", slug: "wordpress-seo" },
-  { title: "Headless CMS SEO", slug: "headless-cms-seo" },
-  { title: "Ai Growth Engineer", slug: "ai-growth-engineer" },
-  { title: "Consultoría SEO", slug: "consultor-seo" },
-  { title: "Desarrollo Web & Apps", slug: "desarrollo-web-apps" },
-  { title: "Programmatic SEO", slug: "programmatic-seo" }
+  { title: isEn ? "LLMs Optimization" : "LLMs Optimization", slug: "llm-optimization" },
+  { title: isEn ? "Local SEO" : "Local SEO", slug: "local-seo" },
+  { title: isEn ? "Youtube SEO" : "Youtube SEO", slug: "youtube-seo" },
+  { title: isEn ? "Wordpress SEO" : "Wordpress SEO", slug: "wordpress-seo" },
+  { title: isEn ? "Headless CMS SEO" : "Headless CMS SEO", slug: "headless-cms-seo" },
+  { title: isEn ? "AI Growth Engineer" : "Ai Growth Engineer", slug: "ai-growth-engineer" },
+  { title: isEn ? "SEO Consulting" : "Consultoría SEO", slug: "consultor-seo" },
+  { title: isEn ? "Web & App Development" : "Desarrollo Web & Apps", slug: "desarrollo-web-apps" },
+  { title: isEn ? "Programmatic SEO" : "Programmatic SEO", slug: "programmatic-seo" }
 ];
 
 const technologies = [
@@ -22,12 +29,11 @@ const technologies = [
   "Automatizaciones agenticas", "Asistentes agenticos", "N8n", "Looker", "Google Tag Manager", "Google Analytics 4"
 ];
 
-const currentLang = Astro.currentLocale || 'es';
-const isEn = currentLang === 'en';
-
 const blogLink = isEn ? '/en/blog' : '/blog';
 const sobreMiLink = isEn ? '/en/sobre-mi' : '/sobre-mi';
 const homeLink = isEn ? '/en' : '/';
+const projectsLink = isEn ? '/en/proyectos' : '/proyectos';
+const nearshoreLink = isEn ? '/en/nearshore' : '/nearshore';
 
 // Traducciones básicas para el Navbar
 const navT = {
@@ -38,7 +44,8 @@ const navT = {
     about: "Sobre Mí",
     blog: "Blog",
     projects: "Proyectos",
-    cta: "Trabajemos Juntos"
+    cta: "Trabajemos Juntos",
+    nearshore: "Nearshore"
   },
   en: {
     industries: "Industries",
@@ -47,9 +54,17 @@ const navT = {
     about: "About Me",
     blog: "Blog",
     projects: "Projects",
-    cta: "Let's Work Together"
+    cta: "Let's Work Together",
+    nearshore: "Nearshore"
   }
 }[currentLang as 'es' | 'en'];
+
+const langPrefix = isEn ? '/en' : '';
+
+// Función para normalizar slugs (misma lógica que en el original pero centralizada)
+function getIndustrySlug(industry: string) {
+    return industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+}
 ---
 <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +84,7 @@ const navT = {
 
       <div class="hidden md:block">
         <div class="ml-10 flex items-center space-x-8">
-          <a href="/nearshore" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Nearshore</a>
+          <a href={nearshoreLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.nearshore}</a>
           <div class="relative group">
             <button class="flex items-center text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
               {navT.industries}
@@ -80,7 +95,7 @@ const navT = {
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {industries.map(industry => (
-                  <a href={`/industrias/${industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href={`${langPrefix}/industrias/${getIndustrySlug(industry)}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     {industry}
                   </a>
                 ))}
@@ -98,7 +113,7 @@ const navT = {
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {services.map(service => (
-                  <a href={`/servicios/${service.slug}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href={`${langPrefix}/servicios/${service.slug}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     {service.title}
                   </a>
                 ))}
@@ -116,7 +131,7 @@ const navT = {
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {technologies.map(tech => (
-                  <a href={`/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href={`${langPrefix}/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     {tech}
                   </a>
                 ))}
@@ -126,15 +141,15 @@ const navT = {
 
           <a href={sobreMiLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.about}</a>
           <a href={blogLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.blog}</a>
-          <a href="/proyectos" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.projects}</a>
+          <a href={projectsLink} class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">{navT.projects}</a>
 
           <div class="flex items-center border-l border-slate-100 ml-4 pl-4 gap-2">
-            <a href="/blog" class={`text-xs font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>ES</a>
+            <a href="/" class={`text-xs font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>ES</a>
             <span class="text-slate-200">|</span>
-            <a href="/en/blog" class={`text-xs font-bold ${isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>EN</a>
+            <a href="/en" class={`text-xs font-bold ${isEn ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>EN</a>
           </div>
 
-          <a href="/#contacto" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 ml-4">{navT.cta}</a>
+          <a href={isEn ? "/en/#contacto" : "/#contacto"} class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 ml-4">{navT.cta}</a>
         </div>
       </div>
     </div>
@@ -143,7 +158,7 @@ const navT = {
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 h-screen overflow-y-auto pb-20">
     <div class="px-4 pt-4 pb-6 space-y-2">
-      <a href="/nearshore" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">Nearshore</a>
+      <a href={nearshoreLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.nearshore}</a>
       <!-- Industries Mobile -->
       <div class="py-2">
         <button id="mobile-industries-toggle" class="flex items-center justify-between w-full text-slate-900 font-bold text-lg py-2">
@@ -154,7 +169,7 @@ const navT = {
         </button>
         <div id="mobile-industries-list" class="hidden pl-4 mt-2 grid grid-cols-1 gap-2">
           {industries.map(industry => (
-            <a href={`/industrias/${industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="block py-2 text-slate-600 text-sm">
+            <a href={`${langPrefix}/industrias/${getIndustrySlug(industry)}`} class="block py-2 text-slate-600 text-sm">
               {industry}
             </a>
           ))}
@@ -171,7 +186,7 @@ const navT = {
         </button>
         <div id="mobile-services-list" class="hidden pl-4 mt-2 grid grid-cols-1 gap-2">
           {services.map(service => (
-            <a href={`/servicios/${service.slug}`} class="block py-2 text-slate-600 text-sm">
+            <a href={`${langPrefix}/servicios/${service.slug}`} class="block py-2 text-slate-600 text-sm">
               {service.title}
             </a>
           ))}
@@ -188,7 +203,7 @@ const navT = {
         </button>
         <div id="mobile-tech-list" class="hidden pl-4 mt-2 grid grid-cols-1 gap-2">
           {technologies.map(tech => (
-            <a href={`/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block py-2 text-slate-600 text-sm">
+            <a href={`${langPrefix}/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block py-2 text-slate-600 text-sm">
               {tech}
             </a>
           ))}
@@ -197,15 +212,15 @@ const navT = {
 
       <a href={sobreMiLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.about}</a>
       <a href={blogLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.blog}</a>
-      <a href="/proyectos" class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.projects}</a>
+      <a href={projectsLink} class="block text-slate-900 font-bold text-lg py-4 border-b border-slate-50">{navT.projects}</a>
 
       <div class="flex gap-4 py-6 border-b border-slate-50">
-        <a href="/blog" class={`text-sm font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400'}`}>Español (ES)</a>
-        <a href="/en/blog" class={`text-sm font-bold ${isEn ? 'text-blue-600' : 'text-slate-400'}`}>English (EN)</a>
+        <a href="/" class={`text-sm font-bold ${!isEn ? 'text-blue-600' : 'text-slate-400'}`}>Español (ES)</a>
+        <a href="/en" class={`text-sm font-bold ${isEn ? 'text-blue-600' : 'text-slate-400'}`}>English (EN)</a>
       </div>
 
       <div class="pt-10">
-        <a href="/#contacto" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-2xl font-bold shadow-lg">
+        <a href={isEn ? "/en/#contacto" : "/#contacto"} class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-2xl font-bold shadow-lg">
           {navT.cta}
         </a>
       </div>

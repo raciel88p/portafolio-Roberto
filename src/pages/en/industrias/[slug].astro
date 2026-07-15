@@ -1,0 +1,152 @@
+---
+import IndustryLayout from '../../../layouts/IndustryLayout.astro';
+
+export async function getStaticPaths() {
+  const industries = [
+    {
+      slug: "tech-industry",
+      name: "Tech Industry",
+      icon: "💻",
+      description: "Where technical innovation meets strategic execution. We help software and hardware companies dominate their category through high-precision SEO.",
+      details: [
+        { title: "Technical SEO for SaaS", text: "We optimize complex architectures to ensure perfect indexability and visibility in competitive markets." },
+        { title: "Digital Scalability", text: "Organic acquisition systems designed to grow alongside your technical infrastructure." }
+      ]
+    },
+    {
+      slug: "real-estate",
+      name: "Real Estate",
+      icon: "🏠",
+      description: "We transform local searches into real transactions. Visibility strategies for real estate agencies looking to lead their geographic area.",
+      details: [
+        { title: "Local Dominance", text: "We position your inventory at the exact moment buyers are looking for their next home." },
+        { title: "Lead Generation", text: "Landing pages optimized to capture genuine interest and convert it into in-person visits." }
+      ]
+    },
+    {
+      slug: "health",
+      name: "Health",
+      icon: "🏥",
+      description: "Ethical SEO with a human sense. We connect patients with health professionals through authority, trust, and compliance with E-E-A-T standards.",
+      details: [
+        { title: "Medical Authority", text: "We structure your content so that search engines and patients recognize you as a reliable source." },
+        { title: "Proximity SEO", text: "We ensure your clinic is the first choice for those needing immediate care in their area." }
+      ]
+    },
+    {
+      slug: "startups",
+      name: "Startups",
+      icon: "🚀",
+      description: "Agile growth without friction. We implement SEO and Growth strategies that validate your market and accelerate your organic traction.",
+      details: [
+        { title: "Exponential Growth", text: "We lay the SEO foundations that allow you to scale your traffic without proportionally increasing your costs." },
+        { title: "Data-Driven Validation", text: "We use search behavior to refine your offer and connect with your buyer persona." }
+      ]
+    },
+    {
+      slug: "betting",
+      name: "Betting",
+      icon: "🎲",
+      description: "Navigating complexity with technical precision. We position betting platforms in highly competitive and regulated markets.",
+      details: [
+        { title: "High-Competition SEO", text: "Aggressive authority strategies to stand out in niches where every click is critical." },
+        { title: "Compliance Management", text: "Technical content and structures that comply with local regulations without sacrificing visibility." }
+      ]
+    },
+    {
+      slug: "online-poker",
+      name: "Online Poker",
+      icon: "🃏",
+      description: "Attracting high-value players. We optimize poker portals and schools to capture transactional traffic and build user loyalty.",
+      details: [
+        { title: "Intent Content", text: "Guides and comparisons that resolve player doubts and guide them toward conversion." },
+        { title: "Affiliation Strategy", text: "We optimize your architecture to maximize the value of each referred user." }
+      ]
+    },
+    {
+      slug: "spiritual",
+      name: "Spiritual",
+      icon: "🧘",
+      description: "SEO with purpose. We help guides, mentors, and conscious projects connect with people looking for real change in their lives.",
+      details: [
+        { title: "Emotional Connection", text: "We identify the words your audience uses when looking for healing, peace, and growth." },
+        { title: "Brand Authority", text: "We build a digital presence that reflects the authenticity and depth of your message." }
+      ]
+    },
+    {
+      slug: "e-commerce",
+      name: "E-commerce",
+      icon: "🛍️",
+      description: "Your inventory before the buyer's eyes. We maximize your eCommerce ROI through transactional SEO and architecture optimization.",
+      details: [
+        { title: "Product SEO", text: "We ensure each SKU in your catalog is a gateway for new customers." },
+        { title: "Funnel Optimization", text: "Comprehensive strategies to reduce abandonment and increase average cart value." }
+      ]
+    },
+    {
+      slug: "saas",
+      name: "SaaS",
+      icon: "⚙️",
+      description: "Growth systems for software as a service. We reduce your CAC by creating a predictable organic acquisition machine.",
+      details: [
+        { title: "Product-Led SEO", text: "We position your tool as the natural solution to your users' problems." },
+        { title: "Technical Authority", text: "Content strategies that attract both decision-makers and end-users." }
+      ]
+    },
+    {
+      slug: "cyber-security",
+      name: "Cyber Security",
+      icon: "🛡️",
+      description: "Armored trust in the digital environment. We position security services before companies that prioritize their data integrity.",
+      details: [
+        { title: "B2B Authority SEO", text: "Technical content that demonstrates expertise and builds trust at C-Level executive levels." },
+        { title: "Pipeline Generation", text: "Strategies focused on capturing Enterprise accounts through high-intent searches." }
+      ]
+    },
+    {
+      slug: "rd",
+      name: "R&D",
+      icon: "🔬",
+      description: "Visibility for scientific innovation. We connect laboratories and R&D projects with partners, investors, and specialized talent.",
+      details: [
+        { title: "Strategic Outreach", text: "We optimize the reach of your findings to attract high-impact collaborations." },
+        { title: "Innovation Ecosystem", text: "We position your center as a reference in technological and scientific advancement." }
+      ]
+    },
+    {
+      slug: "insurance",
+      name: "Insurance",
+      icon: "📜",
+      description: "Protection a click away. Visibility strategies for insurers and brokers in a market based on solvency and proximity.",
+      details: [
+        { title: "Decision Searches", text: "Comparisons and informative content that guide the user toward the right policy." },
+        { title: "Local Acquisition", text: "We ensure your agency is the reference for those seeking protection in their city." }
+      ]
+    },
+    {
+      slug: "tourism",
+      name: "Tourism",
+      icon: "✈️",
+      description: "Inspiration that turns into a trip. We capture the attention of travelers at the moment they dream of their next destination.",
+      details: [
+        { title: "Experience SEO", text: "We don't just sell destinations; we position the unique experiences your business offers." },
+        { title: "Multi-channel Visibility", text: "Strategies for hotels and operators looking to dominate international searches." }
+      ]
+    }
+  ];
+
+  return industries.map((industry) => ({
+    params: { slug: industry.slug },
+    props: { industry },
+  }));
+}
+
+const { industry } = Astro.props;
+---
+
+<IndustryLayout
+  industry={industry.name}
+  description={industry.description}
+  icon={industry.icon}
+  details={industry.details}
+/>

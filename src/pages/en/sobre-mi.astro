@@ -3,11 +3,17 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
-import { sanityClient } from 'sanity:client';
+import { sanityClient } from '../../data/sanity';
 import { urlFor } from '../../data/sanity';
 
 // Obtener datos del autor desde Sanity
-const author = await sanityClient.fetch(`*[_type == "author" && name == "Roberto Pérez Salazar"][0]`);
+const author = await sanityClient.fetch(`*[_type == "author" && name == "Roberto Pérez Salazar"][0] {
+  ...,
+  name,
+  image,
+  linkedin,
+  youtube
+}`);
 
 const expertise = [
   "Technical and International SEO",
@@ -26,12 +32,12 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Roberto Pérez Salazar",
-  "jobTitle": "SEO and Digital Marketing Consultant",
+  "jobTitle": author?.jobTitle || "SEO and Digital Marketing Consultant",
   "url": "https://www.robertoperezsalazar.com/en/sobre-mi",
   "sameAs": [
-    "https://www.linkedin.com/in/roberto88/",
-    "https://www.youtube.com/@recursosparaemprendedores88"
-  ],
+    author?.linkedin || "https://www.linkedin.com/in/roberto88/",
+    author?.youtube || "https://www.youtube.com/@recursosparaemprendedores88"
+  ].filter(link => !!link),
   "description": "SEO Specialist and Growth Marketer with over 15 years of experience helping companies scale through AI and digital strategy.",
   "knowsAbout": expertise
 };
@@ -59,7 +65,8 @@ const jsonLd = {
           </div>
 
           {author?.image && (
-            <div class="w-64 h-64 md:w-80 md:h-80 relative flex-shrink-0">
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <div class="w-64 h-64 md:w-80 md:h-80 relative">
               <div class="absolute inset-0 bg-blue-600 rounded-3xl rotate-6 -z-10 opacity-10"></div>
               <img
                 src={urlFor(author.image).width(600).height(600).url()}
@@ -71,6 +78,20 @@ const jsonLd = {
                 <span class="text-sm font-bold text-slate-900">Available for projects</span>
               </div>
             </div>
+
+            <div class="flex justify-center gap-6 mt-12">
+              {author.linkedin && (
+                <a href={author.linkedin} target="_blank" class="text-slate-400 hover:text-blue-600 transition-all transform hover:scale-110" title="LinkedIn">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.732s.784-1.732 1.75-1.732 1.75.779 1.75 1.732-.784 1.732-1.75 1.732zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+              )}
+              {author.youtube && (
+                <a href={author.youtube} target="_blank" class="text-slate-400 hover:text-red-600 transition-all transform hover:scale-110" title="YouTube">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+              )}
+            </div>
+          </div>
           )}
         </div>
       </header>

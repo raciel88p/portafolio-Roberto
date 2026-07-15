@@ -1,21 +1,41 @@
 ---
+const currentLang = Astro.currentLocale || 'es';
+const isEn = currentLang === 'en';
+
+const t = {
+  es: {
+    title: "Lo que dicen mis clientes",
+    description: "Resultados reales de empresas que han confiado en mi enfoque estratégico de SEO e IA."
+  },
+  en: {
+    title: "What my clients say",
+    description: "Real results from companies that have trusted my strategic SEO and AI approach."
+  }
+}[currentLang as 'es' | 'en'];
+
 const testimonials = [
   {
     name: "Carlos Rodríguez",
-    role: "CEO de TechScale",
-    content: "Roberto transformó nuestra estrategia de contenidos. Gracias a la optimización para LLMs, ahora somos la fuente de referencia en ChatGPT para nuestro nicho.",
+    role: isEn ? "CEO at TechScale" : "CEO de TechScale",
+    content: isEn
+      ? "Roberto transformed our content strategy. Thanks to LLM optimization, we are now the reference source on ChatGPT for our niche."
+      : "Roberto transformó nuestra estrategia de contenidos. Gracias a la optimización para LLMs, ahora somos la fuente de referencia en ChatGPT para nuestro nicho.",
     avatar: "CR"
   },
   {
     name: "Ana García",
-    role: "Marketing Manager en GrowthFlow",
-    content: "El SEO para Youtube que implementó Roberto duplicó nuestras visualizaciones orgánicas en solo 3 meses. Es un experto que entiende el negocio.",
+    role: isEn ? "Marketing Manager at GrowthFlow" : "Marketing Manager en GrowthFlow",
+    content: isEn
+      ? "The Youtube SEO implemented by Roberto doubled our organic views in just 3 months. He is an expert who understands the business."
+      : "El SEO para Youtube que implementó Roberto duplicó nuestras visualizaciones orgánicas en solo 3 meses. Es un experto que entiende el negocio.",
     avatar: "AG"
   },
   {
     name: "Miguel Ángel Ruiz",
-    role: "Fundador de E-comMaster",
-    content: "Trabajar con un AI Growth Engineer como Roberto nos permitió automatizar procesos de captación que antes nos tomaban horas. Resultados tangibles.",
+    role: isEn ? "Founder of E-comMaster" : "Fundador de E-comMaster",
+    content: isEn
+      ? "Working with an AI Growth Engineer like Roberto allowed us to automate acquisition processes that used to take us hours. Tangible results."
+      : "Trabajar con un AI Growth Engineer como Roberto nos permitió automatizar procesos de captación que antes nos tomaban horas. Resultados tangibles.",
     avatar: "MR"
   }
 ];
@@ -24,9 +44,9 @@ const testimonials = [
 <section id="testimonios" class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Lo que dicen mis clientes</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.title}</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Resultados reales de empresas que han confiado en mi enfoque estratégico de SEO e IA.
+        {t.description}
       </p>
     </div>
 
