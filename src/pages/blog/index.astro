@@ -8,37 +8,26 @@ import { Search } from "lucide-react";
 
 const lang = 'es';
 
+const categories = await sanityClient.fetch(
+  `*[_type == "category" && (language == $lang || !defined(language))] | order(title asc)`,
+  { lang }
+);
+
 const posts = await sanityClient.fetch(
   `*[_type == "post" && (language == $lang || !defined(language))] | order(publishedAt desc) {
     ...,
     "author": select(
-      author._type == "reference" => author-> {
-        name,
-        image,
-        jobTitle
-      },
-      author != null => *[_type == "author" && name == ^.author][0] {
-        name,
-        image,
-        jobTitle
-      },
+      author._type == "reference" => author-> { name, image, jobTitle },
+      author != null => *[_type == "author" && name == ^.author][0] { name, image, jobTitle },
       null
-    )
+    ),
+    "categories": categories[]->title
   }`,
   { lang }
 );
-
-const t = {
-  title: "Blog | Roberto Pérez Salazar - Consultor SEO y Marketing Digital",
-  h1: "Blog: Estrategias de ",
-  h1_span: "SEO e Inteligencia Artificial",
-  p: "Comparto mi experiencia y conocimientos sobre cómo escalar negocios digitales utilizando las últimas tendencias en SEO, IA Generativa y marketing estratégico.",
-  search_placeholder: "Buscar artículos...",
-  no_posts: "Próximamente nuevos artículos. ¡Vuelve pronto!"
-};
 ---
 
-<Layout title={t.title}>
+<Layout title="Blog | Roberto Pérez Salazar">
   <Navbar />
 
   <main class="pt-32">
@@ -46,34 +35,48 @@ const t = {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mb-16">
           <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            {t.h1}<span class="text-blue-600">{t.h1_span}</span>
+            Blog: Estrategias de <span class="text-blue-600">SEO e Inteligencia Artificial</span>
           </h1>
           <p class="text-xl text-slate-600 leading-relaxed mb-8">
-            {t.p}
+            Comparto mi experiencia y conocimientos sobre cómo escalar negocios digitales utilizando las últimas tendencias en SEO, IA Generativa y marketing estratégico.
           </p>
 
-          {/* Barra de búsqueda con Lucide Icon */}
-          <div class="relative max-w-md group">
-            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
-              <Search size={20} client:load />
+          <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+            <div class="relative w-full md:max-w-md group">
+              <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                <Search size={20} client:load />
+              </div>
+              <input
+                type="text"
+                placeholder="Buscar artículos..."
+                class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600 transition-all shadow-sm"
+              />
             </div>
-            <input
-              type="text"
-              placeholder={t.search_placeholder}
-              class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600 transition-all shadow-sm"
-            />
+
+            {categories && categories.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                <a href="/blog" class="px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-100 transition-all">
+                  Todas
+                </a>
+                {categories.map((cat: any) => (
+                  <a href={`/blog/category/${cat.slug.current}`} class="px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-sm hover:border-blue-600 hover:text-blue-600 transition-all">
+                    {cat.title}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
-        {posts.length > 0 ? (
+        {posts && posts.length > 0 ? (
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post: any) => (
+            {posts.map((post) => (
               <BlogCard post={post} client:load />
             ))}
           </div>
         ) : (
           <div class="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
-            <p class="text-slate-500 text-lg">{t.no_posts}</p>
+            <p class="text-slate-500 text-lg">Próximamente nuevos artículos. ¡Vuelve pronto!</p>
           </div>
         )}
       </div>

@@ -1,0 +1,19 @@
+
+> app@0.0.1 dev
+> astro dev
+
+04:49:48 [types] Generated 2ms
+04:49:48 [content] Syncing content
+04:49:48 [content] Synced content
+04:49:48 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.3.0 ready in 483 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+04:49:48 watching for file changes...
+04:49:57 [ERROR] Expected "}" but found ":"
+  Stack trace:
+    at /app/src/pages/blog/index.astro:24:40
+    [...] See full stack trace in the browser, or rerun with --verbose.

@@ -7,25 +7,16 @@ import BlogCard from "../../../components/BlogCard.jsx";
 import { Search } from "lucide-react";
 
 const lang = 'en';
+const langPrefix = '/en';
+
+const categories = await sanityClient.fetch(
+  '*[_type == "category" && language == $lang] | order(title asc)',
+  { lang: lang }
+);
 
 const posts = await sanityClient.fetch(
-  `*[_type == "post" && language == $lang] | order(publishedAt desc) {
-    ...,
-    "author": select(
-      author._type == "reference" => author-> {
-        name,
-        image,
-        jobTitle
-      },
-      author != null => *[_type == "author" && name == ^.author][0] {
-        name,
-        image,
-        jobTitle
-      },
-      null
-    )
-  }`,
-  { lang }
+  '*[_type == "post" && language == $lang] | order(publishedAt desc) { ..., "author": select(author._type == "reference" => author-> { name, image, jobTitle }, author != null => *[_type == "author" && name == ^.author][0] { name, image, jobTitle }, null), "categories": categories[]->title }',
+  { lang: lang }
 );
 
 const t = {
@@ -34,7 +25,8 @@ const t = {
   h1_span: "SEO and Artificial Intelligence",
   p: "Sharing my experience and knowledge on how to scale digital businesses using the latest trends in SEO, Generative AI, and strategic marketing.",
   search_placeholder: "Search articles...",
-  no_posts: "New articles coming soon. Stay tuned!"
+  no_posts: "New articles coming soon. Stay tuned!",
+  all_categories: "All"
 };
 ---
 
@@ -52,22 +44,38 @@ const t = {
             {t.p}
           </p>
 
-          {/* Barra de búsqueda con Lucide Icon */}
-          <div class="relative max-w-md group">
-            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
-              <Search size={20} client:load />
+          <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+            {/* Search Bar */}
+            <div class="relative w-full md:max-w-md group">
+              <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                <Search size={20} client:load />
+              </div>
+              <input
+                type="text"
+                placeholder={t.search_placeholder}
+                class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600 transition-all shadow-sm"
+              />
             </div>
-            <input
-              type="text"
-              placeholder={t.search_placeholder}
-              class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600 transition-all shadow-sm"
-            />
+
+            {/* Category Filter */}
+            {categories && categories.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                <a href="/en/blog" class="px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-100 transition-all">
+                  {t.all_categories}
+                </a>
+                {categories.map((cat: any) => (
+                  <a href={`/en/blog/category/${cat.slug.current}`} class="px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-sm hover:border-blue-600 hover:text-blue-600 transition-all">
+                    {cat.title}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
-        {posts.length > 0 ? (
+        {posts && posts.length > 0 ? (
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post: any) => (
+            {posts.map((post) => (
               <BlogCard post={post} client:load />
             ))}
           </div>

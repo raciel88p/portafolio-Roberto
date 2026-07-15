@@ -24,9 +24,15 @@ export default function BlogCard({ post }) {
         </div>
       )}
       <div className="p-8 flex flex-col flex-grow">
-        <div className="flex items-center gap-4 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
-          <span>{publishedDate}</span>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {post.categories && post.categories.map((cat, i) => (
+            <span key={i} className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-md uppercase tracking-wider">
+              {cat}
+            </span>
+          ))}
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-auto">{publishedDate}</span>
         </div>
+
         <h3 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-blue-600 transition-colors line-clamp-2">
           {post.title}
         </h3>
