@@ -70,3 +70,4 @@ El portafolio incluye estrategias personalizadas para 13 sectores clave:
 - **CMS:** Sanity.io (Headless CMS para gestión dinámica de blog y perfiles)
 - **Admin:** Sanity Studio embebido en `/admin`
 - **I18n:** Soporte nativo multilingüe (ES/EN) para blog posts y autores.
+- **Categorías:** Clasificación dinámica de artículos por temas (SEO, IA, etc.) con filtrado en tiempo real.
