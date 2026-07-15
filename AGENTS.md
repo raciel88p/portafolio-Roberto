@@ -65,3 +65,8 @@ El portafolio incluye estrategias personalizadas para 13 sectores clave:
 - Etiquetas Meta optimizadas.
 - Renderizado HTML 100% estático para máxima velocidad e indexabilidad.
 - Slugs de URL optimizados (ASCII-only).
+
+## Integración de Contenidos (CMS)
+- **CMS:** Sanity.io (Headless CMS para gestión dinámica de blog y perfiles)
+- **Admin:** Sanity Studio embebido en `/admin`
+- **I18n:** Soporte nativo multilingüe (ES/EN) para blog posts y autores.

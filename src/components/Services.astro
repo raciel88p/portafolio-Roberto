@@ -1,56 +1,94 @@
 ---
+const currentLang = Astro.currentLocale || 'es';
+const isEn = currentLang === 'en';
+
+const t = {
+  es: {
+    badge: "Nueva Generación",
+    title_start: "Servicios de ",
+    title_span: "Nueva Generación",
+    description: "Soluciones estratégicas diseñadas para el panorama digital actual, impulsadas por tecnología y resultados.",
+    learn_more: "Saber más"
+  },
+  en: {
+    badge: "Next Generation",
+    title_start: "Next Generation ",
+    title_span: "Services",
+    description: "Strategic solutions designed for today's digital landscape, driven by technology and results.",
+    learn_more: "Learn more"
+  }
+}[currentLang as 'es' | 'en'];
+
 const services = [
   {
-    title: "LLMs Optimization",
-    description: "Optimizamos tu contenido para que sea la fuente preferida de los Modelos de Lenguaje de Inteligencia Artificial.",
+    title: isEn ? "LLMs Optimization" : "LLMs Optimization",
+    description: isEn
+      ? "We optimize your content to be the preferred source for AI Language Models."
+      : "Optimizamos tu contenido para que sea la fuente preferida de los Modelos de Lenguaje de Inteligencia Artificial.",
     slug: "llm-optimization",
     icon: "🤖"
   },
   {
-    title: "Local SEO",
-    description: "Domina los resultados de búsqueda locales y atrae clientes listos para comprar en tu zona geográfica.",
+    title: isEn ? "Local SEO" : "Local SEO",
+    description: isEn
+      ? "Dominate local search results and attract customers ready to buy in your geographic area."
+      : "Domina los resultados de búsqueda locales y atrae clientes listos para comprar en tu zona geográfica.",
     slug: "local-seo",
     icon: "📍"
   },
   {
-    title: "Youtube SEO",
-    description: "Posicionamos tus videos en el segundo buscador más grande del mundo para maximizar tu alcance orgánico.",
+    title: isEn ? "Youtube SEO" : "Youtube SEO",
+    description: isEn
+      ? "We position your videos on the world's second-largest search engine to maximize organic reach."
+      : "Posicionamos tus videos en el segundo buscador más grande del mundo para maximizar tu alcance orgánico.",
     slug: "youtube-seo",
     icon: "🎬"
   },
   {
-    title: "Wordpress SEO",
-    description: "Especialistas en exprimir el potencial de Wordpress para alcanzar las primeras posiciones de Google.",
+    title: isEn ? "Wordpress SEO" : "Wordpress SEO",
+    description: isEn
+      ? "Specialists in squeezing the potential of Wordpress to reach the top positions of Google."
+      : "Especialistas en exprimir el potencial de Wordpress para alcanzar las primeras posiciones de Google.",
     slug: "wordpress-seo",
     icon: "🌐"
   },
   {
-    title: "Headless CMS SEO",
-    description: "Estrategias de SEO técnico avanzadas para arquitecturas web modernas y desacopladas.",
+    title: isEn ? "Headless CMS SEO" : "Headless CMS SEO",
+    description: isEn
+      ? "Advanced technical SEO strategies for modern, decoupled web architectures."
+      : "Estrategias de SEO técnico avanzadas para arquitecturas web modernas y desacopladas.",
     slug: "headless-cms-seo",
     icon: "⚡"
   },
   {
-    title: "Ai Growth Engineer",
-    description: "Ingeniería de crecimiento impulsada por IA para automatizar y escalar tus procesos de adquisición.",
+    title: isEn ? "Ai Growth Engineer" : "Ai Growth Engineer",
+    description: isEn
+      ? "AI-driven growth engineering to automate and scale your acquisition processes."
+      : "Ingeniería de crecimiento impulsada por IA para automatizar y escalar tus procesos de adquisición.",
     slug: "ai-growth-engineer",
     icon: "🚀"
   },
   {
-    title: "Consultoría SEO",
-    description: "Asesoramiento estratégico integral para posicionar tu negocio en la cima de los resultados de búsqueda.",
+    title: isEn ? "SEO Consulting" : "Consultoría SEO",
+    description: isEn
+      ? "Comprehensive strategic advice to position your business at the top of search results."
+      : "Asesoramiento estratégico integral para posicionar tu negocio en la cima de los resultados de búsqueda.",
     slug: "consultor-seo",
     icon: "📈"
   },
   {
-    title: "Desarrollo Web & Apps",
-    description: "Diseño y desarrollo de páginas web y aplicaciones móviles de alto rendimiento y enfocadas a conversión.",
+    title: isEn ? "Web & App Development" : "Desarrollo Web & Apps",
+    description: isEn
+      ? "Design and development of high-performance, conversion-focused websites and mobile apps."
+      : "Diseño y desarrollo de páginas web y aplicaciones móviles de alto rendimiento y enfocadas a conversión.",
     slug: "desarrollo-web-apps",
     icon: "💻"
   },
   {
-    title: "Programmatic SEO",
-    description: "Escala tu tráfico orgánico mediante la creación masiva y automatizada de páginas de aterrizaje optimizadas.",
+    title: isEn ? "Programmatic SEO" : "Programmatic SEO",
+    description: isEn
+      ? "Scale your organic traffic through mass and automated creation of optimized landing pages."
+      : "Escala tu tráfico orgánico mediante la creación masiva y automatizada de páginas de aterrizaje optimizadas.",
     slug: "programmatic-seo",
     icon: "📊"
   }
@@ -59,8 +97,8 @@ const services = [
 <section id="servicios" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Servicios de <span class="text-blue-600">Nueva Generación</span></h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">Soluciones estratégicas diseñadas para el panorama digital actual, impulsadas por tecnología y resultados.</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">{isEn ? <>{t.title_start} <span class="text-blue-600">{t.title_span}</span></> : <>{t.title_start} <span class="text-blue-600">{t.title_span}</span></>}</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">{t.description}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,8 +109,8 @@ const services = [
           <p class="text-slate-600 mb-6 leading-relaxed">
             {service.description}
           </p>
-          <a href={`/servicios/${service.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            Saber más
+          <a href={isEn ? `/en/servicios/${service.slug}` : `/servicios/${service.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
+            {t.learn_more}
             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </a>
         </div>

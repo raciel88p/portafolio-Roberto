@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
-import { projects } from '../../data/projects';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import { projects } from '../../../data/projects';
 
 export function getStaticPaths() {
-  const esProjects = projects.filter(p => p.lang === 'es');
-  return esProjects.map((project) => ({
+  const enProjects = projects.filter(p => p.lang === 'en');
+  return enProjects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
   }));
@@ -14,10 +14,24 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 
+const t = {
+    visit: "Visit Website",
+    company: "The Company",
+    challenge: "The Challenge",
+    solution: "The Solution",
+    strategy: "Our Strategy",
+    story: "The Story Behind",
+    experience: "Professional Experience",
+    results: "Key Results",
+    similar: "Looking for similar results?",
+    cta: "Schedule a Consultation",
+    back: "Back to Projects"
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": `Caso de Estudio: ${project.title}`,
+  "name": `Case Study: ${project.title}`,
   "description": project.description,
   "author": {
     "@type": "Person",
@@ -26,7 +40,7 @@ const schema = {
 };
 ---
 
-<Layout title={`Caso de Estudio: ${project.title} | Roberto Pérez Salazar`}>
+<Layout title={`Case Study: ${project.title} | Roberto Pérez Salazar`}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Navbar />
 
@@ -47,7 +61,7 @@ const schema = {
             </p>
             <div class="flex flex-wrap gap-4">
               <a href={project.url} target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center">
-                Visitar Sitio Web
+                {t.visit}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
               </a>
             </div>
@@ -65,9 +79,9 @@ const schema = {
           <div class="lg:col-span-2 space-y-20">
             {project.fullContent.company && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Empresa</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">{t.company}</h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  Expertise que genera confianza
+                  Expertise that builds trust
                 </h3>
                 <p class="text-xl text-slate-600 leading-relaxed">
                   {project.fullContent.company}
@@ -77,9 +91,9 @@ const schema = {
 
             {project.fullContent.challenge && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">El Desafío</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">{t.challenge}</h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  El reto de escalar en un mercado saturado
+                  The challenge of scaling in a saturated market
                 </h3>
                 <p class="text-xl text-slate-600 leading-relaxed">
                   {project.fullContent.challenge}
@@ -89,9 +103,9 @@ const schema = {
 
             {project.fullContent.solution && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Solución</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">{t.solution}</h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  Estrategia integrada y ejecución técnica
+                  Integrated strategy and technical execution
                 </h3>
                 <p class="text-xl text-slate-600 leading-relaxed">
                   {project.fullContent.solution}
@@ -104,7 +118,7 @@ const schema = {
                 {project.fullContent.steps.map((step, index) => (
                   <div class="relative pl-8 border-l-2 border-blue-100">
                     <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
-                    <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Paso 0{index + 1}</h4>
+                    <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Step 0{index + 1}</h4>
                     <h3 class="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
                     <p class="text-lg text-slate-600 leading-relaxed">{step.content}</p>
                   </div>
@@ -116,7 +130,7 @@ const schema = {
               <div>
                 <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
                   <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">02</span>
-                  Nuestra Estrategia
+                  {t.strategy}
                 </h2>
                 <p class="text-lg text-slate-600 leading-relaxed">
                   {project.fullContent.strategy}
@@ -127,8 +141,8 @@ const schema = {
             {project.fullContent.story && (
               <div class="bg-slate-900 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
                 <div class="relative z-10">
-                  <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">La Historia Detrás</h2>
-                  <h3 class="text-3xl font-bold mb-8 leading-tight">Nuestra Trayectoria</h3>
+                  <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">{t.story}</h2>
+                  <h3 class="text-3xl font-bold mb-8 leading-tight">Our Journey</h3>
                   <p class="text-xl text-slate-300 leading-relaxed italic">
                     "{project.fullContent.story}"
                   </p>
@@ -142,7 +156,7 @@ const schema = {
               <div>
                 <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
                   <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">03</span>
-                  Experiencia Profesional
+                  {t.experience}
                 </h2>
                 <div class="bg-blue-50/50 rounded-3xl p-8 border border-blue-100">
                   <ul class="space-y-4">
@@ -175,7 +189,7 @@ const schema = {
 
               <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
                 <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Resultados Clave
+                {t.results}
               </h2>
               <ul class="space-y-4">
                 {project.fullContent.results.map(result => (
@@ -195,9 +209,9 @@ const schema = {
               )}
 
               <div class="mt-12 pt-8 border-t border-slate-200">
-                <p class="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wider">¿Buscas resultados similares?</p>
-                <a href="/#contacto" class="block w-full text-center bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors">
-                  Agenda una Consultoría
+                <p class="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wider">{t.similar}</p>
+                <a href="/en/#contacto" class="block w-full text-center bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors">
+                  {t.cta}
                 </a>
               </div>
             </div>
@@ -210,9 +224,9 @@ const schema = {
     <section class="py-20 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <a href="/proyectos" class="text-slate-600 font-bold hover:text-blue-600 transition-colors flex items-center">
+                <a href="/en/proyectos" class="text-slate-600 font-bold hover:text-blue-600 transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
-                    Volver a Proyectos
+                    {t.back}
                 </a>
             </div>
         </div>
