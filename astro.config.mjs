@@ -2,20 +2,18 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import react from '@astrojs/react';
+import sanityIntegration from '@sanity/astro';
 
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://www.robertoperezsalazar.com',
-  i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
-    routing: {
-      prefixDefaultLocale: false
-    }
-  },
+  site: 'https://robertoperez.com',
   integrations: [
     sitemap(),
-    react()
+    sanityIntegration({
+      projectId: '2grwsc7l',
+      dataset: 'production',
+      useCdn: true,
+    })
   ],
   vite: {
     plugins: [tailwindcss()]

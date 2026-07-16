@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { sanityClient } from 'sanity:client';
+
+// Generate static paths for ES posts
+export async function getStaticPaths() {
+  const query = `*[_type == "post" && language == "es" && defined(slug.current)] {
+    "slug": slug.current
+  }`;
+
+  try {
+    const posts = await sanityClient.fetch(query);
+    return posts.map((post: any) => ({
+      params: { slug: post.slug }
+    }));
+  } catch (e) {
+    console.error("Error generating static paths for Spanish posts:", e);
+    return [];
+  }
+}
+
+const { slug } = Astro.params;
+
+// Fetch full post details
+const query = `*[_type == "post" && language == "es" && slug.current == $slug][0] {
+  title,
+  excerpt,
+  mainImage {
+    asset->{
+      _id,
+      url
+    }
+  },
+  body,
+  publishedAt,
+  "author": author->{
+    name,
+    image {
+      asset->{
+        url
+      }
+    },
+    bio
+  },
+  "categories": categories[]->title
+}`;
+
+let post: any = null;
+let errorMsg = null;
+
+try {
+  post = await sanityClient.fetch(query, { slug });
+} catch (e) {
+  console.error("Error fetching Spanish post details:", e);
+  errorMsg = "No se pudo cargar el detalle del artículo en este momento.";
+}
+
+// Redirect if post doesn't exist
+if (!post && !errorMsg) {
+  return Astro.redirect('/404');
+}
+
+// Format Date helper
+function formatDate(dateStr: string) {
+  if (!dateStr) return '';
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+---
+
+<Layout
+  title={post?.title ? `${post.title} | Blog de Roberto Pérez Salazar` : "Artículo de Blog"}
+  description={post?.excerpt || "Artículo detallado sobre estrategias avanzadas de marketing digital y optimización SEO."}
+>
+  <Navbar />
+
+  <main class="pt-32 pb-24 bg-white min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      {errorMsg ? (
+        <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center text-red-700">
+          <p class="font-semibold">{errorMsg}</p>
+          <a href="/blog" class="inline-block mt-4 text-blue-600 font-bold hover:underline">Volver al blog</a>
+        </div>
+      ) : post && (
+        <article>
+          <!-- Navigation Back -->
+          <div class="mb-8">
+            <a href="/blog" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
+              <svg class="mr-2 w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+              Volver al Blog
+            </a>
+          </div>
+
+          <!-- Metadata -->
+          <div class="mb-8">
+            {post.categories && post.categories.length > 0 && (
+              <span class="inline-block bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+                {post.categories[0]}
+              </span>
+            )}
+
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+              {post.title}
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-500 border-b border-slate-100 pb-8">
+              {post.author?.image?.asset?.url && (
+                <img
+                  src={post.author.image.asset.url}
+                  alt={post.author.name}
+                  class="w-10 h-10 rounded-full object-cover"
+                />
+              )}
+              <div>
+                <p class="font-bold text-slate-900">{post.author?.name || "Roberto Pérez Salazar"}</p>
+                {post.publishedAt && (
+                  <time datetime={post.publishedAt} class="text-xs">
+                    {formatDate(post.publishedAt)}
+                  </time>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Image -->
+          {post.mainImage?.asset?.url && (
+            <div class="rounded-3xl overflow-hidden shadow-md mb-12 aspect-video bg-slate-100">
+              <img
+                src={post.mainImage.asset.url}
+                alt={post.title}
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+          )}
+
+          <!-- Content (Rich Text) -->
+          <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed mb-16">
+            <!-- Renderizer manual para Portable Text sencillo con soporte de Tailwind v4 -->
+            {Array.isArray(post.body) ? (
+              post.body.map((block: any) => {
+                if (block._type === 'block') {
+                  const headingLevel = block.style;
+                  const textContent = block.children?.map((c: any) => c.text).join('') || '';
+
+                  if (headingLevel === 'h2') {
+                    return <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-10 mb-4">{textContent}</h2>;
+                  }
+                  if (headingLevel === 'h3') {
+                    return <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-8 mb-3">{textContent}</h3>;
+                  }
+                  if (headingLevel === 'blockquote') {
+                    return (
+                      <blockquote class="border-l-4 border-blue-600 pl-4 italic my-6 text-slate-600 bg-slate-50 py-2 pr-2 rounded-r-xl">
+                        {textContent}
+                      </blockquote>
+                    );
+                  }
+                  return <p class="mb-6">{textContent}</p>;
+                }
+                return null;
+              })
+            ) : (
+              <p>{post.excerpt}</p>
+            )}
+          </div>
+
+          <!-- Author Bio section -->
+          {post.author && (
+            <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              {post.author.image?.asset?.url ? (
+                <img
+                  src={post.author.image.asset.url}
+                  alt={post.author.name}
+                  class="w-16 h-16 rounded-full object-cover shrink-0"
+                />
+              ) : (
+                <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl shrink-0">
+                  RP
+                </div>
+              )}
+              <div class="text-center sm:text-left">
+                <h4 class="font-bold text-lg text-slate-900 mb-2">Sobre {post.author.name}</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  {post.author.bio?.[0]?.children?.[0]?.text || "Consultor SEO y de Marketing Digital especializado en estrategias de adquisición acelerada de tráfico y conversiones corporativas."}
+                </p>
+              </div>
+            </div>
+          )}
+
+        </article>
+      )}
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

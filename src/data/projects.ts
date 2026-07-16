@@ -1,6 +1,7 @@
 export interface Project {
   slug: string;
   title: string;
+  logo?: string;
   description: string;
   tag: string;
   url: string;
@@ -67,6 +68,7 @@ export const projects: Project[] = [
   {
     slug: "mj-estetica",
     title: "MJ Estética y SPA",
+    logo: "/logos/mj-estetica.png",
     description: "Cómo convertimos una crisis en un laboratorio de crecimiento impulsado por IA. De una inversión de $1,000 a un equipo de 8 personas.",
     tag: "AI Growth & pSEO",
     url: "https://www.mjfisioesteticayspa.com/",
