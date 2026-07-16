@@ -1,27 +1,4 @@
 ---
-const currentLang = Astro.currentLocale || 'es';
-const isEn = currentLang === 'en';
-
-const t = {
-  es: {
-    exp_label: "Años de Experiencia",
-    title_start: "Construyendo Sistemas que ",
-    title_span: "Impulsan Negocios",
-    p1: "Soy <span class=\"font-bold text-slate-900\">Roberto Pérez Salazar</span>, especialista en SEO, Growth Marketing, Inteligencia Artificial y Desarrollo Web, con más de 15 años de experiencia ayudando a empresas a transformar su presencia digital en crecimiento real.",
-    p2: "Mi enfoque va más allá del tráfico. Mi objetivo es construir sistemas que generen clientes, optimicen procesos y hagan crecer un negocio de forma sostenible.",
-    quote: "\"La tecnología por sí sola no genera resultados. La estrategia sí.\"",
-    cta: "Conoce mi historia completa"
-  },
-  en: {
-    exp_label: "Years of Experience",
-    title_start: "Building Systems that ",
-    title_span: "Drive Business",
-    p1: "I am <span class=\"font-bold text-slate-900\">Roberto Pérez Salazar</span>, a specialist in SEO, Growth Marketing, Artificial Intelligence, and Web Development, with over 15 years of experience helping companies transform their digital presence into real growth.",
-    p2: "My focus goes beyond traffic. My goal is to build systems that generate customers, optimize processes, and grow a business sustainably.",
-    quote: "\"Technology alone does not generate results. Strategy does.\"",
-    cta: "Learn my full story"
-  }
-}[currentLang as 'es' | 'en'];
 ---
 <section id="sobre-mi" class="py-24 bg-slate-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,25 +7,29 @@ const t = {
         <div class="aspect-square bg-slate-200 rounded-3xl overflow-hidden shadow-2xl">
           <!-- Placeholder for portrait image -->
           <div class="w-full h-full flex items-center justify-center text-slate-400">
-            <span class="text-lg font-medium italic">[{isEn ? "Roberto Pérez Salazar Portrait" : "Foto de Roberto Pérez Salazar"}]</span>
+            <span class="text-lg font-medium italic">[Foto de Roberto Pérez Salazar]</span>
           </div>
         </div>
         <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl hidden md:block">
-          <p class="text-4xl font-bold text-blue-600 mb-1">15+</p>
-          <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">{t.exp_label}</p>
+          <p class="text-4xl font-bold text-blue-600 mb-1">10+</p>
+          <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Años de Experiencia</p>
         </div>
       </div>
       <div>
-        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">{t.title_start}<span class="text-blue-600">{t.title_span}</span></h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Construyendo Sistemas que <span class="text-blue-600">Impulsan Negocios</span></h2>
         <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
-          <p set:html={t.p1}></p>
-          <p>{t.p2}</p>
+          <p>
+            Soy <span class="font-bold text-slate-900">Roberto Pérez Salazar</span>, especialista en SEO, Growth Marketing, Inteligencia Artificial y Desarrollo Web, con más de 15 años de experiencia ayudando a empresas a transformar su presencia digital en crecimiento real.
+          </p>
+          <p>
+            Mi enfoque va más allá del tráfico. Mi objetivo es construir sistemas que generen clientes, optimicen procesos y hagan crecer un negocio de forma sostenible.
+          </p>
           <p class="italic border-l-4 border-blue-600 pl-4 bg-blue-50 py-2">
-            {t.quote}
+            "La tecnología por sí sola no genera resultados. La estrategia sí."
           </p>
           <div class="pt-4">
-            <a href={isEn ? "/en/sobre-mi" : "/sobre-mi"} class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition-colors">
-              {t.cta}
+            <a href="/sobre-mi" class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition-colors">
+              Conoce mi historia completa
               <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>

@@ -5,7 +5,6 @@ export interface Project {
   tag: string;
   url: string;
   image: string;
-  lang: 'es' | 'en';
   fullContent: {
     company?: string;
     challenge: string;
@@ -21,10 +20,8 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  // --- SPANISH PROJECTS ---
   {
     slug: "golabstech",
-    lang: 'es',
     title: "GolabsTech",
     description: "Estrategia de posicionamiento global y adquisición orgánica de alto impacto. Cómo disparamos la visibilidad y captación de leads en mercados internacionales.",
     tag: "SEO & GEO",
@@ -69,7 +66,6 @@ export const projects: Project[] = [
   },
   {
     slug: "mj-estetica",
-    lang: 'es',
     title: "MJ Estética y SPA",
     description: "Cómo convertimos una crisis en un laboratorio de crecimiento impulsado por IA. De una inversión de $1,000 a un equipo de 8 personas.",
     tag: "AI Growth & pSEO",
@@ -111,12 +107,11 @@ export const projects: Project[] = [
         "Demostración de que una pyme puede operar con tecnología de nivel empresarial con una inversión mínima."
       ],
       quote: "La inteligencia artificial no reemplaza la visión de un emprendedor; amplifica su capacidad para construir negocios más eficientes, escalables y sostenibles.",
-      story: "MJ Estética y SPA nació cuando mi esposa y yo perdiéramos nuestros empleos en la misma semana. Con 37 años y una familia que mantener, apostamos por nosotros mismos. Lo que comenzó como una decisión en medio de la incertidumbre terminó siendo nuestro laboratorio de innovación más exitoso."
+      story: "MJ Estética y SPA nació cuando mi esposa y yo perdimos nuestros empleos en la misma semana. Con 37 años y una familia que mantener, apostamos por nosotros mismos. Lo que comenzó como una decisión en medio de la incertidumbre terminó siendo nuestro laboratorio de innovación más exitoso."
     }
   },
   {
     slug: "ingeniacr",
-    lang: 'es',
     title: "IngeniaCR",
     description: "Caso de Estudio de, SEO, SEM, Web Analytics y Astro. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
     tag: "SEM & Analytics",
@@ -162,7 +157,6 @@ export const projects: Project[] = [
   },
   {
     slug: "ferreteria-epa",
-    lang: 'es',
     title: "Ferretería EPA",
     description: "Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
     tag: "Consultoría SEO",
@@ -181,7 +175,6 @@ export const projects: Project[] = [
   },
   {
     slug: "ins-seguros",
-    lang: 'es',
     title: "Instituto Nacional de Seguros",
     description: "Estrategia integral de visibilidad orgánica para la principal aseguradora de la región.",
     tag: "Consultor SEO",
@@ -195,7 +188,6 @@ export const projects: Project[] = [
   },
   {
     slug: "sapiens-development",
-    lang: 'es',
     title: "Sapiens Development",
     description: "Estrategia de SEO B2B para captar clientes tecnológicos internacionales y posicionar servicios de desarrollo de software premium.",
     tag: "Consultoría SEO",
@@ -214,7 +206,6 @@ export const projects: Project[] = [
   },
   {
     slug: "bluewater-properties",
-    lang: 'es',
     title: "BluewaterProperties of Costa Rica",
     description: "Impacto masivo en el mercado inmobiliario de lujo. Conectando propiedades exclusivas con inversores internacionales mediante SEO de alta gama.",
     tag: "SEO Specialist",
@@ -233,7 +224,6 @@ export const projects: Project[] = [
   },
   {
     slug: "intersources",
-    lang: 'es',
     title: "InterSources",
     description: "Consultoría de visibilidad digital y SEO B2B para líderes en Ciberseguridad. Impulsando la autoridad técnica y la generación de pipeline corporativo.",
     tag: "Consultor SEO and Team lead",
@@ -252,7 +242,6 @@ export const projects: Project[] = [
   },
   {
     slug: "basha-bracelets",
-    lang: 'es',
     title: "Basha Bracelets",
     description: "Escalado de e-commerce espiritual mediante SEO semántico y visibilidad multicanal. Transformando la pasión en un negocio digital rentable.",
     tag: "SEO & E-commerce",
@@ -266,259 +255,6 @@ export const projects: Project[] = [
         "Reducción del 50% en la dependencia de pauta publicitaria en redes sociales",
         "Mejora del 85% en el CTR (Click-Through Rate) de resultados transaccionales",
         "Creación de un activo digital propio que genera ventas recurrentes 24/7"
-      ]
-    }
-  },
-
-  // --- ENGLISH PROJECTS ---
-  {
-    slug: "golabstech",
-    lang: 'en',
-    title: "GolabsTech",
-    description: "Global positioning strategy and high-impact organic acquisition. How we skyrocketed visibility and lead generation in international markets.",
-    tag: "SEO & GEO",
-    url: "https://golabstech.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgolabstech.com%2F?w=600&h=400",
-    fullContent: {
-      company: "GolabsTech is a leading company in nearshore development and artificial intelligence solutions. Headquartered in the USA with talent centers in Latin America, they help tech companies scale their teams with top-tier engineers integrated into their own time zone.",
-      challenge: "The main challenge was to unify a global digital presence that reflected their technical expertise while competing in a highly saturated software services market. They needed to move from being just another provider to a reference authority in organic talent acquisition and AI solutions.",
-      solution: "We designed an organic acquisition system that combines advanced technical SEO, AI Answer Engine Optimization (AEO), and a content architecture designed for C-level decision-makers.",
-      steps: [
-        {
-          title: "Strategic Blueprint and Audit",
-          content: "We performed a deep analysis of market share and competitive search. We identified critical growth gaps and high-intent keyword opportunities that competitors were ignoring."
-        },
-        {
-          title: "Global Architecture Optimization",
-          content: "We implemented an optimized multi-site structure with precise hreflang configurations. This allowed GolabsTech to maintain global domain authority while serving relevant and localized content to prospects in different geographic regions."
-        },
-        {
-          title: "AI-Powered Acquisition (AEO)",
-          content: "We pioneered search optimization for LLMs. We structured the brand's digital assets to ensure positive recommendations on platforms like ChatGPT, Perplexity AI, and Google AI Overviews."
-        },
-        {
-          title: "Conversion Optimization (CRO)",
-          content: "We analyzed user behavior to identify bottlenecks. We redesigned contact flows and landing pages, converting the traffic increase into a real pipeline of qualified leads."
-        }
-      ],
-      strategy: "We positioned SEO as a core growth lever directly aligned with business results, integrating technical visibility with a content strategy that generates Enterprise-level inbound demand.",
-      metrics: [
-        { label: "Organic Traffic", value: "+253.9%" },
-        { label: "New Users", value: "+139%" },
-        { label: "Active Users", value: "+136%" },
-        { label: "Qualified Leads", value: "Enterprise" }
-      ],
-      results: [
-        "Explosive 253.9% growth in organic traffic in just 6 months.",
-        "Validation of the organic channel as the main source of revenue and pipeline generation.",
-        "Consolidated authority in searches related to AI and Nearshore Development.",
-        "Total optimization for the age of generative search (AEO)."
-      ]
-    }
-  },
-  {
-    slug: "mj-estetica",
-    lang: 'en',
-    title: "MJ Estética & SPA",
-    description: "How we turned a crisis into an AI-driven growth lab. From a $1,000 investment to a team of 8 people.",
-    tag: "AI Growth & pSEO",
-    url: "https://www.mjfisioesteticayspa.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.mjfisioesteticayspa.com%2F?w=600&h=400",
-    fullContent: {
-      company: "MJ Estética & SPA was born in 2023 after a moment of family uncertainty. Founded with minimal resources, it became our demonstration that an SME can compete at the highest level using technology, data, and artificial intelligence.",
-      challenge: "The initial challenge was to build a profitable business from scratch with an investment of barely USD $1,000, competing in a saturated local market and initially depending on manual processes and minimal advertising budgets.",
-      solution: "We built an automated acquisition and management system that evolved from a simple digital catalog to an advanced platform based on Programmatic SEO (pSEO) and Artificial Intelligence.",
-      steps: [
-        {
-          title: "Measurement and Data from Day 1",
-          content: "Although the initial technology was simple (Google Sites), we implemented a full measurement stack: Google Tag Manager, Analytics, and Microsoft Clarity with AI to analyze user behavior and detect improvement opportunities."
-        },
-        {
-          title: "Scaling through Programmatic SEO (pSEO)",
-          content: "We migrated to a modern architecture with Astro to automatically generate over 100 highly segmented service pages, achieving massive market coverage with optimized technical effort."
-        },
-        {
-          title: "Inbound Marketing Automation",
-          content: "We implemented AI-assisted flows and ManyChat for lead pre-qualification and 24/7 service, integrating AI-generated lead magnets to nurture prospects without manual intervention."
-        },
-        {
-          title: "Optimization for the AI Era (GEO)",
-          content: "Beyond traditional SEO, we optimized content so that assistants like ChatGPT and Perplexity recommend the clinic as the first reference in its category."
-        }
-      ],
-      strategy: "We used our own business as an innovation lab, testing each AI and automation strategy before implementing them in external projects, focusing on maximizing profits through operational efficiency.",
-      metrics: [
-        { label: "Sales (Year 1)", value: "$75k" },
-        { label: "Organic Traffic", value: "+218.5%" },
-        { label: "Referral Traffic", value: "+243%" },
-        { label: "Sales Increase", value: "+86%" }
-      ],
-      results: [
-        "Transformation of a self-employment project into a company with a team of 8 people.",
-        "86% increase in sales after migration to the platform optimized with Astro and AI.",
-        "Appearance as a recommended reference in AI assistants (ChatGPT, etc.) through GEO techniques.",
-        "Demonstration that an SME can operate with enterprise-level technology with a minimal investment."
-      ],
-      quote: "Artificial intelligence does not replace an entrepreneur's vision; it amplifies their ability to build more efficient, scalable, and sustainable businesses.",
-      story: "MJ Estética & SPA was born when my wife and I both lost our jobs in the same week. At 37 and with a family to support, we bet on ourselves. What started as a decision in the midst of uncertainty ended up being our most successful innovation lab."
-    }
-  },
-  {
-    slug: "ingeniacr",
-    lang: 'en',
-    title: "IngeniaCR",
-    description: "Case Study of SEO, SEM, Web Analytics, and Astro. Optimization of paid campaigns and data modeling for strategic decision-making.",
-    tag: "SEM & Analytics",
-    url: "https://ingeniacr.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
-    fullContent: {
-      company: "IngeniaCR supplies professional uniforms to SMEs and medium-sized companies to provide more trust to customers and increase brand presence.",
-      challenge: "The company was on the verge of technical closure, operating without a demand generation system and depending exclusively on sporadic recommendations. The challenge was to build, from scratch, a digital infrastructure capable of capturing qualified customers in a recurrent and profitable way.",
-      solution: "We implemented a hybrid acquisition ecosystem based on a high-performance landing page developed with Astro, backed by an SEO and SEM (Google Ads) strategy and advanced measurement for rapid CRO implementation to increase conversions.",
-      steps: [
-        {
-          title: "Survival Analysis and Profiling",
-          content: "We identified critical business pain points and defined a high-urgency Buyer Persona to ensure rapid returns on the initial investment."
-        },
-        {
-          title: "Conversion Infrastructure Development",
-          content: "We designed and deployed a platform using Astro and AI, 100% focused on user conversion and optimized for minimal loading times, hosted on Vercel."
-        },
-        {
-          title: "Measurement and SEM Ecosystem",
-          content: "We configured a full analytical stack (GTM, GA4, SEO, GEO, Google Search Console) integrated with Google Ads to validate market hypotheses and track SQL generation in real-time with Microsoft Clarity."
-        },
-        {
-          title: "Optimization and Scaling",
-          content: "We continuously adjusted paid search campaigns based on behavior data, while the platform's technical SEO began to gain organic traction."
-        }
-      ],
-      strategy: "We combined the agility of paid traffic with the efficiency of modern web development to rescue a business in crisis, transforming its digital presence into a data-driven lead generation machine.",
-      metrics: [
-        { label: "New Users", value: "1.3K (+124.7%)" },
-        { label: "Organic Growth", value: "+188.2%" },
-        { label: "Paid Search", value: "63%" },
-        { label: "User Retention", value: "+138.3%" }
-      ],
-      results: [
-        "Exponential growth in the acquisition of 1,300 new users in 28 days.",
-        "Massive 188.2% increase in organic traffic through technical SEO strategies.",
-        "Vertical scaling of paid campaigns achieving 63% of acquisition from Paid Search.",
-        "Successful channel diversification including YouTube (+124.8%) and traffic from AI assistants (ChatGPT).",
-        "Sales potential of $1,600/month generated through qualified digital channels."
-      ]
-    }
-  },
-  {
-    slug: "ferreteria-epa",
-    lang: 'en',
-    title: "Ferretería EPA",
-    description: "I provided SEO training and consulting to EPA Costa Rica, focusing on best practices for search engine optimization, technical SEO, content strategy, and improving organic visibility to strengthen their digital presence.",
-    tag: "SEO Consulting",
-    url: "https://cr.epaenlinea.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "",
-      strategy: "I provided SEO training and consulting to EPA Costa Rica, focusing on best practices for search engine optimization, technical SEO, content strategy, and improving organic visibility to strengthen their digital presence.",
-      results: [
-        "Full indexing of categories with higher profit margins.",
-        "45% increase in monthly transactional organic traffic.",
-        "30% improvement in brand visibility against direct competitors.",
-        "Consolidation as the leading construction e-commerce in the region."
-      ]
-    }
-  },
-  {
-    slug: "ins-seguros",
-    lang: 'en',
-    title: "National Insurance Institute (INS)",
-    description: "Comprehensive organic visibility strategy for the leading insurer in the region.",
-    tag: "SEO Consultant",
-    url: "https://www.segurosdelins.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.segurosdelins.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "Need to dominate insurance-related searches in a highly competitive market.",
-      strategy: "Content strategy based on the Customer Journey and optimization of domain authority through digital PR.",
-      results: [
-        "Leadership in informative insurance searches.",
-        "Dominance of Share of Voice against direct competitors.",
-        "Reduced dependence on paid channels."
-      ]
-    }
-  },
-  {
-    slug: "sapiens-development",
-    lang: 'en',
-    title: "Sapiens Development",
-    description: "B2B SEO strategy to attract international tech clients and position premium software development services.",
-    tag: "SEO Consulting",
-    url: "https://sapiensdev.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "Lack of organic visibility in the US market for high-value nearshore development services.",
-      strategy: "Design of a content architecture focused on solving complex technical problems and optimization of service pages for high-intent keywords.",
-      results: [
-        "Acquisition of Enterprise-level qualified leads in the USA.",
-        "Top 3 positioning for key terms like 'nearshore development'.",
-        "120% increase in organic budget requests.",
-        "Consolidated brand authority in the international tech ecosystem."
-      ]
-    }
-  },
-  {
-    slug: "bluewater-properties",
-    lang: 'en',
-    title: "BluewaterProperties of Costa Rica",
-    description: "Massive impact on the luxury real estate market. Connecting exclusive properties with international investors through high-end SEO.",
-    tag: "SEO Specialist",
-    url: "https://bluewaterpropertiesofcostarica.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbluewaterpropertiesofcostarica.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "A slow website without Google visibility for luxury property investment terms, losing opportunities to large international aggregators.",
-      strategy: "Hyper-local SEO strategy for specific destinations and optimization of 'Core Web Vitals' for a flawless user experience.",
-      results: [
-        "Absolute Top 3 dominance on Google for luxury searches in Guanacaste.",
-        "200% increase in the volume of international qualified leads.",
-        "400% improvement in loading speed, reducing bounce rate.",
-        "Direct sales closures 100% attributed to the organic channel."
-      ]
-    }
-  },
-  {
-    slug: "intersources",
-    lang: 'en',
-    title: "InterSources",
-    description: "Digital visibility and B2B SEO consulting for Cybersecurity leaders. Boosting technical authority and corporate pipeline generation.",
-    tag: "SEO Consultant and Team lead",
-    url: "https://www.intersourcesinc.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intersourcesinc.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "Communicating complex technical cybersecurity services (MSSP) to C-level decision-makers in a market saturated with technical noise.",
-      strategy: "Development of a 'Thought Leadership' strategy through optimized technical content and high-authority downloadable assets that capture qualified leads.",
-      results: [
-        "180% increase in organic traffic from decision profiles (IT Managers, CISOs).",
-        "Positioning as a reference authority in 'Managed Security Services'.",
-        "70% increase in the conversion rate of corporate B2B leads.",
-        "Sales pipeline strengthened through optimized digital assets."
-      ]
-    }
-  },
-  {
-    slug: "basha-bracelets",
-    lang: 'en',
-    title: "Basha Bracelets",
-    description: "Scaling spiritual e-commerce through semantic SEO and multi-channel visibility. Transforming passion into a profitable digital business.",
-    tag: "SEO & E-commerce",
-    url: "https://bashabracelet.com/",
-    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbashabracelet.com%2F?w=600&h=400",
-    fullContent: {
-      challenge: "A brand with an exceptional product but low organic visibility, depending exclusively on social media to generate sales.",
-      strategy: "Implementation of semantic SEO to capture searches for spiritual benefits and a YouTube SEO strategy to educate the user about the products.",
-      results: [
-        "300% growth in sales from organic search.",
-        "50% reduction in dependence on social media advertising.",
-        "85% improvement in CTR (Click-Through Rate) for transactional results.",
-        "Creation of a proprietary digital asset that generates recurring sales 24/7."
       ]
     }
   }

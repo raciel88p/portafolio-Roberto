@@ -5,8 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { projects } from '../../data/projects';
 
 export function getStaticPaths() {
-  const esProjects = projects.filter(p => p.lang === 'es');
-  return esProjects.map((project) => ({
+  return projects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
   }));
