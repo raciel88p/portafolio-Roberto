@@ -2,34 +2,18 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import sanity from '@sanity/astro';
-import react from '@astrojs/react';
-
-// Sincronización con el dominio real del usuario
-const projectId = '2grwsc7l';
-const dataset = 'production';
+import sanityIntegration from '@sanity/astro';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.robertoperezsalazar.com',
-  i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
-    routing: {
-      prefixDefaultLocale: false
-    }
-  },
+  site: 'https://robertoperez.com',
   integrations: [
     sitemap(),
-    sanity({
-      projectId,
-      dataset,
-      useCdn: false,
-      apiVersion: '2023-05-03',
-      // @ts-ignore
-      studioPath: '/admin',
-    }),
-    react()
+    sanityIntegration({
+      projectId: '2grwsc7l',
+      dataset: 'production',
+      useCdn: true,
+    })
   ],
   vite: {
     plugins: [tailwindcss()]

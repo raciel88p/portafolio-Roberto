@@ -3,33 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { projects } from '../../data/projects';
-
-const currentLang = Astro.currentLocale || 'es';
-const isEn = currentLang === 'en';
-
-const t = {
-  es: {
-    title: "Portafolio de Proyectos y Casos de Estudio | Roberto Pérez Salazar",
-    h1: "Casos de éxito: cuando el trabajo en tu web impulsa ",
-    h1_span: "resultados reales",
-    p1: "Estos proyectos muestran el impacto de unir diseño web, SEO, SEM y estrategia. Desde rediseños hasta desarrollos a medida, todos comparten un mismo objetivo: mejorar conversiones, visibilidad y eficiencia. Porque el diseño solo tiene sentido cuando se traduce en resultados.",
-    p2: "Descubre cómo lo logramos:",
-    cta: "Ver Caso de Estudio"
-  },
-  en: {
-    title: "Projects Portfolio and Case Studies | Roberto Pérez Salazar",
-    h1: "Success Stories: When web design drives ",
-    h1_span: "real results",
-    p1: "These projects show the impact of uniting web design, SEO, SEM, and strategy. From redesigns to custom developments, they all share the same goal: improving conversions, visibility, and efficiency. Because design only makes sense when it translates into results.",
-    p2: "Discover how we did it:",
-    cta: "View Case Study"
-  }
-}[currentLang as 'es' | 'en'];
-
-const filteredProjects = projects.filter(p => p.lang === currentLang);
 ---
 
-<Layout title={t.title}>
+<Layout title="Portafolio de Proyectos y Casos de Estudio | Roberto Pérez Salazar">
   <Navbar />
 
   <main class="pt-32">
@@ -37,33 +13,38 @@ const filteredProjects = projects.filter(p => p.lang === currentLang);
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mb-16">
           <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            {t.h1}<span class="text-blue-600">{t.h1_span}</span>
+            Casos de éxito: cuando el trabajo en tu web impulsa <span class="text-blue-600">resultados reales</span>
           </h1>
           <div class="space-y-4">
             <p class="text-xl text-slate-600 leading-relaxed">
-              {t.p1}
+              Estos proyectos muestran el impacto de unir diseño web, SEO, SEM y estrategia. Desde rediseños hasta desarrollos a medida, todos comparten un mismo objetivo: mejorar conversiones, visibilidad y eficiencia. Porque el diseño solo tiene sentido cuando se traduce en resultados.
             </p>
             <p class="text-lg font-bold text-slate-900">
-              {t.p2}
+              Descubre cómo lo logramos:
             </p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map(project => (
+          {projects.map(project => (
             <div class="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <div class="aspect-[16/10] bg-slate-100 relative overflow-hidden">
                 <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div class="absolute top-4 left-4">
                   <span class="bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">{project.tag}</span>
                 </div>
+                {project.logo && (
+                  <div class="absolute bottom-4 right-4 w-28 h-28 bg-white rounded-2xl p-4 shadow-xl flex items-center justify-center border border-slate-100 transition-transform group-hover:scale-110">
+                    <img src={project.logo} alt={project.title} class="max-w-full max-h-full object-contain" />
+                  </div>
+                )}
               </div>
               <div class="p-8">
                 <h3 class="text-2xl font-bold text-slate-900 mb-3">{project.title}</h3>
-                <p class="text-slate-600 mb-6 line-clamp-3">{project.description}</p>
+                <p class="text-slate-600 mb-6">{project.description}</p>
                 <div class="flex flex-wrap gap-4">
-                  <a href={isEn ? `/en/proyectos/${project.slug}` : `/proyectos/${project.slug}`} class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
-                    {t.cta}
+                  <a href={`/proyectos/${project.slug}`} class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center">
+                    Ver Caso de Estudio
                     <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </a>
                 </div>

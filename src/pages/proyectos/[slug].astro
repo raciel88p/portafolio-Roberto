@@ -5,8 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { projects } from '../../data/projects';
 
 export function getStaticPaths() {
-  const esProjects = projects.filter(p => p.lang === 'es');
-  return esProjects.map((project) => ({
+  return projects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
   }));
@@ -39,9 +38,16 @@ const schema = {
             <div class="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-bold mb-6 uppercase tracking-wider">
               {project.tag}
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              {project.title}
-            </h1>
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
+              {project.logo && (
+                <div class="w-48 h-48 md:w-56 md:h-56 flex-shrink-0 bg-white rounded-[2.5rem] p-4 shadow-xl border border-slate-100 flex items-center justify-center overflow-hidden">
+                  <img src={project.logo} alt={`Logo de ${project.title}`} class="w-full h-full object-contain scale-125" />
+                </div>
+              )}
+              <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                {project.title}
+              </h1>
+            </div>
             <p class="text-xl text-slate-600 mb-8 leading-relaxed">
               {project.description}
             </p>

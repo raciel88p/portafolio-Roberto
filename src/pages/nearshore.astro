@@ -4,59 +4,11 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 
-const currentLang = Astro.currentLocale || 'es';
-const isEn = currentLang === 'en';
-
-const t = {
-  es: {
-    title: "Servicios Nearshore | Roberto Pérez Salazar",
-    badge: "Eficiencia y Cercanía",
-    h1: "Servicios ",
-    h1_span: "Nearshore",
-    p1: "Elimina las barreras horarias y culturales. Ofrecemos servicios de SEO, marketing digital y desarrollo web de alta calidad para empresas que buscan talento especializado con la ventaja de la proximidad geográfica.",
-    feature1_title: "Alineación Horaria",
-    feature1_p: "Trabajamos en tu misma zona horaria, permitiendo una comunicación en tiempo real y una integración perfecta con tu equipo interno.",
-    feature2_title: "Afinidad Cultural",
-    feature2_p: "Entendemos tus procesos de negocio y expectativas, reduciendo la fricción y acelerando la entrega de resultados.",
-    feature3_title: "Coste-Eficiencia",
-    feature3_p: "Obtén acceso a talento de primer nivel con una estructura de costes optimizada, sin sacrificar la calidad ni el control.",
-    offer_title: "Nuestra Oferta ",
-    offer_p: "No somos solo proveedores; nos convertimos en tu brazo ejecutor estratégico. Nos especializamos en sectores competitivos donde la precisión y la velocidad son fundamentales.",
-    s1_title: "Estrategia SEO Global",
-    s1_p: "Ejecución de campañas orgánicas para mercados internacionales.",
-    s2_title: "Desarrollo Web Ágil",
-    s2_p: "Implementación de landing pages y arquitecturas web optimizadas.",
-    s3_title: "Staff Augmentation",
-    s3_p: "Especialistas senior integrados directamente en tus flujos de trabajo."
-  },
-  en: {
-    title: "Nearshore Services | Roberto Pérez Salazar",
-    badge: "Efficiency and Proximity",
-    h1: "Nearshore ",
-    h1_span: "Services",
-    p1: "Eliminate time and cultural barriers. We offer high-quality SEO, digital marketing, and web development services for companies looking for specialized talent with the advantage of geographic proximity.",
-    feature1_title: "Time Zone Alignment",
-    feature1_p: "We work in your same time zone, allowing real-time communication and seamless integration with your internal team.",
-    feature2_title: "Cultural Affinity",
-    feature2_p: "We understand your business processes and expectations, reducing friction and accelerating result delivery.",
-    feature3_title: "Cost-Efficiency",
-    feature3_p: "Access top-tier talent with an optimized cost structure, without sacrificing quality or control.",
-    offer_title: "Our Nearshore ",
-    offer_p: "We are not just providers; we become your strategic execution arm. We specialize in competitive sectors where precision and speed are fundamental.",
-    s1_title: "Global SEO Strategy",
-    s1_p: "Execution of organic campaigns for international markets.",
-    s2_title: "Agile Web Development",
-    s2_p: "Implementation of optimized landing pages and web architectures.",
-    s3_title: "Staff Augmentation",
-    s3_p: "Senior specialists integrated directly into your workflows."
-  }
-}[currentLang as 'es' | 'en'];
-
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": isEn ? "Nearshore SEO and Development Services" : "Servicios Nearshore de SEO y Desarrollo",
-  "description": t.p1,
+  "name": "Servicios Nearshore de SEO y Desarrollo",
+  "description": "Potenciamos tu empresa con talento especializado en SEO y desarrollo web bajo un modelo nearshore eficiente y escalable.",
   "provider": {
     "@type": "Person",
     "name": "Roberto Pérez Salazar"
@@ -64,35 +16,35 @@ const schema = {
 };
 ---
 
-<Layout title={t.title}>
+<Layout title="Servicios Nearshore | Roberto Pérez Salazar">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Navbar />
   <main class="pt-32">
     <section class="py-20 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-16">
-          <span class="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-700 text-sm font-bold tracking-wide uppercase mb-6">{t.badge}</span>
-          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-8">{isEn ? <>{t.h1_span} <span class="text-blue-600">{t.h1}</span></> : <>{t.h1}<span class="text-blue-600">{t.h1_span}</span></>}</h1>
+          <span class="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-700 text-sm font-bold tracking-wide uppercase mb-6">Eficiencia y Cercanía</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-8">Servicios <span class="text-blue-600">Nearshore</span></h1>
           <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            {t.p1}
+            Elimina las barreras horarias y culturales. Ofrecemos servicios de SEO, marketing digital y desarrollo web de alta calidad para empresas que buscan talento especializado con la ventaja de la proximidad geográfica.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
             <div class="text-4xl mb-6">⏰</div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">{t.feature1_title}</h3>
-            <p class="text-slate-600 leading-relaxed">{t.feature1_p}</p>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Alineación Horaria</h3>
+            <p class="text-slate-600 leading-relaxed">Trabajamos en tu misma zona horaria, permitiendo una comunicación en tiempo real y una integración perfecta con tu equipo interno.</p>
           </div>
           <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
             <div class="text-4xl mb-6">🤝</div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">{t.feature2_title}</h3>
-            <p class="text-slate-600 leading-relaxed">{t.feature2_p}</p>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Afinidad Cultural</h3>
+            <p class="text-slate-600 leading-relaxed">Entendemos tus procesos de negocio y expectativas, reduciendo la fricción y acelerando la entrega de resultados.</p>
           </div>
           <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
             <div class="text-4xl mb-6">💰</div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">{t.feature3_title}</h3>
-            <p class="text-slate-600 leading-relaxed">{t.feature3_p}</p>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Coste-Eficiencia</h3>
+            <p class="text-slate-600 leading-relaxed">Obtén acceso a talento de primer nivel con una estructura de costes optimizada, sin sacrificar la calidad ni el control.</p>
           </div>
         </div>
       </div>
@@ -105,9 +57,9 @@ const schema = {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-3xl md:text-5xl font-bold mb-8">{t.offer_title}<span class="text-blue-400">{t.h1_span}</span></h2>
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Nuestra Oferta <span class="text-blue-400">Nearshore</span></h2>
             <p class="text-lg text-slate-400 mb-10 leading-relaxed">
-              {t.offer_p}
+              No somos solo proveedores; nos convertimos en tu brazo ejecutor estratégico. Nos especializamos en sectores competitivos donde la precisión y la velocidad son fundamentales.
             </p>
             <ul class="space-y-6">
               <li class="flex items-start">
@@ -115,8 +67,8 @@ const schema = {
                   <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-xl mb-1">{t.s1_title}</h4>
-                  <p class="text-slate-400">{t.s1_p}</p>
+                  <h4 class="font-bold text-xl mb-1">Estrategia SEO Global</h4>
+                  <p class="text-slate-400">Ejecución de campañas orgánicas para mercados internacionales.</p>
                 </div>
               </li>
               <li class="flex items-start">
@@ -124,8 +76,8 @@ const schema = {
                   <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-xl mb-1">{t.s2_title}</h4>
-                  <p class="text-slate-400">{t.s2_p}</p>
+                  <h4 class="font-bold text-xl mb-1">Desarrollo Web Ágil</h4>
+                  <p class="text-slate-400">Implementación de landing pages y arquitecturas web optimizadas.</p>
                 </div>
               </li>
               <li class="flex items-start">
@@ -133,8 +85,8 @@ const schema = {
                   <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-xl mb-1">{t.s3_title}</h4>
-                  <p class="text-slate-400">{t.s3_p}</p>
+                  <h4 class="font-bold text-xl mb-1">Staff Augmentation</h4>
+                  <p class="text-slate-400">Especialistas senior integrados directamente en tus flujos de trabajo.</p>
                 </div>
               </li>
             </ul>

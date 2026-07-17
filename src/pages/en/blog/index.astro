@@ -2,90 +2,146 @@
 import Layout from '../../../layouts/Layout.astro';
 import Navbar from '../../../components/Navbar.astro';
 import Footer from '../../../components/Footer.astro';
-import { sanityClient } from '../../../data/sanity';
-import BlogCard from "../../../components/BlogCard.jsx";
-import { Search } from "lucide-react";
+import { sanityClient } from 'sanity:client';
 
-const lang = 'en';
-const langPrefix = '/en';
+// GROQ Query to fetch published posts in English
+const query = `*[_type == "post" && language == "en"] | order(publishedAt desc) {
+  title,
+  "slug": slug.current,
+  excerpt,
+  mainImage {
+    asset->{
+      _id,
+      url
+    }
+  },
+  publishedAt,
+  "author": author->name,
+  "categories": categories[]->title
+}`;
 
-const categories = await sanityClient.fetch(
-  '*[_type == "category" && language == $lang] | order(title asc)',
-  { lang: lang }
-);
+let posts = [];
+let errorMsg = null;
 
-const posts = await sanityClient.fetch(
-  '*[_type == "post" && language == $lang] | order(publishedAt desc) { ..., "author": select(author._type == "reference" => author-> { name, image, jobTitle }, author != null => *[_type == "author" && name == ^.author][0] { name, image, jobTitle }, null), "categories": categories[]->title }',
-  { lang: lang }
-);
+try {
+  posts = await sanityClient.fetch(query);
+} catch (e) {
+  console.error("Error fetching English blog posts from Sanity:", e);
+  errorMsg = "We couldn't load the blog posts at this moment.";
+}
 
-const t = {
-  title: "Blog | Roberto Pérez Salazar - SEO Consultant & Digital Marketing",
-  h1: "Blog: Strategies for ",
-  h1_span: "SEO and Artificial Intelligence",
-  p: "Sharing my experience and knowledge on how to scale digital businesses using the latest trends in SEO, Generative AI, and strategic marketing.",
-  search_placeholder: "Search articles...",
-  no_posts: "New articles coming soon. Stay tuned!",
-  all_categories: "All"
-};
+// Format Date helper
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
 ---
 
-<Layout title={t.title}>
+<Layout
+  title="Blog | Roberto Pérez Salazar - SEO & Digital Marketing"
+  description="Articles, guides, and case studies about SEO, Artificial Intelligence, Search Engine Marketing, and LLM Optimization."
+>
   <Navbar />
 
-  <main class="pt-32">
-    <section class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mb-16">
-          <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            {t.h1}<span class="text-blue-600">{t.h1_span}</span>
-          </h1>
-          <p class="text-xl text-slate-600 leading-relaxed mb-8">
-            {t.p}
-          </p>
+  <main class="pt-32 pb-24 bg-slate-50 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
-            {/* Search Bar */}
-            <div class="relative w-full md:max-w-md group">
-              <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
-                <Search size={20} client:load />
-              </div>
-              <input
-                type="text"
-                placeholder={t.search_placeholder}
-                class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600 transition-all shadow-sm"
-              />
-            </div>
-
-            {/* Category Filter */}
-            {categories && categories.length > 0 && (
-              <div class="flex flex-wrap gap-2">
-                <a href="/en/blog" class="px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-100 transition-all">
-                  {t.all_categories}
-                </a>
-                {categories.map((cat: any) => (
-                  <a href={`/en/blog/category/${cat.slug.current}`} class="px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-sm hover:border-blue-600 hover:text-blue-600 transition-all">
-                    {cat.title}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
+          <span class="text-blue-600">Growth & SEO</span> Blog
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600">
+          Actionable strategies, technical SEO experiments, LLM optimization (GEO), and artificial intelligence integrations.
+        </p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="/blog" class="px-3 py-1 text-xs font-semibold rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors">Leer en Español</a>
+          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">English</span>
         </div>
-
-        {posts && posts.length > 0 ? (
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <BlogCard post={post} client:load />
-            ))}
-          </div>
-        ) : (
-          <div class="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
-            <p class="text-slate-500 text-lg">{t.no_posts}</p>
-          </div>
-        )}
       </div>
-    </section>
+
+      {errorMsg ? (
+        <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center text-red-700 max-w-lg mx-auto">
+          <p class="font-semibold">{errorMsg}</p>
+        </div>
+      ) : posts.length === 0 ? (
+        <div class="text-center py-20 bg-white rounded-3xl shadow-sm border border-slate-100 max-w-2xl mx-auto px-6">
+          <svg class="mx-auto h-16 w-16 text-slate-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 4a2 2 0 012 2v8a2 2 0 01-2 2h-3M10 11l2 2m0 0l2-2m-2 2v-6"></path>
+          </svg>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">New Articles Coming Soon!</h3>
+          <p class="text-slate-600">We are preparing high-value insights about SEO and AI optimization. Check back shortly.</p>
+        </div>
+      ) : (
+        <!-- Grid list of posts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post: any) => (
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+              <a href={`/en/blog/${post.slug}`} class="block aspect-video w-full bg-slate-100 overflow-hidden relative">
+                {post.mainImage?.asset?.url ? (
+                  <img
+                    src={post.mainImage.asset.url}
+                    alt={post.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center bg-blue-50 text-blue-500 font-bold">
+                    ROBERTOPÉREZ
+                  </div>
+                )}
+                {post.categories && post.categories.length > 0 && (
+                  <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                    {post.categories[0]}
+                  </span>
+                )}
+              </a>
+
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center text-xs text-slate-500 gap-4 mb-4">
+                  {post.publishedAt && (
+                    <time datetime={post.publishedAt}>
+                      {formatDate(post.publishedAt)}
+                    </time>
+                  )}
+                  {post.author && (
+                    <span class="flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                      {post.author}
+                    </span>
+                  )}
+                </div>
+
+                <h2 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-3 line-clamp-2">
+                  <a href={`/en/blog/${post.slug}`}>
+                    {post.title}
+                  </a>
+                </h2>
+
+                <p class="text-slate-600 text-sm mb-6 line-clamp-3 flex-grow">
+                  {post.excerpt || "Discover the details of this new article on digital growth strategies and optimization."}
+                </p>
+
+                <div class="pt-4 border-t border-slate-50">
+                  <a href={`/en/blog/${post.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 group-hover:text-blue-700">
+                    Read full article
+                    <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+    </div>
   </main>
 
   <Footer />

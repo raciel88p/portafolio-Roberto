@@ -1,0 +1,9 @@
+
+> app@0.0.1 preview
+> astro preview --port 4321 --host
+
+
+ astro  v5.3.0 ready in 24 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  http://192.168.0.2:4321/
