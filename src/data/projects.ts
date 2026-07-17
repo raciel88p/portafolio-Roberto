@@ -259,5 +259,23 @@ export const projects: Project[] = [
         "Creación de un activo digital propio que genera ventas recurrentes 24/7"
       ]
     }
+  },
+  {
+    slug: "padel-tennis-guide",
+    title: "PadelTennisGuide",
+    description: "Caso de Estudio de SEO para Directorios: Reestructuración arquitectónica y optimización Onsite profunda para maximizar la indexación y visibilidad de un directorio especializado en pádel.",
+    tag: "SEO para Directorios",
+    url: "https://padeltennisguide.com/",
+    image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fpadeltennisguide.com%2F?w=600&h=400",
+    fullContent: {
+      challenge: "El punto de partida era un sitio web desarrollado en WordPress con severas deficiencias estructurales: carecía de una arquitectura de información óptima para directorios, no presentaba un enlazado interno lógico y sufría de problemas críticos de SEO Onsite que limitaban drásticamente su rastreo, indexación y potencial de conversión de tráfico.",
+      strategy: "Diseñamos un MVP funcional enfocado en resolver las debilidades de la plataforma. Diseñamos e implementamos una estrategia integral dividida en cada etapa de crecimiento SEO, reestructurando la jerarquía semántica, optimizando los enlaces internos y definiendo directrices claras de SEO Onsite para elevar sustancialmente el volumen de indexación de páginas.",
+      results: [
+        "Aumento significativo en el volumen de páginas indexadas en motores de búsqueda.",
+        "Arquitectura de información profesional optimizada para la conversión y experiencia del usuario.",
+        "Implementación exitosa del MVP enfocado en el modelo de negocio de directorios.",
+        "Estrategia de SEO consolidada y dividida en etapas operativas para el equipo directivo."
+      ]
+    }
   }
 ];
