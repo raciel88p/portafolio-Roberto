@@ -1,80 +1,141 @@
 ---
-const services = [
+const problems = [
   {
-    title: "LLMs Optimization",
-    description: "Optimizamos tu contenido para que sea la fuente preferida de los Modelos de Lenguaje de Inteligencia Artificial.",
-    slug: "llm-optimization",
-    icon: "🤖"
-  },
-  {
-    title: "Local SEO",
-    description: "Domina los resultados de búsqueda locales y atrae clientes listos para comprar en tu zona geográfica.",
-    slug: "local-seo",
-    icon: "📍"
-  },
-  {
-    title: "Youtube SEO",
-    description: "Posicionamos tus videos en el segundo buscador más grande del mundo para maximizar tu alcance orgánico.",
-    slug: "youtube-seo",
-    icon: "🎬"
-  },
-  {
-    title: "Wordpress SEO",
-    description: "Especialistas en exprimir el potencial de Wordpress para alcanzar las primeras posiciones de Google.",
-    slug: "wordpress-seo",
-    icon: "🌐"
-  },
-  {
-    title: "Headless CMS SEO",
-    description: "Estrategias de SEO técnico avanzadas para arquitecturas web modernas y desacopladas.",
-    slug: "headless-cms-seo",
-    icon: "⚡"
-  },
-  {
-    title: "Ai Growth Engineer",
-    description: "Ingeniería de crecimiento impulsada por IA para automatizar y escalar tus procesos de adquisición.",
-    slug: "ai-growth-engineer",
-    icon: "🚀"
-  },
-  {
-    title: "Consultoría SEO",
-    description: "Asesoramiento estratégico integral para posicionar tu negocio en la cima de los resultados de búsqueda.",
-    slug: "consultor-seo",
+    title: "Revenue isn't growing",
+    text: "I identify growth opportunities and build systems that generate predictable customer acquisition.",
     icon: "📈"
   },
   {
-    title: "Desarrollo Web & Apps",
-    description: "Diseño y desarrollo de páginas web y aplicaciones móviles de alto rendimiento y enfocadas a conversión.",
-    slug: "desarrollo-web-apps",
-    icon: "💻"
+    title: "Your team wastes time",
+    text: "I automate repetitive processes using AI and workflow automation to maximize efficiency.",
+    icon: "⏱️"
   },
   {
-    title: "Programmatic SEO",
-    description: "Escala tu tráfico orgánico mediante la creación masiva y automatizada de páginas de aterrizaje optimizadas.",
-    slug: "programmatic-seo",
-    icon: "📊"
+    title: "Marketing isn't producing ROI",
+    text: "I build acquisition systems based on data instead of assumptions to assure profitability.",
+    icon: "🎯"
+  },
+  {
+    title: "Operations don't scale",
+    text: "I optimize processes so your company grows without increasing operational complexity.",
+    icon: "⚙️"
+  }
+];
+
+const frameworkPhases = [
+  { phase: "Phase 1", title: "Business Audit", desc: "Deep dive into your current metrics, acquisition channels, and operational bottlenecks." },
+  { phase: "Phase 2", title: "Market Validation", desc: "Analyzing search intent, competitor gaps, and high-converting audience opportunities." },
+  { phase: "Phase 3", title: "Growth Strategy", desc: "Designing a comprehensive acquisition and revenue generation blueprint." },
+  { phase: "Phase 4", title: "AI Automation", desc: "Deploying n8n, Claude, OpenAI, and CRM agents to eliminate repetitive team workload." },
+  { phase: "Phase 5", title: "Customer Acquisition", desc: "Executing SEO, GEO, Youtube, and Paid Ads to capture high-intent traffic." },
+  { phase: "Phase 6", title: "Optimization", desc: "Implementing CRO, funnels, dashboards, and continuous analytics improvements." }
+];
+
+const reorganizedServices = [
+  {
+    title: "AI Business Growth Strategy",
+    icon: "🧠",
+    description: "Evaluación integral del negocio, diseño de roadmap estratégico, definición de KPIs clave y priorización de iniciativas.",
+    tags: ["Evaluación", "Roadmap", "KPIs", "Prioridades"]
+  },
+  {
+    title: "AI Automation",
+    icon: "🤖",
+    description: "Despliegue de automatizaciones avanzadas y agentes inteligentes para optimizar procesos repetitivos.",
+    tags: ["n8n", "Claude", "OpenAI", "Agentes", "CRM", "Automatización"]
+  },
+  {
+    title: "Customer Acquisition",
+    icon: "🎯",
+    description: "Sistemas de captación de tráfico con alta intención de compra en canales orgánicos e impulsados por IA.",
+    tags: ["SEO", "GEO", "Google", "YouTube", "Paid Ads"]
+  },
+  {
+    title: "Revenue Optimization",
+    icon: "📊",
+    description: "Optimización de la tasa de conversión, embudos de venta complejos, analítica web avanzada y tableros interactivos.",
+    tags: ["CRO", "Funnels", "Analytics", "Dashboards"]
+  },
+  {
+    title: "Digital Transformation",
+    icon: "⚡",
+    description: "Modernización de la infraestructura técnica corporativa, integración de CMS sin cabeza, CRM y optimización de procesos.",
+    tags: ["AI", "CMS", "CRM", "Procesos"]
   }
 ];
 ---
-<section id="servicios" class="py-24 bg-white">
+
+<!-- Problems I Solve Section -->
+<section id="problemas" class="py-24 bg-slate-50 border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Servicios de <span class="text-blue-600">Nueva Generación</span></h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">Soluciones estratégicas diseñadas para el panorama digital actual, impulsadas por tecnología y resultados.</p>
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="px-4 py-1.5 text-xs font-bold bg-red-100 text-red-700 rounded-full uppercase tracking-wider">Focus en soluciones</span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6">Problems I Solve</h2>
+      <p class="text-lg text-slate-600">No vendo SEO como un fin. Resuelvo problemas críticos que limitan el crecimiento de tu negocio.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {problems.map(prob => (
+        <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-start gap-6 hover:shadow-md transition-all">
+          <div class="text-4xl bg-red-50 p-4 rounded-2xl text-red-600">{prob.icon}</div>
+          <div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">{prob.title}</h3>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">{prob.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Business Growth Framework Section -->
+<section id="metodologia" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="px-4 py-1.5 text-xs font-bold bg-blue-500/10 text-blue-400 rounded-full uppercase tracking-wider">Metodología Comprobada</span>
+      <h2 class="text-4xl md:text-5xl font-black mt-4 mb-6">Business Growth Framework</h2>
+      <p class="text-lg text-slate-300">AI Growth Operating System™: El paso a paso estratégico para escalar la adquisición y optimizar la rentabilidad.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map(service => (
-        <div class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-all group">
-          <div class="text-4xl mb-6">{service.icon}</div>
-          <h3 class="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
-          <p class="text-slate-600 mb-6 leading-relaxed">
-            {service.description}
-          </p>
-          <a href={`/servicios/${service.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            Saber más
-            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          </a>
+      {frameworkPhases.map((phase) => (
+        <div class="p-8 bg-white/5 border border-white/5 rounded-3xl hover:border-blue-500/30 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-4">{phase.phase}</span>
+            <h3 class="text-2xl font-bold mb-4">{phase.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{phase.desc}</p>
+          </div>
+          <div class="w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-8 opacity-40"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <!-- Blur backgrounds -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -z-0"></div>
+</section>
+
+<!-- Reorganized Services Section -->
+<section id="servicios" class="py-24 bg-white border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Servicios Especializados</span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6">Sistemas de Adquisición y Crecimiento</h2>
+      <p class="text-lg text-slate-600">Soluciones de crecimiento empresarial que combinan tecnología, analítica y optimización avanzada.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {reorganizedServices.map(service => (
+        <div class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/20 transition-all flex flex-col justify-between h-full group">
+          <div>
+            <div class="text-4xl mb-6">{service.icon}</div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">{service.title}</h3>
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">{service.description}</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-50">
+            {service.tags.map(tag => (
+              <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
         </div>
       ))}
     </div>
