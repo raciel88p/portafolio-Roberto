@@ -1,0 +1,236 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const services = [
+  { title: "Posicionamiento Web (SEO)", text: "Para aparecer en Google cuando los pacientes buscan activamente sus servicios." },
+  { title: "Gestión Profesional de Redes", text: "Creación de contenido estratégico que conecta y educa a su audiencia." },
+  { title: "Google Ads y Meta Ads", text: "Campañas publicitarias altamente segmentadas para captar pacientes de forma inmediata." },
+  { title: "Automatización con IA", text: "Seguimiento automatizado de pacientes potenciales para optimizar la conversión." },
+  { title: "Asistentes Virtuales 24/7", text: "Chatbots inteligentes que responden consultas y pre-califican en cualquier momento." },
+  { title: "Optimización de Conversión", text: "Mejora de la experiencia del paciente desde el primer clic hasta la reserva." },
+  { title: "Analítica y Datos", text: "Seguimiento minucioso de métricas clave para una mejora continua." }
+];
+
+const aiTasks = [
+  "Responder consultas frecuentes de manera inmediata.",
+  "Calificar prospectos automáticamente.",
+  "Agendar citas sin intervención humana.",
+  "Dar seguimiento a pacientes potenciales.",
+  "Recordar citas y reducir ausencias (no-shows).",
+  "Analizar datos para identificar nuevas oportunidades de crecimiento."
+];
+
+const benefits = [
+  "Más pacientes calificados.",
+  "Mayor ocupación de la agenda.",
+  "Mejor posicionamiento frente a la competencia.",
+  "Automatización de tareas repetitivas.",
+  "Ahorro de tiempo para su personal.",
+  "Mayor retorno sobre la inversión en marketing."
+];
+---
+
+<Layout
+  title="SEO y Marketing Digital para Clínicas y Salud | Roberto Pérez"
+  description="Atraiga más pacientes y llene su agenda médica. Estrategias de marketing digital avanzadas y optimización con Inteligencia Artificial para clínicas de salud, estética y odontología."
+>
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6">🏥</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Sector Salud y Clínicas</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+            ¿Su clínica está atrayendo <span class="text-blue-600">suficientes pacientes?</span>
+          </h1>
+          <p class="text-xl md:text-2xl font-bold text-slate-700 mt-6 max-w-2xl mx-auto leading-relaxed">
+            Transformamos su presencia digital en una agenda llena de citas
+          </p>
+          <p class="text-lg text-slate-600 mt-6 leading-relaxed max-w-3xl mx-auto">
+            Hoy en día, la mayoría de los pacientes buscan clínicas, médicos y especialistas en Google y en redes sociales antes de tomar una decisión. Si su clínica no aparece entre los primeros resultados o no transmite confianza en el entorno digital, está dejando que esos pacientes elijan a su competencia.
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Agendar una reunión sin compromiso
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-blue-50 border border-blue-100 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6 shadow-sm">
+          <div class="w-20 h-20 shrink-0 rounded-full overflow-hidden border-2 border-white shadow-md bg-slate-200">
+            <img
+              src="https://cdn.sanity.io/images/2grwsc7l/production/8ccdba849ad165213ef0e90c7da59093ea319163-500x500.jpg"
+              alt="Roberto Pérez Salazar"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Mi nombre es <span class="font-bold text-slate-900">Roberto Pérez Salazar</span>. Soy fundador de una clínica médica y ayudo a clínicas de salud, estéticas, odontológicas y centros médicos a atraer más pacientes de manera recurrente mediante estrategias de marketing digital y automatización avanzada con <span class="font-bold text-blue-600">Inteligencia Artificial</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">¿Qué hacemos?</h2>
+          <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+            Brindamos soluciones integrales de mercadeo y tecnología diseñadas para incrementar la visibilidad de su clínica y convertir visitantes en pacientes reales.
+          </p>
+          <p class="text-base text-slate-500 mt-4">
+            Integramos tecnología de vanguardia y agentes de Inteligencia Artificial en cada etapa del proceso comercial para optimizar la captación, atención y seguimiento de pacientes. Esto permite que su equipo dedique más tiempo a brindar una excelente atención médica, mientras la tecnología trabaja para generar nuevas oportunidades de negocio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s) => (
+            <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+              <span class="w-10 h-10 rounded-2xl bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg mb-6">✓</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">{s.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{s.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- AI & Health -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 uppercase tracking-widest">Ventaja Competitiva</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">¿Por qué integrar Inteligencia Artificial?</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+              La IA ya no es una tecnología del futuro; es una ventaja competitiva clave para las clínicas que desean crecer de manera sostenible y eficiente.
+            </p>
+            <p class="text-slate-500 leading-relaxed">
+              Nuestros agentes inteligentes se encargan del trabajo de captación y filtrado inicial, garantizando respuestas inmediatas a cualquier hora del día.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+            <h4 class="font-bold text-slate-900 text-lg mb-4 text-blue-600 flex items-center gap-2">
+              <span>🤖</span> Capacidades de nuestros agentes de IA:
+            </h4>
+            <ul class="space-y-3">
+              {aiTasks.map((task) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-500 font-bold mt-1">✦</span>
+                  <span class="text-slate-700 text-sm">{task}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Checklist -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-3xl p-8 md:p-12 shadow-xl">
+          <h2 class="text-3xl font-extrabold mb-8 text-center">Beneficios para su clínica</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((b) => (
+              <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                <span class="text-2xl text-green-300">✔</span>
+                <span class="font-bold text-sm md:text-base">{b}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-slate-900">Caso de Éxito de Referencia</h2>
+          <p class="text-lg text-slate-600 mt-2">Cómo implementamos esta metodología con resultados reales</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 md:p-12 rounded-3xl shadow-md flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2">
+            <img
+              src="/logos/mj-estetica.png"
+              alt="MJ Estética y SPA Logo"
+              class="w-48 h-auto mb-6 hover:scale-105 transition-transform"
+            />
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">MJ estética and Wellness Center</h3>
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">
+              De una inversión inicial de $1,000 a construir una clínica rentable con un equipo de 8 personas. Aplicamos SEO Programático (pSEO) con más de 100 páginas de servicios y automatización avanzada de leads calificados mediante IA.
+            </p>
+            <a href="/proyectos/mj-estetica" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-blue-700 transition-colors">
+              Explorar el Caso de Estudio completo
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="md:w-1/2 grid grid-cols-2 gap-4">
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+              <span class="block text-3xl font-extrabold text-blue-600">$75k</span>
+              <span class="text-xs text-slate-500 font-bold uppercase mt-1 block">Ventas (Año 1)</span>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+              <span class="block text-3xl font-extrabold text-blue-600">+218.5%</span>
+              <span class="text-xs text-slate-500 font-bold uppercase mt-1 block">Tráfico Orgánico</span>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+              <span class="block text-3xl font-extrabold text-blue-600">+86%</span>
+              <span class="text-xs text-slate-500 font-bold uppercase mt-1 block">Incremento Ventas</span>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+              <span class="block text-3xl font-extrabold text-blue-600">GEO / IA</span>
+              <span class="text-xs text-slate-500 font-bold uppercase mt-1 block">Recomendado ChatGPT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goal / Objective -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Nuestro Objetivo</h2>
+        <p class="text-xl text-slate-700 font-bold max-w-2xl mx-auto mb-6">
+          No vendemos únicamente publicidad o redes sociales.
+        </p>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8">
+          Creamos un sistema digital completo para que su clínica genere un flujo constante de nuevos pacientes, fortalezca su reputación y aumente sus ingresos utilizando las herramientas más avanzadas del mercado.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-2xl text-left italic text-slate-700 max-w-3xl mx-auto mb-10">
+          "Si desea conocer cómo podemos ayudar a que su clínica crezca mediante estrategias de marketing digital e Inteligencia Artificial, con gusto podemos agendar una reunión sin compromiso para analizar sus objetivos y diseñar una estrategia personalizada."
+        </div>
+
+        <p class="text-xl font-bold text-slate-900 uppercase tracking-wide">
+          Es momento de que la tecnología trabaje para hacer crecer su clínica.
+        </p>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
