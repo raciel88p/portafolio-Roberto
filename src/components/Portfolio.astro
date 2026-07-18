@@ -3,28 +3,29 @@ const caseStudies = [
   {
     title: "MJ Estética",
     slug: "mj-estetica",
-    tag: "AI Growth & pSEO",
-    problem: "Business started with only $1,000 under family financial crisis.",
-    solution: "Full business strategy, SEO programmatic (Astro), CRM integration, automated marketing and AI agents.",
-    results: ["$75K in first-year revenue", "Grew team to 8 employees", "Fully automated bookings 24/7", "86% conversion and sales increase"],
+    tag: "AI Growth & SEO Programático",
+    problem: "El negocio comenzó con apenas $1.000 en medio de una crisis financiera familiar.",
+    solution: "Diseño de la estrategia de negocio, SEO programático con Astro, integración de CRM, automatización del marketing e implementación de agentes de IA.",
+    results: ["$75.000 en ingresos durante el primer año.", "Crecimiento del equipo hasta 8 colaboradores.", "Sistema de reservas automatizado 24/7.", "Incremento del 86% en conversiones y ventas."],
     logo: "/logos/mj-estetica.png"
   },
   {
     title: "GolabsTech",
     slug: "golabstech",
     tag: "SEO & GEO",
-    problem: "No international visibility or domain authority in highly competitive Nearshore & AI services.",
-    solution: "Global growth strategy, technical SEO (hreflangs), C-Level oriented content, and Search Generative Engine (GEO) optimization.",
-    results: ["+253.9% organic traffic boost", "Acquired qualified Enterprise leads", "Recommended by ChatGPT & Perplexity", "+139% new users in 6 months"],
+    problem: "Sin visibilidad internacional ni autoridad de dominio dentro del competitivo mercado de servicios Nearshore e Inteligencia Artificial.",
+    solution: "Estrategia global de crecimiento, SEO técnico (hreflang), contenidos dirigidos a ejecutivos C-Level y optimización para motores de búsqueda generativos (GEO).",
+    results: ["+253.9% de crecimiento del tráfico orgánico.", "Captación de leads empresariales altamente calificados.", "Recomendado por ChatGPT y Perplexity.", "+139% de nuevos usuarios en seis meses."],
     logo: null
   },
   {
     title: "PadelTennisGuide",
     slug: "padel-tennis-guide",
     tag: "SEO para Directorios",
-    problem: "New startup directory with severe structural SEO issues, no internal linking, and low indexation on WordPress.",
-    solution: "Comprehensive market positioning, tailored MVP development, search-engine optimized information architecture, and automation roadmap.",
-    results: ["Massive indexation of complex listings", "Coherent internal linking structure", "Clear, optimized conversion paths", "Strategic phased execution plan"]
+    problem: "Directorio nuevo con graves problemas de estructura SEO, escaso enlazado interno y baja indexación en WordPress.",
+    solution: "Posicionamiento estratégico, desarrollo de un MVP personalizado, arquitectura de información optimizada para buscadores y hoja de ruta para automatización.",
+    results: ["Indexación masiva de listados complejos.", "Estructura sólida de enlazado interno.", "Rutas de conversión claras y optimizadas.", "Plan estratégico ejecutado por fases."],
+    logo: null
   }
 ];
 ---
@@ -34,7 +35,7 @@ const caseStudies = [
       <div class="max-w-2xl">
         <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Casos de Éxito</span>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6">Resultados Reales, <span class="text-blue-600">No Herramientas</span></h2>
-        <p class="text-lg text-slate-600">El visitante compra resultados. Cada caso cuenta la historia de un negocio transformado.</p>
+        <p class="text-lg text-slate-600">Los clientes compran resultados. Cada caso de éxito cuenta la historia de una empresa transformada.</p>
       </div>
       <a href="/proyectos" class="text-blue-600 font-bold flex items-center hover:text-blue-700 transition-colors shrink-0">
         Ver todos los casos de estudio
@@ -57,19 +58,19 @@ const caseStudies = [
 
             <!-- Problem -->
             <div class="mb-6">
-              <span class="text-xs font-bold text-red-500 uppercase tracking-wider block mb-1">Problem</span>
+              <span class="text-xs font-bold text-red-500 uppercase tracking-wider block mb-1">Problema</span>
               <p class="text-slate-600 text-sm leading-relaxed">{project.problem}</p>
             </div>
 
             <!-- Solution -->
             <div class="mb-6">
-              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Solution</span>
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Solución</span>
               <p class="text-slate-700 text-sm leading-relaxed">{project.solution}</p>
             </div>
 
             <!-- Results -->
             <div class="border-t border-slate-100 pt-6">
-              <span class="text-xs font-bold text-green-600 uppercase tracking-wider block mb-3">Results</span>
+              <span class="text-xs font-bold text-green-600 uppercase tracking-wider block mb-3">Resultados</span>
               <ul class="space-y-2">
                 {project.results.map(res => (
                   <li class="flex items-start gap-2 text-sm text-slate-800">
@@ -83,7 +84,7 @@ const caseStudies = [
 
           <div class="pt-8 mt-8 border-t border-slate-100 flex">
             <a href={`/proyectos/${project.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
-              Explorar el Caso Completo
+              Explorar el caso completo
               <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </a>
           </div>
