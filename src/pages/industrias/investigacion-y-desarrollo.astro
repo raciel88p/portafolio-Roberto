@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const servicesList = [
+  "Automatización de procesos administrativos y operativos.",
+  "Implementación de soluciones basadas en Inteligencia Artificial.",
+  "Optimización de flujos de trabajo y reducción de tareas repetitivas.",
+  "Análisis de datos para apoyar la toma de decisiones.",
+  "Desarrollo de estrategias de transformación digital.",
+  "Optimización de procesos empresariales.",
+  "Consultoría en innovación y mejora continua.",
+  "Diseño de soluciones tecnológicas adaptadas a las necesidades de cada organización."
+];
+
+const objectiveList = [
+  "Incrementar su productividad.",
+  "Reducir costes operativos.",
+  "Mejorar la experiencia de clientes y colaboradores.",
+  "Aprovechar el potencial de la Inteligencia Artificial y la automatización.",
+  "Crear ventajas competitivas sostenibles mediante la innovación."
+];
+---
+
+<Layout
+  title="Investigación y Desarrollo (I+D) & Innovación | Roberto Pérez"
+  description="Impulsa el crecimiento de tu empresa con tecnología e innovación. Estrategias disruptivas, automatización de procesos e Inteligencia Artificial para resultados reales."
+>
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6">🔬</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Investigación, Desarrollo e Innovación</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+            Impulsa el crecimiento de tu empresa con <span class="text-blue-600">tecnología e innovación</span>
+          </h1>
+          <p class="text-xl md:text-2xl font-bold text-slate-700 mt-6 max-w-2xl mx-auto leading-relaxed">
+            La diferencia entre crecer y liderar está en cómo utilizas la tecnología
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Conversar sobre una solución de innovación
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Core Text Content -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+          <p>
+            El éxito de una organización no depende únicamente de un buen producto o servicio. Es el resultado de la suma de múltiples factores, y uno de los más importantes es la capacidad de integrar nuevas tecnologías en los procesos diarios de la empresa para aumentar la eficiencia, reducir costes y generar nuevas oportunidades de crecimiento.
+          </p>
+          <p>
+            A lo largo de mi trayectoria profesional he comprobado que la tecnología no es un gasto, sino un factor diferenciador que permite a las organizaciones competir con mayor inteligencia y adaptarse a un entorno en constante evolución.
+          </p>
+          <p>
+            He participado en diversos proyectos y emprendimientos donde la innovación tecnológica ha sido uno de los principales impulsores del éxito. Esta experiencia me ha llevado a dedicar una parte importante de mi tiempo y recursos a investigar, desarrollar y validar nuevas metodologías, herramientas y estrategias disruptivas que aporten resultados reales a las empresas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / How I Can Help -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">¿Cómo puedo ayudar a tu organización?</h2>
+          <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+            Ofrezco servicios especializados para transformar la manera en que tu empresa trabaja mediante la adopción estratégica de tecnología e inteligencia artificial.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {servicesList.map((service, index) => (
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col h-full">
+              <span class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center text-lg mb-6 shrink-0">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <p class="text-slate-800 font-medium leading-relaxed flex-grow">{service}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+          <div class="relative z-10">
+            <h2 class="text-3xl font-extrabold mb-4">Mi compromiso</h2>
+            <p class="text-lg text-slate-300 mb-8 max-w-3xl leading-relaxed">
+              No creo en soluciones genéricas. Cada empresa tiene desafíos, procesos y objetivos diferentes. Por ello, cada propuesta parte de un análisis de la situación actual para diseñar una estrategia que genere beneficios medibles y sostenibles.
+            </p>
+
+            <div class="border-t border-slate-800 pt-8">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-6">Mi objetivo es ayudar a las organizaciones a:</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {objectiveList.map((obj) => (
+                  <div class="flex items-start gap-3 bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                    <span class="text-blue-400 font-bold mt-0.5">✦</span>
+                    <span class="text-slate-200 text-sm md:text-base leading-relaxed">{obj}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <!-- Grid styling background overlay -->
+          <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Callout -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 uppercase tracking-widest">Lidera el mañana</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-6 mb-6">La innovación comienza con una decisión</h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6 max-w-3xl mx-auto">
+          Las empresas que liderarán el futuro no serán necesariamente las más grandes, sino aquellas que sean capaces de adaptarse más rápido y aprovechar las oportunidades que ofrece la tecnología.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+          Si deseas descubrir cómo la transformación digital, la automatización y la Inteligencia Artificial pueden impulsar el crecimiento de tu organización, estaré encantado de conversar contigo y desarrollar una solución diseñada específicamente para tus objetivos.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-2xl text-left italic text-slate-700 max-w-3xl mx-auto mb-10">
+          "Innovar no consiste únicamente en incorporar nuevas herramientas; consiste en transformar la manera de trabajar para obtener mejores resultados."
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
