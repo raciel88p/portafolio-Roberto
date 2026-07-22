@@ -9,6 +9,20 @@ const stats = [
 ];
 ---
 <section id="inicio" class="relative pt-32 pb-24 lg:pt-48 lg:pb-36 overflow-hidden bg-slate-900 text-white">
+  <!-- Background video from astro-medical-starter styling -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-screen"
+      src="https://assets.mixkit.co/videos/preview/mixkit-futuristic-technology-digital-grid-background-48197-large.mp4"
+    >
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/50"></div>
+  </div>
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-4xl mx-auto mb-20">
       <span class="inline-block py-1.5 px-4 rounded-full bg-blue-500/10 text-blue-400 text-sm font-bold tracking-wide uppercase mb-6">
@@ -50,7 +64,7 @@ const stats = [
   </div>
 
   <!-- Decorative background elements -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 opacity-30">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 opacity-30 pointer-events-none">
     <div class="absolute top-[-10%] left-[-15%] w-[50%] h-[50%] rounded-full bg-blue-500/20 blur-[130px]"></div>
     <div class="absolute bottom-[-10%] right-[-15%] w-[50%] h-[50%] rounded-full bg-indigo-500/20 blur-[130px]"></div>
   </div>

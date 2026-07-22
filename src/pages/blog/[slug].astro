@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import { PortableText } from '@portabletext/react';
+import { components } from '../../components/PortableTextComponents';
 import { sanityClient } from 'sanity:client';
 
 // Generate static paths for ES posts
@@ -145,30 +147,8 @@ function formatDate(dateStr: string) {
 
           <!-- Content (Rich Text) -->
           <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed mb-16">
-            <!-- Renderizer manual para Portable Text sencillo con soporte de Tailwind v4 -->
-            {Array.isArray(post.body) ? (
-              post.body.map((block: any) => {
-                if (block._type === 'block') {
-                  const headingLevel = block.style;
-                  const textContent = block.children?.map((c: any) => c.text).join('') || '';
-
-                  if (headingLevel === 'h2') {
-                    return <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-10 mb-4">{textContent}</h2>;
-                  }
-                  if (headingLevel === 'h3') {
-                    return <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-8 mb-3">{textContent}</h3>;
-                  }
-                  if (headingLevel === 'blockquote') {
-                    return (
-                      <blockquote class="border-l-4 border-blue-600 pl-4 italic my-6 text-slate-600 bg-slate-50 py-2 pr-2 rounded-r-xl">
-                        {textContent}
-                      </blockquote>
-                    );
-                  }
-                  return <p class="mb-6">{textContent}</p>;
-                }
-                return null;
-              })
+            {post.body ? (
+              <PortableText value={post.body} components={components} />
             ) : (
               <p>{post.excerpt}</p>
             )}
