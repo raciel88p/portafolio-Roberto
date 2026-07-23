@@ -1,14 +1,252 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "GEO Optimization",
-  icon: "🤖",
-  description: "En la era de la IA, el SEO ya no es solo para humanos. Optimizamos tu presencia digital para que los Modelos de Lenguaje (LLMs) como ChatGPT, Claude y Gemini te identifiquen como la fuente de autoridad en tu nicho mediante una ejecución técnica precisa.",
-  details: [
-    { title: "Sistemas de Datos Estructurados", text: "Diseñamos una arquitectura de información que permite a los modelos de IA procesar, entender y citar tu marca con exactitud." },
-    { title: "Visibilidad en Motores de Respuesta", text: "Estrategias avanzadas para posicionar tus soluciones en el centro de las respuestas generadas por chatbots y asistentes inteligentes." }
-  ]
-};
+const strategyPillars = [
+  "Arquitectura de contenido",
+  "EEAT y autoridad temática",
+  "Datos estructurados",
+  "Optimización semántica",
+  "Knowledge Graph",
+  "Entidades",
+  "Cobertura de intención de búsqueda",
+  "Contenido orientado a IA"
+];
+
+const targetIndustries = [
+  "Empresas de Tecnología",
+  "SaaS",
+  "Startups",
+  "Retail",
+  "Real Estate",
+  "Agencias Digitales",
+  "Empresas B2B",
+  "Negocios que buscan liderazgo digital"
+];
+
+const deliverables = [
+  {
+    title: "Auditoría de Visibilidad en IA",
+    desc: "Analizo cómo los principales modelos de IA interpretan su marca, sus competidores y su presencia digital."
+  },
+  {
+    title: "Estrategia GEO Personalizada",
+    desc: "Diseño una estrategia basada en arquitectura de contenido, EEAT, datos estructurados y cobertura semántica de entidades."
+  },
+  {
+    title: "Optimización para LLMs",
+    desc: "No solo optimizamos para Google. Optimizamos para que ChatGPT, Gemini, Claude, Copilot, Perplexity y los nuevos motores generativos comprendan, confíen y recomienden su empresa."
+  },
+  {
+    title: "Incremento de Conversiones",
+    desc: "Más visibilidad genera más oportunidades. El objetivo final siempre es conseguir más leads cualificados, oportunidades comerciales y ventas reales."
+  }
+];
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="GEO: Generative Engine Optimization | Roberto Pérez"
+  description="Posicione su marca como la respuesta que recomiendan ChatGPT, Gemini, Claude y Perplexity. Estrategias avanzadas de optimización para motores de IA (GEO)."
+>
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6 animate-bounce">🤖</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Generative Engine Optimization</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+            Convierta su Empresa en la Respuesta que Recomiendan <span class="text-blue-600">ChatGPT, Gemini, Claude y los Motores de IA</span>
+          </h1>
+          <p class="text-xl md:text-2xl font-bold text-slate-700 mt-6 max-w-2xl mx-auto leading-relaxed">
+            El SEO ya no es suficiente.
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Solicitar Consultoría Estratégica GEO
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Context / Problem statement -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+          <p class="text-xl font-bold text-slate-900">
+            Durante años, las empresas compitieron por aparecer en la primera página de Google. Hoy, la verdadera competencia es otra: Ser la marca que recomiendan los modelos de Inteligencia Artificial.
+          </p>
+          <p>
+            Mientras la mayoría de las empresas siguen optimizando únicamente para buscadores tradicionales, los consumidores ya están preguntando directamente a ChatGPT, Gemini, Claude, Perplexity y otros asistentes de IA qué empresa contratar, qué software comprar o qué proveedor elegir.
+          </p>
+
+          <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-2xl my-8">
+            <p class="font-extrabold text-slate-900 text-lg mb-2">La pregunta es:</p>
+            <p class="italic text-slate-800 text-lg">¿Su empresa aparece como la mejor recomendación... o simplemente no existe para la IA?</p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Mi especialidad: GEO (Generative Engine Optimization)</h3>
+          <p>
+            He dedicado los últimos años a investigar, desarrollar y perfeccionar estrategias de Generative Engine Optimization (GEO) para ayudar a empresas de tecnología, SaaS, retail y real estate a convertirse en referentes dentro de los modelos de lenguaje (LLMs).
+          </p>
+          <p>
+            No se trata únicamente de generar tráfico. Se trata de aumentar la visibilidad donde realmente se están tomando las decisiones de compra.
+          </p>
+        </div>
+
+        <!-- Conversational purchase queries -->
+        <div class="mt-12 bg-slate-50 border border-slate-100 rounded-3xl p-8 max-w-3xl mx-auto">
+          <h4 class="font-bold text-slate-900 mb-6 text-center text-blue-600">Mi objetivo es que cuando un cliente potencial pregunte:</h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+              <span class="text-2xl">💬</span>
+              <p class="italic font-medium text-slate-700 text-sm md:text-base">"¿Cuál es el mejor software para...?"</p>
+            </div>
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+              <span class="text-2xl">💬</span>
+              <p class="italic font-medium text-slate-700 text-sm md:text-base">"¿Qué empresa recomienda para...?"</p>
+            </div>
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+              <span class="text-2xl">💬</span>
+              <p class="italic font-medium text-slate-700 text-sm md:text-base">"¿Quién ofrece la mejor solución en...?"</p>
+            </div>
+          </div>
+          <p class="text-center font-bold text-slate-900 mt-6">...su empresa sea una de las respuestas recomendadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / What You'll Get -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">¿Qué obtendrá?</h2>
+          <p class="text-lg text-slate-600 mt-4">
+            Soluciones avanzadas para alinear su visibilidad con el comportamiento de búsqueda inteligente de la próxima década.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {deliverables.map((item) => (
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+              <span class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 font-extrabold flex items-center justify-center text-xl mb-6">✓</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">{item.desc}</p>
+
+              {item.title.includes("Estrategia GEO") && (
+                <div class="border-t border-slate-50 pt-4 mt-4">
+                  <span class="text-xs font-bold uppercase tracking-wider text-blue-500 block mb-3">Pilares de optimización:</span>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {strategyPillars.map((pillar) => (
+                      <span class="text-xs text-slate-600 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5">
+                        <span class="text-blue-500 font-bold">•</span> {pillar}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Audience / Who can benefit -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+          <div class="relative z-10 text-center">
+            <h2 class="text-3xl font-extrabold mb-4">¿Quién puede beneficiarse?</h2>
+            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+              Trabajo principalmente con organizaciones con visión de futuro que buscan consolidar su liderazgo digital y adelantarse a la competencia.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+              {targetIndustries.map((ind) => (
+                <div class="bg-white/10 p-4 rounded-xl border border-slate-800 backdrop-blur-sm text-center">
+                  <p class="font-bold text-xs md:text-sm text-slate-100">{ind}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <!-- Grid styling background overlay -->
+          <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-8 text-center">¿Por qué trabajar conmigo?</h2>
+        <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+          <p>
+            No aplico tácticas genéricas. Cada estrategia está diseñada considerando su mercado específico, sus competidores, el comportamiento y respuesta de los modelos de IA, y cómo evolucionan los algoritmos generativos.
+          </p>
+
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm mt-8">
+            <h4 class="font-bold text-blue-600 mb-6 text-sm uppercase tracking-wider">Mi enfoque estratégico combina:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold mt-1">✦</span>
+                <p class="text-slate-700 text-sm md:text-base"><strong class="text-slate-900">GEO</strong> (Generative Engine Optimization)</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold mt-1">✦</span>
+                <p class="text-slate-700 text-sm md:text-base"><strong class="text-slate-900">SEO avanzado</strong> técnico e institucional</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold mt-1">✦</span>
+                <p class="text-slate-700 text-sm md:text-base"><strong class="text-slate-900">Inteligencia Artificial</strong> y automatizaciones</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold mt-1">✦</span>
+                <p class="text-slate-700 text-sm md:text-base"><strong class="text-slate-900">Estrategias de crecimiento digital</strong> integrales</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold mt-1">✦</span>
+                <p class="text-slate-700 text-sm md:text-base"><strong class="text-slate-900">Optimización de conversión (CRO)</strong> avanzada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Urgency and CTA Callout -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 uppercase tracking-widest">La ventaja competitiva es ahora</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-6 mb-6">El futuro de la visibilidad digital ya comenzó</h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6">
+          Las empresas que comiencen hoy a optimizar su presencia para los motores generativos tendrán una ventaja que será difícil de alcanzar en los próximos años. La IA ya está decidiendo qué empresas recomienda.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-2xl text-left font-semibold text-slate-800 max-w-3xl mx-auto mb-10">
+          <p class="text-slate-900 font-bold text-lg mb-2">La pregunta es:</p>
+          <p class="italic text-slate-800">¿Quiere que recomiende a su competencia... o a usted?</p>
+        </div>
+
+        <p class="text-xl font-bold text-slate-900 mb-4">Solicite una Consultoría Estratégica</p>
+        <p class="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Analicemos el estado actual de su presencia digital y diseñemos una estrategia para posicionar su empresa como una autoridad dentro de los principales modelos de Inteligencia Artificial.
+        </p>
+        <p class="text-lg font-bold text-blue-600 uppercase tracking-wide">
+          Es momento de que su empresa sea parte de las respuestas, no de las búsquedas.
+        </p>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
