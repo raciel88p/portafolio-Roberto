@@ -1,14 +1,277 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "Programmatic SEO",
-  icon: "📈",
-  description: "Escalado masivo de tráfico orgánico mediante sistemas automatizados. Generamos miles de landing pages de alta calidad basadas en datos para captar cada intención de búsqueda de tu nicho.",
-  details: [
-    { title: "Generación de Sistemas de Páginas", text: "Construcción de motores que crean y actualizan contenido a escala, manteniendo la relevancia y la autoridad técnica." },
-    { title: "Dominio de Larga Cola", text: "Capturamos miles de variaciones de palabras clave específicas (long-tail) para dominar el mercado por volumen y precisión." }
-  ]
-};
+const resultsTable = [
+  { indicator: "Inversión inicial", value: "USD $1,000" },
+  { indicator: "Equipo", value: "8 colaboradores" },
+  { indicator: "Clientes atendidos", value: "+2,100" },
+  { indicator: "Incremento en ventas", value: "+86%" },
+  { indicator: "Tráfico orgánico", value: "+218.5%" },
+  { indicator: "Tráfico referido", value: "+243%" },
+  { indicator: "Ventas primer año", value: "USD $75,000" }
+];
+
+const successFactors = [
+  "Inteligencia Artificial",
+  "SEO Programático",
+  "Automatización",
+  "Analítica",
+  "CRO",
+  "Optimización continua",
+  "Marketing basado en datos"
+];
+
+const challenges = [
+  "Capital inicial de USD $1,000.",
+  "Presupuesto publicitario de apenas USD $30 al mes.",
+  "Sitio web desarrollado con una inversión cercana a USD $15 al año.",
+  "Competencia consolidada en el mercado local.",
+  "Procesos completamente manuales.",
+  "Recursos humanos limitados."
+];
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="SEO Programático & IA: Caso de Éxito | Roberto Pérez"
+  description="Caso de estudio: Cómo una Clínica de Estética creció un 86% utilizando Inteligencia Artificial, automatización avanzada de leads y SEO Programático a escala."
+>
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6">📈</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Estudio de Caso Real & Programmatic SEO</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+            Cómo una Clínica de Estética Creció un <span class="text-blue-600">86%</span> Utilizando IA, Automatización y SEO Programático
+          </h1>
+          <p class="text-xl md:text-2xl font-bold text-slate-700 mt-6 max-w-2xl mx-auto leading-relaxed">
+            MJ Estética & Wellness Center: El laboratorio práctico donde validamos nuestra metodología de adquisición a escala.
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Conversar sobre SEO Programático
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Resumen Ejecutivo & El Reto -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Resumen Ejecutivo</h2>
+          <p>
+            MJ Estética & Wellness Center es la prueba de que una pequeña empresa puede competir con organizaciones mucho más grandes cuando utiliza datos, automatización e inteligencia artificial como parte de su estrategia de crecimiento.
+          </p>
+          <p>
+            Lo que comenzó en 2023 como un pequeño emprendimiento con una inversión de apenas <strong class="text-slate-950">USD $1,000</strong> evolucionó hasta convertirse en una empresa con un equipo de ocho colaboradores, más de 2,100 clientes atendidos y un sistema de crecimiento escalable desarrollado y optimizado internamente.
+          </p>
+          <p>
+            Más importante aún, este negocio se convirtió en el laboratorio donde diseñamos la metodología que hoy implementamos para ayudar a otras empresas a acelerar su crecimiento.
+          </p>
+
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-12 mb-6">El Reto</h2>
+          <p>
+            La empresa inició bajo condiciones extremadamente limitadas, compitiendo en un sector consolidado y con marcas tradicionales:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+            {challenges.map((challenge) => (
+              <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5">✖</span>
+                <p class="text-slate-700 text-sm md:text-base leading-relaxed">{challenge}</p>
+              </div>
+            ))}
+          </div>
+
+          <p>
+            El objetivo no era únicamente sobrevivir. Era construir un modelo de crecimiento repetible que pudiera escalar sin depender proporcionalmente del aumento en inversión publicitaria.
+          </p>
+
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-12 mb-6">Nuestra Hipótesis</h2>
+          <p class="text-xl italic text-slate-800 bg-blue-50/50 border-l-4 border-blue-600 p-6 rounded-r-2xl">
+            "Una pyme puede acelerar su crecimiento cuando integra Inteligencia Artificial, automatización, SEO, analítica avanzada y optimización continua dentro de un único sistema operativo de marketing."
+          </p>
+          <p>Toda la estrategia fue diseñada para validar esa hipótesis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- La Solución (4 pillars) -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-12 text-center">La Solución</h2>
+
+        <div class="space-y-12">
+          <!-- Pillar 1 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg">1</span>
+              Construcción de una infraestructura basada en datos
+            </h3>
+            <p class="text-slate-600 mb-6">
+              Antes de invertir en adquisición de clientes implementamos un ecosistema completo de medición.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {["Google Analytics", "Google Tag Manager", "Microsoft Clarity", "Heatmaps", "Grabaciones de sesiones", "Eventos personalizados", "Dashboard de KPIs"].map((tool) => (
+                <span class="bg-slate-50 text-slate-700 px-3 py-2 rounded-lg border border-slate-100 text-xs font-semibold text-center">{tool}</span>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-900 mt-6">Cada decisión comenzó a respaldarse con datos.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg">2</span>
+              Arquitectura SEO escalable
+            </h3>
+            <p class="text-slate-600 mb-4">
+              Migramos desde Google Sites hacia una plataforma moderna desarrollada con <strong>Astro</strong>.
+            </p>
+            <p class="text-slate-600 mb-6">
+              Posteriormente implementamos una estrategia de <strong>SEO Programático (pSEO)</strong> que permitió generar automáticamente más de cien páginas optimizadas para servicios, procedimientos, ubicaciones, intenciones de búsqueda específicas e idiomas.
+            </p>
+            <p class="text-sm font-bold text-blue-600">Esto incrementó significativamente la cobertura orgánica sin aumentar proporcionalmente el esfuerzo operativo.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg">3</span>
+              Automatización del embudo comercial
+            </h3>
+            <p class="text-slate-600 mb-6">
+              Diseñamos un sistema de adquisición asistido por Inteligencia Artificial y flujos conversacionales automatizados.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {["ManyChat", "Automatización de WhatsApp", "Lead Magnets", "Flujos automatizados", "Calificación automática", "Seguimiento comercial"].map((item) => (
+                <span class="bg-slate-50 text-slate-700 px-3 py-2 rounded-lg border border-slate-100 text-xs font-semibold text-center">{item}</span>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-600 mt-6">El resultado fue una reducción importante del trabajo manual y una mejor velocidad de respuesta.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg">4</span>
+              Optimización para motores de respuesta con IA
+            </h3>
+            <p class="text-slate-600 mb-4">
+              Mientras la mayoría de empresas seguían optimizando únicamente para Google, comenzamos a preparar el contenido para asistentes basados en IA.
+            </p>
+            <p class="text-slate-600 mb-6">
+              La estrategia incluyó Generative Engine Optimization (GEO), arquitectura semántica, datos estructurados, cobertura temática y contenido diseñado específicamente para ser procesado por modelos de lenguaje.
+            </p>
+            <p class="text-sm font-bold text-blue-600">Esto permitió aumentar la visibilidad en plataformas impulsadas por inteligencia artificial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados (Metrics Table) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-center">Resultados e Impacto Comercial</h2>
+        <p class="text-slate-600 mb-12 text-center">Métricas cuantitativas clave obtenidas tras el despliegue del sistema operativo de marketing</p>
+
+        <div class="bg-slate-50 border border-slate-100 rounded-3xl overflow-hidden shadow-sm max-w-2xl mx-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-100 border-b border-slate-200">
+                <th class="p-6 font-bold text-slate-900">Indicador</th>
+                <th class="p-6 font-bold text-slate-900 text-right">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {resultsTable.map((row) => (
+                <tr class="border-b border-slate-100 last:border-none hover:bg-slate-100/50 transition-colors">
+                  <td class="p-6 text-slate-700 font-medium">{row.indicator}</td>
+                  <td class="p-6 text-blue-600 font-extrabold text-right text-lg">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factores Críticos de Éxito -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-center">Factores Críticos de Éxito</h2>
+        <p class="text-slate-600 mb-12 text-center">El crecimiento no fue consecuencia de una única acción. Fue el resultado de integrar múltiples capacidades dentro de un mismo sistema.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {successFactors.map((factor) => (
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+              <span class="text-blue-500 font-bold block text-2xl mb-2">✦</span>
+              <p class="font-bold text-slate-800 text-sm md:text-base">{factor}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-sm font-semibold text-slate-700 mt-8">Cada componente fortalecía al siguiente, creando una sinergia de crecimiento continuo.</p>
+      </div>
+    </section>
+
+    <!-- Story and validation behind clinic -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-blue prose-lg max-w-none text-slate-700 leading-relaxed space-y-8">
+          <h2 class="text-3xl font-extrabold text-slate-900">Más allá de la Clínica</h2>
+          <p>
+            MJ Estética & Wellness Center dejó de ser únicamente una clínica. Se convirtió en un laboratorio permanente de innovación.
+          </p>
+          <p>
+            Cada metodología, automatización o estrategia que posteriormente implementamos para nuestros clientes fue validada primero dentro de nuestro propio negocio. Eso nos permite recomendar únicamente procesos que han demostrado resultados en condiciones reales.
+          </p>
+
+          <div class="bg-blue-50 border border-blue-100 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 shadow-sm">
+            <div class="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-white shadow-md bg-slate-100">
+              <img
+                src="https://cdn.sanity.io/images/2grwsc7l/production/8ccdba849ad165213ef0e90c7da59093ea319163-500x500.jpg"
+                alt="Roberto Pérez"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-xl mb-2">La Historia Detrás del Proyecto</h4>
+              <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                En 2023 mi esposa y yo perdimos nuestros empleos durante la misma semana. En lugar de buscar inmediatamente otro trabajo, decidimos invertir nuestros últimos recursos en construir un negocio propio. No sabíamos que esa decisión terminaría convirtiéndose en el origen de una metodología completa de crecimiento empresarial basada en Inteligencia Artificial. Hoy esa experiencia práctica es la base de nuestro trabajo como consultores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion callout -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold mb-6">Conclusión</h2>
+        <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+          Este caso demuestra que la transformación digital no depende del tamaño de una empresa. Depende de diseñar un sistema donde la tecnología, los datos y la Inteligencia Artificial trabajen de forma coordinada para generar crecimiento sostenible.
+        </p>
+
+        <div class="bg-blue-600 text-white p-6 rounded-2xl font-extrabold text-xl inline-block mb-4">
+          La IA no reemplaza la estrategia. La multiplica.
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
