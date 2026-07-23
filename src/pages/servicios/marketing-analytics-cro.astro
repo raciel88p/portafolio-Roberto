@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const coreTools = [
+  {
+    title: "Google Analytics 4 (GA4)",
+    desc: "Medimos el recorrido completo del cliente para entender qué canales generan ventas y cuáles solo consumen presupuesto."
+  },
+  {
+    title: "Google Tag Manager (GTM)",
+    desc: "Configuramos eventos, conversiones y seguimiento avanzado sin depender continuamente del equipo de desarrollo."
+  },
+  {
+    title: "Microsoft Clarity",
+    desc: "Observamos cómo interactúan los usuarios mediante mapas de calor, grabaciones de sesiones y análisis del comportamiento para detectar problemas de experiencia de usuario (UX)."
+  },
+  {
+    title: "Conversion Rate Optimisation (CRO)",
+    desc: "Analizamos el comportamiento de sus visitantes para eliminar fricciones y aumentar el porcentaje de personas que compran, reservan o solicitan información."
+  }
+];
+
+const aiCapabilities = [
+  "Detectar oportunidades de mejora con mayor rapidez.",
+  "Priorizar los cambios con mayor impacto en ingresos.",
+  "Reducir los costes de análisis, diseño y desarrollo.",
+  "Generar recomendaciones basadas en datos reales.",
+  "Optimizar la experiencia del usuario de forma continua."
+];
+
+const processSteps = [
+  "Auditoría técnica y de experiencia de usuario.",
+  "Implementación de GA4, GTM y Microsoft Clarity.",
+  "Configuración de eventos y objetivos de negocio.",
+  "Análisis del comportamiento de los usuarios.",
+  "Identificación de puntos de abandono y oportunidades de mejora.",
+  "Recomendaciones priorizadas según impacto y esfuerzo.",
+  "Optimización continua basada en datos e Inteligencia Artificial."
+];
+
+const deliverables = [
+  "Mayor rentabilidad de su inversión en marketing.",
+  "Decisiones basadas en datos reales, no en intuiciones.",
+  "Identificación de problemas técnicos que afectan las ventas.",
+  "Mejor experiencia para sus clientes.",
+  "Incremento de conversiones sin aumentar el presupuesto publicitario.",
+  "Informes claros con métricas orientadas al crecimiento del negocio."
+];
+---
+
+<Layout
+  title="Marketing Analytics & CRO | Roberto Pérez"
+  description="Optimiza la tasa de conversión (CRO) y el análisis de negocio (BI) de tu sitio web con Google Analytics 4, GTM y Microsoft Clarity potenciado con Inteligencia Artificial."
+>
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6">📈</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Business Intelligence & CRO</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight animate-fade-in">
+            ¿Su sitio web está perdiendo clientes todos los días <span class="text-blue-600">sin que usted lo sepa?</span>
+          </h1>
+          <p class="text-xl md:text-2xl font-bold text-slate-700 mt-6 max-w-2xl mx-auto leading-relaxed">
+            La mayoría de las empresas invierten más dinero en publicidad cuando el verdadero problema está en su sitio web.
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Solicitar Auditoría de CRO
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Key Statistics -->
+    <section class="py-16 bg-white border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-red-50 border border-red-100 px-6 py-4 rounded-2xl mb-8">
+          <span class="text-2xl">⚠️</span>
+          <p class="text-red-700 font-bold text-lg">
+            ¿Sabía que la tasa de conversión promedio de la mayoría de los sitios web es inferior al <span class="text-2xl">1%</span>?
+          </p>
+        </div>
+        <p class="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto mb-6">
+          Eso significa que, de cada 100 personas que visitan su página, <span class="font-bold text-slate-900">99 se marchan sin comprar, solicitar información o convertirse en clientes</span>.
+        </p>
+        <p class="text-lg text-slate-600 font-semibold mb-12">
+          Y el problema casi nunca es la cantidad de tráfico. El problema es que las empresas no saben qué está ocurriendo dentro de su sitio web.
+        </p>
+
+        <!-- Question Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <span class="text-2xl mb-3 block">📉</span>
+            <p class="text-slate-700 font-medium text-sm">¿En qué página abandonan los usuarios?</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <span class="text-2xl mb-3 block">🔘</span>
+            <p class="text-slate-700 font-medium text-sm">¿Qué botones no reciben clics?</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <span class="text-2xl mb-3 block">📝</span>
+            <p class="text-slate-700 font-medium text-sm">¿Qué formularios generan frustración?</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <span class="text-2xl mb-3 block">🛠️</span>
+            <p class="text-slate-700 font-medium text-sm">¿Qué errores técnicos están impidiendo las conversiones?</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <span class="text-2xl mb-3 block">📱</span>
+            <p class="text-slate-700 font-medium text-sm">¿Qué dispositivos o navegadores presentan problemas?</p>
+          </div>
+          <div class="p-6 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-center">
+            <p class="text-sm">Sin datos, todas las decisiones se convierten en suposiciones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Stack -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Transformamos datos en crecimiento para su negocio</h2>
+          <p class="text-lg text-slate-600 mt-4">
+            Implementamos una solución integral de <strong>Business Intelligence para Marketing Digital</strong>, utilizando las herramientas más potentes del mercado.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {coreTools.map((tool) => (
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+              <span class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 font-extrabold flex items-center justify-center text-xl mb-6">✓</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">{tool.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{tool.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- AI & CRO -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 uppercase tracking-widest">Optimización de Vanguardia</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">La Inteligencia Artificial está cambiando la forma de optimizar los negocios</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+              Hoy ya no es necesario invertir semanas analizando miles de datos manualmente. Utilizamos Inteligencia Artificial para acelerar descubrimientos y reducir costes.
+            </p>
+            <div class="bg-blue-600 text-white p-6 rounded-2xl font-bold text-lg inline-block">
+              Más resultados con menos inversión
+            </div>
+          </div>
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+            <h4 class="font-bold text-slate-900 text-lg mb-4 text-blue-600 flex items-center gap-2">
+              <span>🤖</span> Utilizamos Inteligencia Artificial para:
+            </h4>
+            <ul class="space-y-4">
+              {aiCapabilities.map((capability) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-500 font-bold mt-1">✦</span>
+                  <span class="text-slate-700 font-medium text-sm md:text-base">{capability}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bucket metaphor explanation -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 class="text-3xl font-extrabold mb-6">¿Por qué optimizar antes de aumentar el presupuesto publicitario?</h2>
+        <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+          Muchas empresas duplican su inversión en anuncios cuando su sitio web todavía convierte menos del 1%. <span class="font-bold text-white block mt-3 text-xl">Eso equivale a llenar un balde con agujeros.</span>
+        </p>
+        <p class="text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
+          Antes de invertir más dinero para atraer visitantes, es mucho más rentable mejorar el porcentaje de usuarios que ya llegan a su sitio. Un pequeño incremento en la tasa de conversión puede representar un crecimiento significativo en ventas sin aumentar el presupuesto de marketing.
+        </p>
+      </div>
+      <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900">Nuestro proceso</h2>
+          <p class="text-slate-600 mt-2">Un enfoque metodológico y estratégico estructurado en 7 fases clave</p>
+        </div>
+
+        <div class="space-y-6">
+          {processSteps.map((step, index) => (
+            <div class="flex items-center gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <span class="w-12 h-12 rounded-full bg-blue-600 text-white font-extrabold flex items-center justify-center text-lg shrink-0">
+                {index + 1}
+              </span>
+              <p class="text-slate-800 font-semibold md:text-lg">{step}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-12 text-center">Lo que obtiene</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {deliverables.map((item) => (
+            <div class="flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <span class="text-2xl text-green-500">✔</span>
+              <span class="font-bold text-slate-800 leading-relaxed text-sm md:text-base">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Callout -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Deje de perder clientes por problemas invisibles.</h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          Cada día que su sitio web no está optimizado representa oportunidades de negocio perdidas. Descubra qué está impidiendo que sus visitantes se conviertan en clientes y comience a tomar decisiones respaldadas por datos.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-2xl text-left font-semibold text-slate-800 max-w-3xl mx-auto">
+          Solicite hoy una auditoría de Business Intelligence y Optimización de Conversión y convierta su sitio web en una herramienta real de crecimiento para su empresa.
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
