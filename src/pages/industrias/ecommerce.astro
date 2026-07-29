@@ -1,0 +1,441 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para eCommerce & Tiendas Online",
+  "description": "Convierta su eCommerce en un activo que genere clientes y ventas todos los días de forma orgánica y sostenible.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "eCommerce & Retail"
+};
+---
+
+<Layout
+  title="SEO para eCommerce y Tiendas Online | Roberto Pérez"
+  description="Convierta su tienda online en un motor de ventas constante. Posicionamiento transaccional, optimización de categorías y Generative Engine Optimization para eCommerce."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="text-6xl mb-6">🛒</div>
+          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Comercio Electrónico & eCommerce</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+            Convierta su eCommerce en un Activo que Genere Clientes <span class="text-blue-600">Todos los Días</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-slate-700 mt-6 max-w-3xl mx-auto leading-relaxed">
+            Mientras usted lee esta página, miles de personas están buscando exactamente los productos que vende. No están navegando por curiosidad. No están perdiendo el tiempo.
+          </p>
+          <div class="mt-8">
+            <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+              Solicitar Consultoría Estratégica
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Background elements -->
+      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Section 1: Comparando opciones -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {[
+            { title: "Comparando opciones", icon: "⚖️", desc: "Analizan detalladamente las características y alternativas antes de hacer clic en comprar." },
+            { title: "Buscando precios", icon: "💰", desc: "Evalúan la relación costo-beneficio para obtener la mejor oferta disponible." },
+            { title: "Leyendo reseñas", icon: "⭐", desc: "Buscan validación social y opiniones de otros compradores para reducir riesgos." }
+          ].map(item => (
+            <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center hover:shadow-md transition-all">
+              <div class="text-4xl mb-4">{item.icon}</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <p class="text-2xl font-extrabold text-slate-900">
+            Y muchos están listos para comprar hoy.
+          </p>
+          <div class="bg-blue-50 border-2 border-blue-100 p-8 rounded-3xl max-w-2xl mx-auto mt-8 shadow-sm">
+            <p class="text-xl text-slate-800">La única pregunta es…</p>
+            <p class="text-2xl font-black text-blue-900 mt-2">¿Van a comprarle a usted… o a su competencia?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: El dilema del tráfico y el alquiler de clientes -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+              El verdadero problema no es generar tráfico
+            </h2>
+            <p class="text-slate-700 leading-relaxed text-lg">
+              La mayoría de las tiendas online cree que su principal problema es generar tráfico. <strong>No lo es.</strong>
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+              El verdadero problema es depender de un sistema que deja de producir ventas en el momento en que deja de invertir en publicidad. Hoy muchas empresas viven atrapadas en este ciclo:
+            </p>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-4">
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="text-blue-600 text-lg">📈</span> Más presupuesto en Google Ads o Meta Ads → Más ventas.
+              </div>
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="text-red-500 text-lg">📉</span> Menos presupuesto → Menos tráfico. Menos ventas.
+              </div>
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="text-slate-500 text-lg">⚠️</span> Más presión sobre el margen.
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+            <span class="text-xs font-bold bg-red-100 text-red-700 px-3 py-1 rounded-full uppercase">Alquiler Permanente</span>
+            <p class="text-slate-800 leading-relaxed font-bold text-lg">
+              Cada mes el costo por adquisición aumenta. Cada venta cuesta más. Y el negocio se vuelve más difícil de escalar.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Ese no es un modelo de crecimiento. Es un alquiler permanente de clientes.
+            </p>
+            <p class="text-slate-700 leading-relaxed text-sm font-medium">
+              Las empresas que lideran su mercado juegan con reglas diferentes. Mientras sus competidores siguen pagando por cada clic, ellas construyen un activo digital que genera compradores de forma constante. Un sistema que sigue produciendo demanda incluso cuando las campañas están apagadas.
+            </p>
+            <div class="border-t border-slate-100 pt-4 text-center">
+              <span class="text-blue-600 font-extrabold text-md uppercase">Eso es exactamente lo que hacemos.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: No hacemos SEO (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 uppercase tracking-widest">Nuestra Promesa</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-6 mb-4">
+            No hacemos SEO.
+          </h2>
+          <h3 class="text-xl md:text-2xl text-slate-300 font-medium">
+            Construimos sistemas de adquisición de clientes.
+          </h3>
+          <p class="text-slate-400 text-md mt-4 max-w-2xl mx-auto leading-relaxed">
+            Nuestro trabajo no consiste en mejorar posiciones en Google. Nuestro trabajo consiste en aumentar ingresos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h4 class="text-lg font-bold text-blue-400 mb-6 leading-relaxed">
+              Diseñamos estrategias que ayudan a empresas de eCommerce y retail a conseguir más compradores con alta intención de compra mediante una combinación de:
+            </h4>
+            <ul class="space-y-3">
+              {[
+                "SEO Estratégico",
+                "Generative Engine Optimization (GEO)",
+                "Optimización para Google Shopping y AI Search",
+                "Arquitectura técnica para eCommerce",
+                "CRO (Optimización de Conversión)",
+                "Analítica de negocio avanzada",
+                "Estrategias de contenido orientadas a ventas"
+              ].map((item) => (
+                <li class="flex items-center gap-3">
+                  <span class="text-blue-400 text-xl">✦</span>
+                  <span class="text-slate-200 font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700/50 flex flex-col justify-center text-center h-full">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">El Fin de Cada Decisión</span>
+            <p class="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+              Generar más ventas con mayor rentabilidad
+            </p>
+            <p class="text-slate-400 text-sm mt-6 leading-relaxed">
+              Cada optimización técnica, cada palabra clave seleccionada y cada ajuste en el embudo tiene una única finalidad: maximizar el retorno financiero de su tienda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Cómo lo logramos (Fases) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            Metodología diseñada para el éxito de su eCommerce
+          </h2>
+        </div>
+
+        <div class="space-y-16">
+          <!-- Phase 1 -->
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="md:w-1/12">
+              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm">
+                01
+              </span>
+            </div>
+            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Fase 1: Inteligencia de Datos</span>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Primero encontramos dónde está el dinero</h3>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Antes de optimizar cualquier página entendemos cómo compra su mercado. Analizamos qué productos tienen mayor demanda, qué categorías generan mayor rentabilidad, cómo buscan sus clientes, qué oportunidades está desaprovechando y qué está haciendo mejor su competencia.
+              </p>
+              <div class="bg-white px-4 py-2 rounded-xl inline-block border border-slate-200 text-sm font-bold text-slate-800">
+                📊 No trabajamos con intuición. Trabajamos con datos. Porque cada mejora debe traducirse en más ingresos.
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="md:w-1/12">
+              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm">
+                02
+              </span>
+            </div>
+            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Fase 2: Arquitectura y Rendimiento</span>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Después construimos un eCommerce preparado para crecer</h3>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                La mayoría de las tiendas online pierde ventas por problemas que pasan desapercibidos: arquitecturas confusas, categorías mal organizadas, productos difíciles de encontrar, experiencias móviles deficientes o errores técnicos que limitan la visibilidad.
+              </p>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Nosotros eliminamos esos obstáculos. Creamos una estructura que facilita la compra para el cliente y la comprensión del sitio para Google y los motores de Inteligencia Artificial. Cuando ambas cosas suceden al mismo tiempo, las ventas crecen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="md:w-1/12">
+              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm">
+                03
+              </span>
+            </div>
+            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Fase 3: Optimización para Motores de IA (GEO)</span>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Hoy ya no basta con aparecer en Google</h3>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                La forma en que las personas buscan está cambiando. Cada vez más consumidores utilizan herramientas como: <strong>Google AI Overviews, ChatGPT, Gemini, Microsoft Copilot y Perplexity</strong>. Si su marca no aparece en estas respuestas, pierde una oportunidad enorme de captar compradores antes que su competencia.
+              </p>
+              <div class="bg-blue-600 text-white px-4 py-2 rounded-xl inline-block text-sm font-bold shadow-md">
+                🤖 Implementamos estrategias de GEO para aumentar la probabilidad de recomendación de su tienda.
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="md:w-1/12">
+              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm">
+                04
+              </span>
+            </div>
+            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Fase 4: Medición & CRO</span>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Todo se mide. Todo se optimiza. Todo se mejora.</h3>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                No creemos en campañas que "parecen funcionar". Implementamos sistemas de medición avanzados que permiten saber exactamente: qué categorías generan más ingresos, qué páginas venden más, qué contenidos atraen compradores y qué acciones producen el mayor retorno sobre la inversión (ROI).
+              </p>
+              <div class="bg-white px-4 py-2 rounded-xl inline-block border border-slate-200 text-sm font-bold text-slate-800">
+                📈 Decisiones basadas en evidencia, no en opiniones. El resultado es un negocio más rentable.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Resultados Checklist -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Nuestros clientes buscan resultados reales</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {[
+            "Más ventas orgánicas",
+            "Más compradores cualificados",
+            "Menor costo de adquisición (CAC)",
+            "Mayor tasa de conversión",
+            "Menor dependencia de Google Ads y Meta Ads",
+            "Mayor rentabilidad de catálogo",
+            "Crecimiento sostenible"
+          ].map(item => (
+            <div class="flex items-center gap-3 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <span class="text-green-500 font-extrabold text-2xl">✔</span>
+              <span class="text-slate-800 font-bold">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-xl font-bold text-slate-800">
+            Porque el objetivo nunca fue aparecer primero en Google.
+          </p>
+          <p class="text-2xl font-black text-blue-600 mt-2">
+            El objetivo siempre fue vender más.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Sectores -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Trabajamos con empresas que quieren escalar</h2>
+          <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+            Nuestra metodología está diseñada para eCommerce y tiendas online con catálogos de cientos o miles de productos en sectores como:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {[
+            { label: "Retail", icon: "🏬" },
+            { label: "Moda", icon: "👗" },
+            { label: "Calzado", icon: "👟" },
+            { label: "Joyería", icon: "💍" },
+            { label: "Belleza", icon: "💄" },
+            { label: "Tecnología", icon: "💻" },
+            { label: "Hogar", icon: "🏠" },
+            { label: "Salud", icon: "🏥" },
+            { label: "Accesorios", icon: "🎒" },
+            { label: "Grandes Catálogos", icon: "📦" }
+          ].map(sector => (
+            <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl text-center hover:shadow-sm transition-all">
+              <div class="text-3xl mb-3">{sector.icon}</div>
+              <span class="text-slate-800 text-sm font-bold block">{sector.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-center text-slate-500 text-sm mt-8">
+          Cada estrategia se adapta al comportamiento de compra de su mercado y al nivel de competencia de su industria.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Diferenciador -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            Lo que realmente nos diferencia
+          </h2>
+          <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+            Muchas agencias venden SEO. Nosotros ayudamos a construir un motor de crecimiento.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          {[
+            { title: "Adquisición de Demanda", desc: "Captamos intenciones de compra específicas en cada etapa de búsqueda." },
+            { title: "Optimización de Conversión", desc: "Optimizamos el embudo de ventas para elevar el ticket medio." },
+            { title: "Búsqueda con IA", desc: "GEO adaptado para que sea recomendado por LLMs y GPTs." },
+            { title: "Optimización por Datos", desc: "Análisis continuo para mejorar rentabilidades reales." }
+          ].map(item => (
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-all h-full flex flex-col justify-between">
+              <h4 class="text-slate-900 font-extrabold text-md mb-2">{item.title}</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-blue-50 border border-blue-100 p-8 rounded-3xl text-center max-w-3xl mx-auto">
+          <p class="text-slate-800 text-lg font-bold">No ejecutamos tareas. Diseñamos sistemas.</p>
+          <p class="text-blue-700 font-extrabold text-xl mt-2">¿Cómo genera más ingresos para la empresa?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: El costo de no actuar -->
+    <section class="py-20 bg-red-50 border-t border-b border-red-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 uppercase tracking-widest">El costo de no actuar</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-red-950 mt-6 mb-6">El costo de la inacción financiera</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-8">
+          {[
+            "Paga más por cada cliente adquirido en anuncios.",
+            "Pierde oportunidades frente a competidores mejor posicionados.",
+            "Reduce sus márgenes de ganancia progresivamente.",
+            "Deja escapar miles de búsquedas con intención de compra.",
+            "Construye un negocio totalmente dependiente de la inversión publicitaria."
+          ].map(cost => (
+            <div class="flex items-start gap-2 text-red-900 text-sm font-medium">
+              <span class="text-red-500">✕</span>
+              <span>{cost}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-red-900 leading-relaxed mb-6 max-w-2xl mx-auto font-medium">
+          Mientras otros compran tráfico... Nuestros clientes construyen un activo digital que sigue generando ventas durante meses e incluso años. Esa diferencia termina reflejándose en los resultados financieros.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 9: Consultoría -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Solicite una Consultoría Estratégica</h2>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            Analizaremos su eCommerce para identificar las oportunidades con mayor impacto en crecimiento y rentabilidad.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
+          {[
+            { title: "Canal Orgánico", desc: "Un análisis completo de su canal orgánico actual." },
+            { title: "Competidores", desc: "Una evaluación competitiva frente a sus rivales." },
+            { title: "Categorías Clave", desc: "Las categorías con mayor potencial de crecimiento." },
+            { title: "Análisis de Errores", desc: "Los errores técnicos y de CRO que hoy limitan sus ventas." },
+            { title: "Plan de Trabajo", desc: "Hoja de ruta clara para aumentar ingresos mediante SEO e IA." }
+          ].map((item, index) => (
+            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between h-full">
+              <span class="text-blue-400 font-extrabold text-lg mb-4">0{index + 1}</span>
+              <div>
+                <h4 class="text-white font-bold text-sm mb-2">{item.title}</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-slate-800/80 border border-slate-700 p-8 rounded-3xl max-w-3xl mx-auto mb-10 text-center">
+          <p class="text-slate-300 text-md leading-relaxed mb-4">
+            El comercio electrónico ya no se gana únicamente con más publicidad. Se gana construyendo el canal de adquisición de clientes más rentable, predecible y sostenible.
+          </p>
+          <p class="text-xl md:text-2xl font-extrabold text-blue-400">
+            Si ese es el futuro que quiere para su empresa, conversemos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
