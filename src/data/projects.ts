@@ -14,6 +14,7 @@ export interface Project {
     strategy: string;
     results: string[];
     experience?: string[];
+    experienceTitle?: string;
     metrics?: { label: string; value: string }[];
     quote?: string;
     story?: string;
@@ -262,20 +263,36 @@ export const projects: Project[] = [
   },
   {
     slug: "padel-tennis-guide",
-    title: "PadelTennisGuide",
-    description: "Caso de Estudio de SEO para Directorios: Reestructuración arquitectónica y optimización Onsite profunda para maximizar la indexación y visibilidad de un directorio especializado en pádel.",
+    title: "PadelTennisGuide.com",
+    description: "Caso de Estudio SEO para Directorios: Cómo Transformamos PadelTennisGuide.com en una Plataforma Preparada para Escalar",
     tag: "SEO para Directorios",
     url: "https://padeltennisguide.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fpadeltennisguide.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "El punto de partida era un sitio web desarrollado en WordPress con severas deficiencias estructurales: carecía de una arquitectura de información óptima para directorios, no presentaba un enlazado interno lógico y sufría de problemas críticos de SEO Onsite que limitaban drásticamente su rastreo, indexación y potencial de conversión de tráfico.",
-      strategy: "Diseñamos un MVP funcional enfocado en resolver las debilidades de la plataforma. Diseñamos e implementamos una estrategia integral dividida en cada etapa de crecimiento SEO, reestructurando la jerarquía semántica, optimizando los enlaces internos y definiendo directrices claras de SEO Onsite para elevar sustancialmente el volumen de indexación de páginas.",
+      company: "Lo que comenzó como un proyecto de SEO Off-Page terminó convirtiéndose en una transformación completa del negocio.",
+      challenge: "Fui contratado inicialmente para ejecutar una estrategia de Off-Page SEO. Sin embargo, tras realizar una auditoría técnica exhaustiva, quedó claro que el mayor obstáculo para el crecimiento no era la autoridad del dominio, sino los cimientos del sitio. Antes de invertir en enlaces, era necesario construir una base sólida. El proyecto evolucionó rápidamente hacia una optimización integral del directorio, abordando aspectos técnicos, estructurales y estratégicos que limitaban su crecimiento orgánico.",
+      strategy: "El verdadero objetivo nunca fue mejorar el SEO. El objetivo fue construir una plataforma capaz de crecer de forma sostenible. Cada optimización se realizó pensando en crear una infraestructura que permitiera escalar miles de páginas sin generar problemas de indexación, mejorar la experiencia de los usuarios, aumentar la conversión, facilitar el rastreo por parte de Google, y preparar la arquitectura para el crecimiento mediante Programmatic SEO con ventajas competitivas a largo plazo.",
+      experienceTitle: "Principales optimizaciones implementadas",
+      experience: [
+        "Auditoría SEO técnica completa.",
+        "Reestructuración de la arquitectura del directorio.",
+        "Optimización de la experiencia del usuario (UX).",
+        "Mejora de Core Web Vitals y rendimiento.",
+        "Optimización masiva de imágenes.",
+        "Estrategia de enlazado interno basada en intención de búsqueda.",
+        "Reorganización de categorías y taxonomías.",
+        "Eliminación de problemas de contenido duplicado y canibalización.",
+        "Optimización de páginas para satisfacer la intención de búsqueda.",
+        "Definición de una estrategia editorial orientada a escalar el contenido.",
+        "Identificación de nuevas oportunidades de negocio y crecimiento orgánico.",
+        "Implementación de estándares Enterprise SEO para directorios."
+      ],
       results: [
-        "Aumento significativo en el volumen de páginas indexadas en motores de búsqueda.",
-        "Arquitectura de información profesional optimizada para la conversión y experiencia del usuario.",
-        "Implementación exitosa del MVP enfocado en el modelo de negocio de directorios.",
-        "Estrategia de SEO consolidada y dividida en etapas operativas para el equipo directivo."
-      ]
+        "El proyecto pasó de ser una simple campaña de SEO Off-Page a una consultoría estratégica de crecimiento digital.",
+        "Redefinición de la estructura completa del directorio para maximizar su potencial de posicionamiento.",
+        "Preparación de la infraestructura técnica para escalar miles de páginas sin problemas de indexación."
+      ],
+      story: "Este es solo una parte de los resultados obtenidos durante la transformación de PadelTennisGuide.com."
     }
   }
 ];
