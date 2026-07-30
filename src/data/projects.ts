@@ -245,19 +245,54 @@ export const projects: Project[] = [
   {
     slug: "intersources",
     title: "InterSources",
-    description: "Consultoría de visibilidad digital y SEO B2B para líderes en Ciberseguridad. Impulsando la autoridad técnica y la generación de pipeline corporativo.",
+    description: "Cómo Transformé un Proyecto Web Estancado en un Canal de Generación de Clientes en Menos de 4 Meses",
     tag: "Consultor SEO and Team lead",
     url: "https://www.intersourcesinc.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intersourcesinc.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Comunicar servicios técnicos complejos de ciberseguridad (MSSP) a tomadores de decisiones C-level en un mercado saturado de ruido técnico.",
-      strategy: "Desarrollo de una estrategia de 'Thought Leadership' mediante contenido técnico optimizado y activos descargables de alta autoridad que captan leads calificados.",
+      company: "Cuando fui contratado por Intersources, la empresa ya había invertido en otro proveedor para desarrollar su nueva página web y liderar la estrategia SEO.",
+      companyTitle: "El Inicio",
+      companySub: "Inversiones previas sin una base técnica sólida",
+      challenge: "El problema era que, después de esa inversión, prácticamente no existía una base sobre la cual trabajar.\n\nLo único disponible era una investigación inicial de palabras clave con poco análisis estratégico y un estudio superficial de enlaces. No existía una arquitectura web definida, no había una nueva página desarrollada en Webflow, no existía una estrategia de contenidos y tampoco un plan de posicionamiento que apoyara los objetivos comerciales del negocio.\n\nEn otras palabras, el proyecto debía comenzar desde cero.",
+      challengeTitle: "El Problema",
+      challengeSub: "Comenzar desde cero",
+      solution: "Además del estado del proyecto, existían importantes desafíos operativos.\n\nDebía coordinar equipos distribuidos entre Estados Unidos, India y Costa Rica, trabajando con una diferencia horaria de aproximadamente 12 horas.\n\nTambién era necesario definir qué línea de negocio debía priorizarse, ya que Intersources ofrece múltiples soluciones y servicios de ciberseguridad. Antes de construir el sitio web, era indispensable entender:\n\n• Qué servicios tenían mayor potencial comercial.\n• Qué palabras clave representaban oportunidades reales de negocio.\n• Cómo estructurar el sitio para captar demanda cualificada.\n• Cómo convertir el tráfico orgánico en oportunidades comerciales.",
+      solutionTitle: "El Reto",
+      solutionSub: "Desafíos operativos y prioridades comerciales",
+      strategy: "El proyecto inició con una auditoría completa que permitió construir una estrategia digital desde sus cimientos.\n\nSe desarrolló una arquitectura SEO alineada con los objetivos del negocio.\n\nPara coordinar un equipo internacional compuesto por desarrolladores, diseñador, UX/UI y responsables del negocio, implementé una metodología Scrum, permitiendo mantener entregas continuas y una comunicación eficiente entre todos los participantes.",
+      strategyTitle: "La Estrategia",
+      experienceTitle: "Se desarrolló una arquitectura SEO alineada con los objetivos del negocio, incluyendo:",
+      experience: [
+        "Auditoría SEO técnica completa.",
+        "Investigación estratégica de palabras clave.",
+        "Arquitectura de información y estructura del sitio.",
+        "Estrategia de contenidos.",
+        "Plan de enlazado interno.",
+        "Implementación de analítica y medición.",
+        "Definición de prioridades comerciales para cada línea de servicios."
+      ],
+      metrics: [
+        { label: "Conversiones", value: "+263%" },
+        { label: "Clics Orgánicos", value: "+396%" },
+        { label: "Impresiones", value: "+401%" },
+        { label: "Tiempo Desarrollo", value: "<4 meses" }
+      ],
       results: [
-        "Aumento del 180% en el tráfico orgánico de perfiles de decisión (IT Managers, CISOs)",
-        "Posicionamiento como autoridad referente en 'Managed Security Services'",
-        "Incremento del 70% en la tasa de conversión de leads B2B corporativos",
-        "Pipeline de ventas fortalecido mediante activos digitales optimizados"
-      ]
+        "En menos de cuatro meses logramos lanzar la primera versión funcional del nuevo sitio web.",
+        "Además del desarrollo principal, se implementaron activos digitales para apoyar las estrategias comerciales de la empresa, incluyendo landing pages para campañas de LinkedIn, páginas para eventos y generación de demanda, y calendario de contenidos para marketing digital.",
+        "Configuración completa de Google Tag Manager, instalación de píxeles de seguimiento, implementación de medición de conversiones y dashboards ejecutivos en Looker Studio para seguimiento de KPIs.",
+        "Coordinación continua entre equipos de desarrollo, diseño, UX/UI y stakeholders internacionales.",
+        "Todo el ecosistema fue construido pensando no únicamente en posicionar el sitio en Google, sino en convertir visitantes en oportunidades reales de negocio.",
+        "Incremento del 263% en conversiones.",
+        "Incremento del 396% en clics orgánicos.",
+        "Incremento del 401% en impresiones.",
+        "Construcción y lanzamiento de una plataforma web completamente nueva en menos de cuatro meses.",
+        "Creación de una base SEO escalable que integra SEO técnico, estrategia de contenidos, analítica y optimización para crecimiento a largo plazo.",
+        "Implementación de una infraestructura de medición que permitió tomar decisiones basadas en datos y optimizar continuamente el rendimiento del sitio."
+      ],
+      story: "Este proyecto demuestra que el éxito de una estrategia SEO no comienza con palabras clave ni con contenido.\n\nComentará con una estrategia de negocio clara.\n\nCuando la arquitectura del sitio, el contenido, la tecnología, la analítica y los objetivos comerciales trabajan como un solo sistema, el resultado deja de ser simplemente más tráfico y se convierte en un motor predecible de generación de clientes y crecimiento sostenible.",
+      storyTitle: "La Mayor Lección",
+      storySub: "El SEO como parte del sistema de negocio"
     }
   },
   {
