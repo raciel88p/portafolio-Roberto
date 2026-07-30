@@ -133,46 +133,46 @@ export const projects: Project[] = [
   {
     slug: "ingeniacr",
     title: "IngeniaCR",
-    description: "Caso de Estudio de, SEO, SEM, Web Analytics y Astro. Optimización de campañas pagas y modelado de datos para toma de decisiones estratégicas.",
+    description: "Ingenia CR: De Estar al Borde del Cierre a Generar Clientes de Forma Constante con SEO y SEM",
     tag: "SEM & Analytics",
     url: "https://ingeniacr.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fingeniacr.com%2F?w=600&h=400",
     fullContent: {
-      company: "IngeniaCR suple de uniformes profesionales a pymes y empresas medianas para brindar más confianza a los clientes y aumentar la presencia de marca",
-      challenge: "La empresa se encontraba al borde del cierre técnico, operando sin un sistema de generación de demanda y dependiendo exclusivamente de recomendaciones esporádicas. El reto era construir, desde cero, una infraestructura digital capaz de captar clientes calificados de forma recurrente y rentable.",
-      solution: "Implementamos un ecosistema de adquisición híbrido basado en una landing page de alto rendimiento desarrollada con Astro, respaldada por una estrategia SEO y SEM (Google Ads) y medición avanzada para implementación rápida de CRO para aumentar las conversion",
-      steps: [
-        {
-          title: "Análisis de Supervivencia y Perfilado",
-          content: "Identificamos los puntos de dolor críticos del negocio y definimos un Buyer Persona de alta urgencia para asegurar retornos rápidos sobre la inversión inicial."
-        },
-        {
-          title: "Desarrollo de Infraestructura de Conversión",
-          content: "Diseñamos y desplegamos una plataforma utilizando Astro e IA, enfocada 100% en la conversión de usuarios y optimizada para tiempos de carga mínimos, alojada en Vercel."
-        },
-        {
-          title: "Ecosistema de Medición y SEM",
-          content: "Configuramos una pila analítica completa (GTM, GA4, SEO, GEO, Google Search Console) integrada con Google Ads para validar hipótesis de mercado y rastrear la generación de SQLs en tiempo real con Microsoft Clarity."
-        },
-        {
-          title: "Optimización y Escalado",
-          content: "Ajustamos continuamente las campañas de búsqueda pagas basándonos en los datos de comportamiento, mientras el SEO técnico de la plataforma empezaba a ganar tracción orgánica."
-        }
+      company: "Cuando Ingenia CR llegó a nosotros, la empresa enfrentaba una situación crítica.",
+      companyTitle: "La Situación",
+      companySub: "Al borde del cierre por falta de adquisición",
+      challenge: "No contaban con una estrategia digital para atraer clientes de manera constante. Dependían únicamente de referencias y oportunidades ocasionales, lo que hacía que las ventas fueran impredecibles. Incluso habían estado al borde del cierre por la falta de un sistema que generara nuevas oportunidades de negocio.\n\nNo necesitaban simplemente una página web.\n\nNecesitaban un sistema capaz de atraer clientes de forma continua.",
+      challengeTitle: "El Problema",
+      challengeSub: "Ventas impredecibles y dependencia de recomendaciones",
+      strategy: "Diseñamos e implementamos un sistema completo de adquisición de clientes desde cero.\n\nEn lugar de crear únicamente un sitio web, construimos un activo digital diseñado para generar oportunidades de negocio.",
+      strategyTitle: "La Estrategia",
+      experienceTitle: "Nuestro enfoque incluyó:",
+      experience: [
+        "Desarrollo de una landing page de alta conversión utilizando Astro CMS.",
+        "Integración de SEO desde la etapa de desarrollo para acelerar el posicionamiento orgánico.",
+        "Redacción de una carta de ventas enfocada en conversión para campañas de Google Ads (SEM).",
+        "Configuración de píxeles y eventos de conversión para medir cada interacción importante del usuario.",
+        "Implementación de analítica para optimizar las campañas basándonos en datos reales y no en suposiciones."
       ],
-      strategy: "Combinamos la agilidad del tráfico pago con la eficiencia del desarrollo web moderno para rescatar un negocio en crisis, transformando su presencia digital en una máquina de generación de leads basada en datos.",
       metrics: [
-        { label: "Nuevos Usuarios", value: "1.3K (+124.7%)" },
-        { label: "Crecimiento Orgánico", value: "+188.2%" },
-        { label: "Paid Search", value: "63%" },
-        { label: "Retención Usuarios", value: "+138.3%" }
+        { label: "Tasa Conversión", value: "4.4%" },
+        { label: "Nuevos Usuarios", value: "800+" },
+        { label: "Chat WhatsApp", value: "64" },
+        { label: "Impacto Ventas", value: "$1600" }
       ],
       results: [
-        "Crecimiento exponencial en la adquisición de 1,300 nuevos usuarios en 28 días.",
-        "Incremento masivo del 188.2% en tráfico orgánico mediante estrategias de SEO técnico.",
-        "Escalado vertical de campañas pagas logrando que un 63% de la adquisición provenga de Paid Search.",
-        "Diversificación exitosa de canales incluyendo YouTube (+124.8%) y tráfico desde asistentes de IA (ChatGPT).",
-        "Potencial de ventas de $1,600/mes generado a través de canales digitales calificados."
-      ]
+        "Los resultados comenzaron a verse durante el primer mes.",
+        "Posicionamiento inicial en Google para las primeras búsquedas relevantes.",
+        "Más de 800 usuarios llegaron a la landing page.",
+        "192 visitantes interactuaron activamente con el sitio web.",
+        "64 prospectos iniciaron una conversación por WhatsApp.",
+        "Se generaron los primeros SQL (Sales Qualified Leads) y MQL (Marketing Qualified Leads) con una inversión mínima.",
+        "La estrategia alcanzó una tasa de conversión del 4.4%, validando el modelo de adquisición desde las primeras semanas.",
+        "Impacto potencial de ventas $1600"
+      ],
+      story: "El mayor resultado no fue únicamente el tráfico o la cantidad de prospectos.\n\nFue transformar un negocio que no tenía un sistema de generación de clientes en una empresa con un proceso medible, escalable y optimizable.\n\nCada campaña, cada visita y cada conversión comenzó a generar información que permitió mejorar continuamente el rendimiento y reducir el costo de adquisición de nuevos clientes.\n\nPorque una página web no hace crecer un negocio.\n\nUn sistema de adquisición de clientes sí.",
+      storyTitle: "El Verdadero Impacto",
+      storySub: "Un sistema de adquisición de clientes sí hace crecer el negocio"
     }
   },
   {
@@ -290,7 +290,7 @@ export const projects: Project[] = [
         "Creación de una base SEO escalable que integra SEO técnico, estrategia de contenidos, analítica y optimización para crecimiento a largo plazo.",
         "Implementación de una infraestructura de medición que permitió tomar decisiones basadas en datos y optimizar continuamente el rendimiento del sitio."
       ],
-      story: "Este proyecto demuestra que el éxito de una estrategia SEO no comienza con palabras clave ni con contenido.\n\nComentará con una estrategia de negocio clara.\n\nCuando la arquitectura del sitio, el contenido, la tecnología, la analítica y los objetivos comerciales trabajan como un solo sistema, el resultado deja de ser simplemente más tráfico y se convierte en un motor predecible de generación de clientes y crecimiento sostenible.",
+      story: "Este proyecto demuestra que el éxito de una estrategia SEO no comienza con palabras clave ni con contenido.\n\nComienza con una estrategia de negocio clara.\n\nCuando la arquitectura del sitio, el contenido, la tecnología, la analítica y los objetivos comerciales trabajan como un solo sistema, el resultado deja de ser simplemente más tráfico y se convierte en un motor predecible de generación de clientes y crecimiento sostenible.",
       storyTitle: "La Mayor Lección",
       storySub: "El SEO como parte del sistema de negocio"
     }
