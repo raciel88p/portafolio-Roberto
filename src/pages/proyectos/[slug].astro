@@ -71,37 +71,43 @@ const schema = {
           <div class="lg:col-span-2 space-y-20">
             {project.fullContent.company && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Empresa</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">
+                  {project.fullContent.companyTitle || "La Empresa"}
+                </h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  Expertise que genera confianza
+                  {project.fullContent.companySub || "Expertise que genera confianza"}
                 </h3>
-                <p class="text-xl text-slate-600 leading-relaxed">
+                <div class="text-xl text-slate-600 leading-relaxed whitespace-pre-line">
                   {project.fullContent.company}
-                </p>
+                </div>
               </div>
             )}
 
             {project.fullContent.challenge && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">El Desafío</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">
+                  {project.fullContent.challengeTitle || "El Desafío"}
+                </h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  El reto de escalar en un mercado saturado
+                  {project.fullContent.challengeSub || "El reto de escalar en un mercado saturado"}
                 </h3>
-                <p class="text-xl text-slate-600 leading-relaxed">
+                <div class="text-xl text-slate-600 leading-relaxed whitespace-pre-line">
                   {project.fullContent.challenge}
-                </p>
+                </div>
               </div>
             )}
 
             {project.fullContent.solution && (
               <div>
-                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">La Solución</h2>
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">
+                  {project.fullContent.solutionTitle || "La Solución"}
+                </h2>
                 <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">
-                  Estrategia integrada y ejecución técnica
+                  {project.fullContent.solutionSub || "Estrategia integrada y ejecución técnica"}
                 </h3>
-                <p class="text-xl text-slate-600 leading-relaxed">
+                <div class="text-xl text-slate-600 leading-relaxed whitespace-pre-line">
                   {project.fullContent.solution}
-                </p>
+                </div>
               </div>
             )}
 
@@ -122,25 +128,11 @@ const schema = {
               <div>
                 <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center">
                   <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm mr-4">02</span>
-                  Nuestra Estrategia
+                  {project.fullContent.strategyTitle || "Nuestra Estrategia"}
                 </h2>
-                <p class="text-lg text-slate-600 leading-relaxed">
+                <div class="text-lg text-slate-600 leading-relaxed whitespace-pre-line">
                   {project.fullContent.strategy}
-                </p>
-              </div>
-            )}
-
-            {project.fullContent.story && (
-              <div class="bg-slate-900 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                  <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">La Historia Detrás</h2>
-                  <h3 class="text-3xl font-bold mb-8 leading-tight">Nuestra Trayectoria</h3>
-                  <p class="text-xl text-slate-300 leading-relaxed italic">
-                    "{project.fullContent.story}"
-                  </p>
                 </div>
-                <!-- Decoration -->
-                <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
               </div>
             )}
 
@@ -162,6 +154,24 @@ const schema = {
                     ))}
                   </ul>
                 </div>
+              </div>
+            )}
+
+            {project.fullContent.story && (
+              <div class="bg-slate-900 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                  <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">
+                    {project.fullContent.storyTitle || "La Historia Detrás"}
+                  </h2>
+                  <h3 class="text-3xl font-bold mb-8 leading-tight">
+                    {project.fullContent.storySub || "Nuestra Trayectoria"}
+                  </h3>
+                  <div class="text-xl text-slate-300 leading-relaxed italic whitespace-pre-line">
+                    "{project.fullContent.story}"
+                  </div>
+                </div>
+                <!-- Decoration -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
               </div>
             )}
           </div>
