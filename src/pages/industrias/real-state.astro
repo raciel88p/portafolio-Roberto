@@ -7,8 +7,8 @@ import Contact from '../../components/Contact.astro';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Especialista SEO para Real Estate",
-  "description": "Estrategias de SEO y posicionamiento web altamente especializadas para el sector inmobiliario, desarrolladores y constructoras. Convierta su sitio web en un canal de ventas.",
+  "name": "Especialista SEO para Real Estate e Inmobiliarias",
+  "description": "Convierta su sitio web en el principal canal de adquisición de clientes. Estrategias de posicionamiento SEO, GEO y optimización para el sector inmobiliario y de real estate.",
   "provider": {
     "@type": "Person",
     "name": "Roberto Pérez Salazar"
@@ -18,83 +18,84 @@ const schema = {
 ---
 
 <Layout
-  title="SEO para Real Estate e Inmobiliarias | Roberto Pérez"
+  title="SEO para Real Estate e Inmobiliarias | Roberto Pérez Salazar"
   description="Convierta su sitio web en el principal canal de adquisición de clientes. Estrategias de posicionamiento SEO, GEO y optimización para el sector inmobiliario y de real estate."
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Navbar />
 
-  <main class="pt-32">
+  <main class="pt-24 bg-white text-slate-900">
     <!-- Hero Section -->
-    <section class="py-20 bg-slate-50 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-          <div class="text-6xl mb-6">🏠</div>
-          <span class="px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Sector Inmobiliario & Real Estate</span>
-          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
-            Convierta su Sitio Web en el <span class="text-blue-600">Principal Canal</span> de Adquisición de Clientes de su Empresa
-          </h1>
-          <h2 class="text-xl md:text-2xl text-slate-600 mt-6 max-w-3xl mx-auto leading-relaxed">
-            Genere más oportunidades de negocio. Reduzca la dependencia de la publicidad pagada. Construya una ventaja competitiva que siga creciendo durante los próximos años.
-          </h2>
-          <div class="mt-8">
-            <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
-              Solicitar una Consultoría Estratégica
-            </a>
-          </div>
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para Real Estate & Inmobiliarias
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierta su Sitio Web en el Principal Canal de Adquisición de Clientes de su Empresa
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Genere más oportunidades de negocio. Reduzca la dependencia de la publicidad pagada. Construya una ventaja competitiva que siga creciendo durante los próximos años.
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar una Consultoría Estratégica
+          </a>
         </div>
       </div>
-      <!-- Background elements -->
-      <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-100/30 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-slate-100/30 rounded-full blur-3xl"></div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
     </section>
 
-    <!-- Section 1: Mientras lee esta página... -->
+    <!-- Editorial Narrative Section -->
     <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <p class="text-2xl font-bold text-slate-800 leading-relaxed">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8">
             Mientras lee esta página, hay personas buscando exactamente lo que usted vende.
           </p>
-        </div>
 
-        <!-- Search Cards Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-          {[
-            { label: "Casas en venta", icon: "🏡" },
-            { label: "Apartamentos", icon: "🏢" },
-            { label: "Proyectos residenciales", icon: "🏗️" },
-            { label: "Lotes para invertir", icon: "📐" },
-            { label: "Hoteles", icon: "🏨" },
-            { label: "Resorts", icon: "🌴" },
-            { label: "Propiedades vacacionales", icon: "🏖️" },
-            { label: "Oportunidades inmobiliarias", icon: "📈" },
-            { label: "Desarrolladores confiables", icon: "🤝" },
-            { label: "Empresas constructoras", icon: "🔨" }
-          ].map((item) => (
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-all">
-              <div class="text-3xl mb-3">{item.icon}</div>
-              <span class="text-slate-800 text-sm font-bold block">{item.label}</span>
-            </div>
-          ))}
-        </div>
+          <p class="text-xl font-extrabold text-slate-900 mb-4 uppercase tracking-wider">Buscan:</p>
 
-        <div class="max-w-3xl mx-auto text-center space-y-6">
-          <p class="text-xl text-slate-700 leading-relaxed">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
+            {[
+              { label: "Casas en venta.", icon: "🏡" },
+              { label: "Apartamentos.", icon: "🏢" },
+              { label: "Proyectos residenciales.", icon: "🏗️" },
+              { label: "Lotes para invertir.", icon: "📐" },
+              { label: "Hoteles.", icon: "🏨" },
+              { label: "Resorts.", icon: "🌴" },
+              { label: "Propiedades vacacionales.", icon: "🏖️" },
+              { label: "Oportunidades inmobiliarias.", icon: "📈" },
+              { label: "Desarrolladores confiables.", icon: "🤝" },
+              { label: "Empresas constructoras.", icon: "🔨" }
+            ].map((item) => (
+              <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-100 transition-colors">
+                <span class="text-2xl">{item.icon}</span>
+                <span class="font-bold text-slate-800">{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
             No están navegando por entretenimiento.
           </p>
-          <p class="text-xl text-slate-700 font-bold leading-relaxed">
-            Están comparando opciones. Están evaluando riesgos.
+          <p class="text-lg text-slate-700 leading-relaxed mb-4 font-semibold">
+            Están comparando opciones.
           </p>
-          <p class="text-xl text-slate-700 leading-relaxed">
+          <p class="text-lg text-slate-700 leading-relaxed mb-4 font-semibold">
+            Están evaluando riesgos.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed mb-8">
             Y, en muchos casos, están a pocos días de tomar una decisión que representa cientos de miles o incluso millones de dólares.
           </p>
 
-          <div class="mt-12 bg-blue-50 border-2 border-blue-100 p-8 rounded-3xl max-w-3xl mx-auto shadow-sm">
-            <p class="text-lg md:text-xl text-slate-800 leading-relaxed">
-              La única pregunta es…
-            </p>
-            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-4 leading-relaxed">
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <p class="text-lg text-slate-600 italic">La única pregunta es…</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-3 leading-relaxed">
               ¿Su empresa aparece cuando esos compradores están tomando la decisión… o aparecen primero sus competidores?
             </p>
           </div>
@@ -104,276 +105,327 @@ const schema = {
 
     <!-- Section 2: El comprador ya decidió investigar -->
     <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-            El comprador ya decidió investigar antes de hablar con un vendedor
-          </h2>
-          <p class="text-lg text-slate-600 mt-4 leading-relaxed">
-            Hace algunos años, el proceso comercial comenzaba cuando un cliente llamaba a la empresa. Hoy sucede exactamente al revés.
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          El comprador ya decidió investigar antes de hablar con un vendedor
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            Hace algunos años, el proceso comercial comenzaba cuando un cliente llamaba a la empresa.
           </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6">
-            <div class="bg-blue-600 text-white p-6 rounded-3xl shadow-lg shadow-blue-100">
-              <span class="block text-4xl font-extrabold">90%+</span>
-              <p class="text-lg font-bold mt-2">de los compradores investigan primero en Internet.</p>
-            </div>
-            <p class="text-slate-700 leading-relaxed">
-              Comparan proyectos, buscan opiniones, revisan precios, analizan ubicaciones y evalúan desarrolladores.
-            </p>
-            <p class="text-slate-700 leading-relaxed">
-              Y ahora utilizan herramientas como <strong>ChatGPT, Gemini, Google AI Overviews, Copilot y Perplexity</strong> para encontrar respuestas antes de contactar a un asesor.
-            </p>
-            <div class="border-l-4 border-blue-600 pl-4 py-2 italic text-slate-800 font-medium">
-              "Cuando finalmente llaman… Gran parte de la decisión ya está tomada."
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-            <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2 text-red-600">
-              <span>⚠️</span> El verdadero costo de la invisibilidad
-            </h3>
-            <p class="text-slate-700 leading-relaxed text-sm">
-              Si su empresa no estuvo presente durante esa investigación, probablemente nunca tendrá la oportunidad de competir.
-            </p>
-            <div class="border-t border-slate-100 pt-4 space-y-3">
-              <p class="font-bold text-slate-800 text-sm">No pierde únicamente visitas al sitio web. Pierde:</p>
-              <div class="grid grid-cols-2 gap-3 text-sm">
-                <div class="flex items-center gap-2 text-slate-700">
-                  <span class="text-red-500 font-bold">✕</span> Compradores
-                </div>
-                <div class="flex items-center gap-2 text-slate-700">
-                  <span class="text-red-500 font-bold">✕</span> Reuniones
-                </div>
-                <div class="flex items-center gap-2 text-slate-700">
-                  <span class="text-red-500 font-bold">✕</span> Ventas
-                </div>
-                <div class="flex items-center gap-2 text-slate-700">
-                  <span class="text-red-500 font-bold">✕</span> Cuota de mercado
-                </div>
-              </div>
-              <p class="text-xs text-slate-500 italic mt-2">Todo… sin darse cuenta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Su sitio web como un activo rentable -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-            Su sitio web debería ser uno de los activos más rentables de su empresa
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-between">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-2">Enfoque Tradicional</span>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">El Folleto Digital</h3>
-              <p class="text-slate-600 leading-relaxed text-sm mb-6">
-                La mayoría de las empresas inmobiliarias todavía utilizan su sitio web únicamente para publicar propiedades, sentarse a esperar visitas pasivamente y luego depender de campañas pagadas costosas para intentar generar clientes cada mes.
-              </p>
-            </div>
-            <div class="text-red-500 font-bold text-sm flex items-center gap-2">
-              <span>✕</span> Dependencia total de anuncios pagados
-            </div>
-          </div>
-
-          <div class="p-8 bg-blue-50 border border-blue-100 rounded-3xl flex flex-col justify-between shadow-sm">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Nuestra Metodología</span>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">El Sistema de Adquisición</h3>
-              <p class="text-slate-600 leading-relaxed text-sm mb-6">
-                Las empresas que más crecen construyen un sistema capaz de atraer compradores todos los días de forma orgánica. Sin importar si el equipo comercial está trabajando, sin depender exclusivamente de anuncios y sin tener que comenzar desde cero cada mes.
-              </p>
-            </div>
-            <div class="text-blue-600 font-bold text-sm flex items-center gap-2">
-              <span>✓</span> Generación continua de demanda orgánica
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-12 text-center max-w-2xl mx-auto">
-          <p class="text-xl font-bold text-slate-800">
-            "Un sitio web bien diseñado no genera únicamente tráfico. Genera demanda. Y la demanda genera ventas."
+          <p class="font-semibold text-slate-900 text-lg">
+            Hoy sucede exactamente al revés.
           </p>
-        </div>
-      </div>
-    </section>
+          <p class="text-blue-700 font-extrabold text-xl">
+            Más del 90 % de los compradores investigan primero en Internet.
+          </p>
 
-    <!-- Section 4: No hacemos SEO (Dark Block) -->
-    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 uppercase tracking-widest">Nuestra Filosofía</span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-6 mb-4">
-            No hacemos SEO.
-          </h2>
-          <h3 class="text-xl md:text-2xl text-slate-300 font-medium">
-            Construimos un sistema de crecimiento para atraer compradores de alto valor de forma constante.
-          </h3>
-        </div>
+          <div class="pl-6 border-l-2 border-slate-300 space-y-2 my-6">
+            <p class="font-medium text-slate-800 my-1">Comparan proyectos.</p>
+            <p class="font-medium text-slate-800 my-1">Buscan opiniones.</p>
+            <p class="font-medium text-slate-800 my-1">Revisan precios.</p>
+            <p class="font-medium text-slate-800 my-1">Analizan ubicaciones.</p>
+            <p class="font-medium text-slate-800 my-1">Evalúan desarrolladores.</p>
+          </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h4 class="text-lg font-bold text-blue-400 mb-6">Ayudamos a convertir la presencia digital en un activo que trabaja las 24 horas a:</h4>
+          <p>
+            Y ahora utilizan herramientas como <strong>ChatGPT, Gemini, Google AI Overviews, Copilot y Perplexity</strong> para encontrar respuestas antes de contactar a un asesor.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4">
+            Cuando finalmente llaman…
+          </p>
+          <p class="text-lg font-bold text-slate-800">
+            Gran parte de la decisión ya está tomada.
+          </p>
+          <p>
+            Si su empresa no estuvo presente durante esa investigación, probablemente nunca tendrá la oportunidad de competir.
+          </p>
+          <p class="text-xl font-bold text-red-600">
+            Y ese es el verdadero costo de la invisibilidad.
+          </p>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-150 shadow-sm not-prose my-8">
+            <p class="font-bold text-slate-900 mb-4">No pierde únicamente visitas al sitio web. Pierde:</p>
             <ul class="space-y-3">
-              {[
-                "Desarrolladores inmobiliarios",
-                "Constructoras",
-                "Agencias de bienes raíces",
-                "Comercializadores de proyectos",
-                "Hoteles",
-                "Resorts",
-                "Empresas turísticas"
-              ].map((item) => (
-                <li class="flex items-center gap-3">
-                  <span class="text-blue-400 text-xl">✦</span>
-                  <span class="text-slate-200 font-medium">{item}</span>
-                </li>
-              ))}
+              <li class="flex items-center gap-3 text-slate-800 font-semibold">
+                <span class="text-red-500 text-lg">✕</span> Pierde compradores.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-semibold">
+                <span class="text-red-500 text-lg">✕</span> Pierde reuniones.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-semibold">
+                <span class="text-red-500 text-lg">✕</span> Pierde ventas.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-semibold">
+                <span class="text-red-500 text-lg">✕</span> Pierde participación de mercado.
+              </li>
+            </ul>
+            <p class="text-sm text-slate-500 italic mt-4">Todo… sin darse cuenta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Su sitio web debería ser uno de los activos más rentables -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Su sitio web debería ser uno de los activos más rentables de su empresa
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg">
+            La mayoría de las empresas inmobiliarias todavía utilizan su sitio web como un folleto digital.
+          </p>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 my-6 not-prose">
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="text-slate-400">•</span> Publican propiedades.
+              </li>
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="text-slate-400">•</span> Esperan visitas.
+              </li>
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="text-slate-400">•</span> Y luego dependen de campañas pagadas para generar clientes.
+              </li>
             </ul>
           </div>
 
-          <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700/50">
-            <h4 class="text-md font-bold text-blue-400 uppercase tracking-wider mb-6">Nuestra metodología combina:</h4>
-            <div class="grid grid-cols-2 gap-4">
-              {[
-                "SEO Estratégico",
-                "Optimización WordPress",
-                "Arquitectura de información",
-                "IA aplicada a buscadores",
-                "GEO (Generative Engine Optimization)",
-                "Optimización Google AI",
-                "Analítica avanzada",
-                "CRO (Conversiones)"
-              ].map((item) => (
-                <div class="flex items-center gap-2 bg-slate-900/50 p-3 rounded-xl border border-slate-800 text-sm">
-                  <span class="text-green-400 font-bold">✓</span>
-                  <span class="text-slate-300">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-16 text-center border-t border-slate-800 pt-8 max-w-4xl mx-auto">
-          <p class="text-lg text-slate-300">
-            No perseguimos posiciones en Google. Construimos un sistema que incrementa la generación de oportunidades comerciales.
+          <p class="text-xl font-bold text-slate-900 pt-4">
+            Las empresas que más crecen hacen exactamente lo contrario.
           </p>
-          <p class="text-xl font-bold text-blue-400 mt-4 uppercase tracking-wide">
-            Porque las posiciones no pagan las cuentas. Los clientes sí.
+
+          <div class="bg-blue-50/60 p-6 rounded-2xl border border-blue-100 my-6 not-prose">
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-slate-800 font-medium">
+                <span class="text-blue-500">✓</span> Construyen un sistema capaz de atraer compradores todos los días.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-medium">
+                <span class="text-blue-500">✓</span> Sin importar si el equipo comercial está trabajando.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-medium">
+                <span class="text-blue-500">✓</span> Sin depender exclusivamente de anuncios.
+              </li>
+              <li class="flex items-center gap-3 text-slate-800 font-medium">
+                <span class="text-blue-500">✓</span> Sin tener que comenzar desde cero cada mes.
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-xl font-bold text-slate-900">
+            Un sitio web bien diseñado no genera únicamente tráfico.
+          </p>
+          <p class="text-xl font-extrabold text-blue-700">
+            Genera demanda.
+          </p>
+          <p class="text-2xl font-black text-slate-900">
+            Y la demanda genera ventas.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Así construimos ese sistema (Timeline / Steps) -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Así construimos ese sistema</h2>
-        </div>
+    <!-- Section 4: No hacemos SEO. (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white overflow-hidden relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4 text-center">
+          No hacemos SEO.
+        </h2>
+        <h3 class="text-xl md:text-2xl font-bold text-blue-400 leading-normal mb-12 text-center max-w-2xl mx-auto">
+          Construimos un sistema de crecimiento para atraer compradores de alto valor de forma constante.
+        </h3>
 
-        <div class="space-y-16 relative">
-          <!-- Step 1 -->
-          <div class="flex flex-col md:flex-row gap-8 items-start relative">
-            <div class="md:w-1/12 flex flex-col items-center">
-              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm border-2 border-white">
-                01
-              </span>
-            </div>
-            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-md transition-all">
-              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Paso 1: Demanda y Análisis</span>
-              <h3 class="text-2xl font-bold text-slate-900 mb-4">Primero encontramos dónde está el dinero</h3>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                Antes de escribir una sola página analizamos cómo compran sus clientes. Investigamos: qué buscan, qué preguntas hacen, qué problemas intentan resolver, cómo comparan opciones, qué competidores dominan actualmente el mercado y qué oportunidades están desaprovechadas.
-              </p>
-              <div class="bg-white px-4 py-2 rounded-xl inline-block border border-slate-200 text-sm font-bold text-slate-800">
-                📊 No trabajamos sobre suposiciones. Trabajamos sobre datos.
+        <div class="prose prose-lg prose-invert max-w-none space-y-8">
+          <p class="text-lg text-slate-300 text-center">
+            Ayudamos a:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-8">
+            {[
+              "Desarrolladores inmobiliarios.",
+              "Constructoras.",
+              "Agencias de bienes raíces.",
+              "Comercializadores de proyectos.",
+              "Hoteles.",
+              "Resorts.",
+              "Empresas turísticas."
+            ].map((item) => (
+              <div class="flex items-center gap-3 p-4 bg-slate-800/80 rounded-xl border border-slate-700">
+                <span class="text-blue-400 font-bold">✦</span>
+                <span class="font-semibold text-slate-100">{item}</span>
               </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-200">
+            A convertir su presencia digital en un activo que trabaja para el negocio las 24 horas del día.
+          </p>
+
+          <div class="border-t border-slate-800 pt-8 mt-12">
+            <p class="text-lg font-bold text-blue-400 mb-6 uppercase tracking-wider text-center">
+              Nuestra metodología combina:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+              {[
+                "SEO Estratégico.",
+                "Optimización técnica de WordPress.",
+                "Arquitectura de información.",
+                "Inteligencia Artificial aplicada a buscadores.",
+                "Generative Engine Optimization (GEO).",
+                "Optimización para Google AI.",
+                "Analítica avanzada.",
+                "Optimización de conversiones (CRO)."
+              ].map((item) => (
+                <div class="flex items-center gap-3 p-3 bg-slate-900 rounded-lg border border-slate-800 text-sm">
+                  <span class="text-green-400 font-extrabold">✓</span>
+                  <span class="text-slate-300 font-medium">{item}</span>
+                </div>
+              ))}
             </div>
+          </div>
+
+          <div class="text-center pt-8 border-t border-slate-800 max-w-2xl mx-auto">
+            <p class="text-slate-300 leading-relaxed mb-4">
+              No perseguimos posiciones en Google.
+            </p>
+            <p class="text-lg text-slate-300 leading-relaxed mb-4">
+              Construimos un sistema que incrementa la generación de oportunidades comerciales.
+            </p>
+            <p class="text-xl font-black text-blue-400 uppercase tracking-wide">
+              Porque las posiciones no pagan las cuentas.
+            </p>
+            <p class="text-2xl font-black text-white uppercase tracking-wide">
+              Los clientes sí.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Así construimos ese sistema -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-16 text-center">
+          Así construimos ese sistema
+        </h2>
+
+        <div class="space-y-16">
+          <!-- Step 1 -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">
+              Primero encontramos dónde está el dinero
+            </h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Antes de escribir una sola página analizamos cómo compran sus clientes.
+            </p>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-2 pl-4 border-l-2 border-slate-200">
+              <p class="my-1">Investigamos:</p>
+              <ul class="my-1 space-y-1">
+                <li>Qué buscan.</li>
+                <li>Qué preguntas hacen.</li>
+                <li>Qué problemas intentan resolver.</li>
+                <li>Cómo comparan opciones.</li>
+                <li>Qué competidores dominan actualmente el mercado.</li>
+                <li>Qué oportunidades están desaprovechadas.</li>
+              </ul>
+            </div>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              No trabajamos sobre suposiciones.
+            </p>
+            <p class="text-xl font-bold text-slate-900">
+              Trabajamos sobre datos.
+            </p>
           </div>
 
           <!-- Step 2 -->
-          <div class="flex flex-col md:flex-row gap-8 items-start relative">
-            <div class="md:w-1/12 flex flex-col items-center">
-              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm border-2 border-white">
-                02
-              </span>
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">
+              Después fortalecemos los cimientos
+            </h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Un sitio lento, mal estructurado o difícil de interpretar limita el crecimiento.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Optimizamos completamente su plataforma para que Google y los motores de Inteligencia Artificial puedan comprenderla, indexarla y recomendarla.
+            </p>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-2 pl-4 border-l-2 border-slate-200">
+              <p class="my-1">Mejoramos:</p>
+              <ul class="my-1 space-y-1">
+                <li>Velocidad.</li>
+                <li>Core Web Vitals.</li>
+                <li>Arquitectura SEO.</li>
+                <li>Datos estructurados.</li>
+                <li>Rendimiento móvil.</li>
+                <li>Seguridad.</li>
+                <li>Experiencia del usuario.</li>
+                <li>Indexación.</li>
+              </ul>
             </div>
-            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-md transition-all">
-              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Paso 2: SEO Técnico & Infraestructura</span>
-              <h3 class="text-2xl font-bold text-slate-900 mb-4">Después fortalecemos los cimientos</h3>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                Un sitio lento, mal estructurado o difícil de interpretar limita el crecimiento. Optimizamos completamente su plataforma para que Google y los motores de Inteligencia Artificial puedan comprenderla, indexarla y recomendarla de manera prioritaria.
-              </p>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[
-                  "Velocidad & Core Web Vitals",
-                  "Arquitectura SEO",
-                  "Datos estructurados",
-                  "Rendimiento móvil",
-                  "Seguridad avanzada",
-                  "Experiencia de usuario",
-                  "Indexación limpia",
-                  "Rendimiento de Servidor"
-                ].map((item) => (
-                  <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 text-xs text-slate-700 font-medium text-center">
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <p class="text-xs text-slate-500 italic mt-6">
-                Porque un sitio técnicamente sólido tiene muchas más posibilidades de convertirse en un activo comercial.
-              </p>
-            </div>
+            <p class="text-lg text-slate-800 font-bold italic">
+              Porque un sitio técnicamente sólido tiene muchas más posibilidades de convertirse en un activo comercial.
+            </p>
           </div>
 
           <!-- Step 3 -->
-          <div class="flex flex-col md:flex-row gap-8 items-start relative">
-            <div class="md:w-1/12 flex flex-col items-center">
-              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm border-2 border-white">
-                03
-              </span>
-            </div>
-            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-md transition-all">
-              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Paso 3: Creación de Autoridad</span>
-              <h3 class="text-2xl font-bold text-slate-900 mb-4">Luego construimos autoridad</h3>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                Los compradores no buscan únicamente propiedades. Buscan confianza. Necesitan respuestas. Quieren reducir el riesgo antes de invertir su capital. Por eso desarrollamos contenido de altísimo valor que responde exactamente a las preguntas que realizan durante cada etapa del proceso de compra.
-              </p>
-              <div class="bg-white px-4 py-2 rounded-xl inline-block border border-slate-200 text-sm font-bold text-slate-800">
-                ⭐ El resultado es una empresa que genera confianza antes incluso de la primera reunión comercial.
-              </div>
-            </div>
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">
+              Luego construimos autoridad
+            </h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Los compradores no buscan únicamente propiedades.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold text-slate-900">
+              Buscan confianza.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Necesitan respuestas.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Quieren reducir el riesgo antes de invertir.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Por eso desarrollamos contenido que responde exactamente a las preguntas que realizan durante cada etapa del proceso de compra.
+            </p>
+            <p class="text-xl font-bold text-blue-700">
+              El resultado es una empresa que genera confianza antes incluso de la primera reunión comercial.
+            </p>
           </div>
 
           <!-- Step 4 -->
-          <div class="flex flex-col md:flex-row gap-8 items-start relative">
-            <div class="md:w-1/12 flex flex-col items-center">
-              <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg shadow-sm border-2 border-white">
-                04
-              </span>
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">
+              Finalmente optimizamos para el futuro de las búsquedas
+            </h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              El comportamiento del consumidor cambió.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Ya no utiliza únicamente Google.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Cada vez más personas hacen preguntas directamente a herramientas de Inteligencia Artificial.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Si su empresa no forma parte de esas respuestas, perderá visibilidad progresivamente.
+            </p>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Implementamos estrategias de Generative Engine Optimization (GEO) para aumentar las probabilidades de que su empresa sea mencionada, citada y recomendada dentro de plataformas como:
+            </p>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-1 pl-4 border-l-2 border-slate-200">
+              <ul class="my-1 space-y-1">
+                <li>ChatGPT.</li>
+                <li>Gemini.</li>
+                <li>Google AI Overviews.</li>
+                <li>Microsoft Copilot.</li>
+                <li>Perplexity.</li>
+              </ul>
             </div>
-            <div class="md:w-11/12 bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-md transition-all">
-              <span class="text-xs font-bold uppercase tracking-widest text-blue-600 block mb-2">Paso 4: Inteligencia Artificial & GEO</span>
-              <h3 class="text-2xl font-bold text-slate-900 mb-4">Finalmente optimizamos para el futuro de las búsquedas</h3>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                El comportamiento del consumidor cambió. Ya no utiliza únicamente Google. Cada vez más personas hacen preguntas directamente a herramientas de Inteligencia Artificial. Si su empresa no forma parte de esas respuestas, perderá visibilidad progresivamente.
-              </p>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                Implementamos estrategias de Generative Engine Optimization (GEO) para aumentar las probabilidades de que su empresa sea mencionada, citada y recomendada dentro de plataformas como: <strong>ChatGPT, Gemini, Google AI Overviews, Microsoft Copilot, Perplexity</strong>.
-              </p>
-              <div class="bg-blue-600 text-white px-4 py-2 rounded-xl inline-block text-sm font-bold shadow-md">
-                🚀 Porque el futuro de las búsquedas ya comenzó.
-              </div>
-            </div>
+            <p class="text-xl font-black text-slate-950 mt-4">
+              Porque el futuro de las búsquedas ya comenzó.
+            </p>
           </div>
         </div>
       </div>
@@ -381,94 +433,108 @@ const schema = {
 
     <!-- Section 6: Lo que realmente obtiene -->
     <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-            Lo que realmente obtiene
-          </h2>
-          <p class="text-lg text-slate-600 mt-4 leading-relaxed font-bold">
-            No vendemos horas de trabajo. No vendemos auditorías. No vendemos palabras clave.
-          </p>
-          <p class="text-lg text-slate-600 mt-2 leading-relaxed">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Lo que realmente obtiene
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-4">
+          <p>No vendemos horas de trabajo.</p>
+          <p>No vendemos auditorías.</p>
+          <p>No vendemos palabras clave.</p>
+          <p class="text-xl font-bold text-slate-900">
             Construimos un canal permanente de adquisición de clientes.
           </p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {[
-            "Mayor visibilidad frente a compradores con intención real",
-            "Más tráfico orgánico cualificado",
-            "Más solicitudes de información",
-            "Más visitas a proyectos",
-            "Más oportunidades comerciales",
-            "Menor dependencia de campañas pagadas",
-            "Mayor autoridad en el mercado",
-            "Crecimiento sostenible de las ventas"
-          ].map((item) => (
-            <div class="flex items-start gap-3 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <span class="text-green-500 font-extrabold text-xl">✓</span>
-              <span class="text-slate-800 font-semibold">{item}</span>
-            </div>
-          ))}
-        </div>
+          <p class="text-lg font-bold text-slate-800 pt-4">
+            Los resultados normalmente se reflejan en:
+          </p>
 
-        <div class="text-center max-w-2xl mx-auto">
-          <p class="text-xl font-extrabold text-blue-700 uppercase tracking-wide">
-            "No medimos el éxito por la posición de una palabra clave. Lo medimos por el crecimiento del negocio."
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 my-6 not-prose">
+            <ul class="space-y-3">
+              {[
+                "Mayor visibilidad frente a compradores con intención real.",
+                "Más tráfico orgánico cualificado.",
+                "Más solicitudes de información.",
+                "Más visitas a proyectos.",
+                "Más oportunidades comerciales.",
+                "Menor dependencia de campañas pagadas.",
+                "Mayor autoridad en el mercado.",
+                "Crecimiento sostenible de las ventas."
+              ].map((item) => (
+                <li class="flex items-start gap-3 text-slate-800">
+                  <span class="text-green-500 font-bold text-lg">✓</span>
+                  <span class="font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p class="text-lg">
+            No medimos el éxito por la posición de una palabra clave.
+          </p>
+          <p class="text-xl font-extrabold text-blue-700">
+            Lo medimos por el crecimiento del negocio.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 7: La diferencia (Agencia vs Nosotros) -->
+    <!-- Section 7: La diferencia -->
     <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-            La diferencia entre una agencia tradicional y nuestra metodología
-          </h2>
-        </div>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          La diferencia entre una agencia tradicional y nuestra metodología
+        </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center">
-            <span class="text-red-500 font-bold block mb-2">Agencias Tradicionales</span>
-            <p class="text-slate-600 italic">"Entregan informes pasivos de tareas"</p>
-            <div class="text-2xl font-bold text-slate-800 mt-4">Nosotros construimos activos</div>
-          </div>
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center">
-            <span class="text-red-500 font-bold block mb-2">Agencias Tradicionales</span>
-            <p class="text-slate-600 italic">"Hablan de rankings y clicks vacíos"</p>
-            <div class="text-2xl font-bold text-slate-800 mt-4">Nosotros hablamos de ingresos</div>
-          </div>
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center">
-            <span class="text-red-500 font-bold block mb-2">Agencias Tradicionales</span>
-            <p class="text-slate-600 italic">"Ejecutan tareas y horas de soporte"</p>
-            <div class="text-2xl font-bold text-slate-800 mt-4">Diseñamos estrategia comercial</div>
-          </div>
-        </div>
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            Muchas agencias entregan informes.
+          </p>
+          <p class="text-xl font-bold text-slate-900">
+            Nosotros construimos activos.
+          </p>
+          <p>
+            Muchas agencias hablan de rankings.
+          </p>
+          <p class="text-xl font-bold text-slate-900">
+            Nosotros hablamos de ingresos.
+          </p>
+          <p>
+            Muchas agencias ejecutan tareas.
+          </p>
+          <p class="text-xl font-bold text-blue-700">
+            Nosotros diseñamos una estrategia alineada con los objetivos comerciales de su empresa.
+          </p>
 
-        <div class="bg-blue-50 border border-blue-100 p-8 rounded-3xl">
-          <h3 class="text-lg font-extrabold text-blue-900 mb-6 uppercase tracking-wider text-center">Cada proyecto integra un sistema unificado:</h3>
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {[
-              "Investigación de demanda",
-              "Inteligencia competitiva",
-              "SEO técnico completo",
-              "Arquitectura de información",
-              "Estrategia de contenidos",
-              "Optimización para IA",
-              "CRO (Optimización de conversión)",
-              "Analítica avanzada",
-              "Medición continua",
-              "Optimización permanente"
-            ].map((item) => (
-              <div class="bg-white p-4 rounded-xl border border-blue-100 text-center hover:shadow-sm transition-all flex flex-col justify-center h-24">
-                <span class="text-slate-800 text-xs font-extrabold leading-tight block">{item}</span>
-              </div>
-            ))}
+          <div class="border-t border-slate-200 pt-8 mt-8">
+            <p class="font-extrabold text-slate-900 text-lg mb-4">Cada proyecto integra:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose">
+              {[
+                "Investigación de demanda.",
+                "Inteligencia competitiva.",
+                "SEO técnico.",
+                "Arquitectura de información.",
+                "Estrategia de contenidos.",
+                "Optimización para Inteligencia Artificial.",
+                "CRO.",
+                "Analítica avanzada.",
+                "Medición continua.",
+                "Optimización permanente."
+              ].map((item) => (
+                <div class="flex items-center gap-2 px-3 py-2 bg-slate-50 rounded-lg border border-slate-100 text-sm text-slate-700 font-medium">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <p class="text-center text-slate-700 mt-8 font-bold">
-            No realizamos acciones aisladas. Construimos un sistema que continúa generando resultados durante años.
+
+          <p class="text-lg">
+            No realizamos acciones aisladas.
+          </p>
+          <p class="text-2xl font-black text-slate-950">
+            Construimos un sistema que continúa generando resultados durante años.
           </p>
         </div>
       </div>
@@ -476,54 +542,76 @@ const schema = {
 
     <!-- Section 8: El costo de esperar -->
     <section class="py-20 bg-red-50 border-t border-b border-red-100">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 uppercase tracking-widest">Alerta de Oportunidad</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-red-950 mt-6 mb-6">El costo de esperar</h2>
-        <p class="text-lg text-red-900 leading-relaxed mb-6 max-w-2xl mx-auto">
-          Cada día que pasa sin una estrategia sólida ocurre lo mismo: los compradores descubren primero a sus competidores, el costo de la publicidad continúa aumentando, la adquisición de clientes se vuelve más cara y las oportunidades de negocio desaparecen silenciosamente.
-        </p>
-        <p class="text-red-900 leading-relaxed mb-8 max-w-2xl mx-auto font-medium">
-          Mientras otras empresas construyen autoridad digital, cada mes será más difícil alcanzarlas. La buena noticia es que todavía existe una enorme oportunidad. Pero esa ventana no permanecerá abierta para siempre.
-        </p>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-red-950 leading-tight mb-8">
+          El costo de esperar
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-red-900 space-y-6">
+          <p>
+            Cada día que pasa sin una estrategia sólida ocurre lo mismo.
+          </p>
+          <p class="font-bold">
+            Los compradores descubren primero a sus competidores.
+          </p>
+          <p>
+            El costo de la publicidad continúa aumentando.
+          </p>
+          <p>
+            La adquisición de clientes se vuelve más cara.
+          </p>
+          <p class="font-bold">
+            Y las oportunidades de negocio desaparecen silenciosamente.
+          </p>
+          <p>
+            Mientras otras empresas construyen autoridad digital, cada mes será más difícil alcanzarlas.
+          </p>
+          <p class="text-xl font-bold">
+            La buena noticia es que todavía existe una enorme oportunidad.
+          </p>
+          <p class="text-xl font-extrabold text-red-700">
+            Pero esa ventana no permanecerá abierta para siempre.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Section 9: Solicite una Consultoría Estratégica (leads into Contact Form) -->
-    <section class="py-20 bg-slate-900 text-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Solicite una Consultoría Estratégica</h2>
-          <p class="text-lg text-slate-300 leading-relaxed">
-            Durante una sesión personalizada analizaremos con absoluto detalle:
+    <!-- Section 9: Solicite una Consultoría Estratégica -->
+    <section class="py-20 bg-slate-950 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight mb-8 text-center">
+          Solicite una Consultoría Estratégica
+        </h2>
+
+        <div class="prose prose-lg prose-invert max-w-none space-y-6">
+          <p class="text-lg text-slate-300 text-center">
+            Durante una sesión personalizada analizaremos:
           </p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
-          {[
-            { title: "Auditoría de Estado", desc: "El estado actual de su sitio web." },
-            { title: "Benchmarking", desc: "Fortalezas y debilidades frente a competidores." },
-            { title: "Oportunidades", desc: "Las áreas con mayor potencial de crecimiento." },
-            { title: "Estrategia IA & SEO", desc: "Cómo aprovechar IA para generar más clientes." },
-            { title: "Plan de Trabajo", desc: "Una hoja de ruta clara para transformarse." }
-          ].map((item, index) => (
-            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between h-full">
-              <span class="text-blue-400 font-extrabold text-lg mb-4">0{index + 1}</span>
-              <div>
-                <h4 class="text-white font-bold text-sm mb-2">{item.title}</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 my-8 not-prose">
+            <ul class="space-y-4">
+              {[
+                "El estado actual de su sitio web.",
+                "Las fortalezas y debilidades frente a sus competidores.",
+                "Las oportunidades con mayor potencial de crecimiento.",
+                "Cómo aprovechar SEO e Inteligencia Artificial para generar más clientes.",
+                "Una hoja de ruta clara y priorizada para transformar su presencia digital en un motor constante de ventas."
+              ].map((item) => (
+                <li class="flex items-start gap-3 text-slate-200">
+                  <span class="text-blue-400 font-extrabold text-lg">•</span>
+                  <span class="font-medium text-lg leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div class="bg-slate-800/80 border border-slate-700 p-8 rounded-3xl max-w-3xl mx-auto mb-10 text-center">
-          <p class="text-slate-300 text-md leading-relaxed mb-6">
+          <p class="text-lg text-slate-300 text-center">
             Al finalizar tendrá una visión completa de dónde se encuentra hoy, qué está frenando su crecimiento y qué acciones pueden generar el mayor impacto en su negocio.
           </p>
-          <p class="text-slate-300 text-md leading-relaxed mb-6">
+          <p class="text-lg text-slate-300 text-center">
             Porque un sitio web no debería limitarse a mostrar propiedades.
           </p>
-          <p class="text-xl md:text-2xl font-extrabold text-blue-400">
+          <p class="text-2xl md:text-3xl font-black text-center text-blue-400 leading-normal">
             Debería convertirse en uno de los activos más rentables de toda su empresa.
           </p>
         </div>
@@ -531,7 +619,9 @@ const schema = {
     </section>
 
     <!-- Contact Form Section -->
-    <Contact />
+    <section id="contacto">
+      <Contact />
+    </section>
   </main>
 
   <Footer />
