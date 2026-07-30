@@ -8,16 +8,25 @@ export interface Project {
   image: string;
   fullContent: {
     company?: string;
+    companyTitle?: string;
+    companySub?: string;
     challenge: string;
+    challengeTitle?: string;
+    challengeSub?: string;
     solution?: string;
+    solutionTitle?: string;
+    solutionSub?: string;
     steps?: { title: string; content: string }[];
     strategy: string;
+    strategyTitle?: string;
     results: string[];
     experience?: string[];
     experienceTitle?: string;
     metrics?: { label: string; value: string }[];
     quote?: string;
     story?: string;
+    storyTitle?: string;
+    storySub?: string;
   };
 }
 
@@ -25,45 +34,53 @@ export const projects: Project[] = [
   {
     slug: "golabstech",
     title: "GolabsTech",
-    description: "Estrategia de posicionamiento global y adquisición orgánica de alto impacto. Cómo disparamos la visibilidad y captación de leads en mercados internacionales.",
+    description: "Cómo una Empresa de Inteligencia Artificial Ahorró $2 Millones en Publicidad y Multiplicó su Crecimiento Orgánico con una Estrategia SEO",
     tag: "SEO & GEO",
     url: "https://golabstech.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgolabstech.com%2F?w=600&h=400",
     fullContent: {
-      company: "GolabsTech es una empresa líder en soluciones de desarrollo e inteligencia artificial nearshore. Con sede en EE.UU. y centros de talento en Latinoamérica, ayudan a empresas tecnológicas a escalar sus equipos con ingenieros de alto nivel integrados en su misma zona horaria.",
-      challenge: "El reto principal era unificar una presencia global digital que reflejara su expertise técnico, mientras competían en un mercado de servicios de software altamente saturado. Necesitaban pasar de ser un proveedor más a una autoridad referente en adquisición orgánica de talento y soluciones de IA.",
-      solution: "Diseñamos un sistema de adquisición orgánica que combina SEO técnico avanzado, optimización para motores de respuesta de IA (AEO) y una arquitectura de contenidos diseñada para tomadores de decisiones C-level.",
-      steps: [
-        {
-          title: "Blueprint Estratégico y Auditoría",
-          content: "Realizamos un análisis profundo de la cuota de mercado y de búsqueda competitiva. Identificamos brechas críticas de crecimiento y oportunidades de palabras clave de alta intención que los competidores estaban ignorando."
-        },
-        {
-          title: "Optimización de la Arquitectura Global",
-          content: "Implementamos una estructura multisitio optimizada con configuraciones hreflang precisas. Esto permitió a GolabsTech mantener una autoridad de dominio global mientras servía contenido relevante y localizado a prospectos en diferentes regiones geográficas."
-        },
-        {
-          title: "Adquisición impulsada por IA (AEO)",
-          content: "Fuimos pioneros en la optimización de búsqueda para LLM. Estructuramos los activos digitales de la marca para asegurar recomendaciones positivas en plataformas como ChatGPT, Perplexity AI y Google AI Overviews."
-        },
-        {
-          title: "Optimización de Conversión (CRO)",
-          content: "Analizamos el comportamiento del usuario para identificar cuellos de botella. Rediseñamos los flujos de contacto y landing pages, convirtiendo el aumento de tráfico en un pipeline real de leads calificados."
-        }
+      company: "GolabTech es una empresa especializada en Inteligencia Artificial y desarrollo de software para empresas.",
+      companyTitle: "La Empresa",
+      companySub: "Especialistas en Inteligencia Artificial",
+      challenge: "Como ocurre en muchas organizaciones tecnológicas, ya habían realizado algunos esfuerzos en SEO y GEO (Generative Engine Optimisation). Sin embargo, todas esas acciones se estaban ejecutando sin una estrategia clara, sin prioridades definidas y, sobre todo, sin una base técnica sólida que permitiera generar resultados reales.\n\nInvertir tiempo y recursos, pero el crecimiento era limitado.",
+      challengeTitle: "El Problema",
+      challengeSub: "Esfuerzos sin dirección ni base técnica sólida",
+      solution: "Cuando fui contratado como Consultor SEO, el primer paso no fue crear contenido ni modificar la web.\n\nComencé con una auditoría completa del negocio.\n\nAnalicé el mercado, el comportamiento de búsqueda de sus clientes potenciales, la competencia, el rendimiento técnico del sitio y todo el embudo de conversión.\n\nEn menos de una semana quedó claro cuál era el verdadero problema.\n\nNo era la falta de contenido.\n\nNo era la autoridad del dominio.\n\nEra la ausencia de una estrategia integral que conectara el SEO con los objetivos comerciales de la empresa.",
+      solutionTitle: "El Diagnóstico",
+      solutionSub: "Auditoría completa de negocio y embudo",
+      strategy: "Durante el primer mes implementamos un plan de crecimiento basado en datos.",
+      experienceTitle: "Entre las principales acciones se incluyeron:",
+      experience: [
+        "Investigación profunda de palabras clave con intención comercial.",
+        "Identificación de nuevas oportunidades de crecimiento orgánico.",
+        "Optimización de la arquitectura del sitio y del enlazado interno.",
+        "Mejora de Core Web Vitals para aumentar la velocidad y la experiencia del usuario.",
+        "Optimización de la experiencia de navegación para incrementar las conversiones.",
+        "Implementación de datos estructurados (Schema Markup) en el blog para mejorar la visibilidad en Google y potenciar el rendimiento del calendario editorial.",
+        "Identificación y corrección de los principales obstáculos que afectan la conversión.",
+        "Rediseño estratégico de páginas clave incorporando elementos de CRO (Conversion Rate Optimization).",
+        "Definición de conversiones SQL y MQL alineadas con buyer personas cuyo valor promedio por cliente era de $10,000."
       ],
-      strategy: "Posicionamos el SEO como una palanca de crecimiento central alineada directamente con los resultados de negocio, integrando visibilidad técnica con una estrategia de contenido que genera demanda entrante de nivel Enterprise.",
       metrics: [
-        { label: "Tráfico Orgánico", value: "+253.9%" },
-        { label: "Nuevos Usuarios", value: "+139%" },
-        { label: "Usuarios Activos", value: "+136%" },
-        { label: "Leads Calificados", value: "Enterprise" }
+        { label: "Tráfico Orgánico", value: "+269%" },
+        { label: "Ahorro Publicidad", value: "$2M" },
+        { label: "Nuevos Usuarios", value: "+31.2%" },
+        { label: "Leads Orgánicos", value: "23" }
       ],
       results: [
-        "Crecimiento explosivo del 253.9% en tráfico orgánico en solo 6 meses.",
-        "Validación del canal orgánico como principal fuente generadora de ingresos y pipeline.",
-        "Autoridad consolidada en búsquedas relacionadas con IA y Nearshore Development.",
-        "Optimización total para la era de la búsqueda generativa (AEO)."
-      ]
+        "Los cambios comenzaron a reflejarse rápidamente.",
+        "En apenas un mes, GolabTech empezó a posicionarse para múltiples palabras clave estratégicas relacionadas con sus servicios de Inteligencia Artificial y desarrollo de software.",
+        "Durante el primer año, el impacto fue aún mayor.",
+        "269% de crecimiento del tráfico orgánico.",
+        "27.9% más usuarios activos respecto al año anterior.",
+        "31.2% de incremento en nuevos usuarios.",
+        "35.4% de crecimiento en el engagement de la marca.",
+        "23 nuevos leads cualificados generados desde el canal orgánico.",
+        "Ahorro estimado de $2 millones en inversión publicitaria, gracias al volumen de tráfico orgánico conseguido y a la reducción de la dependencia de campañas de pago."
+      ],
+      story: "El SEO no consiste únicamente en posicionar palabras clave.\n\nCuando se integra con la estrategia de negocio, la experiencia del usuario, la optimización de conversiones y una arquitectura técnica sólida, se convierte en uno de los activos más rentables para cualquier empresa.\n\nEso fue exactamente lo que sucedió con GolabTech.\n\nNo solo conseguimos más tráfico.\n\nConseguimos un sistema capaz de atraer clientes potenciales cualificados, reducir costes de adquisición y generar un crecimiento sostenible para la empresa.",
+      storyTitle: "La Lección",
+      storySub: "El SEO como activo de negocio"
     }
   },
   {
@@ -96,7 +113,7 @@ export const projects: Project[] = [
           content: "Más allá del SEO tradicional, optimizamos el contenido para que asistentes como ChatGPT y Perplexity recomienden la clínica como la primera referencia en su categoría."
         }
       ],
-      strategy: "Utilizamos nuestro propio negocio como un laboratorio de innovación, probando cada estrategia de IA y automatización antes de implementarlas en proyectos externos, enfocándonos en maximizar utilidades mediante la eficiencia operativa.",
+      strategy: "Utilizamos nuestro propio negocio como un laboratorio de innovación, probando cada estrategia de IA y automatización antes de implementarlas en proyectos externos, enfocándose en maximizar utilidades mediante la eficiencia operativa.",
       metrics: [
         { label: "Ventas (Año 1)", value: "$75k" },
         { label: "Tráfico Orgánico", value: "+218.5%" },
@@ -198,7 +215,7 @@ export const projects: Project[] = [
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400",
     fullContent: {
       challenge: "Ausencia de visibilidad orgánica en el mercado estadounidense para servicios de desarrollo nearshore de alto valor.",
-      strategy: "Diseño de una arquitectura de contenidos enfocada en la resolución de problemas técnicos complejos y optimización de páginas de servicios para palabras clave de alta intención.",
+      strategy: "Diseño de una arquitectura de contenidos enfocada en la resolución de problemas técnicos complejos and optimización de páginas de servicios para palabras clave de alta intención.",
       results: [
         "Captación de leads cualificados de nivel Enterprise en EE.UU.",
         "Posicionamiento en el Top 3 para términos clave de 'desarrollo nearshore'",
@@ -278,7 +295,7 @@ export const projects: Project[] = [
         "Reestructuración de la arquitectura del directorio.",
         "Optimización de la experiencia del usuario (UX).",
         "Mejora de Core Web Vitals y rendimiento.",
-        "Optimización masiva de imágenes.",
+        "Optimización de masiva de imágenes.",
         "Estrategia de enlazado interno basada en intención de búsqueda.",
         "Reorganización de categorías y taxonomías.",
         "Eliminación de problemas de contenido duplicado y canibalización.",
