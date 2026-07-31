@@ -209,19 +209,52 @@ export const projects: Project[] = [
   {
     slug: "sapiens-development",
     title: "Sapiens Development",
-    description: "Estrategia de SEO B2B para captar clientes tecnológicos internacionales y posicionar servicios de desarrollo de software premium.",
+    description: "Consultoría SEO Estratégica para Empresas de Tecnología",
     tag: "Consultoría SEO",
     url: "https://sapiensdev.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsapiensdev.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Ausencia de visibilidad orgánica en el mercado estadounidense para servicios de desarrollo nearshore de alto valor.",
-      strategy: "Diseño de una arquitectura de contenidos enfocada en la resolución de problemas técnicos complejos and optimización de páginas de servicios para palabras clave de alta intención.",
+      company: "Convierte Google en un canal de crecimiento para tu empresa.\n\nLa mayoría de las empresas invierten miles de dólares en desarrollo, marketing y ventas. Pero pocas aprovechan uno de los activos con mayor retorno a largo plazo: la demanda que ya existe en Google.\n\nCada día, potenciales clientes buscan soluciones como las que ofrece tu empresa.\n\nLa pregunta es:\n¿Están encontrando a Sapiens Development... o a la competencia?\n\nMientras muchas organizaciones siguen dependiendo exclusivamente de campañas pagadas para generar oportunidades comerciales, las empresas con mayor crecimiento construyen un activo mucho más rentable: un sistema de adquisición orgánico que genera clientes de forma constante.\n\nEl SEO ya no consiste únicamente en aparecer primero en Google.\nSe trata de construir una ventaja competitiva difícil de replicar.",
+      companyTitle: "El Activo del Negocio",
+      companySub: "Convierte Google en un canal de crecimiento",
+      challenge: "Identificar las oportunidades de mayor impacto para aumentar la visibilidad de Sapiens Development, atraer clientes con alta intención de compra y convertir el tráfico orgánico en una fuente sostenible de ingresos.\n\nNo entregamos únicamente una auditoría.\n\nEntregamos una estrategia de crecimiento basada en datos.",
+      challengeTitle: "Nuestro Objetivo",
+      challengeSub: "Aumentar visibilidad y convertir tráfico en ingresos",
+      solution: "Realizamos un diagnóstico completo de la presencia digital de la empresa para descubrir dónde se están perdiendo oportunidades y cuáles pueden generar el mayor retorno.\n\n• Análisis del mercado: tamaño de la demanda, tendencias de búsqueda, oportunidades de crecimiento, nuevos nichos de mercado.\n\n• Inteligencia competitiva: analizamos cómo están captando clientes los principales competidores, identificando palabras clave estratégicas, contenido de mayor rendimiento, fortalezas y debilidades, y oportunidades que aún no están siendo aprovechadas.\n\n• Auditoría SEO Integral: evaluamos factores que afectan el rendimiento orgánico (SEO técnico, arquitectura, indexación, velocidad, Core Web Vitals, enlazado interno, contenido, experiencia de usuario, autoridad del dominio).\n\n• Estrategia SEO de negocio: no todas las oportunidades generan el mismo impacto. Priorizamos las iniciativas según potencial de generación de leads, impacto en ingresos, esfuerzo de implementación, retorno esperado y rapidez de ejecución.\n\nEl resultado es una estrategia enfocada en las acciones que pueden producir mayor crecimiento.",
+      solutionTitle: "¿Qué Analizamos?",
+      solutionSub: "Diagnóstico completo de la presencia digital",
+      strategy: "Definimos un plan de implementación claro para los próximos 90 a 180 días.\n\nCada iniciativa incluye prioridad, responsables, esfuerzo estimado, impacto esperado e indicadores de éxito (KPIs).\n\nDe esta forma, el equipo sabe exactamente qué ejecutar primero y por qué.",
+      strategyTitle: "Roadmap Ejecutivo",
+      experienceTitle: "Entregables claves que obtiene Sapiens Development:",
+      experience: [
+        "Auditoría SEO Ejecutiva.",
+        "Benchmark competitivo.",
+        "Análisis de oportunidades de mercado.",
+        "Investigación de demanda y palabras clave.",
+        "Estrategia SEO personalizada.",
+        "Roadmap de implementación (90–180 días).",
+        "Dashboard de KPIs.",
+        "Presentación ejecutiva para stakeholders.",
+        "Recomendaciones priorizadas por impacto y retorno esperado."
+      ],
+      metrics: [
+        { label: "Crecimiento", value: "Orgánico" },
+        { label: "Roadmap", value: "90-180 d" },
+        { label: "Valor CAC", value: "Reducido" },
+        { label: "Leads", value: "Continuos" }
+      ],
       results: [
-        "Captación de leads cualificados de nivel Enterprise en EE.UU.",
-        "Posicionamiento en el Top 3 para términos clave de 'desarrollo nearshore'",
-        "Incremento del 120% en las solicitudes de presupuesto orgánicas",
-        "Autoridad de marca consolidada en el ecosistema tech internacional"
-      ]
+        "Una visión completa del potencial de crecimiento orgánico.",
+        "Un mapa claro de oportunidades para incrementar la adquisición de clientes.",
+        "Una estrategia alineada con los objetivos comerciales de la empresa.",
+        "Un plan de implementación priorizado para maximizar el retorno de la inversión.",
+        "Un sistema de crecimiento sostenible que reduce la dependencia de la publicidad pagada.",
+        "Presentación de resultados en una sesión ejecutiva dirigida a los líderes de la organización.",
+        "Definición clara de prioridades, responsables, esfuerzo e impacto esperado por cada iniciativa."
+      ],
+      story: "Una buena estrategia SEO no solo incrementa el tráfico.\n\nIncrementa la visibilidad ante clientes con intención real de compra.\n\nReduce el coste de adquisición de clientes (CAC).\n\nGenera oportunidades comerciales de forma continua.\n\nAl finalizar la consultoría presentamos los resultados en una sesión ejecutiva dirigida a los líderes de la organización para facilitar la toma de decisiones con información clara, priorizada y respaldada por datos.",
+      storyTitle: "El Verdadero Valor",
+      storySub: "El valor de la consultoría estratégica"
     }
   },
   {
