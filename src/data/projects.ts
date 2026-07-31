@@ -331,19 +331,51 @@ export const projects: Project[] = [
   {
     slug: "basha-bracelets",
     title: "Basha Bracelets",
-    description: "Escalado de e-commerce espiritual mediante SEO semántico y visibilidad multicanal. Transformando la pasión en un negocio digital rentable.",
+    description: "Consultoría SEO Estratégica para Basha Bracelets (WooCommerce)",
     tag: "SEO & E-commerce",
     url: "https://bashabracelet.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fbashabracelet.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Una marca con un producto excepcional pero con baja visibilidad orgánica, dependiendo exclusivamente de redes sociales para generar ventas.",
-      strategy: "Implementación de SEO semántico para captar búsquedas por beneficios espirituales y una estrategia de SEO en YouTube para educar al usuario sobre los productos.",
+      company: "Convierte Google en tu canal de adquisición de clientes más rentable\n\nCada día, cientos de personas buscan en Google pulseras, joyería personalizada y regalos como los que ofrece Basha.\n\nLa pregunta no es si existe demanda.\n\nLa pregunta es:\n¿Están encontrando tu tienda... o la de tu competencia?\n\nMientras muchas marcas dependen cada vez más de campañas pagadas con costes crecientes, una estrategia SEO bien ejecutada permite atraer clientes de forma constante, aumentar las ventas y construir un activo digital que sigue generando resultados incluso cuando dejas de invertir en publicidad.\n\nNo hablamos simplemente de mejorar posiciones en Google.\nHablamos de crear una ventaja competitiva que incremente la facturación y reduzca el coste de adquisición de clientes a largo plazo.",
+      companyTitle: "El Activo del E-commerce",
+      companySub: "Convierte Google en tu canal de adquisición más rentable",
+      challenge: "Diseñar una estrategia SEO basada en datos que permita a Basha Bracelets aumentar su visibilidad, captar tráfico con intención de compra y convertir ese tráfico en ventas recurrentes dentro de WooCommerce.\n\nCada recomendación estará priorizada según su impacto potencial en ingresos, facilidad de implementación y retorno de la inversión.",
+      challengeTitle: "Nuestro Objetivo",
+      challengeSub: "Aumentar visibilidad y convertir tráfico en ventas recurrentes",
+      solution: "Qué analizaremos:\n\n1. Oportunidades de mercado: identificaremos exactamente dónde existe demanda y qué productos tienen mayor potencial de crecimiento.\n\n2. Benchmark competitivo: analizaremos a los principales competidores para ver por qué están posicionando mejor, qué categorías generan más tráfico, qué estrategia de contenidos utilizan, qué autoridad tienen, y qué oportunidades están dejando libres.\n\n3. Auditoría SEO Integral: realizaremos una auditoría completa del ecommerce evaluando factores de SEO técnico, arquitectura, WooCommerce, velocidad (Core Web Vitals), contenido y enlazado interno.\n\n4. Estratégia SEO orientada a ventas: diseñaremos un plan estratégico priorizado según el impacto en el negocio (Quick Wins, categorías, optimización de fichas de producto, enlazado interno).",
+      solutionTitle: "¿Qué Analizamos?",
+      solutionSub: "Diagnóstico integral orientado a ventas de ecommerce",
+      strategy: "Definimos un Roadmap Ejecutivo (90-180 días) completamente priorizado que incluirá qué hacer primero, qué acciones generan mayor retorno, el nivel de esfuerzo requerido, responsables, cronograma y KPIs de seguimiento.\n\nEsto permitirá ejecutar la estrategia de forma ordenada y medir el impacto de cada iniciativa.",
+      strategyTitle: "Roadmap Ejecutivo",
+      experienceTitle: "Entregables claves que obtiene Basha Bracelets:",
+      experience: [
+        "Auditoría SEO Ejecutiva",
+        "Benchmark Competitivo",
+        "Análisis de Oportunidades de Mercado",
+        "Investigación de Keywords con intención de compra",
+        "Estrategia SEO personalizada para WooCommerce",
+        "Roadmap de implementación (90–180 días)",
+        "Dashboard de KPIs y métricas",
+        "Presentación ejecutiva para Dirección"
+      ],
+      metrics: [
+        { label: "WooCommerce", value: "Optimizado" },
+        { label: "Plazo Roadmap", value: "90-180 d" },
+        { label: "Valor CAC", value: "Minimizado" },
+        { label: "Demanda", value: "Captada" }
+      ],
       results: [
-        "Crecimiento del 300% en ventas provenientes de búsqueda orgánica",
-        "Reducción del 50% en la dependencia de pauta publicitaria en redes sociales",
-        "Mejora del 85% en el CTR (Click-Through Rate) de resultados transaccionales",
-        "Creación de un activo digital propio que genera ventas recurrentes 24/7"
-      ]
+        "Incrementar la visibilidad en Google para las búsquedas con mayor intención de compra.",
+        "Aumentar el tráfico orgánico cualificado.",
+        "Mejorar la conversión del ecommerce WooCommerce.",
+        "Reducir progresivamente la dependencia de la publicidad pagada.",
+        "Construir un canal de adquisición de clientes sostenible y escalable.",
+        "Identificar nuevas oportunidades de crecimiento antes que la competencia.",
+        "Presentación de resultados en una sesión ejecutiva dirigida a los líderes de la organización para facilitar la toma de decisiones basada en datos."
+      ],
+      story: "Una buena estrategia SEO no solo incrementa el tráfico.\n\nIncrementa la visibilidad ante clientes con intención real de compra.\n\nReduce el coste de adquisición de clientes (CAC).\n\nGenera oportunidades comerciales de forma continua.\n\nMás que una auditoría SEO, esta consultoría proporciona una hoja de ruta estratégica para convertir el posicionamiento orgánico en una fuente recurrente de ventas y una ventaja competitiva para el negocio.",
+      storyTitle: "El Resultado",
+      storySub: "El valor de la consultoría estratégica para WooCommerce"
     }
   },
   {
