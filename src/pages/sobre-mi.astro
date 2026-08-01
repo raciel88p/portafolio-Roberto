@@ -4,91 +4,180 @@ import Navbar from '../components/Navbar.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 
-const expertise = [
-  "SEO Técnico e Internacional",
-  "Growth Marketing",
-  "Analítica Digital y Data",
-  "IA aplicada al marketing",
-  "Automatización de procesos",
-  "Desarrollo Web",
-  "CRO (Optimización de Conversiones)",
-  "Local SEO",
-  "Arquitectura Web"
+const coreServices = [
+  "Diseñar estrategias de crecimiento sostenibles.",
+  "Implementar Inteligencia Artificial con impacto real en el negocio.",
+  "Optimizar procesos para reducir costes y aumentar la productividad.",
+  "Escalar startups y pymes con estructuras eficientes.",
+  "Desarrollar estrategias de SEO y marketing que generen clientes de forma constante.",
+  "Identificar nuevas oportunidades de ingresos.",
+  "Construir modelos de negocio preparados para el futuro.",
+  "Acompañar la transformación digital de tu organización."
 ];
 ---
 
-<Layout title="Sobre Mí - Roberto Pérez Salazar | Estrategia y Crecimiento Digital" description="Conoce a Roberto Pérez Salazar, especialista con más de 15 años de experiencia en SEO, Growth Marketing e IA. Descubre cómo ayudo a las empresas a escalar de forma sostenible.">
+<Layout
+  title="Sobre Mí - Roberto Pérez Salazar | Consultor SEO y de Marketing Digital"
+  description="Conozca a Roberto Pérez Salazar, especialista en SEO, marketing digital e inteligencia artificial, y cómo ayudo a transformar negocios en activos altamente rentables."
+>
   <Navbar />
 
-  <main class="pt-32 pb-24">
+  <main class="pt-32 pb-24 bg-white text-slate-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Header -->
+      <!-- Header / Hook Section -->
       <header class="mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-          Más que Tráfico: <span class="text-blue-600">Sistemas de Crecimiento Real</span>
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Sobre Mí
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+          Las empresas no fracasan por falta de esfuerzo. <span class="text-blue-600 block mt-2">Fracasan porque resuelven los problemas equivocados.</span>
         </h1>
-        <p class="text-xl text-slate-600 leading-relaxed">
-          Soy Roberto Pérez Salazar, especialista en SEO, Growth Marketing, Inteligencia Artificial y Desarrollo Web, con más de 15 años de experiencia ayudando a empresas a transformar su presencia digital en crecimiento real.
+        <p class="text-xl md:text-2xl text-slate-700 leading-relaxed font-medium">
+          Cada día, miles de empresas toman decisiones que consumen tiempo, dinero y talento sin generar un crecimiento sostenible.
         </p>
       </header>
 
       <!-- Content -->
-      <div class="prose prose-lg prose-slate max-w-none mb-20">
-        <p class="text-lg text-slate-600 leading-relaxed mb-8">
-          No me enfoco únicamente en aumentar el tráfico. Mi objetivo es construir sistemas que generen clientes, optimicen procesos y hagan crecer un negocio de forma sostenible.
-        </p>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">Mi Trayectoria: Resiliencia y Emprendimiento</h2>
-        <p class="text-lg text-slate-600 leading-relaxed mb-6">
-          Mi trayectoria combina la experiencia corporativa con el emprendimiento. Después de que mi esposa y yo perdiéramos nuestros empleos en la misma semana, decidimos construir nuestra propia empresa desde cero.
-        </p>
-        <p class="text-lg text-slate-600 leading-relaxed mb-8">
-          Con una inversión mínima, desarrollamos una estrategia basada en SEO, automatización, publicidad digital y optimización de conversiones que convirtió ese proyecto en un negocio rentable, generando empleo y demostrando que una buena estrategia puede cambiar el rumbo de una empresa y sus personas.
-        </p>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">Experiencia y Especialización</h2>
-        <p class="text-lg text-slate-600 leading-relaxed mb-6">
-          He trabajado con organizaciones nacionales e internacionales desarrollando estrategias de:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {expertise.map(item => (
-            <div class="flex items-center space-x-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="font-bold text-slate-800">{item}</span>
-            </div>
-          ))}
-        </div>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">El Futuro de los Negocios</h2>
-        <p class="text-lg text-slate-600 leading-relaxed mb-6">
-          Hoy estoy enfocado en la intersección entre Marketing, Inteligencia Artificial y Automatización. Creo que el futuro pertenece a las empresas capaces de combinar datos, creatividad y agentes de IA para escalar sin aumentar proporcionalmente sus costos.
-        </p>
-
-        <div class="bg-blue-600 text-white p-10 rounded-3xl my-16 shadow-2xl relative overflow-hidden">
-          <div class="relative z-10">
-            <h3 class="text-2xl font-bold mb-4 italic">Mi filosofía es sencilla:</h3>
-            <p class="text-3xl md:text-4xl font-bold leading-tight">
-              "La tecnología por sí sola no genera resultados. La estrategia sí."
-            </p>
+      <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose my-12">
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+            <span class="text-3xl">🚀</span>
+            <p class="font-bold text-slate-900 mt-4">Las startups agotan su capital antes de encontrar un modelo rentable.</p>
           </div>
-          <!-- Decoration -->
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+            <span class="text-3xl">⏱️</span>
+            <p class="font-bold text-slate-900 mt-4">Las pymes trabajan más horas para obtener los mismos resultados.</p>
+          </div>
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+            <span class="text-3xl">⚙️</span>
+            <p class="font-bold text-slate-900 mt-4">Las organizaciones invierten en tecnología esperando transformación… y terminan con las mismas herramientas.</p>
+          </div>
         </div>
 
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">¿Cómo podemos trabajar?</h2>
-        <p class="text-lg text-slate-600 leading-relaxed mb-6">
-          Cada proyecto que desarrollo busca responder una sola pregunta:
-        </p>
-        <p class="text-2xl font-bold text-slate-900 bg-slate-50 p-6 rounded-2xl border-l-8 border-blue-600 mb-12">
-          ¿Cómo podemos construir un sistema que genere más clientes, más eficiencia y más valor para el negocio?
-        </p>
+        <div class="bg-blue-50/60 p-8 rounded-3xl border border-blue-100 not-prose my-12">
+          <p class="text-lg text-slate-600 italic">La pregunta no es:</p>
+          <p class="text-xl md:text-2xl font-black text-blue-900 mt-1 mb-6">¿Qué tecnología necesitas?</p>
+          <p class="text-lg text-slate-600 italic">La verdadera pregunta es:</p>
+          <p class="text-2xl md:text-3xl font-black text-blue-900 mt-1">¿Qué está impidiendo que tu negocio crezca?</p>
+          <p class="text-xl font-bold text-blue-700 mt-6 leading-relaxed">
+            Ese es el problema que me apasiona resolver.
+          </p>
+        </div>
 
-        <p class="text-xl font-bold text-slate-900">
-          En conclusión: Construyo sistemas digitales que convierten estrategia, datos e inteligencia artificial en crecimiento medible para las empresas.
-        </p>
+        <!-- Section 2: No vendo horas -->
+        <div class="pt-8 border-t border-slate-100">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">
+            No vendo horas de consultoría. Construyo empresas más fuertes.
+          </h2>
+          <p>
+            Trabajo con startups, pymes y organizaciones de América, Europa y Asia, adaptándome a su cultura, objetivos y zona horaria.
+          </p>
+          <p class="font-bold text-slate-900">
+            Mi trabajo comienza donde la mayoría de las consultorías terminan.
+          </p>
+          <p>
+            No llego con una presentación de PowerPoint llena de teorías.
+          </p>
+          <div class="pl-6 border-l-4 border-blue-600 space-y-2 my-6 font-semibold text-slate-800">
+            <p>Primero escucho.</p>
+            <p>Comprendo el negocio.</p>
+            <p>Analizo sus procesos.</p>
+            <p>Identifico los cuellos de botella.</p>
+            <p>Descubro dónde se está perdiendo dinero, tiempo o talento.</p>
+            <p>Y, a partir de ahí, diseño soluciones que generan resultados medibles.</p>
+          </div>
+          <p class="text-xl font-bold text-blue-600">
+            Porque ningún negocio necesita más reuniones. Necesita mejores decisiones.
+          </p>
+        </div>
+
+        <!-- Section 3: La experiencia -->
+        <div class="pt-8 border-t border-slate-100">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">
+            La experiencia cambia la forma de asesorar.
+          </h2>
+          <p>
+            He construido empresas desde cero. He emprendido con presupuestos limitados. He tenido que calcular cada inversión. He enfrentado momentos donde el flujo de caja definía el futuro del negocio.
+          </p>
+          <p class="text-lg font-bold text-slate-900">
+            Sé lo que significa no tener margen para cometer errores. Por eso no hablo únicamente desde la teoría. Hablo desde la experiencia.
+          </p>
+          <p>
+            Entiendo cómo construir una empresa sostenible desde sus cimientos. Cómo definir precios rentables. Cómo proteger los márgenes. Cómo optimizar operaciones. Cómo utilizar la inteligencia artificial para reducir costes y aumentar productividad. Cómo convertir el marketing en un sistema de adquisición constante de clientes. Y, sobre todo, cómo construir una organización preparada para crecer sin perder el control.
+          </p>
+        </div>
+
+        <!-- Section 4: Mi filosofía -->
+        <div class="pt-8 border-t border-slate-100">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">
+            Mi filosofía es simple.
+          </h2>
+          <p class="text-xl font-bold text-slate-900">
+            Las empresas exitosas no solo generan utilidades. Generan oportunidades.
+          </p>
+          <p>
+            Crean empleo. Impulsan comunidades. Transforman industrias. Cuando una empresa crece de forma saludable, el impacto trasciende a sus accionistas.
+          </p>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 my-6">
+            <ul class="space-y-3 not-prose text-slate-700">
+              <li class="flex items-center gap-3">
+                <span class="text-blue-500">•</span> Mejoran las condiciones de sus colaboradores.
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-blue-500">•</span> Aumenta el bienestar de sus familias.
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-blue-500">•</span> Se fortalece la economía local.
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-blue-500">•</span> Y se crea un efecto positivo que alcanza a miles de personas.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Por eso mi propósito nunca ha sido simplemente ayudar a vender más. Mi propósito es ayudar a construir organizaciones capaces de permanecer, innovar y liderar durante muchos años.
+          </p>
+        </div>
+
+        <!-- Section 5: ¿Cómo puedo ayudarte? -->
+        <div class="pt-8 border-t border-slate-100">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">
+            ¿Cómo puedo ayudarte?
+          </h2>
+          <p class="text-lg">
+            Puedo colaborar con tu organización para:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-6">
+            {coreServices.map(item => (
+              <div class="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <span class="text-blue-600 font-extrabold mt-0.5">✓</span>
+                <span class="font-semibold text-slate-800 text-sm leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Section 6: Mi compromiso -->
+        <div class="pt-8 border-t border-slate-100">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">
+            Mi compromiso
+          </h2>
+          <p>
+            No prometo fórmulas mágicas. No vendo humo. No aplico soluciones estándar. Cada empresa tiene desafíos distintos. Cada mercado exige una estrategia diferente.
+          </p>
+          <p class="font-bold text-slate-900">
+            Mi compromiso es comprender profundamente tu organización y ayudarte a tomar mejores decisiones que generen un impacto tangible en tus resultados.
+          </p>
+          <p>
+            Porque cuando una empresa crece, no solo mejora su balance financiero. Protege empleos. Genera nuevas oportunidades. Impulsa la innovación. Y contribuye a construir una economía más fuerte. Ese es el tipo de impacto que vale la pena crear.
+          </p>
+          <p class="text-xl font-black text-slate-950">
+            Si tu organización está preparada para dar el siguiente paso, conversemos.
+          </p>
+          <p class="text-2xl font-black text-blue-700 italic mt-4">
+            Porque el crecimiento no ocurre por casualidad. Se construye con estrategia, ejecución y las decisiones correctas.
+          </p>
+        </div>
       </div>
     </div>
   </main>
