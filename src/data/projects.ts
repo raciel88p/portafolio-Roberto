@@ -229,14 +229,52 @@ export const projects: Project[] = [
   {
     slug: "ins-seguros",
     title: "Instituto Nacional de Seguros",
-    description: "Estrategia integral de visibilidad orgánica para la principal aseguradora de la región.",
+    description: "Consultoría Estratégica SEO para Empresas de Seguros (Gobierno)",
     tag: "Consultor SEO",
     url: "https://www.segurosdelins.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.segurosdelins.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "Necesidad de dominar las búsquedas relacionadas con seguros en un mercado altamente competitivo.",
-      strategy: "Estrategia de contenidos basada en el Customer Journey y optimización de la autoridad de dominio mediante PR digital.",
-      results: ["Liderazgo en búsquedas informativas de seguros", "Dominio del Share of Voice frente a competidores directos", "Reducción de la dependencia de canales de pago"]
+      company: "Convierta Google en uno de los canales de adquisición de clientes más rentables de su organización.\n\nCada día, miles de personas buscan en Google seguros, pólizas, coberturas, reclamaciones, seguros de vida, seguros para vehículos, seguros empresariales y otros servicios financieros.\n\nLa demanda ya existe.\n\nLa verdadera pregunta es:\n¿Los clientes están encontrando a su institución… o están contratando con la competencia?\n\nMientras muchas empresas continúan aumentando su inversión en publicidad para generar nuevos clientes, las organizaciones con mayor crecimiento están construyendo un activo mucho más valioso: un sistema de adquisición orgánica que genera oportunidades comerciales de forma continua, reduce el coste de adquisición (CAC) y aumenta el retorno de la inversión a largo plazo.\n\nEl SEO ya no consiste únicamente en aparecer en los primeros resultados de Google.\nSe trata de construir una ventaja competitiva difícil de replicar.\nUna estrategia que continúa generando resultados incluso cuando deja de invertir en publicidad.",
+      companyTitle: "La Oportunidad de Mercado",
+      companySub: "Convierta Google en uno de los canales de adquisición de clientes más rentables",
+      challenge: "El coste oculto de no actuar:\n\nCada día que su empresa no aparece donde los clientes buscan soluciones:\n• Pierde oportunidades de negocio frente a la competencia.\n• Incrementa su dependencia de campañas pagadas.\n• Aumenta el coste de adquisición de nuevos clientes.\n• Desaprovecha una fuente constante de demanda cualificada.\n• Limita el crecimiento sostenible de la organización.\n\nEn mercados altamente competitivos, la visibilidad digital deja de ser una ventaja. Se convierte en una necesidad estratégica.",
+      challengeTitle: "El Coste Oculto",
+      challengeSub: "El coste de no aparecer donde los clientes buscan soluciones",
+      solution: "Qué analizamos:\n\n1. Oportunidad de Mercado: analizamos el potencial real del mercado mediante la demanda existente en Google, tendencias de búsqueda, nuevos segmentos de clientes, servicios con mayor potencial de crecimiento, y oportunidades de expansión digital.\n\n2. Inteligencia Competitiva: analizamos cómo los principales competidores están captando clientes desde Google (keywords, contenidos, arquitectura SEO, fortalezas y debilidades, oportunidades libres).\n\n3. Auditoría SEO Integral: realizamos una evaluación completa de todos los factores que impactan el rendimiento orgánico (SEO técnico, indexación, arquitectura, Core Web Vitals, velocidad, experiencia de usuario, contenido, enlazado interno, autoridad, optimización para buscadores e IA).\n\n4. Estratégia SEO alineada con los objetivos del negocio: priorizamos cada iniciativa según impacto potencial en generación de clientes, incremento esperado en ingresos, esfuerzo de implementación, rapidez y retorno esperado.",
+      solutionTitle: "¿Qué Analizamos?",
+      solutionSub: "Diagnóstico integral orientado a objetivos comerciales",
+      strategy: "Roadmap Ejecutivo (90–180 días): diseñamos un plan de implementación claro y priorizado. Cada iniciativa incluye prioridad, impacto esperado, nivel de esfuerzo, responsables, KPIs, y tiempo estimado de ejecución.\n\nPresentación Ejecutiva para Dirección: al finalizar la consultoría presentamos los resultados en una sesión estratégica con la dirección de la organización.",
+      strategyTitle: "Roadmap & Presentación Ejecutiva",
+      experienceTitle: "Entregables clave de la Consultoría SEO:",
+      experience: [
+        "Auditoría SEO Ejecutiva.",
+        "Benchmark competitivo.",
+        "Investigación de mercado.",
+        "Análisis de demanda y palabras clave.",
+        "Estrategia SEO personalizada.",
+        "Roadmap de implementación (90–180 días).",
+        "Dashboard de KPIs.",
+        "Presentación ejecutiva para dirección.",
+        "Recomendaciones priorizadas según impacto y retorno esperado."
+      ],
+      metrics: [
+        { label: "Sector", value: "Asegurador" },
+        { label: "Plazo Plan", value: "90-180 d" },
+        { label: "Modelo", value: "Activo" },
+        { label: "CAC", value: "Reducido" }
+      ],
+      results: [
+        "Una visión completa del potencial de crecimiento orgánico.",
+        "Un análisis detallado del mercado y de la competencia.",
+        "Una estrategia SEO alineada con los objetivos comerciales.",
+        "Un plan de implementación priorizado por impacto económico.",
+        "Un sistema sostenible para generar clientes de forma continua.",
+        "Menor dependencia de campañas pagadas.",
+        "Un activo digital que continúa generando valor durante años."
+      ],
+      story: "El verdadero retorno de una estrategia SEO:\n\nUna estrategia SEO bien ejecutada no solo incrementa el tráfico. Incrementa la cantidad de personas correctas que llegan a su organización en el momento exacto en que buscan una solución.\n\nReduce el coste de adquisición de clientes. Genera oportunidades comerciales de forma constante. Fortalece el posicionamiento de la marca. Y construye un activo estratégico que continúa produciendo resultados las 24 horas del día, los 365 días del año.\n\nMientras la publicidad deja de generar resultados en el momento en que se detiene la inversión, una estrategia SEO sólida sigue captando clientes durante años.\n\nLas empresas que dominan Google no solo reciben más visitas. Captan más clientes, generan más ingresos y construyen una ventaja competitiva que su competencia tardará años en alcanzar.",
+      storyTitle: "El Verdadero Retorno",
+      storySub: "El retorno de una estrategia SEO bien ejecutada"
     }
   },
   {
