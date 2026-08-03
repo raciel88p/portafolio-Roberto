@@ -178,19 +178,52 @@ export const projects: Project[] = [
   {
     slug: "ferreteria-epa",
     title: "Ferretería EPA",
-    description: "Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
+    description: "Consultoría Estratégica SEO para la Empresa Ferretera Más Grande de Latinoamérica",
     tag: "Consultoría SEO",
     url: "https://cr.epaenlinea.com/",
     image: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fcr.epaenlinea.com%2F?w=600&h=400",
     fullContent: {
-      challenge: "",
-      strategy: "Brindé capacitación y consultoría en SEO a EPA Costa Rica, enfocándome en buenas prácticas de optimización para motores de búsqueda, SEO técnico, estrategia de contenido y mejora de la visibilidad orgánica para fortalecer su presencia digital.",
+      company: "Convierta Google en su principal canal de adquisición de clientes… sin depender cada vez más de la publicidad.\n\nCada día, miles de empresas, contratistas, ingenieros, arquitectos, desarrolladores, industrias y consumidores buscan en Google:\n\n• Materiales de construcción\n• Herramientas profesionales\n• Equipos industriales\n• Ferretería especializada\n• Productos eléctricos\n• Fontanería\n• Pinturas\n• Tornillería\n• Seguridad industrial\n• Proveedores para proyectos\n• Compras al por mayor\n\nLa demanda ya existe.\n\nLa verdadera pregunta es:\n¿Están encontrando a su empresa... o están comprando a la competencia?\n\nCada búsqueda representa una oportunidad comercial. Y cada oportunidad que no captura hoy es una venta que probablemente termina en manos de otro proveedor.",
+      companyTitle: "La Oportunidad del Sector",
+      companySub: "Convierta Google en su principal canal de adquisición de clientes",
+      challenge: "El mayor coste no es invertir en SEO. Es no aparecer cuando el mercado está listo para comprar.\n\nLa mayoría de las empresas intentan crecer aumentando su presupuesto en publicidad. Pero existe un problema: cada año el coste por clic aumenta, cada año captar un nuevo cliente cuesta más, y en el momento en que detiene la inversión... desaparecen también los resultados.\n\nLas compañías líderes están construyendo algo mucho más valioso. Un activo digital que genera oportunidades comerciales todos los días. Un sistema que trabaja las 24 horas, que reduce el coste de adquisición, que aumenta el margen, y que continúa produciendo resultados durante años.\n\nEso es una estrategia SEO correctamente ejecutada. No hablamos únicamente de aparecer primero en Google. Hablamos de construir una ventaja competitiva extremadamente difícil de copiar.\n\nLo que está perdiendo cada día que retrasa esta decisión:\n• La competencia captura clientes que podrían ser suyos.\n• Aumenta la dependencia de campañas pagadas.\n• El coste de adquisición continúa creciendo.\n• Se desaprovechan miles de búsquedas con intención real de compra.\n• El crecimiento depende exclusivamente de incrementar la inversión publicitaria.\n\nEn mercados altamente competitivos, la visibilidad ya no es una ventaja. Es infraestructura comercial.",
+      challengeTitle: "El Coste de la Invisibilidad",
+      challengeSub: "El coste real de no aparecer cuando el mercado está listo para comprar",
+      solution: "Qué analizamos:\n\n1. Oportunidad real de mercado: tamaño de la demanda, categorías con mayor crecimiento, productos con mayor potencial, nuevas líneas de negocio, tendencias del sector, mercados aún desatendidos para responder dónde existe el mayor potencial económico para crecer.\n\n2. Inteligencia competitiva: analizamos cómo las principales empresas del sector están captando clientes desde Google (keywords, categorías, contenidos, fortalezas y debilidades, oportunidades libres).\n\n3. Auditoría SEO Integral: evaluamos todos los factores que limitan el crecimiento orgánico (SEO técnico, indexación, arquitectura, Core Web Vitals, velocidad, experiencia de usuario, contenido, enlazado interno, autoridad, optimización para buscadores e IA).\n\n4. Estratégia SEO alineada con los objetivos del negocio: priorizamos iniciativas según potencial de ingresos, captación de clientes, rapidez de implementación, coste de ejecución y retorno esperado.",
+      solutionTitle: "¿Qué Analizamos?",
+      solutionSub: "Diagnóstico integral alineado con objetivos financieros",
+      strategy: "Roadmap Ejecutivo (90–180 días): convertimos el análisis en un plan de acción claro. Cada iniciativa incluye prioridad, impacto esperado, nivel de esfuerzo, responsables, KPIs, tiempo estimado y dependencias.\n\nPresentación Ejecutiva para Dirección: al finalizar la consultoría presentamos los hallazgos en una sesión estratégica con la alta dirección para facilitar la toma de decisiones respaldada por datos.",
+      strategyTitle: "Roadmap & Presentación Ejecutiva",
+      experienceTitle: "Entregables clave de la Consultoría SEO:",
+      experience: [
+        "Auditoría SEO Ejecutiva.",
+        "Investigación de mercado.",
+        "Benchmark competitivo.",
+        "Análisis de demanda y palabras clave.",
+        "Estrategia SEO personalizada.",
+        "Roadmap de implementación (90–180 días).",
+        "Dashboard de KPIs.",
+        "Presentación ejecutiva.",
+        "Plan de acción priorizado por impacto y retorno esperado."
+      ],
+      metrics: [
+        { label: "Sector", value: "Ferretero" },
+        { label: "Plazo Plan", value: "90-180 d" },
+        { label: "Modelo", value: "Activo" },
+        { label: "CAC", value: "Reducido" }
+      ],
       results: [
-        "Indexación completa de las categorías con mayor margen de beneficio",
-        "Incremento del 45% en el tráfico orgánico transaccional mensual",
-        "Mejora del 30% en la visibilidad de marca frente a competidores directos",
-        "Consolidación como el e-commerce de construcción referente en la región"
-      ]
+        "Una visión completa del potencial de crecimiento digital.",
+        "Un análisis profundo del mercado y de la competencia.",
+        "Una estrategia SEO alineada con los objetivos comerciales.",
+        "Un roadmap priorizado por impacto financiero.",
+        "Un sistema sostenible de captación de clientes.",
+        "Menor dependencia de campañas pagadas.",
+        "Un activo digital que incrementa su valor con el tiempo."
+      ],
+      story: "El SEO no consiste en generar más tráfico. Consiste en atraer a las personas correctas, en el momento exacto en que están listas para comprar.\n\nLa publicidad alquila clientes. El SEO construye un activo.\n\nMientras un anuncio deja de funcionar el mismo día que se detiene la inversión, una estrategia SEO continúa generando oportunidades durante años.\n\nLas empresas que dominan Google no solo reciben más visitas. Reciben más solicitudes de cotización, cierran más ventas, incrementan su participación de mercado, y construyen una ventaja competitiva que a la competencia le tomará años alcanzar.\n\nLa pregunta ya no es si su empresa necesita una estrategia SEO.\nLa verdadera pregunta es: ¿Cuántos clientes más está dispuesto a seguir entregando a la competencia mientras decide comenzar?",
+      storyTitle: "El Verdadero Retorno",
+      storySub: "El verdadero retorno de una estrategia SEO bien ejecutada"
     }
   },
   {
