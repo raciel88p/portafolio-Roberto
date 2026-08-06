@@ -1,0 +1,348 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Plataformas de Póker Online",
+  "description": "Impulsa el Crecimiento de tu Plataforma de Póker Online con una Estrategia SEO que Atrae Jugadores de Alto Valor. Convierte Google en tu mejor canal de adquisición.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Plataformas de Póker Online"
+};
+---
+
+<Layout
+  title="SEO para Plataformas de Póker Online | Roberto Pérez Salazar"
+  description="Impulsa el Crecimiento de tu Plataforma de Póker Online con una Estrategia SEO que Atrae Jugadores de Alto Valor. Convierte Google en tu mejor canal de adquisición."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para iGaming & Póker Online
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Plataforma de Póker Online con una Estrategia SEO que Atrae Jugadores de Alto Valor
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte Google en tu mejor canal de adquisición de jugadores
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agenda una Reunión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8">
+            Cada día, miles de personas buscan dónde jugar póker online, comparar salas, conocer estrategias, bonos y torneos.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-600 italic">La pregunta es sencilla:</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Están encontrando tu plataforma o la de tu competencia?
+            </p>
+          </div>
+
+          <p>
+            Mientras muchas empresas dependen exclusivamente de campañas de pago cada vez más costosas, las plataformas que lideran los resultados orgánicos generan un flujo constante de jugadores cualificados, reducen su coste de adquisición y construyen una ventaja competitiva difícil de igualar.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4 leading-relaxed border-t border-slate-100">
+            Como consultor especializado en SEO estratégico y crecimiento digital, ayudo a plataformas de póker online a incrementar su visibilidad en buscadores y transformar el tráfico orgánico en una fuente sostenible de nuevos registros y jugadores activos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por tu plataforma?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño e implemento estrategias SEO adaptadas al sector del gaming y entretenimiento digital para aumentar la captación de usuarios con intención real de jugar.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría SEO Integral
+              </h3>
+              <p>
+                Identifico los factores que limitan el crecimiento orgánico de tu sitio:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Problemas técnicos", "Errores de indexación", "Rendimiento y velocidad",
+                  "Experiencia de usuario", "Arquitectura web", "Oportunidades de optimización"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Investigación Estratégica de Keywords
+              </h3>
+              <p class="italic text-slate-600">
+                No se trata de conseguir más tráfico. Se trata de atraer a las personas adecuadas.
+              </p>
+              <p>
+                Analizo las búsquedas con mayor intención comercial para posicionar tu plataforma frente a usuarios que ya están buscando:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Salas de póker", "Bonos", "Torneos", "Estrategias",
+                  "Comparativas", "Poker online por país", "Keywords de alto valor para adquisición"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Estrategia de Contenidos que Genera Tráfico
+              </h3>
+              <p>
+                Creo una arquitectura de contenidos diseñada para dominar todo el recorrido del usuario:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Guías", "Tutoriales", "Landing Pages",
+                  "Comparativas", "FAQs", "Contenido evergreen",
+                  "Clusters temáticos"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900 pt-2">
+                Cada contenido está diseñado para atraer tráfico cualificado y aumentar las conversiones.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización Técnica Avanzada
+              </h3>
+              <p>
+                Mejoro todos los factores que Google utiliza para evaluar una plataforma:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Core Web Vitals", "Enlazado interno", "Datos estructurados",
+                  "Crawl Budget", "Indexación", "Arquitectura SEO",
+                  "Optimización móvil"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO para IA y Nuevos Motores de Búsqueda
+              </h3>
+              <p class="italic text-slate-600">
+                La forma en que los usuarios descubren plataformas está cambiando.
+              </p>
+              <p>
+                Optimizo tu contenido para aumentar su visibilidad en:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Google AI Overviews", "ChatGPT", "Bing Copilot",
+                  "Perplexity AI", "Buscadores impulsados por IA"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Preparando tu plataforma para el futuro del posicionamiento orgánico.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo las estrategias SEO de tus principales competidores para descubrir:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Keywords que están generando tráfico.",
+                  "Contenidos con mayor rendimiento.",
+                  "Oportunidades de enlaces.",
+                  "Brechas de contenido.",
+                  "Estrategias que puedes aprovechar antes que ellos."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Retorno de la Inversión
+              </h3>
+              <p>
+                Cada decisión está respaldada por datos. Monitorizo indicadores clave como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Crecimiento del tráfico orgánico", "Rankings de palabras clave", "Nuevos registros",
+                  "Conversiones", "Valor del tráfico", "Coste de adquisición", "Retorno de la inversión (ROI)"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-850 font-extrabold text-blue-600">
+                Porque el SEO no consiste únicamente en posicionar palabras clave, sino en generar crecimiento real para el negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para tu organización
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar una estrategia SEO sólida, tu plataforma puede conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Mayor visibilidad en Google y otros buscadores.",
+            "Más jugadores cualificados llegando de forma orgánica.",
+            "Reducción de la dependencia de campaigns PPC.",
+            "Disminución del coste de adquisición de clientes (CAC).",
+            "Incremento del reconocimiento y autoridad de la marca.",
+            "Crecimiento sostenible basado en activos digitales propios.",
+            "Mayor rentabilidad a largo plazo."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No ofrezco soluciones genéricas. Cada estrategia se desarrolla en función de los objetivos, el mercado y el nivel de competencia de tu plataforma.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 not-prose">
+            {[
+              "SEO Estratégico", "SEO Técnico",
+              "Marketing Digital", "Optimización de Conversión (CRO)",
+              "Análisis de Datos", "Inteligencia Artificial aplicada al SEO",
+              "Growth Marketing"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-xs font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-100 leading-relaxed max-w-3xl mx-auto mt-12">
+            Mi objetivo es ayudarte a construir un canal de adquisición orgánico capaz de generar resultados durante años, no únicamente durante el tiempo que dure una campaña publicitaria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Convierte el tráfico orgánico en una ventaja competitiva
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si tu organización busca aumentar su visibilidad, captar más jugadores cualificados y reducir su dependencia de la publicidad pagada, estaré encantado de analizar tu plataforma e identificar las oportunidades con mayor potencial de crecimiento.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agenda una reunión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo hacer que los motores de búsqueda trabajen a favor de tu negocio y convertir el SEO en uno de los activos más rentables para el crecimiento de tu plataforma de póker online.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
