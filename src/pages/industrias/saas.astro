@@ -1,0 +1,399 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Empresas SaaS",
+  "description": "Impulsa el Crecimiento de tu Empresa SaaS con un Método Científico que Acelera la Rentabilidad. Convierte los datos en tu mayor ventaja competitiva.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Empresas SaaS & Scaleups"
+};
+---
+
+<Layout
+  title="SEO & Growth Marketing para Empresas SaaS | Roberto Pérez Salazar"
+  description="Impulsa el Crecimiento de tu Empresa SaaS con un Método Científico que Acelera la Rentabilidad. Convierte los datos en tu mayor ventaja competitiva."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para SaaS & Scaleups
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Empresa SaaS con un Método Científico que Acelera la Rentabilidad
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte los datos en tu mayor ventaja competitiva
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8">
+            Cada día nacen nuevas empresas SaaS.
+          </p>
+
+          <p>
+            La mayoría invierte miles de dólares en marketing, ventas y adquisición de clientes sin saber realmente qué estrategias generan crecimiento y cuáles simplemente consumen presupuesto.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-600 italic">La pregunta es simple:</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Tu empresa está tomando decisiones basadas en datos... o en suposiciones?
+            </p>
+          </div>
+
+          <p>
+            Mientras muchas compañías persiguen métricas de vanidad, los SaaS que logran un crecimiento sostenible utilizan un proceso sistemático para experimentar, medir, optimizar y escalar únicamente aquello que genera un retorno real sobre la inversión.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4 leading-relaxed border-t border-slate-100">
+            Como AI Business Growth Consultant especializado en empresas SaaS, ayudo a organizaciones a construir sistemas de crecimiento basados en datos, inteligencia artificial y experimentación continua para acelerar ingresos, reducir costes y aumentar la rentabilidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por tu empresa SaaS?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño e implemento estrategias de crecimiento adaptadas a cada etapa del negocio, desde startups hasta empresas SaaS en expansión.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <p class="text-center font-semibold text-blue-700 mb-12">
+            Mi metodología integra ciencia de datos, inteligencia artificial, automatización y Growth Marketing para identificar las oportunidades con mayor impacto en el crecimiento.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría Integral de Crecimiento
+              </h3>
+              <p>
+                Antes de escalar un negocio es necesario entender qué está limitando su crecimiento. Analizo cada uno de los factores que influyen en el rendimiento de tu empresa:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Estrategia de adquisición de clientes", "Funnel de conversión", "Customer Journey",
+                  "Product-Market Fit", "SEO y visibilidad orgánica", "Canales de adquisición",
+                  "Automatizaciones", "Analítica y medición", "Procesos internos",
+                  "Retención y expansión de clientes"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold italic pt-2">
+                Identifico los cuellos de botella que impiden acelerar el crecimiento y priorizo las acciones con mayor impacto.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Método Científico para Escalar un SaaS
+              </h3>
+              <p class="italic text-slate-600">
+                El crecimiento no debe depender de la intuición.
+              </p>
+              <p>
+                Trabajo con una metodología basada en hipótesis, experimentación y validación continua. Cada iniciativa sigue un proceso claro:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-semibold">
+                {[
+                  "Formular hipótesis.", "Diseñar experimentos.",
+                  "Medir resultados.", "Analizar datos.",
+                  "Optimizar.", "Escalar únicamente aquello que demuestra resultados."
+                ].map((item, idx) => (
+                  <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <span class="text-blue-600 font-black">0{idx+1}</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Este enfoque reduce el riesgo y permite tomar decisiones con mayor confianza.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO Estratégico para Empresas SaaS
+              </h3>
+              <p class="italic text-slate-600">
+                Google continúa siendo uno de los canales con mayor retorno de inversión.
+              </p>
+              <p>
+                Diseño estrategias SEO orientadas a atraer usuarios con alta intención de compra mediante:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 not-prose mb-4 text-xs font-bold text-slate-700">
+                {[
+                  "Investigación avanzada", "Arquitectura SEO", "SEO técnico",
+                  "Contenidos de alta conversión", "Landing Pages", "Topic Clusters",
+                  "Programmatic SEO", "Búsquedas transaccionales"
+                ].map(item => (
+                  <span class="px-3 py-2.5 bg-blue-50 text-blue-800 rounded-lg border border-blue-100 text-center">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-800 font-extrabold text-blue-600 pt-2 text-center uppercase tracking-wide">
+                El objetivo no es conseguir más visitas. El objetivo es atraer clientes potenciales preparados para comprar.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización del Funnel y Conversión (CRO)
+              </h3>
+              <p>
+                Incrementar el tráfico sin mejorar la conversión limita el crecimiento. Analizo todo el recorrido del usuario para aumentar la tasa de conversión mediante:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Optimización de Landing Pages", "UX basada en datos", "Heatmaps",
+                  "Pruebas A/B", "Optimización de CTAs", "Formularios",
+                  "Onboarding", "Activación de usuarios"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-800 font-medium">
+                Pequeñas mejoras en conversión generan un impacto significativo en los ingresos.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Artificial Aplicada al Crecimiento
+              </h3>
+              <p class="italic text-slate-600">
+                La IA no sustituye la estrategia. La potencia.
+              </p>
+              <p>
+                Implemento soluciones basadas en inteligencia artificial para:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Automatización de marketing.", "Automatización comercial.",
+                  "Lead Scoring.", "Generación de contenido.",
+                  "Chatbots.", "Atención al cliente.",
+                  "Automatización de procesos.", "Predicción de oportunidades.",
+                  "Productividad de equipos."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Growth Marketing Basado en Datos
+              </h3>
+              <p>
+                Construyo sistemas de crecimiento donde cada canal trabaja de forma coordinada. Integro estrategias como:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose text-sm text-slate-700 font-semibold text-center">
+                {[
+                  "SEO", "Content Marketing", "Email Marketing",
+                  "Automatización", "CRO", "Analítica",
+                  "Marketing de Producto", "Inteligencia Artificial"
+                ].map(item => (
+                  <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-850 font-bold pt-2">
+                El objetivo es construir un motor de crecimiento sostenible y escalable.
+              </p>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo el mercado para descubrir oportunidades antes que la competencia. Investigo:
+              </p>
+              <div class="grid grid-cols-2 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Estrategias de competidores", "Keywords más rentables",
+                  "Contenidos con mejor rendimiento", "Canales de adquisición",
+                  "Posicionamiento", "Oportunidades de diferenciación"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                No se trata únicamente de competir. Se trata de encontrar ventajas difíciles de replicar.
+              </p>
+            </div>
+
+            <!-- Pillar 8 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Retorno de la Inversión
+              </h3>
+              <p>
+                Todo se mide. Todo se optimiza. Monitorizo indicadores clave como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4 text-xs font-bold">
+                {[
+                  "MRR", "ARR", "CAC", "LTV", "Churn Rate", "Activación",
+                  "Retención", "Conversión", "Tráfico orgánico", "Pipeline", "Revenue Growth"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-850 font-extrabold text-blue-600">
+                Cada decisión está respaldada por datos. Porque el crecimiento sostenible comienza con una correcta medición.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para tu empresa
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar una estrategia basada en datos y crecimiento científico, tu organización puede conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Incrementar la adquisición de clientes cualificados.",
+            "Reducir el coste de adquisición (CAC).",
+            "Mejorar la conversión en cada etapa del embudo.",
+            "Aumentar el Lifetime Value (LTV).",
+            "Disminuir el churn.",
+            "Automatizar procesos críticos.",
+            "Escalar de forma sostenible.",
+            "Tomar decisiones basadas en evidencia.",
+            "Incrementar la rentabilidad del negocio."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No vendo tácticas aisladas. Diseño sistemas de crecimiento.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 not-prose">
+            {[
+              "Growth Marketing", "SEO Estratégico",
+              "SEO Técnico", "Inteligencia Artificial",
+              "Ciencia de Datos", "CRO",
+              "Automatización", "Analítica Digital",
+              "Product Strategy"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-[10px] font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-100 leading-relaxed max-w-3xl mx-auto mt-12">
+            Mi objetivo es ayudarte a construir una empresa SaaS más rentable, escalable y preparada para competir en un mercado donde los datos y la inteligencia artificial marcan la diferencia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Convierte tu SaaS en una máquina de crecimiento rentable
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si buscas acelerar el crecimiento de tu empresa, reducir el coste de adquisición y tomar decisiones respaldadas por datos, estaré encantado de analizar tu negocio e identificar las oportunidades con mayor potencial de impacto.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agenda una sesión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo transformar los datos, la inteligencia artificial y el Growth Marketing en un sistema predecible de crecimiento para tu empresa SaaS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
