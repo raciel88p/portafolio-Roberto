@@ -1,0 +1,403 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Plataformas de Apuestas e iGaming",
+  "description": "Impulsa el Crecimiento de tu Plataforma de Apuestas con una Estrategia que Atrae Apostadores de Alto Valor. Convierte Google y los buscadores en tu principal canal de adquisición.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "iGaming & Apuestas Deportivas"
+};
+---
+
+<Layout
+  title="SEO & Growth Marketing para Plataformas de Apuestas | Roberto Pérez Salazar"
+  description="Impulsa el Crecimiento de tu Plataforma de Apuestas con una Estrategia que Atrae Apostadores de Alto Valor. Convierte Google y los buscadores en tu principal canal de adquisición."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para iGaming & Apuestas Deportivas
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Plataforma de Apuestas con una Estrategia que Atrae Apostadores de Alto Valor
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte Google, la Inteligencia Artificial y los motores de búsqueda en tu mejor canal de adquisición de usuarios
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8">
+            Cada día, millones de personas buscan:
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8 not-prose">
+            {[
+              { label: "Casas de apuestas.", icon: "🎰" },
+              { label: "Bonos de bienvenida.", icon: "🎁" },
+              { label: "Apuestas deportivas.", icon: "⚽" },
+              { label: "Pronósticos.", icon: "📊" },
+              { label: "Cuotas.", icon: "📈" },
+              { label: "Comparativas.", icon: "⚖️" },
+              { label: "Estrategias de betting.", icon: "🧠" }
+            ].map((item) => (
+              <div class="flex flex-col p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-100 transition-all text-center">
+                <span class="text-3xl mb-2">{item.icon}</span>
+                <span class="font-bold text-sm text-slate-800">{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-600 italic">La pregunta es sencilla:</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Están registrándose en tu plataforma... o en la de tu competencia?
+            </p>
+          </div>
+
+          <p>
+            Mientras muchas empresas de iGaming dependen exclusivamente de campañas de afiliados, publicidad pagada y promociones cada vez más costosas, las plataformas que dominan el posicionamiento orgánico generan un flujo constante de usuarios cualificados, reducen su coste de adquisición y construyen una ventaja competitiva difícil de replicar.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4 leading-relaxed border-t border-slate-100">
+            Como consultor especializado en Growth Marketing, SEO e Inteligencia Artificial para plataformas de apuestas deportivas e iGaming, ayudo a operadores a incrementar su visibilidad, captar jugadores de alto valor y construir sistemas de adquisición sostenibles que impulsan el crecimiento del negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por tu plataforma?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño e implemento estrategias de crecimiento adaptadas al sector del betting y el entretenimiento digital.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <p class="text-center font-semibold text-blue-700 mb-12">
+            Mi metodología combina SEO, inteligencia artificial, automatización, análisis de datos y optimización de conversiones para aumentar registros, depósitos y el valor de cada usuario adquirido.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría Integral de Crecimiento
+              </h3>
+              <p>
+                Antes de escalar una plataforma es necesario comprender qué está limitando su crecimiento. Analizo aspectos clave como:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "SEO", "Arquitectura web", "Rendimiento",
+                  "Experiencia de usuario", "Funnel de registro", "Funnel de depósito",
+                  "Automatización", "Analítica", "Estrategia de contenidos",
+                  "Canales de adquisición", "Retención", "Conversión"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold italic pt-2">
+                Identifico los factores que limitan el crecimiento y priorizo las acciones con mayor retorno para el negocio.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO Estratégico para Plataformas de Apuestas
+              </h3>
+              <p>
+                Cada búsqueda representa una oportunidad para captar un nuevo jugador. Desarrollo estrategias para posicionar tu plataforma frente a usuarios con intención real de apostar. Incluye:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 not-prose mb-4 text-xs font-bold text-slate-700">
+                {[
+                  "Investigación de keywords", "SEO Técnico", "SEO Programático",
+                  "Landing Pages", "Topic Clusters", "Contenidos Evergreen",
+                  "Comparativas", "Guías", "Optimización transaccional"
+                ].map(item => (
+                  <span class="px-3 py-2.5 bg-blue-50 text-blue-800 rounded-lg border border-blue-100 text-center">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-800 font-extrabold text-blue-600 pt-2 text-center uppercase tracking-wide">
+                El objetivo no es atraer más tráfico. Es atraer usuarios preparados para registrarse, depositar y apostar.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Estrategia de Contenidos que Convierte
+              </h3>
+              <p>
+                Los apostadores investigan antes de elegir una plataforma. Desarrollo contenidos diseñados para captar tráfico de alta intención mediante:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Guías", "Pronósticos", "Estrategias", "Comparativas",
+                  "Bonos", "Casas de apuestas por país", "Mercados deportivos",
+                  "FAQs", "Tutoriales"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Cada contenido fortalece la autoridad de la marca y aumenta las oportunidades de conversión.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización del Funnel de Conversión (CRO)
+              </h3>
+              <p>
+                Cada visitante que abandona el proceso de registro representa ingresos perdidos. Optimizo cada etapa del recorrido del usuario:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Landing Pages", "Registro", "Primer depósito",
+                  "Bonos", "CTAs", "UX",
+                  "Pruebas A/B", "Optimización móvil", "Activación de usuarios"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-medium">
+                Pequeñas mejoras en la conversión generan un impacto directo sobre los ingresos.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Artificial Aplicada al iGaming
+              </h3>
+              <p>
+                La Inteligencia Artificial permite adquirir usuarios de forma más eficiente y optimizar la experiencia del jugador. Implemento soluciones para:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Automatización de marketing.", "Personalización.",
+                  "Chatbots.", "Atención al cliente.",
+                  "Segmentación inteligente.", "Automatización de campañas.",
+                  "Generación de contenido.", "Análisis predictivo.",
+                  "Optimización de procesos."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-850 pt-2">
+                La IA ayuda a escalar el negocio mientras mejora la experiencia del usuario.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO para la Nueva Generación de Buscadores
+              </h3>
+              <p>
+                Cada vez más usuarios descubren marcas a través de herramientas impulsadas por inteligencia artificial. Optimizo tu presencia para aumentar la visibilidad en:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Google AI Overviews", "ChatGPT", "Bing Copilot", "Perplexity AI"].map(item => (
+                  <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-950">
+                Preparando tu plataforma para el futuro del posicionamiento orgánico.
+              </p>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo las estrategias de tus principales competidores para descubrir:
+              </p>
+              <div class="grid grid-cols-2 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Keywords más rentables", "Contenidos con mayor tráfico",
+                  "Estrategias SEO", "Oportunidades de enlaces",
+                  "Brechas de contenido", "Ventajas competitivas"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900 pt-2">
+                El objetivo es identificar oportunidades antes que la competencia y acelerar el crecimiento.
+              </p>
+            </div>
+
+            <!-- Pillar 8 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Retorno de la Inversión
+              </h3>
+              <p>
+                Toda estrategia debe generar resultados medibles. Monitorizo indicadores como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4 text-xs font-bold">
+                {[
+                  "Registros", "Primeros depósitos", "Usuarios activos",
+                  "Conversión", "Coste de adquisición (CAC)", "Lifetime Value (LTV)",
+                  "Retención", "Tráfico orgánico", "Valor del tráfico", "ROI"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-850 font-extrabold text-blue-600">
+                Porque el verdadero objetivo no es posicionar palabras clave. Es construir un sistema de adquisición rentable y scalables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para tu plataforma
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar una estrategia de crecimiento basada en datos podrás conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Mayor visibilidad en Google y motores de búsqueda.",
+            "Más registros cualificados.",
+            "Incremento de primeros depósitos.",
+            "Reducción del coste de adquisición.",
+            "Menor dependencia de campañas pagadas.",
+            "Mayor autoridad de marca.",
+            "Automatización de procesos.",
+            "Crecimiento sostenible basado en activos digitales propios."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No desarrollo estrategias aisladas. Diseño sistemas completos de crecimiento para empresas de iGaming.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Cada estrategia se desarrolla en función de los objetivos, el mercado, la regulación y el nivel de competencia de tu plataforma.
+          </p>
+
+          <p class="text-center font-bold text-blue-400 mb-6 uppercase tracking-wider">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 not-prose">
+            {[
+              "SEO Estratégico", "SEO Técnico",
+              "Growth Marketing", "Inteligencia Artificial",
+              "CRO", "Automatización",
+              "Analítica Digital", "Ciencia de Datos"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-xs font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-100 leading-relaxed max-w-3xl mx-auto mt-12">
+            Mi objetivo es ayudarte a construir un canal de adquisición orgánico que genere usuarios de alto valor durante años y convierta el crecimiento sostenible en una ventaja competitiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Convierte el tráfico orgánico en una ventaja competitiva
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si tu plataforma busca captar más usuarios cualificados, aumentar los depósitos y reducir la dependencia de la publicidad pagada, estaré encantado de analizar tu negocio e identificar las oportunidades con mayor potencial de crecimiento.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agenda una sesión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo utilizar el SEO, la Inteligencia Artificial, la automatización y el Growth Marketing para convertir tu plataforma de apuestas en una marca más visible, más rentable y preparada para liderar el mercado del iGaming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
