@@ -1,0 +1,397 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Startups",
+  "description": "Impulsa el Crecimiento de tu Startup con un Sistema Basado en Datos, Inteligencia Artificial y Experimentación. Convierte tu startup en una empresa preparada para escalar.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Startups & Scaleups"
+};
+---
+
+<Layout
+  title="SEO & Growth Marketing para Startups | Roberto Pérez Salazar"
+  description="Impulsa el Crecimiento de tu Startup con un Sistema Basado en Datos, Inteligencia Artificial y Experimentación. Convierte tu startup en una empresa preparada para escalar."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para Startups & Scaleups
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Startup con un Sistema Basado en Datos, Inteligencia Artificial y Experimentación
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte tu startup en una empresa preparada para escalar
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8 text-center">
+            Crear una startup es difícil. Escalarla es aún más difícil.
+          </p>
+
+          <p>
+            Cada día nacen miles de nuevas empresas con grandes ideas, productos innovadores y equipos talentosos. Sin embargo, la mayoría no fracasa por falta de tecnología.
+          </p>
+          <p class="text-xl font-black text-red-600">
+            Fracasa porque no consigue adquirir clientes de forma rentable.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-600 italic">La pregunta es sencilla:</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Tu startup está creciendo gracias a un sistema repetible... o depende de la suerte, las recomendaciones y campañas que dejan de funcionar cuando se acaba el presupuesto?
+            </p>
+          </div>
+
+          <p>
+            Las startups que logran escalar no toman decisiones basadas en intuición. Construyen sistemas de crecimiento donde cada experimento, cada dato y cada inversión tiene un propósito claro.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4 leading-relaxed border-t border-slate-100">
+            Como AI Business Growth Consultant, ayudo a startups a diseñar e implementar estrategias de crecimiento que combinan SEO, Inteligencia Artificial, automatización, analítica y Growth Marketing para acelerar la adquisición de clientes, optimizar la conversión y construir un crecimiento sostenible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por tu startup?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño sistemas de crecimiento adaptados a startups en etapa de validación, crecimiento o expansión.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <p class="text-center font-semibold text-blue-700 mb-6">
+            Mi metodología utiliza experimentación continua, análisis de datos e inteligencia artificial para identificar las oportunidades con mayor impacto sobre el negocio.
+          </p>
+          <p class="text-center font-bold text-slate-900 mb-12">
+            No se trata de hacer más marketing. Se trata de descubrir qué impulsa realmente el crecimiento y escalar aquello que funciona.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría Estratégica de Crecimiento
+              </h3>
+              <p>
+                Antes de invertir más tiempo o presupuesto, analizo qué está frenando el crecimiento de tu startup. Evalúo aspectos clave como:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Product-Market Fit", "Posicionamiento", "Sitio web",
+                  "SEO", "Funnel de adquisición", "Conversión",
+                  "Activación", "Retención", "Automatización",
+                  "Customer Journey", "Analítica", "Estrategia comercial"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold italic pt-2">
+                El resultado es un plan priorizado con acciones de alto impacto para acelerar el crecimiento.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Adquisición de Clientes Basada en Datos
+              </h3>
+              <p>
+                El crecimiento sostenible comienza con un sistema de adquisición predecible. Diseño estrategias para atraer clientes mediante:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose pt-2 text-slate-800 font-medium">
+                {[
+                  "SEO Estratégico.", "Content Marketing.",
+                  "Landing Pages.", "Programmatic SEO.",
+                  "Marketing de Producto.", "Growth Loops.",
+                  "Lead Magnets.", "Estrategias de captación orgánica."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold pt-2 text-center text-blue-600 uppercase tracking-wide">
+                El objetivo no es generar más tráfico. Es atraer usuarios con alta probabilidad de convertirse en clientes.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Growth Marketing y Experimentación
+              </h3>
+              <p>
+                Las startups más exitosas no hacen suposiciones. Experimentan. Trabajo con una metodología basada en hipótesis y validación continua. Cada iniciativa sigue un proceso claro:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-semibold">
+                {[
+                  "Definir hipótesis.", "Diseñar experimentos.",
+                  "Medir resultados.", "Analizar datos.",
+                  "Optimizar.", "Escalar únicamente aquello que genera crecimiento."
+                ].map((item, idx) => (
+                  <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <span class="text-blue-600 font-black">0{idx+1}</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Esto permite reducir el riesgo y maximizar el retorno de cada inversión.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización del Funnel de Conversión (CRO)
+              </h3>
+              <p>
+                Conseguir tráfico es solo el comienzo. La verdadera diferencia está en convertir visitantes en usuarios y usuarios en clientes. Optimizo:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Landing Pages", "Formularios", "CTAs", "Onboarding", "Activación", "UX", "Pruebas A/B", "Automatización", "Conversión"].map(item => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-800 font-medium">
+                Pequeñas mejoras en la conversión pueden multiplicar el crecimiento sin aumentar el presupuesto.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Artificial para Startups
+              </h3>
+              <p>
+                La Inteligencia Artificial permite que las startups hagan más con menos recursos. Implemento soluciones para:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Automatización de marketing.", "Automatización comercial.",
+                  "Lead Scoring.", "Chatbots.",
+                  "Generación de contenido.", "Automatización de procesos.",
+                  "Atención al cliente.", "Productividad de equipos.",
+                  "Análisis predictivo."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-800 pt-2">
+                La IA ayuda a acelerar el crecimiento sin incrementar proporcionalmente los costes.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO para la Nueva Generación de Buscadores
+              </h3>
+              <p>
+                Los usuarios ya no buscan únicamente en Google. También utilizan plataformas impulsadas por inteligencia artificial. Optimizo tu presencia para aumentar la visibilidad en:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Google AI Overviews", "ChatGPT", "Bing Copilot", "Perplexity AI"].map(item => (
+                  <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-950">
+                Preparando tu startup para la próxima generación de búsqueda y descubrimiento digital.
+              </p>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo el mercado para descubrir oportunidades antes que tus competidores. Investigo:
+              </p>
+              <div class="grid grid-cols-2 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Keywords con mayor intención comercial", "Estrategias de crecimiento",
+                  "Contenidos con mejor rendimiento", "Canales de adquisición",
+                  "Tendencias del mercado", "Brechas de posicionamiento",
+                  "Oportunidades de diferenciación"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900 pt-2">
+                El objetivo no es seguir tendencias. Es construir ventajas competitivas sostenibles.
+              </p>
+            </div>
+
+            <!-- Pillar 8 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Retorno de la Inversión
+              </h3>
+              <p>
+                Toda decisión debe estar respaldada por datos. Monitorizo indicadores clave como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {[
+                  "Tráfico orgánico", "Usuarios registrados", "Leads",
+                  "MQLs", "SQLs", "CAC", "LTV", "Activación",
+                  "Retención", "Churn", "MRR", "ARR", "Conversión", "ROI"
+                ].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-850 font-extrabold text-blue-600">
+                Porque una startup no crece por intuición. Crece cuando entiende qué métricas impulsan realmente el negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para tu startup
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar un sistema de crecimiento basado en datos podrás conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Adquirir clientes de forma más eficiente.",
+            "Reducir el coste de adquisición (CAC).",
+            "Incrementar la conversión en todo el embudo.",
+            "Automatizar procesos repetitivos.",
+            "Escalar con mayor velocidad y menor riesgo.",
+            "Tomar decisiones respaldadas por datos.",
+            "Construir un motor de crecimiento sostenible.",
+            "Preparar tu startup para rondas de inversión y expansión."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No vendo campañas de marketing. Construyo sistemas de crecimiento para startups.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 not-prose">
+            {[
+              "Growth Marketing", "SEO Estratégico",
+              "Inteligencia Artificial", "Automatización",
+              "CRO", "Analítica Digital",
+              "Ciencia de Datos", "Estrategia de Producto"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-xs font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-center mb-8 mt-12">
+            Cada estrategia se adapta a la etapa de crecimiento, modelo de negocio y objetivos específicos de cada startup.
+          </p>
+
+          <p class="text-xl font-bold text-center text-slate-100 leading-relaxed max-w-3xl mx-auto">
+            Mi propósito es ayudarte a construir un sistema de adquisición escalable que convierta el crecimiento en un proceso repetible y medible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Convierte tu startup en una empresa preparada para escalar
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si buscas adquirir más clientes, optimizar tus métricas de crecimiento y construir una estrategia sostenible respaldada por datos, estaré encantado de analizar tu negocio e identificar las oportunidades con mayor potencial de impacto.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agenda una sesión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo utilizar el SEO, la Inteligencia Artificial, la automatización y el Growth Marketing para transformar tu startup en una empresa preparada para crecer, atraer inversión y competir a gran escala.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
