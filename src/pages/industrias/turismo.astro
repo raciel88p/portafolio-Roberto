@@ -1,0 +1,404 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO & Growth Marketing para Hospitality y Turismo",
+  "description": "Impulse el crecimiento de su negocio de Hospitality con una estrategia que genera más reservas directas. Optimización para hoteles, Airbnb, glampings y operadores turísticos.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Hospitality & Turismo"
+};
+---
+
+<Layout
+  title="SEO & Growth Marketing para Hospitality y Turismo | Roberto Pérez Salazar"
+  description="Impulse el crecimiento de su negocio de Hospitality con una estrategia que genera más reservas directas. Optimización para hoteles, Airbnb, glampings y operadores turísticos."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para Hospitality & Turismo
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Negocio de Hospitality con una Estrategia que Genera Más Reservas Directas
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte Google, la Inteligencia Artificial y tu Sitio Web en tus mejores canales de adquisición de huéspedes
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8">
+            Cada día, millones de viajeros buscan dónde hospedarse.
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-8 not-prose">
+            {[
+              { label: "Comparan hoteles.", icon: "🏨" },
+              { label: "Buscan Airbnb.", icon: "🏠" },
+              { label: "Exploran experiencias.", icon: "🗺️" },
+              { label: "Leen reseñas.", icon: "⭐" },
+              { label: "Investigan destinos.", icon: "🌴" }
+            ].map((item) => (
+              <div class="flex flex-col p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-100 transition-all text-center">
+                <span class="text-3xl mb-2">{item.icon}</span>
+                <span class="font-bold text-sm text-slate-800">{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-600 italic">La pregunta es sencilla:</p>
+            <p class="text-xl md:text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Están reservando contigo... o con tu competencia?
+            </p>
+          </div>
+
+          <p>
+            Mientras muchos alojamientos dependen casi por completo de plataformas como Airbnb, Booking.com o Expedia y pagan elevadas comisiones por cada reserva, los negocios que construyen una estrategia de adquisición propia generan un flujo constante de huéspedes, incrementan sus reservas directas y mejoran significativamente su rentabilidad.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 pt-4 leading-relaxed">
+            Como consultor especializado en Growth Marketing, SEO e Inteligencia Artificial para el sector Hospitality, ayudo a hoteles, Airbnb, glampings, eco-lodges, villas, property managers y alojamientos turísticos a aumentar su visibilidad, captar huéspedes de alto valor y construir un sistema de crecimiento sostenible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por tu negocio?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño e implemento estrategias de crecimiento adaptadas a empresas de hospitalidad que desean reducir su dependencia de las OTAs y convertir su presencia digital en una fuente constante de reservas.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <p class="text-center font-semibold text-blue-700 mb-12">
+            Mi metodología combina SEO, Inteligencia Artificial, automatización, optimización de conversiones y análisis de datos para maximizar la ocupación y aumentar los ingresos.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría Integral de Crecimiento
+              </h3>
+              <p>
+                Antes de escalar un negocio turístico es necesario identificar qué está limitando su rendimiento. Analizo aspectos clave como:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Sitio web", "SEO", "Posicionamiento local",
+                  "Google Business", "Experiencia de usuario", "Funnel de reservas",
+                  "Automatización", "Reputación online", "Canales de adquisición",
+                  "Analítica", "Estrategia comercial"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold italic pt-2">
+                El objetivo es descubrir las oportunidades con mayor impacto sobre la ocupación y la rentabilidad.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO Estratégico para Hospitality
+              </h3>
+              <p>
+                Miles de viajeros buscan diariamente:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Hoteles", "Airbnb", "Villas", "Eco Lodges", "Glamping", "Alojamientos familiares", "Hospedajes cerca de atracciones", "Escapadas de fin de semana", "Experiencias únicas"].map(item => (
+                  <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p>
+                Si tu negocio no aparece en esos resultados, probablemente esas reservas terminarán en otra propiedad. Diseño estrategias SEO para posicionar tu negocio frente a viajeros con alta intención de reservar.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose pt-2 text-slate-800 font-medium">
+                {[
+                  "Investigación de keywords.",
+                  "SEO Técnico.",
+                  "SEO Local.",
+                  "Landing Pages.",
+                  "Programmatic SEO.",
+                  "Topic Clusters.",
+                  "Contenido Evergreen.",
+                  "Optimización para búsquedas transaccionales."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-extrabold text-blue-600 pt-2 text-center uppercase tracking-wide">
+                No se trata de atraer más visitantes. Se trata de atraer más huéspedes.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Estrategia de Contenidos que Inspira Confianza
+              </h3>
+              <p>
+                Las personas no reservan únicamente una habitación. Compran una experiencia. Desarrollo contenidos que ayudan al viajero durante todo el proceso de decisión:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Guías de viaje", "Qué hacer en el destino", "Itinerarios", "Restaurantes", "Actividades", "Consejos locales", "Experiencias", "Blogs", "FAQs", "Landing Pages"].map(item => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Cada contenido posiciona tu marca antes de que el huésped tome la decisión de reservar.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización de Reservas Directas (CRO)
+              </h3>
+              <p>
+                Cada visitante que abandona tu sitio sin reservar representa ingresos perdidos. Optimizo el proceso de reserva mediante:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Landing Pages", "UX", "Velocidad",
+                  "Formularios", "Motores de reserva", "CTAs",
+                  "Pruebas A/B", "Optimización móvil", "Confianza y prueba social"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-medium">
+                Pequeñas mejoras en la conversión pueden incrementar significativamente las reservas sin aumentar la inversión en publicidad.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Artificial para Hospitality
+              </h3>
+              <p>
+                La Inteligencia Artificial está transformando la forma en que los viajeros descubren y reservan alojamientos. Implemento soluciones de IA para:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Atención automática.", "Chatbots.",
+                  "Automatización de reservas.", "Email Marketing.",
+                  "Personalización.", "Recomendaciones.",
+                  "Automatización operativa.", "Generación de contenido.",
+                  "Gestión de clientes.", "Optimización de procesos."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-800">
+                La IA permite ofrecer una mejor experiencia mientras reduce costes operativos.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO para la Nueva Generación de Buscadores
+              </h3>
+              <p>
+                Cada vez más viajeros utilizan herramientas de Inteligencia Artificial para planificar sus escapadas. Optimizo tu presencia para aumentar la probabilidad de aparecer en estas nuevas experiencias de búsqueda y preparar tu negocio para el futuro del turismo digital:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Google AI Overviews", "ChatGPT", "Bing Copilot", "Perplexity AI"].map(item => (
+                  <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo las estrategias digitales de tus principales competidores para descubrir:
+              </p>
+              <div class="grid grid-cols-2 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Keywords que generan reservas", "Contenidos con mejor rendimiento",
+                  "Oportunidades SEO", "Estrategias de precios",
+                  "Posicionamiento", "Brechas de contenido",
+                  "Ventajas competitivas"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                No se trata de copiar a la competencia. Se trata de encontrar oportunidades antes que ellos.
+              </p>
+            </div>
+
+            <!-- Pillar 8 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Retorno de la Inversión
+              </h3>
+              <p>
+                Todo se mide. Todo se optimiza. Monitorizo indicadores clave como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Reservas directas", "Ocupación", "ADR", "RevPAR", "Tráfico orgánico", "Conversión", "Coste de adquisición", "ROI", "Value del cliente", "Lifetime Value"].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="text-slate-800 font-extrabold text-blue-600">
+                Porque una estrategia digital solo tiene sentido cuando genera resultados para el negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para tu empresa
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar una estrategia integral de crecimiento podrás conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Más reservas directas.",
+            "Menor dependencia de Airbnb, Booking y otras OTAs.",
+            "Reducción de las comisiones pagadas a intermediarios.",
+            "Mayor ocupación durante todo el año.",
+            "Incremento del ingreso por huésped.",
+            "Mejor posicionamiento en Google.",
+            "Mayor reconocimiento de marca.",
+            "Automatización de procesos.",
+            "Crecimiento sostenible basado en activos digitales propios."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No vendo únicamente SEO. Diseño sistemas completos de crecimiento para negocios de hospitalidad.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 not-prose">
+            {[
+              "SEO Estratégico", "SEO Técnico",
+              "Hospitality Marketing", "Inteligencia Artificial",
+              "CRO", "Automatización",
+              "Analítica Digital", "Growth Marketing"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-xs font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-100 mt-12 leading-relaxed max-w-3xl mx-auto">
+            Mi objetivo es ayudarte a construir un canal de adquisición propio que genere reservas durante años, reduzca tu dependencia de intermediarios y convierta tu sitio web en uno de los activos más rentables de tu negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Convierte tu presencia digital en una fuente constante de reservas
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si buscas aumentar la ocupación, atraer huéspedes de mayor valor y construir una estrategia de crecimiento sostenible, estaré encantado de analizar tu negocio e identificar las oportunidades con mayor potencial de impacto.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agenda una sesión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo utilizar el SEO, la Inteligencia Artificial, la automatización y el Growth Marketing para transformar tu negocio de Hospitality en una marca más visible, más rentable y menos dependiente de las plataformas de terceros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
