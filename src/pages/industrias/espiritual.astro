@@ -1,0 +1,372 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Organizaciones Espirituales",
+  "description": "Ayudo a Organizaciones con Propósito Espiritual a Ampliar su Impacto y Llegar a Más Personas. Estrategias de posicionamiento SEO, contenidos y optimización.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Organizaciones Espirituales y Conscientes"
+};
+---
+
+<Layout
+  title="SEO para Organizaciones con Propósito Espiritual | Roberto Pérez Salazar"
+  description="Ayudo a Organizaciones con Propósito Espiritual a Ampliar su Impacto y Llegar a Más Personas. Estrategias de posicionamiento SEO, contenidos y optimización."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para Organizaciones con Propósito
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Ayudo a Organizaciones con Propósito Espiritual a Ampliar su Impacto y Llegar a Más Personas
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Una misión tan importante merece una estrategia de crecimiento a su altura
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Reunión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 leading-relaxed mb-4">
+            Hay organizaciones que venden productos. Otras venden servicios.
+          </p>
+          <p class="text-xl md:text-2xl font-bold text-slate-800 leading-normal mb-8">
+            Pero existen organizaciones cuya labor trasciende lo comercial. Acompañan a las personas en momentos de pérdida, esperanza, transformación y fe.
+          </p>
+
+          <p class="text-lg font-bold text-slate-900 italic">Soy creyente.</p>
+          <p>
+            A lo largo de mi vida he comprendido que existe una dimensión espiritual que da sentido a nuestra existencia. Esa convicción también ha dado propósito a mi trabajo.
+          </p>
+          <p class="font-semibold">
+            Por eso decidí especializarme en ayudar a organizaciones cuya misión consiste en servir a otros en algunos de los momentos más importantes de la vida.
+          </p>
+          <p class="text-xl font-bold text-slate-900 leading-relaxed">
+            Mientras ustedes ofrecen esperanza, consuelo, orientación y acompañamiento, yo desarrollo estrategias para que su organización llegue a más personas, fortalezca su presencia y multiplique el impacto de su misión.
+          </p>
+
+          <p class="text-2xl font-black text-blue-700 pt-4 text-center">
+            Porque cuando una organización con propósito crece, también crece el número de vidas que puede transformar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Can I Do Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6 text-center">
+          ¿Qué puedo hacer por su organización?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+          Diseño e implemento estrategias de crecimiento adaptadas a organizaciones cuya misión va más allá del beneficio económico.
+        </p>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+          <p class="text-center font-semibold text-blue-700 mb-12">
+            Mi enfoque combina marketing estratégico, SEO, inteligencia artificial, automatización y análisis de datos para ayudarles a ampliar su alcance sin perder su esencia, sus principios ni sus valores.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="space-y-16">
+            <!-- Pillar 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Auditoría Estratégica de Crecimiento
+              </h3>
+              <p>
+                Antes de diseñar una estrategia, analizo el estado actual de la organización para identificar las oportunidades con mayor potencial de impacto. Evalúo aspectos como:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Visibilidad digital", "Posicionamiento en buscadores", "Sitio web",
+                  "Experiencia del usuario", "Procesos internos", "Automatización",
+                  "Comunicación", "Embudos de captación", "Analítica", "Presencia local"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="text-slate-800 font-bold italic pt-2">
+                El objetivo es construir una estrategia basada en datos que permita crecer de forma sostenible.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                SEO para Organizaciones con Propósito
+              </h3>
+              <p>
+                Cada día miles de personas buscan información relacionada con:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-sm text-slate-800 font-bold">
+                {[
+                  "Servicios funerarios.", "Acompañamiento espiritual.", "Apoyo durante el duelo.",
+                  "Cementerios y memoriales.", "Servicios conmemorativos.", "Recursos para familias.",
+                  "Iglesias.", "Centros de retiro.", "Organizaciones religiosas."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="pt-4">
+                Si su organización no aparece cuando las personas necesitan ayuda, probablemente encontrarán otra alternativa.
+              </p>
+              <p class="font-bold text-slate-900">
+                Diseño estrategias SEO que aumentan su visibilidad precisamente cuando alguien busca orientación, apoyo o sus servicios.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Estrategia de Contenidos que Inspiran Confianza
+              </h3>
+              <p>
+                Las personas no solo buscan un servicio. Buscan respuestas. Buscan tranquilidad. Buscan alguien en quien confiar. Desarrollo contenidos que responden a esas necesidades mediante:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Guías", "Artículos", "Recursos educativos",
+                  "Preguntas frecuentes", "Landing Pages", "Historias inspiradoras",
+                  "Contenido evergreen"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Cada contenido fortalece la autoridad de la organización y genera confianza antes del primer contacto.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Artificial para Servir con Mayor Eficiencia
+              </h3>
+              <p class="italic text-slate-600">
+                La tecnología no reemplaza el trato humano. Lo potencia.
+              </p>
+              <p>
+                Implemento soluciones basadas en inteligencia artificial y automatización para:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose text-slate-800 font-medium">
+                {[
+                  "Atención inicial.", "Respuesta a consultas frecuentes.",
+                  "Automatización administrativa.", "Gestión de contactos.",
+                  "Marketing personalizado.", "Seguimiento de familias.",
+                  "Organización interna.", "Optimización de procesos."
+                ].map(item => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500 font-extrabold">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-blue-600">
+                De esta forma, su equipo puede dedicar más tiempo a aquello que realmente importa: servir a las personas.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Optimización de la Experiencia Digital
+              </h3>
+              <p>
+                Muchas personas tendrán el primer contacto con su organización a través de Internet. Por eso optimizo:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Sitio web", "Velocidad", "Navegación", "Formularios", "Contacto", "Conversión", "Accesibilidad", "Experiencia móvil"].map(item => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Una experiencia sencilla y cercana facilita que las personas encuentren ayuda cuando más la necesitan.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Inteligencia Competitiva
+              </h3>
+              <p>
+                Analizo el entorno para identificar oportunidades de crecimiento. Investigo:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 not-prose text-sm text-slate-700 font-semibold">
+                {[
+                  "Competidores", "Tendencias de búsqueda", "Contenidos",
+                  "Posicionamiento", "Estrategias digitales", "Oportunidades de diferenciación"
+                ].map(item => (
+                  <div class="flex items-center gap-2 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-blue-500">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                El objetivo no es copiar a otros. Es encontrar la mejor forma de comunicar el valor único de su misión.
+              </p>
+            </div>
+
+            <!-- Pillar 7 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Medición del Impacto
+              </h3>
+              <p>
+                Toda estrategia debe medirse. Monitorizo indicadores como:
+              </p>
+              <div class="flex flex-wrap gap-2 not-prose mb-4">
+                {["Visibilidad", "Tráfico orgánico", "Solicitudes de contacto", "Conversión", "Alcance", "Participación", "Posicionamiento", "Retorno de la inversión"].map(item => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+                ))}
+              </div>
+              <p class="font-bold text-slate-900">
+                Pero también entiendo que el éxito de una organización con propósito no siempre se mide únicamente en cifras.
+              </p>
+              <p class="text-xl font-extrabold text-blue-700">
+                También se mide en el número de personas que logra acompañar, orientar y servir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Beneficios para su organización
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Al implementar una estrategia de crecimiento basada en datos y tecnología, su organización puede conseguir:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "Llegar a más personas que necesitan apoyo.",
+            "Incrementar su visibilidad y credibilidad.",
+            "Fortalecer su presencia digital.",
+            "Optimizar procesos internos.",
+            "Reducir tareas repetitivas mediante automatización.",
+            "Mejorar la experiencia de las familias y usuarios.",
+            "Incrementar las oportunidades de contacto.",
+            "Construir un crecimiento sostenible sin perder su identidad."
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-green-500 font-bold text-lg">✓</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work with Me Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No trabajo únicamente con estrategias de marketing. Trabajo con organizaciones que tienen una misión.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300">
+          <p class="text-center mb-8">
+            Comprendo que detrás de cada servicio existe una responsabilidad humana y espiritual. Por eso cada estrategia se desarrolla respetando los valores, la identidad y el propósito de la organización.
+          </p>
+
+          <p class="text-center font-bold text-blue-400 mb-6 uppercase tracking-wider">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 not-prose">
+            {[
+              "SEO Estratégico", "Marketing Digital",
+              "Inteligencia Artificial", "Automatización",
+              "Growth Marketing", "Optimización de Conversión",
+              "Analítica", "Estrategia Digital"
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-center flex flex-col justify-center min-h-[100px]">
+                <span class="text-blue-400 font-bold mb-2">✦</span>
+                <span class="text-slate-200 text-xs font-semibold uppercase tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-center text-slate-100 mt-12 leading-relaxed max-w-3xl mx-auto">
+            Mi objetivo no consiste únicamente en generar más visitas o más ingresos. Mi objetivo es ayudar a que organizaciones con propósito puedan servir a más personas y ampliar el impacto positivo que generan en la sociedad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Multiplique el impacto de su misión
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si su organización desea llegar a más personas, fortalecer su presencia digital y construir un crecimiento sostenible alineado con sus valores, estaré encantado de analizar su situación e identificar las oportunidades con mayor potencial de impacto.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <h3 class="text-2xl font-black text-blue-900 mb-4">Agende una reunión estratégica</h3>
+            <p class="text-lg text-slate-700 leading-relaxed font-semibold">
+              Descubriremos juntos cómo utilizar el marketing, el SEO, la inteligencia artificial y la automatización para ampliar el alcance de su misión y ayudar a muchas más personas en los momentos más importantes de sus vidas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
