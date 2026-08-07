@@ -1,0 +1,450 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista SEO para Empresas de Seguros",
+  "description": "Impulsa el crecimiento de tu empresa de seguros con una estrategia que genera clientes de alto valor. Captación orgánica, optimización para IA y sistemas de conversión.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Seguros, Brokers, InsurTech"
+};
+---
+
+<Layout
+  title="SEO para Empresas de Seguros, Brokers e InsurTech | Roberto Pérez Salazar"
+  description="Impulsa el crecimiento de tu empresa de seguros con una estrategia que genera clientes de alto valor. Captación orgánica, optimización para IA y sistemas de conversión."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Estrategias de Adquisición para Seguros & InsurTech
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Impulsa el Crecimiento de tu Empresa de Seguros con una Estrategia que Genera Clientes de Alto Valor
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Convierte Google, la Inteligencia Artificial y tu presencia digital en tu mejor canal de adquisición de clientes
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agenda una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Introductory Editorial Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-2xl font-bold text-slate-800 leading-normal mb-8">
+            Cada día, miles de personas y empresas buscan soluciones para proteger su patrimonio, su salud, su familia y su negocio.
+          </p>
+
+          <p class="text-xl font-extrabold text-slate-900 mb-4 uppercase tracking-wider">Buscan:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+            {[
+              { label: "Seguros de vida.", icon: "❤️" },
+              { label: "Seguros de salud.", icon: "🏥" },
+              { label: "Seguros de automóvil.", icon: "🚗" },
+              { label: "Seguros para empresas.", icon: "🏢" },
+              { label: "Seguros de viaje.", icon: "✈️" },
+              { label: "Seguros de hogar.", icon: "🏠" },
+              { label: "Seguros de responsabilidad civil.", icon: "⚖️" },
+              { label: "Comparativas de pólizas.", icon: "📊" }
+            ].map((item) => (
+              <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-100 transition-colors">
+                <span class="text-2xl">{item.icon}</span>
+                <span class="font-bold text-slate-800">{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <p class="text-lg text-slate-600 italic">La pregunta es sencilla:</p>
+            <p class="text-2xl font-extrabold text-blue-900 mt-2">
+              ¿Están solicitando una cotización con tu empresa... o con la competencia?
+            </p>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Mientras muchas aseguradoras y corredores dependen exclusivamente de publicidad pagada, referidos o agentes comerciales, las organizaciones que dominan la búsqueda orgánica generan un flujo constante de prospectos cualificados, reducen su coste de adquisición y construyen una ventaja competitiva sostenible.
+          </p>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-8">
+            Como <strong>AI Business Growth Consultant</strong>, ayudo a aseguradoras, brokers, agencias e InsurTech a diseñar sistemas de crecimiento que combinan SEO, Inteligencia Artificial, automatización, analítica y Growth Marketing para incrementar las oportunidades comerciales y acelerar el crecimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Methodology Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+            ¿Qué puedo hacer por tu empresa?
+          </h2>
+          <p class="text-lg md:text-xl text-slate-600 font-bold mt-4">
+            Diseño e implemento estrategias de crecimiento adaptadas al sector asegurador.
+          </p>
+          <p class="text-base text-slate-500 mt-2 leading-relaxed">
+            Mi metodología integra ciencia de datos, SEO, inteligencia artificial y automatización para atraer clientes con alta intención de compra, optimizar la conversión y construir un sistema de adquisición rentable y escalable.
+          </p>
+        </div>
+
+        <!-- Solutions Grid -->
+        <div class="space-y-12">
+
+          <!-- Auditoría -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Auditoría Estratégica de Crecimiento
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Antes de invertir más presupuesto en marketing, identifico qué está limitando el crecimiento de tu organización. Analizo exhaustivamente los principales puntos de dolor y fricciones para optimizar la captación.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Analizo aspectos como:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              {[
+                "Posicionamiento digital.",
+                "SEO técnico.",
+                "Sitio web.",
+                "Arquitectura de contenidos.",
+                "Funnel de captación.",
+                "Formularios de cotización.",
+                "Automatización.",
+                "Analítica.",
+                "Customer Journey.",
+                "Estrategia comercial y procesos de seguimiento."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-blue-700 mt-6 italic">
+              El resultado es un plan de acción priorizado basado en datos y oportunidades de alto impacto.
+            </p>
+          </div>
+
+          <!-- SEO Estratégico -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              SEO Estratégico para Empresas de Seguros
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Cada búsqueda representa una oportunidad para captar un nuevo cliente. Desarrollo estrategias SEO avanzadas para posicionar tu empresa frente a personas con una alta intención de contratación.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Posicionamiento para búsquedas específicas como:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-slate-600 mb-6">
+              {[
+                "Seguros de vida.",
+                "Seguros médicos.",
+                "Seguros de automóvil.",
+                "Seguros empresariales.",
+                "Seguros para PYMES.",
+                "Seguros de viaje.",
+                "Seguros patrimoniales.",
+                "Comparadores de seguros.",
+                "Cotizaciones.",
+                "Renovación de pólizas."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-400">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="font-bold text-slate-800 mb-3">Mi enfoque incluye:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              {[
+                "Investigación avanzada de keywords.",
+                "SEO Técnico y SEO Local.",
+                "Programmatic SEO.",
+                "Landing Pages optimizadas.",
+                "Topic Clusters.",
+                "Contenido Evergreen."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-slate-900 mt-6 uppercase tracking-wider">
+              No buscamos únicamente tráfico. Buscamos clientes preparados para solicitar una cotización.
+            </p>
+          </div>
+
+          <!-- Contenidos -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Estrategia de Contenidos que Genera Confianza
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Contratar un seguro es una decisión basada en confianza. Los clientes investigan, comparan coberturas y buscan información clara antes de tomar una decisión que afectará su seguridad.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Desarrollo contenidos que educan y generan credibilidad mediante:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm text-slate-600">
+              {["Guías.", "Comparativas.", "Calculadoras.", "FAQs.", "Casos prácticos.", "Landing Pages.", "Recursos educativos.", "Blogs especializados."].map((item) => (
+                <div class="flex items-center gap-2 py-1 px-2 bg-slate-50 rounded border border-slate-100">
+                  <span class="text-blue-500">✦</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-600 mt-6">
+              Cada contenido está diseñado para atraer tráfico cualificado y acompañar al cliente durante todo su proceso de decisión.
+            </p>
+          </div>
+
+          <!-- CRO -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Optimización del Funnel de Conversión (CRO)
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Atraer visitantes no es suficiente. Es necesario convertirlos de forma efectiva en solicitudes de cotización reales y clientes de cartera.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Optimizo cada etapa del embudo mediante:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm text-slate-600">
+              {["Landing Pages.", "Formularios.", "UX.", "CTAs.", "Automatización del seguimiento.", "Lead Magnets.", "Pruebas A/B.", "Optimización móvil."].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 mt-6">
+              Pequeñas mejoras en la conversión pueden incrementar significativamente el volumen de pólizas vendidas.
+            </p>
+          </div>
+
+          <!-- Inteligencia Artificial -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Inteligencia Artificial Aplicada al Sector Asegurador
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              La Inteligencia Artificial está transformando por completo la forma en que las aseguradoras captan, evalúan y atienden clientes.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Implemento soluciones avanzadas para:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              {[
+                "Automatización de marketing.",
+                "Automatización comercial.",
+                "Chatbots y asistentes conversacionales.",
+                "Atención al cliente.",
+                "Lead Scoring predictivo.",
+                "Personalización de campañas.",
+                "Generación de contenido optimizado.",
+                "Automatización de procesos operativos.",
+                "Análisis predictivo de conversiones."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-400">✦</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-500 mt-6">
+              La IA ayuda a mejorar la eficiencia operativa mientras incrementa la capacidad comercial de tus agentes.
+            </p>
+          </div>
+
+          <!-- SEO Futuro -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              SEO para la Nueva Generación de Buscadores
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Cada vez más personas utilizan herramientas impulsadas por inteligencia artificial para investigar productos financieros, coberturas y contratos aseguradores.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Optimizo la presencia de tu empresa para aumentar la visibilidad en:</p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              {["Google AI Overviews", "ChatGPT", "Bing Copilot", "Perplexity AI"].map((engine) => (
+                <span class="px-3 py-1 bg-slate-100 text-slate-800 rounded-lg text-sm font-bold">
+                  {engine}
+                </span>
+              ))}
+            </div>
+            <p class="text-sm text-slate-600 font-semibold">
+              Preparando tu organización para el futuro de la búsqueda digital.
+            </p>
+          </div>
+
+          <!-- Inteligencia Competitiva -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Inteligencia Competitiva
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Analizo minuciosamente las estrategias de tus principales competidores para descubrir y capitalizar sus debilidades y fortalezas.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Descubrimos oportunidades mediante el análisis de:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              {[
+                "Keywords con mayor intención de compra.",
+                "Contenidos que generan más oportunidades.",
+                "Estrategias SEO avanzadas.",
+                "Brechas de contenido sin explotar.",
+                "Oportunidades de posicionamiento local.",
+                "Tendencias emergentes del mercado asegurador."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-slate-950 mt-6">
+              El objetivo no es competir por precio. Es construir una marca más visible, más confiable y más fácil de encontrar.
+            </p>
+          </div>
+
+          <!-- Medición ROI -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm">
+            <h3 class="text-2xl font-black text-slate-900 mb-4">
+              Medición del Retorno de la Inversión
+            </h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Cada estrategia implementada debe justificar su inversión mediante datos claros, transparentes y directamente vinculados a los ingresos del negocio.
+            </p>
+            <p class="font-bold text-slate-800 mb-3">Monitorizo continuamente indicadores clave de rendimiento (KPIs):</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-slate-600">
+              {["Tráfico orgánico.", "Solicitudes de cotización.", "Leads cualificados.", "Conversión.", "Coste de adquisición (CAC).", "Valor del cliente (LTV).", "ROI.", "Ventas atribuidas."].map((item) => (
+                <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl text-center">
+                  <span class="font-bold text-slate-800 block">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 mt-6">
+              Porque el objetivo del marketing no es generar visitas. Es generar crecimiento rentable.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-center mb-12">
+          Beneficios para tu empresa
+        </h2>
+        <p class="text-lg text-slate-300 text-center mb-8">
+          Al implementar una estrategia basada en datos podrás conseguir:
+        </p>
+        <div class="space-y-4">
+          {[
+            "Mayor visibilidad en Google y motores de búsqueda impulsados por IA.",
+            "Más solicitudes de cotización cualificadas.",
+            "Incremento de clientes potenciales.",
+            "Reducción del coste de adquisición (CAC).",
+            "Mayor confianza y autoridad de marca.",
+            "Automatización de procesos comerciales.",
+            "Menor dependencia de la publicidad pagada.",
+            "Crecimiento sostenible basado en activos digitales propios."
+          ].map((benefit) => (
+            <div class="flex items-start gap-3 p-4 bg-slate-800/60 rounded-xl border border-slate-800">
+              <span class="text-green-400 font-extrabold text-xl">✓</span>
+              <span class="text-lg font-medium text-slate-200">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">
+          ¿Por qué trabajar conmigo?
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            No desarrollo campañas aisladas. Diseño sistemas de crecimiento integrales y estructurados para empresas del sector asegurador.
+          </p>
+          <p class="font-bold text-slate-900">
+            Combino experiencia en:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 not-prose my-6">
+            {[
+              "Growth Marketing",
+              "SEO Estratégico",
+              "SEO Técnico",
+              "Inteligencia Artificial",
+              "Automatización",
+              "CRO",
+              "Analítica Digital",
+              "Ciencia de Datos"
+            ].map((skill) => (
+              <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl text-center text-sm font-bold text-slate-800">
+                {skill}
+              </div>
+            ))}
+          </div>
+
+          <p>
+            Cada estrategia se adapta al mercado, al tipo de seguros que comercializa tu empresa y a tus objetivos de crecimiento.
+          </p>
+          <p class="text-xl font-bold text-blue-700">
+            Mi propósito es ayudarte a construir un sistema de adquisición que genere clientes de forma constante, fortalezca tu posicionamiento y convierta el crecimiento sostenible en una ventaja competitiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-slate-950 text-white border-t border-slate-900">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black text-white mb-6">
+          Convierte tu presencia digital en un motor de crecimiento
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed mb-8">
+          Si tu empresa busca atraer más clientes, incrementar las solicitudes de cotización y reducir la dependencia de la publicidad pagada, estaré encantado de analizar tu negocio e identificar las oportunidades con mayor potencial de impacto.
+        </p>
+        <div class="p-8 bg-slate-900 rounded-3xl border border-slate-800 mb-8 text-left">
+          <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">
+            Agenda una sesión estratégica
+          </h3>
+          <p class="text-slate-300 text-center text-base leading-relaxed">
+            Descubriremos juntos cómo utilizar el SEO, la Inteligencia Artificial, la automatización y el Growth Marketing para transformar tu empresa de seguros en una organización más visible, más rentable y preparada para liderar el mercado.
+          </p>
+        </div>
+        <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          Agendar Sesión de Consultoría
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
