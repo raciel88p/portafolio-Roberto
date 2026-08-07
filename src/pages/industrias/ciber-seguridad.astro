@@ -1,0 +1,306 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en Posicionamiento para Ciberseguridad",
+  "description": "Convierte tu experiencia en ciberseguridad en una máquina para generar nuevos clientes. Ayudo a empresas de Ciberseguridad, MSSP y proveedores de tecnología.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Ciberseguridad & MSSP B2B"
+};
+---
+
+<Layout
+  title="SEO & Posicionamiento para Ciberseguridad | Roberto Pérez Salazar"
+  description="Convierte tu experiencia en ciberseguridad en una máquina para generar nuevos clientes. Ayudo a empresas de Ciberseguridad, MSSP y proveedores de tecnología."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Soluciones para Ciberseguridad & MSSP B2B
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tu experiencia en ciberseguridad en una máquina para generar nuevos clientes
+        </h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Ayudo a empresas de Ciberseguridad, MSSP y proveedores de tecnología a transformar soluciones técnicas en mensajes que generan confianza, autoridad y oportunidades comerciales.
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-2xl md:text-3xl font-bold text-slate-800 leading-normal mb-8 text-center">
+            La mayoría de las empresas de ciberseguridad tienen un problema que no está relacionado con su tecnología.
+          </p>
+
+          <p>
+            Tienen excelentes ingenieros, servicios sólidos, certificaciones y herramientas de clase mundial.
+          </p>
+
+          <div class="p-8 bg-red-50 border-l-4 border-red-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-red-950 leading-relaxed font-semibold">
+              Pero cuando un cliente potencial visita su sitio web o escucha su presentación, sucede algo preocupante: no entiende claramente por qué debería elegirlos. Y cuando el valor no se comunica con claridad, la decisión termina basándose únicamente en el precio.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-black text-slate-900 pt-6">
+            Tus clientes no compran tecnología. Compran tranquilidad.
+          </h2>
+          <p>
+            Los responsables de TI, CISOs, gerentes de infraestructura y directores generales no buscan un firewall, un SOC o un servicio MDR.
+          </p>
+          <div class="pl-6 border-l-2 border-slate-300 space-y-2 my-6 font-semibold">
+            <p>• ¿Cómo reducirá esta solución el riesgo para mi empresa?</p>
+            <p>• ¿Qué impacto tendrá en la continuidad de mi negocio?</p>
+            <p>• ¿Podré cumplir con las regulaciones y auditorías?</p>
+            <p>• ¿Cómo evitaré pérdidas económicas por un incidente?</p>
+            <p>• ¿Por qué debería confiar en ustedes y no en otro proveedor?</p>
+          </div>
+          <p>
+            Cuando tu comunicación responde estas preguntas, las ventas dejan de depender únicamente de las especificaciones técnicas.
+          </p>
+          <p class="text-xl font-bold text-slate-950">
+            Comienzan a basarse en confianza. Y la confianza vende.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ah, Ahí es donde puedo ayudarte -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8">
+          Ahí es donde puedo ayudarte.
+        </h2>
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            Trabajo con empresas de ciberseguridad, MSSP y compañías tecnológicas para construir una estrategia comercial y de posicionamiento que permita convertir capacidades técnicas en mensajes que conecten con los verdaderos problemas de sus clientes.
+          </p>
+          <p class="font-bold text-slate-900">
+            Mi objetivo es ayudarte a que el mercado comprenda el valor real de tus soluciones y facilitar el proceso de compra.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose my-12">
+            {[
+              "Definir una propuesta de valor clara y diferenciada.",
+              "Posicionar tu empresa frente a competidores con mensajes orientados al negocio.",
+              "Traducir conceptos técnicos complejos en beneficios que cualquier tomador de decisión pueda entender.",
+              "Desarrollar mensajes comerciales que generen confianza desde el primer contacto.",
+              "Mejorar tu sitio web, presentaciones comerciales y materiales de ventas.",
+              "Identificar oportunidades de posicionamiento para nuevos mercados y segmentos.",
+              "Crear estrategias de contenido que generen autoridad y atraigan clientes cualificados."
+            ].map(item => (
+              <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/60 shadow-sm text-sm font-semibold">
+                <span class="text-blue-600 font-extrabold">✓</span>
+                <span class="text-slate-800 leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- El problema no es tu tecnología -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8">
+          El problema no es tu tecnología. Es la forma en que el mercado la percibe.
+        </h2>
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>Many companies talk about:</p>
+          <div class="flex flex-wrap gap-2 not-prose mb-6">
+            {["Firewalls", "EDR", "XDR", "SIEM", "SOC", "Zero Trust", "Threat Intelligence", "Automatización"].map(item => (
+              <span class="px-3 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-full uppercase tracking-wider">{item}</span>
+            ))}
+          </div>
+          <p class="font-bold text-slate-900">
+            Pero pocas logran explicar por qué todo eso es importante para el negocio del cliente.
+          </p>
+          <p>
+            La diferencia entre una empresa que crece y una que lucha por conseguir reuniones comerciales no suele estar en la calidad de su solución. Está en cómo comunica su valor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mi Enfoque Section -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-6">
+          Mi enfoque
+        </h2>
+        <h3 class="text-xl md:text-2xl text-blue-400 font-bold text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+          No vendo humo. No escribo mensajes genéricos.
+        </h3>
+
+        <div class="prose prose-lg prose-invert max-w-none text-slate-300 space-y-8">
+          <p class="text-center">
+            Primero comprendo tu negocio, tu mercado, tu competencia y el tipo de cliente al que deseas llegar. Después construimos una estrategia de comunicación orientada a resultados.
+          </p>
+
+          <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 max-w-2xl mx-auto not-prose">
+            <p class="text-slate-400 italic mb-4">Una estrategia donde cada mensaje responde tres preguntas fundamentales:</p>
+            <div class="space-y-3 text-slate-100 font-bold text-lg pl-4 border-l-2 border-blue-500">
+              <p>1. ¿Qué problema resuelves?</p>
+              <p>2. ¿Por qué eres diferente?</p>
+              <p>3. ¿Por qué deberían confiar en ti?</p>
+            </div>
+          </div>
+
+          <p class="text-center font-bold text-slate-200">
+            Cuando esas respuestas son claras, todo mejora:
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 not-prose text-sm text-slate-200 font-semibold text-center">
+            {[
+              "Más reuniones comerciales.",
+              "Mayor confianza.",
+              "Mejor posicionamiento.",
+              "Mayor percepción de valor.",
+              "Menor presión por precio."
+            ].map(item => (
+              <div class="p-4 bg-slate-900 border border-slate-850 rounded-xl">
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Con quién trabajo? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 leading-tight mb-8">
+          ¿Con quién trabajo?
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Ayudo a empresas como:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          {[
+            "MSSP (Managed Security Service Providers)",
+            "Consultoras de ciberseguridad",
+            "Empresas de respuesta a incidentes",
+            "Proveedores de servicios SOC",
+            "Empresas de Pentesting",
+            "Consultoras de cumplimiento (ISO 27001, NIST, PCI DSS, HIPAA)",
+            "Fabricantes de software de seguridad",
+            "Empresas SaaS de ciberseguridad",
+            "Integradores tecnológicos"
+          ].map(item => (
+            <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="text-blue-500 font-bold text-lg">•</span>
+              <span class="font-semibold text-slate-800 text-sm leading-normal">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 leading-tight mb-12 text-center">
+          Servicios
+        </h2>
+
+        <div class="space-y-8 not-prose">
+          {[
+            { title: "Estrategia de Posicionamiento", desc: "Define una propuesta de valor que haga que el mercado entienda inmediatamente por qué tu empresa es diferente." },
+            { title: "Mensajería Comercial", desc: "Transforma conceptos técnicos en mensajes claros, convincentes y orientados al negocio." },
+            { title: "Optimización de Sitio Web", desc: "Convierte tu página web en una herramienta de generación de oportunidades comerciales." },
+            { title: "Estrategia de Contenidos", desc: "Desarrolla contenido que eduque, genere confianza y posicione a tu empresa como una autoridad en ciberseguridad." },
+            { title: "Consultoría de Go-To-Market", desc: "Diseña una estrategia para lanzar nuevos servicios o expandirte hacia nuevos mercados." }
+          ].map((srv, idx) => (
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex items-start gap-4">
+              <span class="w-8 h-8 bg-blue-100 text-blue-700 rounded-lg font-black text-sm flex items-center justify-center flex-shrink-0">0{idx+1}</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">{srv.title}</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">{srv.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- El resultado Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 leading-tight mb-8">
+          El resultado
+        </h2>
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            Una empresa puede tener la mejor solución de ciberseguridad del mercado. Pero si el cliente no entiende rápidamente cómo esa solución protege su negocio, reduce riesgos y aporta valor, terminará comparándola únicamente por precio.
+          </p>
+          <p class="text-xl font-bold text-slate-950">
+            Mi trabajo consiste en evitar que eso ocurra.
+          </p>
+          <p class="text-lg leading-relaxed font-semibold text-blue-700">
+            Te ayudo a construir un mensaje que transmita confianza, demuestre autoridad y convierta la experiencia técnica de tu equipo en una ventaja competitiva que impulse el crecimiento comercial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session scheduling / Call to action Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8 text-center">
+          Agenda una sesión estratégica
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg text-slate-600 text-center">
+            Si quieres que tu empresa deje de competir únicamente por precio y comience a destacar por el valor que realmente ofrece, conversemos.
+          </p>
+
+          <div class="p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose my-12">
+            <p class="text-lg text-slate-750 leading-relaxed font-semibold">
+              Analizaremos tu posicionamiento actual, identificaremos oportunidades de mejora y definiremos una estrategia para comunicar tus soluciones de forma clara, diferenciada y orientada a generar más clientes.
+            </p>
+          </div>
+
+          <p class="text-xl font-black text-center text-blue-700 italic pt-4">
+            La tecnología protege a tus clientes. Una buena estrategia de comunicación hace que esos clientes te elijan a ti.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
