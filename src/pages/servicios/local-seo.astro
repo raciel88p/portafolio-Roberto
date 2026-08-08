@@ -1,14 +1,538 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "Local SEO",
-  icon: "📍",
-  description: "Dominio geográfico con sentido de negocio. Conectamos tu empresa con clientes locales en el momento exacto de la necesidad, transformando la proximidad en una ventaja competitiva medible.",
-  details: [
-    { title: "Orquestación de Perfiles Locales", text: "Gestión integral de Google Business Profile y directorios estratégicos para dominar el 'Local Pack' de los buscadores." },
-    { title: "Estrategias de Reputación", text: "Sistemas para captar y gestionar reseñas que construyen la autoridad social necesaria para liderar tu zona." }
-  ]
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en Local SEO + SEO + GEO",
+  "description": "Convierte las búsquedas locales en clientes y aumenta tus ventas entre un 20% y un 60%. Estrategias de visibilidad geolocalizada y optimización para motores de IA.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Costa Rica & Soporte Global"
 };
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="Local SEO + SEO + GEO | Consultoría de Crecimiento Local"
+  description="Convierte las búsquedas locales en clientes y aumenta tus ventas entre un 20% y un 60%. Estrategia de Local SEO, posicionamiento en mapas y optimización para ChatGPT y buscadores de IA."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Local SEO + SEO + GEO
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte las búsquedas locales en clientes y aumenta tus ventas entre un 20% y un 60%
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Tu próximo cliente ya está buscando lo que vendes. La pregunta es: ¿te está encontrando a ti o a tu competencia?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar Análisis de Local SEO
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Demand Problem -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Cada día, personas cerca de tu negocio buscan en Google y en plataformas de inteligencia artificial productos y servicios como los tuyos.
+          </p>
+
+          <p class="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wider">Buscan cosas como:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-8 not-prose">
+            {[
+              "“mejor restaurante cerca de mí”",
+              "“dentista en [ciudad]”",
+              "“clínica estética cerca de mí”",
+              "“agencia inmobiliaria en [ciudad]”",
+              "“mejor abogado en [ciudad]”",
+              "“servicio de [producto] cerca de mí”"
+            ].map((term) => (
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 font-mono text-sm text-slate-700">
+                {term}
+              </div>
+            ))}
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            El problema no es necesariamente que no exista demanda.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed mb-6 font-semibold text-slate-900">
+            El problema es que tu negocio puede no estar apareciendo en el momento exacto en que el cliente está listo para comprar.
+          </p>
+
+          <div class="my-10 p-6 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <p class="text-xl font-black text-blue-950">
+              Ahí es donde entra nuestra estrategia de Local SEO + SEO + GEO.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Deja de competir por precio -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6">
+          Deja de competir únicamente por precio. Empieza a competir por visibilidad.
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg">
+            Nuestro objetivo es posicionar tu negocio donde tus clientes toman decisiones:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+            {[
+              "Google Search",
+              "Google Maps",
+              "Google Business Profile",
+              "Búsquedas “near me”",
+              "Directorios y plataformas locales",
+              "Resultados orgánicos",
+              "Bing y otros motores de búsqueda",
+              "ChatGPT y otros buscadores basados en IA",
+              "Respuestas generadas por inteligencia artificial"
+            ].map((platform) => (
+              <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200">
+                <span class="text-blue-500 font-bold">✦</span>
+                <span class="font-bold text-slate-800">{platform}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-bold text-slate-900 pt-4">
+            No buscamos simplemente generar tráfico.
+          </p>
+          <p class="text-xl font-extrabold text-blue-700">
+            Buscamos generar tráfico con intención comercial.
+          </p>
+          <p class="text-lg leading-relaxed text-slate-600 italic">
+            Porque 1,000 visitas de personas que nunca comprarán no valen lo mismo que 100 personas que están buscando exactamente lo que tú vendes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Una estrategia diseñada para aumentar las ventas -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Una estrategia diseñada para aumentar las ventas, no solamente los rankings
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p>
+            Dependiendo de la situación actual del negocio, una estrategia correctamente ejecutada puede contribuir a incrementos de ventas del orden del <strong>20% al 60%</strong>.
+          </p>
+          <p>
+            No prometemos un porcentaje fijo de ventas, porque ningún profesional serio puede controlar todos los factores que afectan los ingresos de un negocio.
+          </p>
+          <p class="font-semibold text-slate-900">
+            Lo que sí hacemos es construir y optimizar el sistema de adquisición orgánica que alimenta esas ventas.
+          </p>
+
+          <div class="bg-blue-50/60 p-8 rounded-3xl border border-blue-100 my-8 not-prose max-w-md mx-auto text-center">
+            <p class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4">El modelo es simple:</p>
+            <div class="space-y-3 font-bold text-lg text-slate-800">
+              <p>Más visibilidad local</p>
+              <p class="text-blue-500 text-xl">↓</p>
+              <p>Más búsquedas relevantes</p>
+              <p class="text-blue-500 text-xl">↓</p>
+              <p>Más llamadas, mensajes, visitas y solicitudes</p>
+              <p class="text-blue-500 text-xl">↓</p>
+              <p>Más oportunidades comerciales</p>
+              <p class="text-blue-500 text-xl">↓</p>
+              <p>Más clientes</p>
+              <p class="text-blue-500 text-xl">↓</p>
+              <p class="text-2xl text-blue-700 font-black">Más ventas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: ¿Qué estamos haciendo diferente? -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-black mb-4">
+            ¿Qué estamos haciendo diferente?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8 text-left">
+            <div class="p-6 bg-slate-800/50 rounded-2xl border border-slate-800">
+              <p class="text-xs text-red-400 font-bold uppercase tracking-wider mb-2">Muchas agencias venden:</p>
+              <p class="text-xl font-bold text-slate-300">“Te posicionaremos en Google.”</p>
+            </div>
+            <div class="p-6 bg-blue-900/40 rounded-2xl border border-blue-800">
+              <p class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-2">Nosotros pensamos de una manera diferente:</p>
+              <p class="text-xl font-black text-white">“Construiremos un sistema de visibilidad que haga que tu negocio sea encontrado, elegido y recomendado cuando tus clientes estén buscando una solución.”</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-blue-400 text-center uppercase tracking-wider mb-12">
+          Por eso integramos tres áreas:
+        </h3>
+
+        <div class="space-y-12">
+          <!-- 01 Local SEO -->
+          <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl font-black text-blue-500">01</span>
+              <h4 class="text-2xl font-bold text-white">Local SEO</h4>
+            </div>
+            <p class="text-slate-300 mb-6">
+              Optimizamos la presencia local de tu negocio para aumentar su visibilidad en búsquedas geográficas y de alta intención.
+            </p>
+            <p class="font-bold text-slate-200 mb-3 text-sm">Trabajamos aspectos como:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm text-slate-400">
+              {[
+                "Google Business Profile",
+                "Google Maps",
+                "Categorías y servicios",
+                "NAP y consistencia",
+                "Reseñas y reputación",
+                "Citaciones locales",
+                "Directorios relevantes",
+                "Landing pages locales",
+                "Optimización on-page",
+                "SEO técnico",
+                "Schema Markup",
+                "Keywords locales",
+                "Búsquedas “near me”",
+                "Competidores locales"
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-400 mt-6 uppercase tracking-wider">
+              El objetivo: Aparecer cuando una persona cercana está buscando lo que tu negocio ofrece.
+            </p>
+          </div>
+
+          <!-- 02 SEO orientado a intención -->
+          <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl font-black text-blue-500">02</span>
+              <h4 class="text-2xl font-bold text-white">SEO orientado a intención de compra</h4>
+            </div>
+            <p class="text-slate-300 mb-6">
+              No todas las keywords tienen el mismo valor. Una persona que busca <em class="text-slate-400">“qué es una clínica estética”</em> no necesariamente está lista para comprar, pero alguien que busca <em class="text-white font-bold">“clínica estética cerca de mí”</em> tiene una intención comercial mucho mayor.
+            </p>
+            <p class="font-bold text-slate-200 mb-4 text-sm">Desarrollamos una estrategia basada en diferentes niveles de intención:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-sm">
+              {[
+                { title: "Informacional", desc: "Personas que están investigando." },
+                { title: "Comercial", desc: "Personas que están comparando opciones." },
+                { title: "Transaccional", desc: "Personas que están listas para comprar." },
+                { title: "Local", desc: "Personas que buscan una solución cerca de ellas." }
+              ].map((lvl) => (
+                <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+                  <span class="font-bold text-blue-400 block mb-1">{lvl.title}</span>
+                  <span class="text-slate-400 text-xs">{lvl.desc}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-green-400 mt-6">
+              Nuestro objetivo es llevar al negocio hacia las búsquedas con mayor potencial comercial.
+            </p>
+          </div>
+
+          <!-- 03 GEO -->
+          <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl font-black text-blue-500">03</span>
+              <h4 class="text-2xl font-bold text-white">GEO — Generative Engine Optimization</h4>
+            </div>
+            <p class="text-slate-300 mb-6">
+              La forma en que las personas encuentran negocios está cambiando. Ya no solo preguntan a Google; también preguntan a <strong>ChatGPT, Gemini, Perplexity, Copilot</strong> y otros sistemas de IA.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-400 mb-6">
+              {[
+                "“¿Cuáles son las mejores clínicas estéticas de [ciudad]?”",
+                "“¿Qué restaurante me recomiendas cerca de [zona]?”",
+                "“¿Cuál es el mejor abogado para este tipo de problema?”",
+                "“¿Dónde puedo encontrar un buen servicio de [servicio]?”"
+              ].map((q) => (
+                <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 italic">
+                  {q}
+                </div>
+              ))}
+            </div>
+            <p class="text-slate-300 mb-6">
+              Queremos que tu empresa tenga la información, autoridad, relevancia y señales digitales necesarias para aumentar sus posibilidades de ser considerada en este nuevo ecosistema de búsqueda.
+            </p>
+            <div class="p-4 bg-blue-950/40 rounded-xl border border-blue-900 text-sm">
+              <span class="font-bold text-blue-400 block mb-1">GEO conecta:</span>
+              <p class="text-slate-300">Contenido + entidades + autoridad + información local + estructura SEO + reputación digital para preparar tu negocio para la nueva generación de búsquedas impulsadas por IA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: La diferencia entre aparecer y ser elegido -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">
+          La diferencia entre aparecer y ser elegido
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          Estar en Google no es suficiente. Tu negocio debe responder tres preguntas esenciales:
+        </p>
+
+        <div class="space-y-6 my-10">
+          {[
+            { q: "1. ¿Me pueden encontrar?", a: "SEO + Local SEO" },
+            { q: "2. ¿Por qué deberían elegirme?", a: "Contenido + reputación + propuesta de valor + reseñas" },
+            { q: "3. ¿Cómo pueden contactarme inmediatamente?", a: "CRO + llamadas + WhatsApp + formularios + reservas" }
+          ].map((item) => (
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <span class="font-black text-slate-900 text-xl block mb-2">{item.q}</span>
+              <span class="text-blue-700 font-bold">{item.a}</span>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-slate-900">
+          Por eso nuestra estrategia no termina en el ranking. Conectamos visibilidad con conversión.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: Local Growth Framework -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">
+          Nuestro Local Growth Framework™
+        </h2>
+
+        <div class="space-y-12 relative before:absolute before:top-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:h-full before:bg-slate-200">
+
+          <!-- Phase 1 -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:justify-between gap-6 sm:gap-12">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-xs font-bold z-10">1</div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:text-right">
+              <h3 class="text-xl font-black text-slate-900">Fase 1 — Diagnóstico</h3>
+              <p class="text-sm text-slate-500 mt-1">Analizamos de forma integral tu visibilidad, perfiles, reseñas, website y oportunidades GEO.</p>
+            </div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0">
+              <div class="bg-white p-4 rounded-xl border border-slate-150 text-xs text-slate-600 space-y-1">
+                <p>• Visibilidad y Google Maps</p>
+                <p>• Keywords y Competidores</p>
+                <p>• SEO técnico, website y contenido</p>
+                <p>• Oportunidades GEO</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:justify-between gap-6 sm:gap-12">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-xs font-bold z-10">2</div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:order-2">
+              <h3 class="text-xl font-black text-slate-900">Fase 2 — Estrategia</h3>
+              <p class="text-sm text-slate-500 mt-1">Construimos un mapa de oportunidades basado en: Ciudad + servicio + intención + competencia + demanda.</p>
+            </div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:order-1 sm:text-right">
+              <p class="text-sm text-slate-600 font-bold italic">Priorizamos las oportunidades de mayor impacto.</p>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:justify-between gap-6 sm:gap-12">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-xs font-bold z-10">3</div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:text-right">
+              <h3 class="text-xl font-black text-slate-900">Fase 3 — Optimización</h3>
+              <p class="text-sm text-slate-500 mt-1">Optimizamos los activos que Google y los motores de IA utilizan para entender tu negocio.</p>
+            </div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0">
+              <div class="bg-white p-4 rounded-xl border border-slate-150 text-xs text-slate-600 space-y-1">
+                <p>• Website, Landing Pages y GBP</p>
+                <p>• Schema, Entidades y Directorios</p>
+                <p>• Citaciones y señales locales</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:justify-between gap-6 sm:gap-12">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-xs font-bold z-10">4</div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:order-2">
+              <h3 class="text-xl font-black text-slate-900">Fase 4 — Autoridad y reputación</h3>
+              <p class="text-sm text-slate-500 mt-1">Fortalecemos tu reputación on-page y off-page.</p>
+            </div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:order-1 sm:text-right">
+              <div class="bg-white p-4 rounded-xl border border-slate-150 text-xs text-slate-600 space-y-1">
+                <p>• Estrategia de reseñas</p>
+                <p>• Citaciones relevantes y backlinks</p>
+                <p>• Contenido especializado de alta autoridad</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:justify-between gap-6 sm:gap-12">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-xs font-bold z-10">5</div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0 sm:text-right">
+              <h3 class="text-xl font-black text-slate-900">Fase 5 — Conversión</h3>
+              <p class="text-sm text-slate-500 mt-1">Optimizamos lo que ocurre después del clic para maximizar ventas.</p>
+            </div>
+            <div class="sm:w-[45%] pl-10 sm:pl-0">
+              <p class="text-sm font-bold text-blue-700">Más visitantes + mejor conversión = más oportunidades de venta.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: ¿Qué puedes esperar? & Rentabilidad -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6">
+          ¿Qué puedes esperar?
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-4">
+          El objetivo es construir un canal de adquisición que pueda producir resultados de manera progresiva y sostenible.
+        </p>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          Dependiendo de tu mercado, competencia, autoridad actual, ticket promedio y capacidad de conversión, una mejora significativa de la visibilidad orgánica puede contribuir a incrementar las ventas en un rango aproximado de:
+        </p>
+        <div class="p-8 bg-blue-600 text-white rounded-3xl text-center font-black text-4xl md:text-5xl my-8">
+          20% — 60%
+        </div>
+        <p class="text-sm text-slate-500 italic mb-12">
+          No es una promesa automática. Es el potencial de crecimiento que buscamos desbloquear cuando existen oportunidades reales de demanda local y el negocio tiene capacidad para convertir esa demanda.
+        </p>
+
+        <!-- Rentabilidad Comparativa -->
+        <h3 class="text-2xl font-black text-slate-900 mb-4">
+          ¿Por qué esto puede ser más rentable que seguir aumentando tu presupuesto publicitario?
+        </h3>
+        <p class="text-slate-700 mb-6">
+          La publicidad puede generar resultados mientras continúas pagando por cada clic o impresión. El SEO crea un activo digital que puede seguir generando visibilidad después de que termina una campaña.
+        </p>
+        <p class="font-bold text-slate-800 mb-4">Por eso nuestra filosofía es:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose text-sm text-slate-700">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>Paid Media</strong> para acelerar.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>SEO</strong> para construir.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>Local SEO</strong> para capturar demanda local.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>GEO</strong> para prepararte para el futuro de la búsqueda.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 sm:col-span-2 text-center">
+            <strong>CRO</strong> para convertir esa demanda en ingresos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: KPI Real & Competidores -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black mb-6">
+          El verdadero KPI no es “posición #1”
+        </h2>
+        <p class="text-slate-300 leading-relaxed mb-6">
+          Una agencia puede celebrar: <span class="italic text-slate-400">“¡Subimos 30 posiciones!”</span> Pero la pregunta importante es: ¿Cuántos clientes nuevos generó ese crecimiento?
+        </p>
+        <p class="font-bold text-slate-200 mb-4">Por eso medimos indicadores relacionados con el negocio:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-12">
+          {["Visibilidad local.", "Rankings y Maps.", "Impresiones y Clics.", "Llamadas y WhatsApp.", "Solicitudes y Leads.", "Reservas.", "Conversión.", "Coste por adquisición."].map((kpi) => (
+            <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl text-xs font-bold text-blue-300">
+              {kpi}
+            </div>
+          ))}
+        </div>
+        <p class="text-xl font-black text-center text-blue-400">
+          Porque al final del día: El ranking no paga las facturas. Los clientes sí.
+        </p>
+
+        <!-- Competencia Block -->
+        <div class="border-t border-slate-800 pt-16 mt-16">
+          <h3 class="text-2xl font-black mb-6">
+            ¿Tu competencia ya está ocupando ese espacio?
+          </h3>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Cada búsqueda local representa una oportunidad. Si un cliente busca <span class="italic font-bold text-white">“[servicio] cerca de mí”</span> y aparecen cinco competidores antes que tú, esos cinco negocios están recibiendo una oportunidad que podría haber sido tuya.
+          </p>
+          <p class="text-lg font-bold text-red-400">
+            La pregunta no es: “¿Necesito SEO?”
+          </p>
+          <p class="text-xl font-black text-white">
+            La pregunta es: “¿Cuántos clientes estoy perdiendo porque mi competencia es más visible que yo?”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Hagamos que tu negocio sea más fácil -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-8">
+          Hagamos que tu negocio sea más fácil de encontrar, elegir y contactar
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          Si tienes un buen producto o servicio, pero tu presencia digital no refleja la calidad de tu negocio, existe una oportunidad. Podemos analizar en profundidad tus puntos clave de fuga y convertirlos en un motor.
+        </p>
+
+        <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm my-8 not-prose">
+          <p class="font-extrabold text-slate-900 mb-4">Podemos analizar:</p>
+          <ul class="space-y-2 text-slate-700 font-semibold">
+            <li class="flex items-center gap-2">✓ Tu visibilidad local y GBP</li>
+            <li class="flex items-center gap-2">✓ Tus competidores y keywords comerciales</li>
+            <li class="flex items-center gap-2">✓ Tu website y oportunidades Local SEO / GEO</li>
+            <li class="flex items-center gap-2">✓ Tus principales puntos de fuga de clientes</li>
+          </ul>
+        </div>
+
+        <p class="text-lg text-slate-700 leading-relaxed">
+          Y convertir ese análisis en una estrategia de crecimiento. El objetivo es sencillo: Más visibilidad, más clientes potenciales, más conversiones y más ventas.
+        </p>
+        <p class="text-xl md:text-2xl font-black text-blue-900 mt-6 leading-relaxed">
+          Solicita un análisis de Local SEO y descubre cuánto potencial de crecimiento puede estar escondido en las búsquedas de tu propia ciudad.
+        </p>
+        <p class="text-2xl font-black text-slate-950 mt-4 leading-relaxed">
+          No necesitas que más personas conozcan tu negocio. Necesitas que las personas que ya están buscando lo que vendes puedan encontrarte.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
