@@ -1,14 +1,484 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "SEO para Directorios",
-  icon: "🗂️",
-  description: "Optimizamos arquitecturas complejas de directorios y grandes volúmenes de datos para acelerar la indexación masiva en Google, mejorar la experiencia de usuario y capturar búsquedas de alta intención transaccional.",
-  details: [
-    { title: "Arquitectura de la Información", text: "Estructuramos de manera jerárquica y semántica las categorías y listados para facilitar el rastreo y la navegación." },
-    { title: "Optimización de Indexación", text: "Estrategias avanzadas de enlazado interno y directivas de rastreo para asegurar que cada página de valor sea indexada." }
-  ]
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO para Directorios y Plataformas Escalables",
+  "description": "SEO para Directorios: Convierte tu plataforma en un motor de crecimiento orgánico. Evita el desperdicio de crawl budget y optimiza arquitecturas de información complejas.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
 };
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="SEO para Directorios y Plataformas Escalables | Roberto Pérez Salazar"
+  description="SEO para Directorios: Convierte tu plataforma en un motor de crecimiento orgánico. Optimización técnica, programmatic SEO y enlazado interno para directorios."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          SEO para Directorios & Plataformas Grandes
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          SEO para Directorios: Convierte tu Plataforma en un Motor de Crecimiento Orgánico
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Tu directorio puede tener miles de páginas. La pregunta es: ¿cuántas de ellas están realmente generando negocio?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Analizar Potencial de tu Directorio
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Scale Problem -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Los directorios tienen una ventaja que pocos modelos digitales pueden igualar: pueden crear miles de oportunidades de posicionamiento a partir de una estructura escalable de ciudades, categorías, servicios y listings.
+          </p>
+
+          <p class="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wider">
+            Pero esa misma escala puede convertirse en su mayor problema. Cuando la arquitectura SEO no está correctamente diseñada, un directorio puede terminar con:
+          </p>
+
+          <div class="bg-red-50 p-6 rounded-2xl border border-red-100 my-8 not-prose space-y-3">
+            {[
+              "Miles de URLs que Google no debería indexar.",
+              "Contenido duplicado generado por filtros y parámetros.",
+              "Páginas con poco valor para el usuario.",
+              "Keyword cannibalisation.",
+              "Crawl budget desperdiciado.",
+              "Páginas importantes sin suficiente autoridad interna.",
+              "Una arquitectura difícil de escalar.",
+              "Miles de listings que generan poco o ningún tráfico orgánico."
+            ].map((problem) => (
+              <div class="flex items-center gap-3 text-slate-700 text-sm font-semibold">
+                <span class="text-red-500 font-bold">✕</span>
+                <span>{problem}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            El problema no es tener pocas páginas.
+          </p>
+          <p class="text-xl font-black text-slate-900 leading-relaxed">
+            El problema es no convertir esas páginas en activos SEO que generen tráfico, leads y clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: La oportunidad -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">
+          La oportunidad: transformar la escala en una ventaja competitiva
+        </h2>
+
+        <div class="prose prose-lg prose-slate max-w-none text-slate-700 space-y-6">
+          <p class="text-lg">
+            Un directorio correctamente estructurado puede convertirse en una verdadera infraestructura de adquisición orgánica. Imagine que cada:
+          </p>
+
+          <p class="text-2xl font-black text-slate-900 text-center py-4 bg-white rounded-2xl border border-slate-150 my-6 shadow-xs">
+            Ciudad + Categoría + Servicio + Ubicación
+          </p>
+
+          <p>representa una oportunidad para captar una búsqueda relevante. Por ejemplo:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-sm text-slate-700 my-6">
+            {[
+              "• Padel clubs in London",
+              "• Padel courts in Manchester",
+              "• Padel clubs near me",
+              "• Dentists in London",
+              "• Real estate agents in Costa Rica"
+            ].map((ex) => (
+              <div class="p-3 bg-white border border-slate-150 rounded-xl">
+                {ex}
+              </div>
+            ))}
+          </div>
+
+          <p>
+            En lugar de depender exclusivamente de publicidad para adquirir usuarios, construimos una estructura que permita que Google genere tráfico de manera recurrente hacia tu plataforma.
+          </p>
+          <p class="text-xl font-bold text-blue-700">
+            Pero hacerlo correctamente requiere mucho más que generar páginas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Nuestra propuesta -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-slate-900">
+            Nuestra propuesta: Construimos un sistema SEO diseñado para escalar
+          </h2>
+          <p class="text-lg text-slate-600 font-bold mt-4">
+            Nuestro enfoque combina cuatro áreas críticas para asegurar el rendimiento a gran escala.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+
+          <!-- 01 Technical SEO -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xs">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-3xl font-black text-blue-600">01</span>
+              <h3 class="text-2xl font-black text-slate-900">Technical SEO</h3>
+            </div>
+            <p class="text-slate-700 mb-6">
+              Garantizamos que Google pueda rastrear, interpretar e indexar las páginas que realmente importan.
+            </p>
+            <p class="font-bold text-slate-800 mb-3 text-sm">Analizamos y optimizamos:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-600">
+              {[
+                "Indexation.", "Crawlability.", "Robots.txt.", "XML sitemaps.", "Canonicals.", "Meta robots.", "Redirects.", "Status codes.", "URL parameters.", "Faceted navigation.", "Duplicate URLs.", "Orphan pages.", "Page depth.", "Core Web Vitals."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-blue-700 mt-6 italic">
+              Resultado: menos desperdicio de crawl budget y mayor control sobre qué páginas entran en el índice de Google.
+            </p>
+          </div>
+
+          <!-- 02 SEO Architecture -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xs">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-3xl font-black text-blue-600">02</span>
+              <h3 class="text-2xl font-black text-slate-900">SEO Architecture</h3>
+            </div>
+            <p class="text-slate-700 mb-6">
+              Diseñamos una arquitectura que conecte las diferentes dimensiones de tu negocio. Por ejemplo:
+            </p>
+            <p class="text-lg font-bold text-slate-900 text-center py-3 bg-white rounded-xl border border-slate-200 mb-6">
+              Country → City → Category → Service → Listing
+            </p>
+            <p class="font-bold text-slate-800 mb-3 text-sm">La estructura se determina utilizando datos de:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Search intent.", "Keyword demand.", "Geographic demand.", "Commercial value.", "Competition.", "User behaviour."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-slate-900 mt-6 uppercase tracking-wider">
+              No creamos URLs porque podemos. Creamos URLs porque existe una oportunidad de búsqueda.
+            </p>
+          </div>
+
+          <!-- 03 Programmatic SEO -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xs">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-3xl font-black text-blue-600">03</span>
+              <h3 class="text-2xl font-black text-slate-900">Programmatic SEO</h3>
+            </div>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              Aquí está una de las mayores oportunidades de un directorio. Construimos un framework que permita crear páginas SEO a escala sin convertir el sitio en una colección de páginas duplicadas o de bajo valor.
+            </p>
+            <p class="text-center font-bold text-blue-800 bg-white border border-slate-200 py-3 rounded-xl mb-6">
+              Search intent + Location + Category + Unique data + Useful content + Internal links
+            </p>
+            <p class="text-sm font-black text-slate-950">
+              El objetivo no es crear 10,000 páginas. El objetivo es crear 10,000 oportunidades potenciales de adquisición, cuando los datos y la demanda justifican esas páginas.
+            </p>
+          </div>
+
+          <!-- 04 Authority & Internal Linking -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xs">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-3xl font-black text-blue-600">04</span>
+              <h3 class="text-2xl font-black text-slate-900">Authority & Internal Linking</h3>
+            </div>
+            <p class="text-slate-700 mb-6">
+              Una arquitectura escalable necesita una estrategia igualmente escalable de distribución de autoridad interna. Diseñamos conexiones inteligentes entre:
+            </p>
+            <p class="text-center font-bold text-slate-900 bg-white border border-slate-200 py-3 rounded-xl mb-6">
+              Cities → Categories → Services → Listings → Related Listings
+            </p>
+            <p class="font-bold text-slate-800 mb-3 text-sm">Incluyendo oportunidades como:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Nearby locations.", "Related categories.", "Similar businesses.", "Popular listings.", "Related services.", "Recommended locations."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 mt-6">
+              Esto permite distribuir autoridad internamente y ayuda a Google a descubrir y entender las páginas estratégicas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: El principio fundamental & De más paginas a más valor -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          El principio fundamental
+        </h2>
+        <p class="text-slate-300 text-lg leading-relaxed mb-8">
+          No todas las URLs tienen el mismo valor. Una de las mayores oportunidades de un directorio es decidir meticulosamente qué debe:
+        </p>
+
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 text-center font-black text-sm text-blue-400 mb-12">
+          {["INDEX", "NOINDEX", "CANONICALIZE", "BLOCK", "REDIRECT", "CONSOLIDATE"].map((action) => (
+            <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl">
+              {action}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-base text-slate-400 italic mb-16">
+          o simplemente NO EXISTIR. Esta decisión puede tener un impacto significativo en la eficiencia de rastreo, la calidad del índice y la capacidad del sitio para posicionar sus páginas estratégicas.
+        </p>
+
+        <hr class="border-slate-800 my-16" />
+
+        <h3 class="text-2xl md:text-3xl font-black mb-6">
+          De "más páginas" a "más valor"
+        </h3>
+        <p class="text-slate-300 leading-relaxed mb-8">
+          Una estrategia SEO tradicional puede decir: <span class="italic text-slate-400">"Necesitamos crear más contenido."</span> Nuestro enfoque plantea una pregunta diferente: <strong class="text-white">"¿Qué páginas tienen el potencial de generar valor comercial y cómo podemos hacerlas competitivas?"</strong>
+        </p>
+
+        <p class="text-center font-bold text-blue-400 text-lg mb-8">
+          Search Demand → Intent → Architecture → Content → Internal Authority → Indexation → Conversion
+        </p>
+
+        <p class="text-xl font-bold text-center text-slate-200">
+          De esta manera, SEO deja de ser simplemente una actividad de marketing y se convierte en una infraestructura de crecimiento.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Qué podemos construir para tu directorio? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-16 text-slate-900">
+          ¿Qué podemos construir para tu directorio?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Box 1: SEO Strategy -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">SEO Strategy</h3>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• SEO roadmap.</li>
+              <li>• Keyword research.</li>
+              <li>• Search intent mapping.</li>
+              <li>• Competitor analysis & opportunity analysis.</li>
+            </ul>
+          </div>
+
+          <!-- Box 2: Technical SEO -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">Technical SEO</h3>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• Technical audit & indexation strategy.</li>
+              <li>• Crawl budget and canonical optimisation.</li>
+              <li>• Robots.txt and XML sitemap strategy.</li>
+              <li>• Faceted navigation & parameter management.</li>
+            </ul>
+          </div>
+
+          <!-- Box 3: Programmatic SEO -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">Programmatic SEO</h3>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• Page templates and content frameworks.</li>
+              <li>• Dynamic metadata.</li>
+              <li>• Location, Category and Service pages.</li>
+              <li>• Listing optimisation.</li>
+            </ul>
+          </div>
+
+          <!-- Box 4: Information Architecture -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">Information Architecture</h3>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• URL structure.</li>
+              <li>• Category and Location hierarchy.</li>
+              <li>• Internal linking & taxonomy optimisation.</li>
+            </ul>
+          </div>
+
+          <!-- Box 5: Content & On-Page SEO -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">Content & On-Page SEO</h3>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• Titles & H1/H2 structured content.</li>
+              <li>• FAQs, Schema markup and internal links.</li>
+              <li>• Local relevance signaling.</li>
+            </ul>
+          </div>
+
+          <!-- Box 6: Automation -->
+          <div class="p-6 bg-slate-50 border border-slate-100 rounded-3xl">
+            <h3 class="text-xl font-black text-slate-900 mb-3">Automation</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3">
+              Cuando sea apropiado, integramos procesos de automatización y AI para acelerar:
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {["Keyword analysis.", "Content briefs.", "Metadata gen.", "Internal linking.", "SEO QA.", "Data analysis."].map((tech) => (
+                <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-800">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: ¿Cómo medimos el éxito? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 text-center mb-6">
+          ¿Cómo medimos el éxito?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16">
+          No medimos el proyecto simplemente por la cantidad de páginas creadas, sino por el impacto sobre indicadores que de verdad le importan al negocio.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { title: "Visibility", desc: "¿Cuántas keywords relevantes estamos capturando?" },
+            { title: "Organic Traffic", desc: "¿Cuánto tráfico cualificado está generando el directorio?" },
+            { title: "Rankings", desc: "¿Estamos ganando posiciones en términos estratégicos?" },
+            { title: "Indexation", desc: "¿Google está indexando las páginas correctas?" },
+            { title: "Leads", desc: "¿Cuántos usuarios se convierten en oportunidades?" },
+            { title: "Revenue", desc: "¿Cuánto valor económico genera el canal orgánico?" }
+          ].map((kpi) => (
+            <div class="p-6 bg-white rounded-2xl border border-slate-150 shadow-xs">
+              <span class="font-black text-slate-900 text-lg block mb-2">{kpi.title}</span>
+              <p class="text-sm text-slate-600">{kpi.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-center text-blue-700 mt-12">
+          SEO debe estar conectado con resultados de negocio, no solamente con métricas SEO.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: El resultado que buscamos & Por que conmigo -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <h2 class="text-3xl font-black text-slate-900 mb-12 text-center">
+          El resultado que buscamos
+        </h2>
+
+        <div class="bg-blue-50/60 p-8 rounded-3xl border border-blue-100 space-y-4 mb-16 text-center font-bold text-slate-800">
+          <p>De: <span class="text-slate-500">Una base de datos de listings</span> → A: <span class="text-blue-700">Una plataforma de adquisición orgánica.</span></p>
+          <p>De: <span class="text-slate-500">Miles de URLs</span> → A: <span class="text-blue-700">Miles de oportunidades SEO controladas.</span></p>
+          <p>De: <span class="text-slate-500">Tráfico potencial</span> → A: <span class="text-blue-700">Tráfico cualificado.</span></p>
+          <p>De: <span class="text-slate-500">Visibilidad</span> → A: <span class="text-blue-700">Leads y crecimiento.</span></p>
+        </div>
+
+        <h3 class="text-2xl font-black text-slate-900 mb-4">
+          ¿Por qué trabajar conmigo?
+        </h3>
+        <p class="text-slate-700 mb-6 leading-relaxed">
+          Mi enfoque combina SEO técnico, estrategia de crecimiento, automatización, AI y análisis de negocio. No veo el SEO como una colección de tareas aisladas, sino como un sistema integral:
+        </p>
+
+        <p class="text-center font-black text-blue-700 text-lg">
+          Data → Strategy → Architecture → Automation → Execution → Measurement → Optimisation
+        </p>
+        <p class="text-slate-700 mt-6 leading-relaxed">
+          Esto permite identificar rápidamente dónde está el cuello de botella y concentrar los recursos donde existe mayor potencial de crecimiento.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 8: Identificar donde esta la oportunidad -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8 text-center">
+          Empecemos por identificar dónde está la oportunidad
+        </h2>
+        <p class="text-lg text-slate-700 text-center mb-12">
+          Antes de recomendarte una lista genérica de tareas SEO, podemos analizar tu directorio para determinar con precisión:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+          {[
+            "1. Qué está impidiendo actualmente el crecimiento orgánico.",
+            "2. Qué páginas deberían posicionar y cuáles están desperdiciando recursos.",
+            "3. Qué oportunidades de keywords y ubicaciones existen.",
+            "4. Qué estructura permitiría escalar el sitio sin generar index bloat.",
+            "5. Qué procesos pueden automatizarse mediante AI y workflows.",
+            "6. Qué acciones tienen el mayor potencial de impacto comercial."
+          ].map((item) => (
+            <div class="p-4 bg-white rounded-xl border border-blue-100 font-bold text-sm text-slate-800">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center space-y-4">
+          <p class="text-xl font-black text-slate-950">
+            No necesitas simplemente más páginas. Necesitas una arquitectura SEO que convierta escala en crecimiento.
+          </p>
+          <p class="text-lg text-slate-700 max-w-xl mx-auto">
+            Si tu directorio tiene cientos, miles o incluso millones de URLs potenciales, podemos diseñar un sistema SEO que permita crecer de manera controlada, medible y sostenible.
+          </p>
+          <p class="text-xl font-black text-blue-900 uppercase tracking-wider pt-6">
+            El objetivo no es posicionar más páginas. El objetivo es posicionar las páginas correctas, frente a las personas correctas, en el momento correcto.
+          </p>
+          <p class="text-2xl font-black text-slate-900">
+            Hablemos sobre el potencial SEO de tu directorio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
