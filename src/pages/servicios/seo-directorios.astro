@@ -409,11 +409,37 @@ const schema = {
           El resultado que buscamos
         </h2>
 
-        <div class="bg-blue-50/60 p-8 rounded-3xl border border-blue-100 space-y-4 mb-16 text-center font-bold text-slate-800">
-          <p>De: <span class="text-slate-500">Una base de datos de listings</span> → A: <span class="text-blue-700">Una plataforma de adquisición orgánica.</span></p>
-          <p>De: <span class="text-slate-500">Miles de URLs</span> → A: <span class="text-blue-700">Miles de oportunidades SEO controladas.</span></p>
-          <p>De: <span class="text-slate-500">Tráfico potencial</span> → A: <span class="text-blue-700">Tráfico cualificado.</span></p>
-          <p>De: <span class="text-slate-500">Visibilidad</span> → A: <span class="text-blue-700">Leads y crecimiento.</span></p>
+        <!-- Beautiful 2-Column Comparison Table with modern Tailwind CSS style -->
+        <div class="overflow-hidden border border-blue-100 rounded-3xl shadow-sm mb-16 not-prose max-w-2xl mx-auto">
+          <table class="min-w-full divide-y divide-slate-100 bg-white">
+            <thead class="bg-blue-50/60">
+              <tr>
+                <th scope="col" class="px-6 py-4 text-left text-sm font-black text-blue-900 uppercase tracking-wider w-1/2">
+                  Estado Inicial (De)
+                </th>
+                <th scope="col" class="px-6 py-4 text-left text-sm font-black text-blue-900 uppercase tracking-wider w-1/2">
+                  El Resultado (A)
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-sm">
+              {[
+                { from: "Una base de datos de listings", to: "Una plataforma de adquisición orgánica." },
+                { from: "Miles de URLs", to: "Miles de oportunidades SEO controladas." },
+                { from: "Tráfico potencial", to: "Tráfico cualificado." },
+                { from: "Visibilidad", to: "Leads y crecimiento." }
+              ].map((row) => (
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 text-slate-500 font-semibold leading-relaxed">
+                    {row.from}
+                  </td>
+                  <td class="px-6 py-4 text-blue-700 font-bold leading-relaxed">
+                    {row.to}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <h3 class="text-2xl font-black text-slate-900 mb-4">
