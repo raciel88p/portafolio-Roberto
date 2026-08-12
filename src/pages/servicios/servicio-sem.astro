@@ -1,14 +1,433 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "Servicio de SEM",
-  icon: "📈",
-  description: "Diseño, optimización y escalado de campañas pagas en Google Ads y motores de búsqueda. Maximizamos el retorno de tu inversión publicitaria conectándote con audiencias de alta conversión de forma inmediata.",
-  details: [
-    { title: "Estructura de Campañas de Alto Impacto", text: "Estructuración profesional de grupos de anuncios, palabras clave y concordancias para reducir costes y capturar tráfico calificado." },
-    { title: "Medición y Atribución Avanzada", text: "Configuración precisa de píxeles, eventos y modelado de conversiones para tomar decisiones basadas en datos e ingresos reales." }
-  ]
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en SEM y Google Ads",
+  "description": "Convierte tu inversión en Google Ads en un sistema de crecimiento rentable. Estructuración y optimización avanzada de campañas SEM orientadas a ROI.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
 };
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="Consultor de SEM y Google Ads | Roberto Pérez Salazar"
+  description="Convierte tu inversión en Google Ads en un sistema de adquisición rentable. Estructuración de campañas, landing pages y analítica avanzada para maximizar el ROI."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Estrategia SEM & Google Ads de Alto Impacto
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tu inversión en Google Ads en un sistema de crecimiento rentable
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Estás invirtiendo en Google Ads, pero no tienes claridad sobre cuánto realmente te está costando conseguir un cliente?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar un Diagnóstico SEM
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Margins & Economics -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Muchas empresas no tienen un problema de tráfico.
+          </p>
+          <p class="text-2xl font-black text-slate-900 leading-tight mb-6">
+            Tienen un problema de rentabilidad, estrategia y control.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Puedes aumentar el presupuesto de publicidad y conseguir más clics. Pero si las campañas no están estructuradas alrededor del margen, el valor del cliente y la conversión, simplemente estarás gastando más dinero.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <h3 class="text-xl font-black text-blue-950 mb-2">SEM estratégico para empresas que quieren crecer</h3>
+            <p class="text-slate-700 mb-4 leading-relaxed">
+              Mi enfoque de SEM va más allá de configurar campañas y seleccionar palabras clave. Construyo un sistema de adquisición integrado que conecta perfectamente:
+            </p>
+            <p class="font-extrabold text-blue-900 text-center text-lg md:text-xl my-4">
+              Estrategia → Datos → Google Ads → Landing Pages → Conversión → Automatización → Rentabilidad
+            </p>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            El objetivo no es generar la mayor cantidad de tráfico posible.
+          </p>
+          <p class="text-xl font-black text-slate-900">
+            El objetivo es generar más oportunidades de negocio con el menor coste sostenible posible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Dónde está realmente el problema? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          ¿Dónde está realmente el problema?
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-12 text-center">
+          Antes de aumentar tu presupuesto publicitario, analizamos cinco variables fundamentales de negocio:
+        </p>
+
+        <div class="space-y-6">
+          {[
+            { num: "1", title: "Demanda", text: "¿Qué están buscando realmente tus clientes y qué intención existe detrás de esas búsquedas?" },
+            { num: "2", title: "Competencia", text: "¿Quién está capturando actualmente esa demanda y cuánto está pagando por ella?" },
+            { num: "3", title: "Conversión", text: "¿Tu landing page convierte el tráfico que estás comprando?" },
+            { num: "4", title: "Economía del cliente", text: "¿Cuánto puedes pagar para adquirir un cliente sin destruir tu margen?" },
+            { num: "5", title: "Escalabilidad", text: "¿El sistema puede crecer sin que el coste por adquisición aumente de forma descontrolada?" }
+          ].map((v) => (
+            <div class="bg-white p-6 rounded-2xl border border-slate-150 shadow-xs flex gap-4 items-start">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                {v.num}
+              </span>
+              <div>
+                <h3 class="font-black text-slate-900 text-lg mb-1">{v.title}</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">{v.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-lg font-bold text-center text-blue-700 mt-12 italic">
+          Esta visión permite tomar decisiones basadas en negocio, no solamente en métricas publicitarias.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: Un sistema SEM diseñado para generar negocio (01 to 05) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">
+          Un sistema SEM diseñado para generar negocio
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 01 Auditoría y diagnóstico -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Fase 01</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Auditoría y diagnóstico</h3>
+            <p class="text-lg text-slate-700">
+              Analizamos tu cuenta, estructura, campañas, keywords, anuncios, conversiones, tracking y presupuesto.
+            </p>
+            <p class="font-bold text-slate-800">Identificamos:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-600">
+              {["Presupuesto desperdiciado", "Keywords no rentables", "Estructura incorrecta", "Problemas de tracking", "Gaps de crecimiento", "Costes innecesarios", "Problemas de conversión"].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-red-500 font-bold">✕</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700">
+              Resultado: un mapa claro de qué está funcionando, qué no y dónde está la oportunidad.
+            </p>
+          </div>
+
+          <!-- 02 Estrategia de adquisición -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Fase 02</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Estrategia de adquisición</h3>
+            <p class="text-lg text-slate-700">
+              Diseñamos una estrategia de adquisición multicanal y segmentada basada en:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-slate-600">
+              {[
+                "Search campaigns.", "Brand vs. non-brand.", "High-intent keywords.", "Competitor campaigns.", "Remarketing.", "Performance Max.", "Geographic targeting.", "Audience segmentation.", "Funnel strategy."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-slate-900 italic">
+              Cada campaña tiene un propósito concreto dentro del proceso de adquisición.
+            </p>
+          </div>
+
+          <!-- 03 Optimización de Google Ads -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Fase 03</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Optimización de Google Ads</h3>
+            <p class="text-lg text-slate-700">
+              Gestionamos y optimizamos continuamente tu cuenta publicitaria para asegurar un rendimiento dinámico:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Keywords y Match types.", "Negative keywords.", "Ad copy y Assets.", "Bidding strategies.", "Budgets.", "Quality Score.", "Search terms.", "Audiences.", "Geographic targeting.", "Ad extensions/assets."
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-600">
+              La cuenta evoluciona con los datos.
+            </p>
+          </div>
+
+          <!-- 04 Landing Pages & CRO -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Fase 04</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Landing Pages & CRO</h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Comprar tráfico sin optimizar la conversión es una de las formas más caras de hacer marketing. Por eso analizamos integralmente todo el recorrido:
+            </p>
+            <p class="text-center font-bold text-blue-700 bg-slate-50 border border-slate-100 py-3 rounded-xl max-w-md mx-auto">
+              Anuncio → Landing Page → Oferta → CTA → Conversión
+            </p>
+            <p class="text-sm text-slate-600 font-bold">
+              Identificamos fricciones y oportunidades para aumentar la tasa de conversión.
+            </p>
+          </div>
+
+          <!-- 05 Tracking y atribución -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Fase 05</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Tracking y atribución</h3>
+            <p class="text-lg text-slate-700">
+              Sin datos confiables, optimizar SEM se convierte en una cuestión de opiniones. Implementamos y revisamos una arquitectura analítica robusta:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Google Analytics 4", "Google Tag Manager", "Google Ads tracking", "Enhanced conversions", "Form submissions", "Calls tracking", "Lead tracking", "CRM integration", "Conversion attribution"
+              ].map((item) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-slate-950 uppercase tracking-wider pt-2">
+              Así podemos responder una pregunta fundamental: ¿Qué campañas realmente están generando ingresos?
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: De CPC a ROI (Dark Block and Table) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 text-center">
+          De CPC a ROI
+        </h2>
+        <p class="text-slate-300 text-lg leading-relaxed text-center mb-8">
+          No gestionamos campañas únicamente para conseguir: <span class="italic text-slate-400">más clics → más tráfico → más impresiones.</span>
+        </p>
+        <p class="text-xl font-bold text-center text-blue-400 mb-12">
+          Gestionamos campañas para conseguir: más clientes → mejor CAC → mayor revenue → mayor rentabilidad.
+        </p>
+
+        <!-- Beautiful 2-Column Comparison Table with Tailwind CSS styles -->
+        <div class="overflow-hidden border border-slate-800 rounded-3xl shadow-sm max-w-xl mx-auto bg-slate-850">
+          <table class="min-w-full divide-y divide-slate-800">
+            <thead class="bg-slate-800">
+              <tr>
+                <th scope="col" class="px-6 py-4 text-left text-sm font-black text-blue-400 uppercase tracking-wider w-1/2">
+                  Métrica
+                </th>
+                <th scope="col" class="px-6 py-4 text-left text-sm font-black text-blue-400 uppercase tracking-wider w-1/2">
+                  Objetivo
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-sm">
+              {[
+                { metric: "CTR", objective: "Mejorar relevancia" },
+                { metric: "CPC", objective: "Controlar coste" },
+                { metric: "Conversion Rate", objective: "Aumentar eficiencia" },
+                { metric: "CPL", objective: "Reducir coste por lead" },
+                { metric: "CAC", objective: "Controlar adquisición" },
+                { metric: "ROAS", objective: "Medir retorno publicitario" },
+                { metric: "Revenue", objective: "Conectar marketing con negocio" }
+              ].map((row) => (
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="px-6 py-4 text-slate-300 font-bold leading-relaxed">
+                    {row.metric}
+                  </td>
+                  <td class="px-6 py-4 text-blue-400 font-semibold leading-relaxed">
+                    {row.objective}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: La ventaja: combinar SEM + SEO + AI + automatización -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+          La ventaja: combinar SEM + SEO + AI + automatización
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          El mayor potencial aparece cuando SEM no funciona de forma aislada. Podemos conectar la publicidad con todo un ecosistema de crecimiento:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose text-sm text-slate-700">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>SEO</strong> para capturar demanda orgánica.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>AI</strong> para analizar datos, descubrir oportunidades y acelerar procesos.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>Automatización</strong> para reducir tareas manuales y mejorar velocidad.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <strong>CRO</strong> para convertir más del tráfico existente.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 sm:col-span-2 text-center">
+            <strong>CRM</strong> para conocer qué campañas producen clientes reales, no solamente leads.
+          </div>
+        </div>
+
+        <p class="text-xl font-black text-slate-950 mt-8">
+          Esto transforma SEM de un canal publicitario en un sistema de adquisición de clientes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: ¿Por qué trabajar conmigo? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          No busco simplemente administrar tu cuenta de Google Ads. Mi objetivo es entender cómo funciona tu negocio y dónde se produce el crecimiento.
+        </p>
+        <p class="font-bold text-slate-800">
+          Trabajo con una visión que combina:
+        </p>
+        <div class="flex flex-wrap gap-2 my-6">
+          {["Marketing", "SEO", "Tecnología", "AI", "Automatización", "Data"].map((tag) => (
+            <span class="px-3.5 py-1.5 bg-white border border-slate-150 rounded-full text-sm font-bold text-slate-800 shadow-xs">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <p class="text-lg font-bold text-blue-700 leading-relaxed">
+          Esto permite identificar oportunidades que normalmente quedan fuera de una gestión tradicional de PPC.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: ¿Qué puedes esperar? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 text-center">
+          ¿Qué puedes esperar?
+        </h2>
+        <p class="text-lg text-slate-600 text-center mb-12">
+          Un proceso completamente orientado a maximizar tus resultados y eficiencia:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 mb-12">
+          {[
+            "Reducir desperdicio publicitario.",
+            "Mejorar la calidad de los leads.",
+            "Aumentar conversiones.",
+            "Identificar nuevas oportunidades de demanda.",
+            "Mejorar el control sobre el presupuesto.",
+            "Automatizar procesos repetitivos.",
+            "Conectar marketing con resultados comerciales.",
+            "Crear un sistema que pueda escalar."
+          ].map((item) => (
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl flex items-start gap-3">
+              <span class="text-green-500 font-extrabold">•</span>
+              <span class="font-bold">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center space-y-3">
+          <p class="text-xl font-black text-slate-950">
+            No se trata de gastar más en Google.
+          </p>
+          <p class="text-2xl font-black text-blue-900 uppercase tracking-wider">
+            Se trata de hacer que cada dólar invertido tenga una función dentro de una estrategia de crecimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Empecemos con los números -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8 text-center">
+          Empecemos con los números
+        </h2>
+        <p class="text-lg text-slate-700 text-center mb-12">
+          Antes de recomendarte aumentar tu inversión, quiero entender en profundidad:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 text-center">
+          {[
+            { q: "¿Cuánto estás gastando y cuántos leads generas?", icon: "💰" },
+            { q: "¿Cuántos leads se convierten en clientes?", icon: "📈" },
+            { q: "¿Cuánto vale cada cliente y cuánto puedes pagar por adquirirlo?", icon: "🎯" }
+          ].map((item) => (
+            <div class="p-6 bg-white rounded-2xl border border-blue-100 shadow-sm flex flex-col items-center justify-center">
+              <span class="text-3xl mb-3">{item.icon}</span>
+              <p class="font-bold text-sm text-slate-800 leading-relaxed">{item.q}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <p class="text-lg text-slate-700 leading-relaxed font-bold">
+            A partir de esos datos podemos determinar dónde está realmente la oportunidad.
+          </p>
+          <p class="text-2xl md:text-3xl font-black text-blue-900 leading-tight pt-4">
+            Solicita un diagnóstico de tu estrategia SEM
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Descubre cuánto potencial de crecimiento existe en tus campañas actuales y qué deberíamos cambiar para convertir tu inversión publicitaria en un sistema de adquisición más rentable.
+          </p>
+          <p class="text-2xl font-black text-slate-950 pt-2">
+            Agenda una sesión estratégica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,14 +1,430 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "Ai Growth Strategy",
-  icon: "📈",
-  description: "Diseño de estrategias de crecimiento empresarial impulsadas por Inteligencia Artificial. Alineamos el modelado de datos, la automatización y los modelos de lenguaje para optimizar la toma de decisiones estratégicas y maximizar el ROI.",
-  details: [
-    { title: "Modelado e Inteligencia de Negocio", text: "Identificación de oportunidades de crecimiento mediante análisis predictivo y el diseño de sistemas de adquisición integrados con IA." },
-    { title: "Ecosistemas de Conversión de Alta Eficiencia", text: "Alineación inteligente de SEO, SEM, y agentes autónomos para crear embudos de venta hiper-personalizados y optimizados para la conversión." }
-  ]
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en AI Growth Strategy",
+  "description": "AI Growth Engine: Convierte la IA en un sistema que genera crecimiento, reduce costes y acelera tu negocio. Estrategias avanzadas de Inteligencia Artificial y Automatización.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
 };
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="AI Growth Strategy & AI Growth Engine | Roberto Pérez Salazar"
+  description="AI Growth Engine: Convierte la IA en un sistema que genera crecimiento, reduce costes y acelera tu negocio. Estrategia de IA, automatización de workflows y marketing de crecimiento."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          AI Growth Engine
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte la IA en un sistema que genera crecimiento, reduce costes y acelera tu negocio
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Tu empresa está usando inteligencia artificial… o simplemente está experimentando con ella?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar Sesión Estratégica de IA
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Ecosistema real -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Hoy muchas empresas incorporan ChatGPT, automatizaciones y diferentes herramientas de IA, pero pocas consiguen convertirlas en un sistema integrado capaz de generar ingresos, reducir costes y mejorar la velocidad de ejecución.
+          </p>
+
+          <p class="text-2xl font-black text-blue-700 leading-tight text-center my-8">
+            Ahí es donde entra el AI Growth Engine.
+          </p>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            No se trata de añadir más herramientas a tu empresa. Se trata de diseñar un sistema que conecte <strong>IA + automatización + marketing + ventas + datos + operaciones</strong> para convertir oportunidades en resultados medibles.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <h3 class="text-xl font-black text-blue-950 mb-2">El problema no es la falta de tecnología</h3>
+            <p class="text-slate-700 leading-relaxed mb-4">
+              La mayoría de las empresas ya tienen acceso a herramientas suficientes. El problema está en cómo utilizarlas.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-800">
+              {["Procesos manuales.", "Información dispersa.", "Leads sin seguimiento.", "Marketing dependiente.", "Datos sin acción.", "Tareas repetitivas.", "Contenido lento.", "Baja velocidad."].map((it) => (
+                <div class="p-3 bg-white rounded-xl border border-blue-100">
+                  {it}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            Mientras tanto, empresas más ágiles están utilizando IA para reducir el tiempo entre una idea y su ejecución.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed font-bold text-slate-900 mb-6">
+            La oportunidad no consiste en reemplazar a tu equipo. Consiste en darle un sistema que le permita producir más, decidir mejor y ejecutar más rápido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué es un AI Growth Engine? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          ¿Qué es un AI Growth Engine?
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8 text-center">
+          Un AI Growth Engine es una infraestructura de crecimiento diseñada alrededor de tu negocio. Integra diferentes sistemas para crear un ciclo continuo:
+        </p>
+
+        <p class="text-2xl font-black text-center text-blue-700 bg-white border border-slate-200 py-4 rounded-2xl mb-8 shadow-xs max-w-xl mx-auto">
+          Data → AI → Automation → Marketing → Sales → Customer → Data
+        </p>
+
+        <div class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-3 pl-4 border-l-2 border-slate-350">
+          <p>• Cada interacción genera información.</p>
+          <p>• La información alimenta la IA.</p>
+          <p>• La IA ayuda a tomar decisiones.</p>
+          <p>• Las decisiones activan automatizaciones.</p>
+          <p>• Las automatizaciones aceleran marketing, ventas y operaciones.</p>
+          <p>• Y los resultados vuelven a alimentar el sistema.</p>
+        </div>
+
+        <p class="text-xl font-black text-center text-slate-900 mt-12">
+          El objetivo es crear un negocio que aprende y mejora continuamente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: De herramientas aisladas a un sistema de crecimiento (01 to 05) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-slate-900">
+            De herramientas aisladas a un sistema de crecimiento
+          </h2>
+          <p class="text-lg text-slate-600 mt-4 leading-relaxed font-bold">
+            En lugar de implementar herramientas de IA de manera independiente, analizamos tu negocio desde una perspectiva integral.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+
+          <!-- 01 Growth Strategy -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Área 01</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Growth Strategy</h3>
+            <p class="text-lg text-slate-700">
+              Identificamos dónde existe el mayor potencial de crecimiento económico. Analizamos:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs text-slate-600">
+              {["Adquisición de clientes", "Generación de leads", "Conversión", "Customer journey", "Retención", "Operaciones", "Costes", "Procesos manuales", "Oportunidades de automatización"].map((it) => (
+                <div class="p-2 bg-slate-50 border border-slate-100 rounded text-center">
+                  {it}
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-blue-700 italic pt-2">
+              El resultado es un Growth Opportunity Map que prioriza las oportunidades según impacto y facilidad de implementación.
+            </p>
+          </div>
+
+          <!-- 02 AI-Powered Marketing -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Área 02</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">AI-Powered Marketing</h3>
+            <p class="text-lg text-slate-700">
+              Convertimos la IA en una capa de inteligencia para tu marketing. Podemos optimizar:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-600">
+              {["Estrategia de contenidos", "SEO", "Programmatic SEO", "Research de keywords", "Contenido asistido por IA", "Campañas ads", "Lead magnets", "Landing pages", "Personalización", "Análisis de competencia", "Customer segmentation"].map((it) => (
+                <div class="flex items-center gap-1">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-slate-900 uppercase tracking-wider pt-2">
+              El objetivo no es producir más contenido. Es producir mejor marketing, más rápido y con mayor capacidad de aprendizaje.
+            </p>
+          </div>
+
+          <!-- 03 AI Sales Engine -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Área 03</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">AI Sales Engine</h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Tu equipo comercial no debería perder tiempo realizando tareas que una máquina puede ejecutar automáticamente. Diseñamos workflows para:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Capturar leads.", "Calificar oportunidades.", "Enriquecer datos.", "Segmentar prospectos.", "Automatizar follow-ups.", "Generar propuestas.", "Preparar reuniones.", "Actualizar CRM.", "Identificar oportunidades.", "Priorizar leads."
+              ].map((it) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 pt-2">
+              El resultado es un proceso comercial más rápido y consistente.
+            </p>
+          </div>
+
+          <!-- 04 Workflow Automation -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Área 04</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">Workflow Automation</h3>
+            <p class="text-lg text-slate-700 leading-relaxed">
+              Identificamos procesos repetitivos y diseñamos automatizaciones que conectan tus herramientas de manera fluida.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs font-mono text-slate-700 leading-relaxed space-y-2">
+              <p><strong>Ejemplo 1:</strong> Lead → CRM → AI qualification → Email → Sales notification → Follow-up → Reporting</p>
+              <p><strong>Ejemplo 2:</strong> Keyword research → AI analysis → Content brief → Content production → SEO optimisation → Publishing → Performance monitoring</p>
+            </div>
+            <p class="text-sm font-bold text-slate-800">
+              La automatización permite que tu equipo dedique más tiempo a actividades que realmente requieren criterio humano.
+            </p>
+          </div>
+
+          <!-- 05 AI Operations -->
+          <div class="border-l-4 border-blue-600 pl-6 md:pl-8 space-y-4">
+            <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block">Área 05</span>
+            <h3 class="text-2xl md:text-3xl font-black text-slate-900">AI Operations</h3>
+            <p class="text-lg text-slate-700">
+              La IA también puede transformar la forma en que opera administrativamente tu empresa. Analizamos procesos como:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-600">
+              {[
+                "Reporting.", "Documentación.", "Research.", "Customer support.", "Internal communication.", "Data analysis.", "Administrative workflows.", "Knowledge management.", "Quality control."
+              ].map((it) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-500 pt-2">
+              El objetivo es reducir la fricción operativa y aumentar la capacidad del equipo sin necesariamente aumentar proporcionalmente los costes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: No vendemos herramientas. Diseñamos sistemas. (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 text-center">
+          No vendemos herramientas. Diseñamos sistemas.
+        </h2>
+        <p class="text-slate-300 text-lg leading-relaxed mb-8 text-center max-w-xl mx-auto">
+          Puedes comprar decenas de herramientas de IA. Eso no significa que tengas una estrategia de crecimiento.
+        </p>
+
+        <p class="text-2xl font-black text-center text-blue-400 mb-8 uppercase tracking-wide">
+          ¿Dónde puede la IA producir el mayor impacto económico en tu empresa?
+        </p>
+
+        <p class="text-slate-300 mb-12 leading-relaxed">
+          Diseñamos el sistema de IA y automatización directamente alrededor de tus oportunidades de facturación. Priorizamos las iniciativas utilizando la siguiente fórmula estratégica:
+        </p>
+
+        <div class="p-6 bg-slate-800 rounded-3xl border border-slate-700 text-center text-2xl font-black text-white max-w-md mx-auto">
+          Business Impact × Automation Potential × Speed to Value
+        </div>
+
+        <p class="text-xl font-black text-center text-blue-400 mt-12 uppercase tracking-wider">
+          De esta manera, no empezamos por la tecnología. Empezamos por el negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Qué puede conseguir tu empresa? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8 text-center">
+          ¿Qué puede conseguir tu empresa?
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed text-center mb-12">
+          Dependiendo de tu situación actual, el AI Growth Engine puede ayudarte a desbloquear:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            { title: "Aumentar ingresos", text: "Generando más oportunidades, mejorando conversiones y acelerando ventas." },
+            { title: "Reducir costes", text: "Automatizando procesos repetitivos y reduciendo trabajo manual innecesario." },
+            { title: "Aumentar productividad", text: "Permitiendo que tu equipo consiga más resultados con los mismos recursos." },
+            { title: "Ejecutar más rápido", text: "Reduciendo el tiempo entre estrategia, producción y lanzamiento." },
+            { title: "Mejorar decisiones", text: "Convirtiendo datos dispersos en información accionable." },
+            { title: "Crear una ventaja competitiva", text: "Construyendo procesos y sistemas que tus competidores no pueden copiar simplemente comprando una herramienta." }
+          ].map((item) => (
+            <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+              <span class="font-black text-slate-900 text-lg block mb-2">{item.title}</span>
+              <p class="text-sm text-slate-600 leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Nuestro enfoque -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 text-center">
+          Nuestro enfoque
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed text-center mb-12">
+          No creemos en implementar IA porque "todo el mundo lo está haciendo". Utilizamos un proceso claro de cuatro etapas:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-12">
+          {[
+            { step: "1. Diagnose", text: "Analizamos tu negocio, procesos, datos, marketing y oportunidades." },
+            { step: "2. Prioritise", text: "Identificamos las iniciativas con mayor potencial económico." },
+            { step: "3. Build", text: "Diseñamos e implementamos los workflows, automatizaciones y sistemas de IA." },
+            { step: "4. Optimise", text: "Medimos resultados, identificamos nuevos cuellos de botella y mejoramos continuamente." }
+          ].map((v) => (
+            <div class="p-5 bg-white rounded-2xl border border-slate-150 text-center shadow-xs">
+              <span class="font-black text-blue-700 block mb-2">{v.step}</span>
+              <p class="text-xs text-slate-600 leading-relaxed">{v.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-lg font-bold text-center text-blue-900 max-w-xl mx-auto leading-relaxed">
+          La implementación no termina cuando la automatización está funcionando. Termina cuando el sistema está generando un impacto medible en el negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: AI Growth Operating System™ & ¿Para quién es? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+            AI Growth Operating System™
+          </h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-12">
+            El resultado final no es una colección de automatizaciones independientes. Es una infraestructura de crecimiento integrada que conecta:
+          </p>
+          <div class="bg-blue-50/60 p-6 rounded-2xl border border-blue-100 max-w-md mx-auto text-center font-bold text-slate-800 space-y-1">
+            {["Strategy", "Data", "AI", "Automation", "Marketing", "Sales", "Customer Experience", "Analytics", "Continuous Optimisation"].map((lvl, index, arr) => (
+              <>
+                <p class={index === arr.length - 1 ? "text-xl font-black text-blue-700" : ""}>{lvl}</p>
+                {index < arr.length - 1 && <p class="text-blue-500 text-sm">↓</p>}
+              </>
+            ))}
+          </div>
+          <p class="text-lg font-bold text-slate-800 mt-8 max-w-xl mx-auto">
+            Esto transforma la IA de una herramienta experimental en una capacidad estratégica de tu empresa.
+          </p>
+        </div>
+
+        <hr class="border-slate-200 my-16" />
+
+        <!-- Para quién es -->
+        <h3 class="text-2xl font-black text-slate-900 mb-6 text-center">
+          ¿Para quién es?
+        </h3>
+        <p class="text-lg text-slate-600 text-center mb-8">
+          El AI Growth Engine está diseñado especialmente para:
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-bold text-slate-800 mb-12">
+          {["Startups", "SMBs", "E-commerce", "SaaS", "Empresas de servicios", "Empresas B2B", "Agencias", "Equipos comerciales", "Generación de leads", "Procesos manuales"].map((tag) => (
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 shadow-xs">
+              {tag}
+            </div>
+          ))}
+        </div>
+        <p class="text-lg text-slate-700 text-center leading-relaxed">
+          Si tu empresa está creciendo, pero cada nuevo cliente requiere proporcionalmente más personas, procesos y costes, probablemente existe una oportunidad importante de automatización.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 8: El objetivo no es hacer más con IA -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+          El objetivo no es hacer más con IA. Es hacer crecer el negocio de una manera diferente.
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+          La próxima ventaja competitiva no será simplemente quién tenga acceso a la mejor herramienta de IA. Será quién consiga construir el mejor sistema alrededor de ella.
+        </p>
+        <p class="text-xl font-bold text-blue-400">
+          Las empresas que comiencen ahora pueden utilizar IA para aumentar velocidad, productividad y capacidad de ejecución. Las que esperen tendrán que competir contra compañías que ya la hayan construido.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 9: Empecemos por una oportunidad concreta -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          Empecemos por una oportunidad concreta
+        </h2>
+        <p class="text-lg text-slate-700 text-center mb-12">
+          No necesitas transformar toda tu empresa en 30 días. Podemos comenzar identificando una oportunidad de alto impacto:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 text-center text-sm">
+          {[
+            "Un proceso que consume demasiado tiempo.",
+            "Un canal que no está convirtiendo.",
+            "Una operación que podría funcionar de manera mucho más eficiente."
+          ].map((item) => (
+            <div class="p-6 bg-white rounded-2xl border border-blue-100 shadow-sm flex items-center justify-center font-bold">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center space-y-4 max-w-xl mx-auto">
+          <p class="text-lg font-bold text-slate-800">
+            A partir de ahí construimos: una oportunidad, un sistema, un resultado medible. Y después escalamos.
+          </p>
+          <p class="text-xl font-bold text-blue-900 pt-6">
+            ¿Quieres descubrir dónde puede generar mayor impacto la IA en tu empresa?
+          </p>
+          <p class="text-2xl font-black text-slate-950">
+            Book an AI Growth Strategy Session
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Analicemos tu negocio, identifiquemos las oportunidades de mayor impacto y diseñemos un roadmap práctico para convertir IA y automatización en crecimiento real.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
