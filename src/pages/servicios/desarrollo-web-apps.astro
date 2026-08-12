@@ -1,14 +1,279 @@
 ---
-import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
 
-const service = {
-  title: "Desarrollo Web & Apps",
-  icon: "💻",
-  description: "Desarrollo de soluciones digitales que combinan el sentido humano con la excelencia técnica. Creamos plataformas diseñadas para el rendimiento, la conversión y la escalabilidad.",
-  details: [
-    { title: "Ejecución de Alto Nivel", text: "Código limpio, arquitecturas modernas y un enfoque obsesivo en la velocidad de carga y la experiencia del usuario (UX)." },
-    { title: "Integración de Sistemas", text: "Conectamos tu presencia web con tus herramientas de negocio, bases de datos y sistemas de IA para un flujo de trabajo sin fisuras." }
-  ]
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en Desarrollo Web, Aplicaciones y Growth Systems",
+  "description": "Growth Systems Development: Diseñamos y desarrollamos sitios web, aplicaciones web y plataformas digitales pensadas desde el inicio para atraer usuarios y generar crecimiento medible.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
 };
 ---
-<ServiceLayout {...service} />
+
+<Layout
+  title="Desarrollo Web & Apps orientadas a Crecimiento | Roberto Pérez Salazar"
+  description="Growth Systems Development: Diseñamos y desarrollamos sitios web, aplicaciones web y plataformas digitales pensadas desde el inicio para atraer usuarios y generar crecimiento medible."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Growth Systems Development
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tu sitio web o aplicación en un verdadero sistema de crecimiento
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Tu empresa necesita una página web o una aplicación… o necesita un sistema que realmente ayude a crecer el negocio?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Hablemos de tu Proyecto
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Margins & Economics -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Muchas empresas invierten miles de dólares en desarrollar sitios web, plataformas y aplicaciones que técnicamente funcionan, pero que no generan suficientes clientes, ventas o eficiencia.
+          </p>
+          <p class="text-xl font-bold text-slate-900 leading-tight mb-6">
+            El problema no siempre está en el desarrollo. Está en construir tecnología sin conectarla con una estrategia de crecimiento.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Por eso, ofrecemos un servicio de <strong>Growth Systems Development</strong>: diseñamos y desarrollamos sitios web, aplicaciones web y plataformas digitales pensadas desde el inicio para atraer usuarios, convertir oportunidades, automatizar procesos y generar crecimiento medible.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <h3 class="text-xl font-black text-blue-950 mb-4 text-center">No desarrollamos solamente tecnología. Construimos sistemas para hacer crecer tu negocio.</h3>
+            <p class="text-slate-800 font-bold mb-4">Nuestro enfoque combina:</p>
+            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-slate-800">
+              {[
+                "Desarrollo web y aplicaciones.",
+                "UX/UI y optimización de conversión.",
+                "SEO técnico y programático.",
+                "Automatización de procesos.",
+                "Integración de inteligencia artificial.",
+                "CRM y sistemas de generación de leads.",
+                "Analytics, tracking y dashboards.",
+                "Integraciones con APIs externas.",
+                "Landing pages de adquisición.",
+                "Optimización continua de datos."
+              ].map((it) => (
+                <div class="p-2.5 bg-white border border-blue-100 rounded-xl flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            El objetivo es crear un ecosistema digital donde cada componente tenga una función clara dentro del proceso de crecimiento.
+          </p>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-150 text-center font-bold text-slate-800 my-8">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-2">De una simple página web a un motor real:</p>
+            <p class="text-xl text-blue-800">
+              Visitante → Lead → Cliente → Automatización → Retención → Crecimiento
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué podemos desarrollar? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué podemos desarrollar?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Card 1 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <span class="text-blue-500 text-3xl">🎯</span>
+            <h3 class="text-2xl font-black text-slate-900">1. Websites orientados a crecimiento</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              No se trata simplemente de tener un sitio bonito. Desarrollamos sitios preparados estratégicamente para:
+            </p>
+            <div class="grid grid-cols-1 gap-1 text-xs font-bold text-slate-600">
+              {["Generar leads", "Posicionarse en Google", "Convertir tráfico en clientes", "Integrarse con CRM", "Automatizar seguimiento", "Medir conversiones", "Escalar nuevas páginas y mercados"].map((it) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <span class="text-blue-500 text-3xl">💻</span>
+            <h3 class="text-2xl font-black text-slate-900">2. Aplicaciones web y plataformas digitales</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Podemos desarrollar aplicaciones y plataformas a medida adaptadas a las necesidades de tu modelo de negocio:
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {["SaaS", "Marketplaces", "Directorios", "Portales de clientes", "Sistemas de reservas", "Plataformas de membresías", "Dashboards", "Herramientas internas", "Sistemas de gestión", "Aplicaciones con IA", "Plataformas con APIs"].map((it) => (
+                <span class="px-2.5 py-1 bg-slate-100 rounded text-xs font-bold text-slate-800 border border-slate-150">
+                  {it}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <span class="text-blue-500 text-3xl">🤖</span>
+            <h3 class="text-2xl font-black text-slate-900">3. Automatización e inteligencia artificial</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Tu equipo no debería perder horas haciendo manualmente procesos repetitivos. Diseñamos sistemas que pueden utilizar IA y automatización para:
+            </p>
+            <div class="grid grid-cols-1 gap-1 text-xs font-bold text-slate-600">
+              {["Capturar y clasificar leads", "Responder consultas", "Automatizar follow-ups", "Generar contenido", "Procesar información", "Crear reportes automatizados", "Automatizar tareas administrativas", "Conectar diferentes herramientas"].map((it) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-xs font-bold text-slate-400 italic pt-2">
+              La tecnología debe reducir trabajo, no crear más trabajo.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <span class="text-blue-500 text-3xl">🚀</span>
+            <h3 class="text-2xl font-black text-slate-900">4. Growth + SEO desde el desarrollo</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Una de las principales ventajas de trabajar con un enfoque de Growth Systems es que el SEO no se incorpora al final. Se considera desde la arquitectura de código inicial para desarrollar:
+            </p>
+            <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-600">
+              {["Estructuras SEO escalables", "Landing pages", "Páginas programáticas", "Arquitectura de información", "Internal linking", "Schema markup", "Sistemas de indexación", "Tracking de conversiones"].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-xs font-bold text-blue-700 pt-2">
+              De esta manera, el desarrollo no solamente crea páginas. Crea activos digitales capaces de generar tráfico y oportunidades de negocio.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Nuestro proceso (01 to 06) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">
+          Nuestro proceso
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { step: "01", title: "Business & Growth Strategy", desc: "Primero entendemos el negocio, el cliente, el proceso comercial y las oportunidades de crecimiento." },
+            { step: "02", title: "Architecture", desc: "Diseñamos la arquitectura tecnológica, UX, SEO, integraciones y automatizaciones necesarias." },
+            { step: "03", title: "Build", desc: "Desarrollamos el website, aplicación o plataforma utilizando una arquitectura preparada para crecer." },
+            { step: "04", title: "Connect", desc: "Integramos CRM, analytics, APIs, automatizaciones, IA y herramientas de marketing de crecimiento." },
+            { step: "05", title: "Launch", desc: "Lanzamos el sistema con tracking, conversiones y métricas correctamente configuradas." },
+            { step: "06", title: "Optimise", desc: "Medimos resultados, identificamos oportunidades y seguimos mejorando el sistema de forma continua." }
+          ].map((v) => (
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-xs space-y-2">
+              <span class="text-3xl font-black text-blue-600 block">{v.step}</span>
+              <h4 class="text-lg font-black text-slate-900">{v.title}</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-lg font-bold text-center text-blue-900 mt-12 italic max-w-xl mx-auto">
+          No consideramos el lanzamiento como el final del proyecto. Lo consideramos el comienzo del proceso de crecimiento.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: ¿Por qué este enfoque es diferente? (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">
+          ¿Por qué este enfoque es diferente?
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+          Porque una empresa no necesita simplemente más código. Necesita que la tecnología contribuya a:
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-12 max-w-xl mx-auto text-sm text-blue-400 font-bold">
+          {["Más tráfico.", "Más leads.", "Más ventas.", "Menos trabajo manual.", "Mejores datos.", "Mayor eficiencia."].map((it) => (
+            <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl">
+              {it}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-slate-200 uppercase tracking-wider">
+          Nuestro enfoque conecta Technology + AI + Automation + SEO + Growth en un mismo sistema.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Construyamos algo que produzca resultados -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-8 text-center">
+          Construyamos algo que produzca resultados reales
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed text-center mb-12">
+          Si estás pensando en desarrollar un nuevo website, aplicación web o plataforma, podemos ayudarte a convertir ese proyecto tecnológico en una infraestructura de crecimiento para tu negocio.
+        </p>
+
+        <div class="text-center space-y-4 max-w-xl mx-auto">
+          <p class="text-xl font-black text-slate-950">
+            No construyas solamente otra página web. Construye un sistema que trabaje para hacer crecer tu empresa.
+          </p>
+          <p class="text-2xl font-black text-blue-900 pt-6">
+            Hablemos de tu proyecto
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Cuéntanos qué quieres desarrollar, qué problema quieres resolver y dónde quieres llevar tu negocio. Analizaremos la oportunidad y te ayudaremos a definir una estrategia tecnológica y de crecimiento que pueda evolucionar contigo.
+          </p>
+          <div class="text-lg font-black text-blue-950 uppercase tracking-wider space-y-1 pt-4">
+            <p>Desarrollo web. Aplicaciones. IA. Automatización. SEO. Growth.</p>
+            <p class="text-xl text-blue-700">Todo conectado en un solo sistema.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
