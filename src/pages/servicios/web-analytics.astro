@@ -1,0 +1,362 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista en Web Analytics & Data Intelligence",
+  "description": "Convierte tus datos en decisiones que hacen crecer tu negocio. Servicios de Web Analytics & Data Intelligence para empresas que quieren crecer con precisión.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Servicios de Web Analytics & Data Intelligence | Roberto Pérez Salazar"
+  description="Convierte tus datos en decisiones que hacen crecer tu negocio. Servicios de Web Analytics & Data Intelligence para empresas que quieren crecer con precisión."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Web Analytics & Data Intelligence
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tus datos en decisiones que hacen crecer tu negocio
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Servicios de Web Analytics & Data Intelligence para empresas que quieren crecer con mayor precisión
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agenda una Conversación Estratégica
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Margins & Economics -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6 font-semibold">
+            Tu empresa genera datos todos los días.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6 text-center text-xs font-bold text-slate-700 not-prose">
+            {["Visitas al sitio web.", "Leads.", "Ventas.", "Campañas.", "Conversiones.", "Clientes.", "Costes de adquisición.", "Comportamiento."].map((it) => (
+              <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">
+                {it}
+              </div>
+            ))}
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Pero tener datos no significa necesariamente tener información útil. La verdadera ventaja competitiva aparece cuando puedes convertir esos datos en decisiones que mejoran ingresos, reducen costes y aceleran el crecimiento. Ahí es donde puedo ayudarte.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <h3 class="text-xl font-black text-blue-950 mb-4">El problema no es la falta de datos. Es no saber qué hacer con ellos.</h3>
+            <p class="text-slate-700 leading-relaxed mb-4">
+              Muchas empresas tienen Google Analytics, Google Search Console, CRM, plataformas publicitarias, redes sociales y diferentes herramientas de marketing. Sin embargo, los datos suelen estar:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-800">
+              {[
+                "• Fragmentados entre diferentes plataformas.",
+                "• Mal configurados o incompletos.",
+                "• Sin una estructura clara de medición.",
+                "• Desconectados de los objetivos financieros.",
+                "• Analizados de forma reactiva en lugar de estratégica.",
+                "• Convertidos en reportes, pero no en decisiones."
+              ].map((it) => (
+                <div>{it}</div>
+              ))}
+            </div>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-4">
+            El resultado es una situación común:
+          </p>
+          <p class="text-xl font-black text-slate-900 mb-8 leading-relaxed text-center py-3 bg-slate-50 rounded-xl border border-slate-100">
+            La empresa tiene información, pero no tiene claridad.
+          </p>
+
+          <p class="text-2xl font-black text-blue-700 uppercase tracking-wider text-center">
+            De datos aislados a un sistema de inteligencia para el negocio
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed text-center mt-4">
+            Mi enfoque combina Web Analytics, análisis de datos, SEO, marketing digital, automatización e inteligencia artificial para construir un sistema de medición que responda las preguntas realmente importantes:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-8 text-sm text-slate-700 not-prose">
+            {[
+              "¿De dónde vienen nuestros mejores clientes?",
+              "¿Qué canales generan ingresos y cuáles tráfico?",
+              "¿Dónde estamos perdiendo conversiones?",
+              "¿Qué campañas están produciendo retorno?",
+              "¿Qué páginas están contribuyendo realmente?",
+              "¿Cuál es el coste real de adquirir un cliente?",
+              "¿Qué oportunidades estamos dejando pasar?",
+              "¿Qué deberíamos cambiar primero?"
+            ].map((q) => (
+              <div class="p-3 bg-white border border-slate-150 rounded-xl font-semibold shadow-xs">
+                {q}
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-black text-center text-slate-900 mt-8">
+            La meta no es producir más dashboards. La meta es tomar mejores decisiones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué puedo hacer por tu empresa? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué puedo hacer por tu empresa?
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 1. Auditoría y estrategia de Web Analytics -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">1. Auditoría y estrategia de Web Analytics</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Reviso cómo tu empresa está recopilando y utilizando sus datos digitales. Analizo integralmente:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-bold text-slate-600">
+              {["Google Analytics 4", "Google Tag Manager", "Google Search Console", "Conversion tracking", "Eventos y objetivos", "Funnels analysis", "Attribution modeling", "Form & lead tracking", "E-commerce tracking", "CRM integration", "Data quality"].map((it) => (
+                <div class="p-2 bg-slate-50 border border-slate-100 rounded text-center">
+                  {it}
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 italic pt-2">
+              El objetivo es identificar qué información falta, qué información no es confiable y qué debería medirse para tomar mejores decisiones.
+            </p>
+          </div>
+
+          <!-- 2. Data Analytics orientado al negocio -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">2. Data Analytics orientado al negocio</h3>
+            <p class="text-slate-700 leading-relaxed">
+              No me limito a decirte cuántas personas visitaron tu web. Analizo qué está ocurriendo detrás de los números:
+            </p>
+            <p class="text-center font-bold text-blue-700 bg-slate-50 border border-slate-100 py-3 rounded-xl max-w-md mx-auto">
+              Traffic → Engagement → Leads → Sales → Revenue
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+              Esto permite conectar las métricas digitales con los resultados reales del negocio. En lugar de preguntar: <em class="text-slate-500">“¿Cuánto tráfico recibimos?”</em> podemos preguntar: <strong class="text-slate-900">“¿Qué fuentes de tráfico están generando los clientes más rentables?”</strong>
+            </p>
+            <p class="text-sm font-bold text-slate-900 pt-2">
+              Ese cambio de perspectiva puede transformar la forma en que una empresa invierte su presupuesto.
+            </p>
+          </div>
+
+          <!-- 3. Dashboards ejecutivos -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">3. Dashboards ejecutivos</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Construyo dashboards que permitan a dirección y equipos de marketing entender rápidamente los indicadores vitales:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs font-bold text-slate-600">
+              {["Revenue", "Leads", "Conversion rate", "CAC", "Marketing perf.", "Organic growth", "Paid media", "SEO performance", "User behaviour", "Funnel performance"].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-500">
+              El objetivo es que un ejecutivo pueda entender qué está pasando, por qué está pasando y qué debería hacerse después.
+            </p>
+          </div>
+
+          <!-- 4. Conversion & Funnel Analysis -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">4. Conversion & Funnel Analysis</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Analizo el recorrido completo del usuario:
+            </p>
+            <p class="text-center font-bold text-slate-900 bg-slate-50 border border-slate-200 py-3 rounded-xl max-w-md mx-auto">
+              Visitante → Interacción → Lead → Oportunidad → Cliente → Revenue
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+              Esto permite identificar los puntos exactos donde estamos perdiendo potenciales clientes. Por ejemplo, si una empresa recibe 100,000 visitas pero solamente convierte el 1%, el problema podría no ser conseguir más tráfico, sino mejorar la conversión del tráfico existente.
+            </p>
+            <p class="text-sm font-bold text-blue-700">
+              Esa diferencia puede representar una oportunidad significativa de crecimiento sin aumentar proporcionalmente el presupuesto de adquisición.
+            </p>
+          </div>
+
+          <!-- 5. Marketing & ROI Analytics -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">5. Marketing & ROI Analytics</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Conecto todas tus actividades de marketing con resultados empresariales reales:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-bold text-slate-600">
+              {["SEO", "Google Ads", "Meta Ads", "LinkedIn", "Email marketing", "Organic traffic", "Content marketing", "Landing pages"].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-500 pt-2">
+              El objetivo es determinar con precisión: Dónde invertir más, dónde invertir menos, qué optimizar, qué eliminar, y qué oportunidades escalar.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: De reporting a decision intelligence (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">
+          Un enfoque diferente: de reporting a decision intelligence
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed mb-12 max-w-xl mx-auto">
+          No creo que una empresa necesite otro dashboard lleno de gráficos que nadie revisa. Creo que necesita un sistema que responda tres preguntas críticas:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          {[
+            { num: "01", q: "What happened?", a: "¿Qué ocurrió con la interacción del usuario y con las conversiones?" },
+            { num: "02", q: "Why did it happen?", a: "¿Por qué ocurrió ese comportamiento y qué variables lo causaron?" },
+            { num: "03", q: "What should we do next?", a: "¿Qué deberíamos hacer ahora exactamente para optimizarlo?" }
+          ].map((v) => (
+            <div class="p-6 bg-slate-800 border border-slate-700 rounded-2xl space-y-2">
+              <span class="text-blue-400 font-black text-2xl block">{v.num}</span>
+              <h4 class="font-black text-slate-100 text-sm leading-snug">{v.q}</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">{v.a}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-blue-400 mt-12 max-w-xl mx-auto leading-normal">
+          Ese último punto es el más importante. Porque los datos solamente generan valor cuando producen mejores decisiones.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Integración con AI y automatización -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 text-center">
+          Integración con AI y automatización
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-12 text-center">
+          El siguiente paso es utilizar inteligencia artificial y automatización para reducir el trabajo manual asociado con el análisis. Podemos automatizar procesos como:
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-xs font-bold text-slate-800 text-center">
+          {[
+            "Recolección de datos.", "Consolidación de info.", "Reporting.", "Análisis de tendencias.", "Identificación de anomalías.", "Alertas de rendimiento.", "Clasificación de leads.", "Análisis de comportamiento.", "Generación de insights.", "Preparación de reportes."
+          ].map((tag) => (
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 shadow-xs flex items-center justify-center">
+              {tag}
+            </div>
+          ))}
+        </div>
+        <p class="text-xl font-black text-slate-900 mt-12 text-center max-w-xl mx-auto leading-relaxed">
+          Esto permite que el equipo dedique menos tiempo a recopilar datos y más tiempo a actuar sobre ellos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Qué obtiene tu empresa? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-black text-slate-900 mb-6 text-center">
+          ¿Qué obtiene tu empresa?
+        </h3>
+        <p class="text-lg text-slate-600 text-center mb-8">
+          Al trabajar juntos, el objetivo es construir una estructura donde puedas:
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-bold text-slate-800 mb-12">
+          {["Medir mejor.", "Entender mejor.", "Decidir más rápido.", "Invertir con precisión.", "Reducir desperdicio.", "Identificar oportunidades.", "Escalar lo que funciona."].map((tag) => (
+            <div class="p-3 bg-white rounded-xl border border-slate-150 shadow-xs">
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Mi metodología (1 to 6) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">
+          Mi metodología
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { step: "1. Diagnose", desc: "Entendemos el negocio, sus objetivos y sus principales problemas de medición." },
+            { step: "2. Measure", desc: "Diseñamos o corregimos la arquitectura de analytics y tracking." },
+            { step: "3. Analyse", desc: "Convertimos los datos en insights accionables de negocio." },
+            { step: "4. Optimise", desc: "Identificamos oportunidades para mejorar conversiones, adquisición y eficiencia." },
+            { step: "5. Automate", desc: "Automatizamos reporting, análisis y procesos repetitivos de datos." },
+            { step: "6. Scale", desc: "Construimos un sistema que pueda crecer de forma sólida junto con el negocio." }
+          ].map((v) => (
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-xs space-y-2">
+              <span class="text-xl font-black text-blue-600 block">{v.step}</span>
+              <p class="text-sm text-slate-600 leading-relaxed font-semibold">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: No necesitas más datos. Necesitas mejores respuestas. -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          No necesitas más datos. Necesitas mejores respuestas.
+        </h2>
+        <p class="text-lg text-slate-700 text-center mb-12 leading-relaxed">
+          Si actualmente tienes tráfico, campañas, leads, ventas y múltiples fuentes de información, pero todavía no tienes una visión clara de qué está impulsando realmente el crecimiento, podemos empezar por ahí. Una auditoría inicial puede identificar rápidamente las principales oportunidades de medición, análisis y optimización.
+        </p>
+
+        <div class="bg-white p-8 rounded-3xl border border-blue-100 max-w-xl mx-auto shadow-sm">
+          <h4 class="text-xl font-black text-blue-950 mb-6 text-center">
+            ¿Quieres saber qué están diciendo realmente tus datos?
+          </h4>
+          <p class="text-slate-700 text-sm leading-relaxed mb-6 text-center">
+            Agenda una conversación estratégica. Analicemos tu ecosistema digital, identifiquemos las principales oportunidades y definamos qué datos necesitas para tomar decisiones más inteligentes y rentables.
+          </p>
+          <div class="text-center font-black text-blue-950 uppercase tracking-wider space-y-1 text-sm pt-4">
+            <p>Web Analytics. Data Intelligence. AI & Automation.</p>
+            <p class="text-blue-700 font-bold">De los datos a las decisiones.</p>
+            <p class="text-blue-900 font-bold">De las decisiones al crecimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
