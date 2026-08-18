@@ -1,0 +1,353 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoría y Configuración de Google Analytics 4 (GA4)",
+  "description": "Convierte tus datos de Google Analytics 4 en decisiones que generan crecimiento. Servicio integral de administración, auditoría, configuración de eventos y dashboards en GA4.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Consultoría y Configuración de Google Analytics 4 (GA4) | Roberto Pérez Salazar"
+  description="Convierte tus datos de Google Analytics 4 en decisiones que generan crecimiento. Auditoría, configuración de conversiones, eventos, GTM y dashboards."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-amber-100 text-amber-800 rounded-full uppercase tracking-wider mb-6">
+          Google Analytics 4 & Data Intelligence
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tus datos de Google Analytics 4 en decisiones que generan crecimiento
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Sabes cuánto tráfico recibe tu negocio, pero no sabes exactamente qué acciones están generando ventas?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar Auditoría de GA4
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Diagnóstico e Introducción -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Tener Google Analytics 4 instalado no significa necesariamente que estés midiendo lo que realmente importa.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 mb-6">
+            Muchas empresas tienen GA4 funcionando, pero sus datos están incompletos, mal configurados o simplemente no se utilizan para tomar decisiones de negocio.
+          </p>
+
+          <div class="my-8 p-6 bg-amber-50 border-l-4 border-amber-500 rounded-r-2xl not-prose">
+            <p class="text-lg font-bold text-amber-950 mb-2">El problema no es la falta de datos.</p>
+            <p class="text-xl font-black text-amber-900">El problema es no convertir esos datos en acciones.</p>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-8">
+            Por eso ofrecemos un servicio integral de administración, configuración, seguimiento y análisis de Google Analytics 4, diseñado para que tu empresa tenga información confiable y pueda tomar mejores decisiones de marketing y crecimiento.
+          </p>
+
+          <div class="p-8 bg-slate-900 text-white rounded-3xl text-center not-prose shadow-lg mb-12">
+            <h3 class="text-2xl font-black mb-4">Deja de mirar métricas. Empieza a medir resultados.</h3>
+            <p class="text-slate-300 leading-relaxed max-w-xl mx-auto">
+              Nuestro enfoque no consiste únicamente en configurar GA4. Trabajamos para construir un sistema de medición que permita responder preguntas estratégicas como:
+            </p>
+          </div>
+
+          <!-- Strategic Questions Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+            {[
+              "¿De dónde vienen realmente tus clientes?",
+              "¿Qué canales generan más conversiones?",
+              "¿Qué campañas están generando resultados?",
+              "¿Qué páginas convierten y cuáles están perdiendo oportunidades?",
+              "¿Qué acciones realizan los usuarios antes de convertirse en clientes?",
+              "¿Cuánto estás pagando para adquirir cada cliente?",
+              "¿Dónde está el mayor potencial de crecimiento?"
+            ].map((q) => (
+              <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-800 flex items-start gap-3">
+                <span class="text-blue-600 font-bold text-lg">•</span>
+                <span>{q}</span>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Nuestro servicio incluye (1 to 7) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          Nuestro servicio incluye
+        </h2>
+
+        <div class="space-y-8">
+
+          <!-- 1. Administración de Google Analytics 4 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">1. Administración de Google Analytics 4</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Mantenemos y gestionamos tu propiedad de GA4 para garantizar que la información esté correctamente organizada y disponible para la toma de decisiones.
+            </p>
+          </div>
+
+          <!-- 2. Configuración y auditoría de GA4 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">2. Configuración y auditoría de GA4</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Revisamos la implementación actual, identificamos errores y oportunidades de mejora y establecemos una estructura de medición alineada con tus objetivos comerciales.
+            </p>
+          </div>
+
+          <!-- 3. Eventos y conversiones -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">3. Eventos y conversiones</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Configuramos el seguimiento de las acciones que realmente importan para tu negocio:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm font-semibold text-slate-800">
+              {[
+                "Formularios enviados", "Llamadas", "Clics importantes", "Compras", "Registros", "Descargas", "Interacciones", "Leads", "Solicitudes de información", "Otras acciones relevantes"
+              ].map((ev) => (
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-150 flex items-center gap-2">
+                  <span class="text-amber-500 font-bold">✓</span>
+                  <span>{ev}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- 4. Google Tag Manager -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">4. Google Tag Manager</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Integramos GA4 con Google Tag Manager para facilitar la administración de eventos, etiquetas y conversiones sin depender constantemente de modificaciones de código.
+            </p>
+          </div>
+
+          <!-- 5. Integración con Google Ads y otras plataformas -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">5. Integración con Google Ads y otras plataformas</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Conectamos tus sistemas de medición para entender mejor el rendimiento de tus campañas y relacionar inversión, tráfico, conversiones y resultados.
+            </p>
+          </div>
+
+          <!-- 6. Dashboards y reporting -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">6. Dashboards y reporting</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Creamos reportes claros para que puedas visualizar los indicadores más importantes de tu negocio sin tener que navegar constantemente por GA4.
+            </p>
+          </div>
+
+          <!-- 7. Análisis de datos -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">7. Análisis de datos</h3>
+            <p class="text-slate-700 leading-relaxed">
+              No nos limitamos a entregar números. Analizamos los datos para identificar:
+            </p>
+            <div class="p-4 bg-blue-50 border border-blue-200 rounded-2xl text-blue-950 font-bold text-center text-lg">
+              Qué está funcionando → Qué no está funcionando → Por qué → Qué deberíamos hacer después.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: De datos a decisiones -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          De datos a decisiones
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Before: Basic reporting -->
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Antes: Reporte genérico</span>
+            <p class="text-slate-600 font-medium">
+              Imagina abrir un reporte mensual y encontrar únicamente:
+            </p>
+            <div class="p-4 bg-white border border-slate-200 rounded-2xl font-bold text-slate-800 text-center">
+              “Tuvimos 25,000 usuarios este mes.”
+            </div>
+            <p class="text-xs text-slate-500 pt-2">
+              Te deja con la misma pregunta: ¿Y eso qué significa para las ventas?
+            </p>
+          </div>
+
+          <!-- After: Actionable insights -->
+          <div class="p-8 bg-blue-900 text-white rounded-3xl space-y-4 shadow-md">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-300">Ahora: Respuestas accionables</span>
+            <p class="text-slate-200 font-medium">
+              En lugar de eso, recibes información como:
+            </p>
+            <ul class="space-y-3 text-sm font-semibold text-blue-100">
+              <li class="p-3 bg-blue-800/80 rounded-xl border border-blue-700">
+                • El canal X generó el 42% de los leads con un coste de adquisición inferior al promedio.
+              </li>
+              <li class="p-3 bg-blue-800/80 rounded-xl border border-blue-700">
+                • La landing page Y recibe tráfico, pero tiene una tasa de conversión significativamente menor que otras páginas.
+              </li>
+              <li class="p-3 bg-blue-800/80 rounded-xl border border-blue-700">
+                • Los usuarios provenientes de la campaña Z tienen mayor probabilidad de convertirse.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-8 bg-amber-50 border border-amber-200 rounded-3xl text-center max-w-2xl mx-auto space-y-3">
+          <p class="text-xl font-bold text-amber-950">Eso cambia completamente la conversación.</p>
+          <p class="text-slate-700 text-sm">Ya no estás preguntando: <span class="font-bold">“¿Cuánto tráfico tenemos?”</span></p>
+          <p class="text-2xl font-black text-amber-900">
+            Estás preguntando: “¿Dónde debemos invertir nuestro próximo dólar para generar más crecimiento?”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Un sistema de medición diseñado para tu negocio -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          Un sistema de medición diseñado para tu negocio
+        </h2>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10">
+          Cada empresa tiene objetivos diferentes. Por eso no comenzamos con un dashboard genérico. Primero entendemos todo el ecosistema:
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-black text-blue-300 mb-10">
+          {[
+            "Objetivos de negocio", "Embudo de conversión", "Customer Journey", "Eventos", "Conversiones", "KPIs", "Reporting", "Optimización"
+          ].map((step, idx) => (
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-2 bg-slate-800 rounded-xl border border-slate-700">{step}</span>
+              {idx < 7 && <span class="text-amber-400 font-bold">→</span>}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-white max-w-xl mx-auto leading-relaxed">
+          El objetivo es construir una infraestructura de datos que acompañe las decisiones de marketing y negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Qué obtienes? (5 core benefits) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué obtienes?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-2">
+            <h3 class="text-xl font-black text-slate-900">Mayor visibilidad</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Entiende qué está sucediendo realmente en tu sitio web y en tus canales digitales.
+            </p>
+          </div>
+
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-2">
+            <h3 class="text-xl font-black text-slate-900">Mejores decisiones</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Reduce las decisiones basadas en intuición y utiliza datos para priorizar oportunidades.
+            </p>
+          </div>
+
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-2">
+            <h3 class="text-xl font-black text-slate-900">Menos pérdida de información</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Una correcta implementación permite capturar las interacciones relevantes del usuario y evitar puntos ciegos en el funnel.
+            </p>
+          </div>
+
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-2">
+            <h3 class="text-xl font-black text-slate-900">Mejor rendimiento de marketing</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Identifica qué canales, campañas y páginas están contribuyendo realmente a tus objetivos.
+            </p>
+          </div>
+
+          <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl space-y-2 md:col-span-2">
+            <h3 class="text-xl font-black text-slate-900">Un sistema escalable</h3>
+            <p class="text-slate-700 leading-relaxed">
+              La medición puede evolucionar junto con tu empresa, incorporando nuevos eventos, campañas, productos y objetivos.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Closing proposition & CTA -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+          No necesitas más datos. Necesitas mejores respuestas.
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto mb-8">
+          Google Analytics 4 puede convertirse en mucho más que una herramienta para saber cuántas personas visitan tu página. Puede convertirse en el sistema de inteligencia que conecta tus esfuerzos de marketing con tus resultados de negocio.
+        </p>
+
+        <p class="text-xl font-bold text-blue-900 mb-8">
+          Nuestro trabajo es ayudarte a construir ese sistema.
+        </p>
+
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-md max-w-xl mx-auto text-center space-y-4">
+          <p class="text-slate-800 font-bold">
+            Si actualmente tienes GA4 instalado pero no estás completamente seguro de que tus datos sean correctos, estás perdiendo oportunidades de análisis y crecimiento.
+          </p>
+          <p class="text-2xl font-black text-amber-600 pt-2">
+            Hagamos que tus datos trabajen para tu negocio.
+          </p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Solicita una auditoría inicial de tu implementación de GA4 y descubre qué estás midiendo, qué estás dejando fuera y qué oportunidades puedes aprovechar.
+          </p>
+
+          <div class="font-black text-slate-900 uppercase tracking-wider text-sm space-y-1 pt-4">
+            <p>Menos intuición.</p>
+            <p class="text-blue-600">Más datos.</p>
+            <p class="text-blue-800">Mejores decisiones.</p>
+            <p class="text-amber-600 text-base">Mayor crecimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
