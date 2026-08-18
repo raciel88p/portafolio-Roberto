@@ -1,0 +1,424 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automatizaciones Agénticas e Inteligencia Artificial Empresarial",
+  "description": "Convierte tu empresa en un negocio que trabaja 24/7 con Automatizaciones Agénticas. Diseño e implementación de sistemas de IA autónomos y workflows inteligentes.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Automatizaciones Agénticas: Sistemas de IA para Negocios 24/7 | Roberto Pérez Salazar"
+  description="Convierte tu empresa en un negocio que trabaja 24/7. Agentes de IA autónomos para ventas, marketing, atención al cliente y operaciones."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-purple-100 text-purple-800 rounded-full uppercase tracking-wider mb-6">
+          AI Workforce & Agentic Automation
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Automatizaciones Agénticas: Convierte tu Empresa en un Negocio que Trabaja 24/7
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Cuánto tiempo pierde tu equipo haciendo tareas repetitivas que una IA podría ejecutar automáticamente?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar Sesión de Diagnóstico
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: El Diagnóstico -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Responder consultas, dar seguimiento a clientes, preparar reportes, actualizar sistemas, clasificar información, generar contenido, revisar datos, enviar correos y coordinar procesos.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 mb-4">
+            El problema no es que tu equipo no sea productivo.
+          </p>
+          <p class="text-xl font-black text-red-600 mb-8">
+            El problema es que muchas empresas todavía dependen de personas para ejecutar procesos que podrían funcionar automáticamente.
+          </p>
+
+          <div class="my-10 p-8 bg-purple-50 border-l-4 border-purple-600 rounded-r-2xl not-prose shadow-xs">
+            <h3 class="text-2xl font-black text-purple-950 mb-3">
+              La nueva generación de automatización ya no solo ejecuta instrucciones
+            </h3>
+            <p class="text-slate-700 leading-relaxed mb-4">
+              Con las <strong class="text-purple-900">Automatizaciones Agénticas</strong>, podemos diseñar sistemas de IA capaces de:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-slate-800">
+              {[
+                "Analizar información y tomar decisiones.",
+                "Ejecutar tareas en diferentes plataformas.",
+                "Comunicarse con clientes y equipos.",
+                "Detectar situaciones que requieren atención.",
+                "Crear y modificar información.",
+                "Coordinar múltiples pasos de un proceso.",
+                "Aprender de reglas, contexto y datos disponibles.",
+                "Escalar procesos sin aumentar proporcionalmente el número de empleados."
+              ].map((cap) => (
+                <div class="p-2.5 bg-white rounded-lg border border-purple-100 flex items-center gap-2">
+                  <span class="text-purple-600 font-bold">•</span>
+                  <span>{cap}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-purple-900 pt-4">
+              En lugar de simplemente conectar aplicaciones con reglas básicas, creamos agentes de IA que trabajan dentro de tus procesos de negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué podría hacer un Agente de IA por tu empresa? Example Flow -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-6">
+          ¿Qué podría hacer un Agente de IA por tu empresa?
+        </h2>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-12">
+          Imagina que un nuevo cliente completa un formulario. El sistema podría automáticamente:
+        </p>
+
+        <!-- Step-by-Step Flow -->
+        <div class="max-w-2xl mx-auto space-y-3 text-left font-bold text-sm">
+          {[
+            "1. Capturar el lead",
+            "2. Analizarlo y determinar su nivel de interés",
+            "3. Consultar información en tu CRM",
+            "4. Personalizar una respuesta",
+            "5. Enviar un email o WhatsApp",
+            "6. Registrar toda la actividad",
+            "7. Programar seguimiento",
+            "8. Alertar a un vendedor cuando sea necesaria intervención humana"
+          ].map((step, idx) => (
+            <div class="p-4 bg-slate-800 border border-slate-700 rounded-2xl flex items-center justify-between">
+              <span class="text-slate-200">{step}</span>
+              {idx < 7 && <span class="text-purple-400 font-black text-xs uppercase tracking-wider">↓</span>}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-slate-400 text-sm mt-8">
+          Todo esto puede suceder sin que una persona tenga que ejecutar manualmente cada paso. Y esto es solo un ejemplo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: Automatiza procesos. No solamente tareas. -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          Automatiza procesos. No solamente tareas.
+        </h2>
+        <p class="text-lg text-slate-700 text-center max-w-3xl mx-auto leading-relaxed mb-10">
+          Nuestro enfoque comienza por entender cómo funciona realmente tu negocio. Identificamos:
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-bold text-slate-800 mb-12">
+          {[
+            "Procesos repetitivos", "Cuellos de botella", "Tareas administrativas", "Procesos comerciales", "Atención al cliente", "Generación y gestión de leads", "Reporting", "Procesamiento de información", "Operaciones internas", "Procesos con toma de decisiones"
+          ].map((item) => (
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <div class="p-8 bg-purple-50 border border-purple-200 rounded-3xl text-center max-w-2xl mx-auto space-y-3">
+          <p class="text-slate-800 text-sm">
+            Después diseñamos una arquitectura de automatización que combina:
+          </p>
+          <p class="text-xl font-black text-purple-950">
+            IA + agentes + workflows + APIs + datos + herramientas empresariales.
+          </p>
+          <p class="text-xs text-purple-900 uppercase font-black tracking-wider pt-2">
+            El objetivo no es implementar IA porque está de moda. El objetivo es generar un impacto medible en el negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Algunos procesos que podemos automatizar (Ventas, Marketing, CS, Ops, Management) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          Algunos procesos que podemos automatizar
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Ventas -->
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <h3 class="text-2xl font-black text-slate-900">Ventas</h3>
+            <ul class="space-y-1.5 text-xs font-bold text-slate-700">
+              <li>• Captura y clasificación automática de leads.</li>
+              <li>• Lead scoring con IA.</li>
+              <li>• Seguimiento automático.</li>
+              <li>• Personalización de emails.</li>
+              <li>• Actualización del CRM.</li>
+              <li>• Investigación de prospectos.</li>
+              <li>• Preparación de información para vendedores.</li>
+              <li>• Recuperación de leads que no respondieron.</li>
+            </ul>
+          </div>
+
+          <!-- Marketing -->
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <h3 class="text-2xl font-black text-slate-900">Marketing</h3>
+            <ul class="space-y-1.5 text-xs font-bold text-slate-700">
+              <li>• Investigación de mercados.</li>
+              <li>• Análisis de keywords.</li>
+              <li>• Generación de briefs.</li>
+              <li>• Creación y optimización de contenido.</li>
+              <li>• Análisis de campañas.</li>
+              <li>• Reportes automáticos.</li>
+              <li>• Segmentación de audiencias.</li>
+              <li>• Automatización de campañas.</li>
+            </ul>
+          </div>
+
+          <!-- Customer Service -->
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <h3 class="text-2xl font-black text-slate-900">Customer Service</h3>
+            <ul class="space-y-1.5 text-xs font-bold text-slate-700">
+              <li>• Agentes de atención 24/7.</li>
+              <li>• Clasificación de consultas.</li>
+              <li>• Respuestas personalizadas.</li>
+              <li>• Escalamiento a humanos.</li>
+              <li>• Seguimiento de tickets.</li>
+              <li>• Consulta de bases de conocimiento.</li>
+              <li>• Análisis de conversaciones.</li>
+            </ul>
+          </div>
+
+          <!-- Operaciones -->
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <h3 class="text-2xl font-black text-slate-900">Operaciones</h3>
+            <ul class="space-y-1.5 text-xs font-bold text-slate-700">
+              <li>• Procesamiento de documentos.</li>
+              <li>• Extracción y clasificación de información.</li>
+              <li>• Generación de reportes.</li>
+              <li>• Conciliación de datos.</li>
+              <li>• Actualización de sistemas.</li>
+              <li>• Alertas automáticas.</li>
+              <li>• Coordinación entre departamentos.</li>
+            </ul>
+          </div>
+
+          <!-- Dirección y Management -->
+          <div class="p-8 bg-purple-900 text-white rounded-3xl space-y-4 md:col-span-2 shadow-lg">
+            <h3 class="text-2xl font-black">Dirección y Management</h3>
+            <p class="text-slate-200 text-sm leading-relaxed">
+              Imagina recibir cada mañana un sistema que analiza automáticamente:
+            </p>
+            <div class="p-3 bg-purple-800 rounded-xl font-bold text-xs text-center border border-purple-700">
+              Ventas + Marketing + Finanzas + Operaciones + CRM
+            </div>
+            <p class="text-purple-200 font-bold text-sm">Y te entrega:</p>
+            <div class="p-4 bg-purple-950 rounded-2xl text-center font-black text-white text-base border border-purple-800">
+              Qué ocurrió → Qué está ocurriendo → Qué necesita atención → Qué recomienda hacer.
+            </div>
+            <p class="text-xs text-purple-300 font-semibold pt-2 text-center">
+              Eso es pasar de simplemente recibir datos a tener un sistema inteligente de toma de decisiones.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Por qué automatización agéntica? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-black text-slate-900 mb-6">
+          ¿Por qué automatización agéntica?
+        </h2>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-8">
+          La automatización tradicional funciona muy bien cuando: <span class="font-bold text-slate-800">“Si ocurre A → ejecuta B.”</span> Pero los negocios reales son mucho más complejos.
+        </p>
+
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl max-w-2xl mx-auto mb-8 font-black text-purple-900 text-sm sm:text-base">
+          Contexto → Análisis → Decisión → Ejecución → Verificación → Aprendizaje/Mejora
+        </div>
+
+        <p class="text-slate-700 font-bold max-w-xl mx-auto">
+          Esto permite automatizar procesos que anteriormente requerían intervención humana constante.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: Nuestro proceso (01 to 06) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          Nuestro proceso
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">01. Discovery</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Analizamos tu operación y encontramos oportunidades de automatización.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">02. Opportunity Mapping</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Calculamos dónde la automatización puede generar mayor impacto en tiempo, costos, productividad, ventas y experiencia del cliente.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">03. Diseño del sistema</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Diseñamos el workflow, agentes, integraciones, reglas, datos y puntos de intervención humana.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">04. Implementación</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Integramos las herramientas que ya utiliza tu empresa y construimos las nuevas automatizaciones.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">05. Testing</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Probamos diferentes escenarios para garantizar que el sistema responda correctamente.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-purple-600 uppercase tracking-widest">06. Optimización</span>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Medimos resultados y mejoramos continuamente los agentes y workflows.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: La meta no es reemplazar a tu equipo & Hours Saved Math -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          La meta no es reemplazar a tu equipo
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">
+          Es permitir que tu equipo deje de dedicar horas a tareas que no necesitan intervención humana. Tu equipo debería concentrarse en:
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center text-xs font-bold text-slate-800 mb-16">
+          {["Estrategia", "Creatividad", "Relaciones", "Negociación", "Decisiones importantes"].map((core) => (
+            <div class="p-3 bg-purple-50 border border-purple-100 rounded-xl text-purple-950">
+              {core}
+            </div>
+          ))}
+        </div>
+
+        <!-- Math calculation box -->
+        <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl max-w-3xl mx-auto shadow-xl text-center space-y-6">
+          <h3 class="text-2xl font-black text-purple-400">
+            ¿Cuánto podría ahorrar tu empresa?
+          </h3>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Supongamos que <strong class="text-white">5 empleados</strong> dedican solamente <strong class="text-white">2 horas al día</strong> a tareas repetitivas.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto text-sm font-bold">
+            <div class="p-4 bg-slate-800 border border-slate-700 rounded-2xl">
+              <p class="text-xs text-slate-400 uppercase">Diario</p>
+              <p class="text-xl text-white font-black mt-1">10 horas / día</p>
+            </div>
+            <div class="p-4 bg-purple-950 border border-purple-800 rounded-2xl">
+              <p class="text-xs text-purple-300 uppercase">Mensual (22 días)</p>
+              <p class="text-2xl text-purple-300 font-black mt-1">220 horas / mes</p>
+            </div>
+          </div>
+
+          <p class="text-slate-200 text-base leading-relaxed max-w-xl mx-auto">
+            Ahora imagina recuperar una parte significativa de esas horas mediante automatización. No estamos hablando solamente de ahorrar tiempo. Estamos hablando de convertir tiempo operativo en capacidad productiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Construyamos tu AI Workforce & CTA -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">
+          Construyamos tu AI Workforce
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto mb-8">
+          No necesitas contratar un equipo enorme para comenzar. Puedes comenzar con un proceso. Identificamos el proceso con mayor potencial, construimos el primer agente, medimos los resultados y posteriormente expandimos la automatización hacia otras áreas.
+        </p>
+
+        <!-- Evolution Path -->
+        <div class="p-6 bg-white border border-slate-200 rounded-3xl shadow-xs max-w-2xl mx-auto mb-12 space-y-3 font-bold text-sm text-slate-800">
+          <p class="text-slate-500 text-xs uppercase font-black tracking-wider">El Objetivo:</p>
+          <div class="p-3 bg-slate-50 rounded-xl">1. De procesos manuales → a workflows inteligentes</div>
+          <div class="p-3 bg-purple-50 rounded-xl text-purple-950 font-black">2. De workflows inteligentes → a agentes autónomos</div>
+          <div class="p-3 bg-purple-900 rounded-xl text-white font-black">3. De agentes individuales → a un sistema operativo de IA para tu empresa</div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-purple-200 shadow-md max-w-xl mx-auto space-y-4">
+          <h3 class="text-2xl font-black text-slate-900">
+            ¿Tu empresa está preparada para trabajar 24/7?
+          </h3>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Agenda una sesión de diagnóstico y descubramos qué procesos de tu empresa pueden convertirse en automatizaciones agénticas.
+          </p>
+
+          <div class="font-black text-slate-900 uppercase tracking-wider text-sm space-y-1 pt-2">
+            <p>Menos trabajo manual.</p>
+            <p class="text-purple-600">Más velocidad.</p>
+            <p class="text-purple-800">Más productividad.</p>
+            <p class="text-blue-600 text-base">Más capacidad para crecer.</p>
+          </div>
+
+          <p class="text-base font-black text-slate-900 pt-4 border-t border-slate-100">
+            La próxima ventaja competitiva de tu empresa no será solamente tener más empleados. Será tener mejores sistemas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
