@@ -1,0 +1,328 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Especialista y Consultor en Google Tag Manager",
+  "description": "Convierte tus datos en decisiones: Servicios de gestión profesional de Google Tag Manager. Tracking avanzado, GA4, Meta Pixel y atribución de conversiones.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Consultoría y Gestión Profesional de Google Tag Manager | Roberto Pérez Salazar"
+  description="Servicios de gestión profesional de Google Tag Manager (GTM). Convierte tus datos en decisiones con tracking avanzado, GA4, Ads, Meta Pixel y atribución."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Gestión Profesional de Google Tag Manager
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tus datos en decisiones: Servicios de gestión profesional de Google Tag Manager
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Sabes realmente qué está pasando con cada clic, formulario, llamada y conversión de tu negocio?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar Auditoría de GTM
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / Medición incorrecta -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Muchas empresas invierten en Google Ads, Meta Ads, SEO y otras estrategias digitales, pero cuando llega el momento de responder <strong class="text-slate-900">“¿qué canal está generando realmente resultados?”</strong>, los datos no son confiables, están incompletos o simplemente no existen.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 mb-4">
+            El problema no siempre está en tus campañas. Muchas veces está en la medición.
+          </p>
+          <p class="text-xl font-black text-red-600 mb-8">
+            Y si los datos son incorrectos, las decisiones también lo serán.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose">
+            <h3 class="text-xl font-black text-blue-950 mb-3">
+              Google Tag Manager no debería ser simplemente una etiqueta instalada en tu sitio
+            </h3>
+            <p class="text-slate-700 leading-relaxed mb-4">
+              Google Tag Manager (GTM) puede convertirse en el centro de control de toda tu estrategia de medición digital. Pero configurarlo correctamente requiere mucho más que copiar y pegar códigos.
+            </p>
+            <p class="font-bold text-blue-900 mb-3 text-sm">Una implementación profesional debe conectar de forma fluida:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-bold text-slate-800">
+              {[
+                "Google Analytics 4", "Google Ads", "Meta Pixel", "Conversiones", "Formularios", "Botones y CTAs", "Eventos personalizados", "Landing pages", "CRM integration", "Remarketing", "Plataformas Ads", "Herramientas BI"
+              ].map((it) => (
+                <div class="p-2 bg-white rounded-lg border border-blue-100 flex items-center gap-1.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p class="text-lg font-bold text-slate-900 text-center leading-relaxed">
+            Mi servicio de Administración y Gestión de Google Tag Manager está diseñado para que tu empresa pueda confiar en sus datos antes de tomar decisiones de marketing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué incluye el servicio? (1 to 6) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué incluye el servicio?
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 1. Auditoría de Google Tag Manager -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">1. Auditoría de Google Tag Manager</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Reviso la estructura actual de tu contenedor para identificar:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-semibold text-slate-600">
+              {[
+                "Tags duplicados o innecesarios", "Triggers mal configurados", "Variables incorrectas", "Eventos no registrados", "Conversiones no recibidas", "Problemas de implementación", "Fricción en la calidad de datos"
+              ].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-red-500 font-bold">✕</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 pt-2">
+              El objetivo es saber exactamente qué está funcionando, qué está fallando y qué debe mejorarse.
+            </p>
+          </div>
+
+          <!-- 2. Administración continua de GTM -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">2. Administración continua de GTM</h3>
+            <p class="text-slate-700 leading-relaxed">
+              No tienes que depender de un desarrollador cada vez que necesitas realizar un cambio de tracking. Gestiono y mantengo tu implementación para que GTM se convierta en una infraestructura de medición organizada y escalable.
+            </p>
+          </div>
+
+          <!-- 3. Configuración de eventos y conversiones -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">3. Configuración de eventos y conversiones</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Implemento eventos relevantes para el negocio, por ejemplo:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-bold text-slate-600">
+              {[
+                "Envíos de formularios", "Clicks en botones", "Clicks en teléfonos", "WhatsApp tracking", "Descargas", "Reproducción de videos", "Leads", "Compras", "Solicitudes de cotización", "Acciones específicas"
+              ].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-slate-950 uppercase tracking-wider pt-2">
+              La prioridad no es medir todo. La prioridad es medir lo que importa para el negocio.
+            </p>
+          </div>
+
+          <!-- 4. Integración con GA4 -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">4. Integración con GA4</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Conecto GTM con Google Analytics 4 para que puedas analizar el comportamiento de los usuarios y relacionarlo con tus objetivos comerciales.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center my-4">
+              <div class="p-4 bg-slate-50 border border-slate-150 rounded-2xl">
+                <p class="text-xs text-slate-400 uppercase font-bold mb-1">De:</p>
+                <p class="text-slate-700 font-bold">“Tenemos tráfico.”</p>
+              </div>
+              <div class="p-4 bg-blue-50 border border-blue-100 rounded-2xl">
+                <p class="text-xs text-blue-600 uppercase font-bold mb-1">A:</p>
+                <p class="text-blue-950 font-black">“Sabemos qué acciones realizan los usuarios y cuáles generan resultados.”</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Google Ads y Meta Ads -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">5. Google Ads y Meta Ads</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Configuro y reviso la medición necesaria para tus campañas publicitarias. El objetivo es que las plataformas reciban señales de conversión más útiles para optimizar automáticamente las campañas.
+            </p>
+          </div>
+
+          <!-- 6. Tracking personalizado -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">6. Tracking personalizado</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Cada negocio tiene diferentes objetivos. Por eso desarrollo soluciones de tracking adaptadas específicamente a tu sitio web, funnel y modelo de negocio. No utilizamos una configuración genérica; construimos la medición alrededor de tus objetivos comerciales.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: El verdadero valor no está en instalar GTM (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">
+          El verdadero valor no está en instalar GTM
+        </h2>
+        <p class="text-xl font-bold text-blue-400 mb-8 max-w-xl mx-auto">
+          Está en convertir datos en información útil para tomar decisiones.
+        </p>
+        <p class="text-slate-300 text-lg leading-relaxed mb-8">
+          Imagina poder responder con absoluta claridad:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto mb-12 text-sm text-slate-200 font-semibold">
+          {[
+            "• ¿De dónde vienen mis leads?",
+            "• ¿Qué campañas generan conversiones?",
+            "• ¿Qué landing page funciona mejor?",
+            "• ¿Cuántas personas hacen clic en WhatsApp?",
+            "• ¿Qué acciones realizan antes de convertirse?",
+            "• ¿Qué campañas deberían recibir más presupuesto?"
+          ].map((item) => (
+            <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-black text-white max-w-xl mx-auto leading-relaxed">
+          Cuando la medición está correctamente implementada, el marketing deja de basarse únicamente en intuición. <span class="text-blue-400 block mt-2">Empieza a basarse en evidencia.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Un sistema de medición diseñado para crecer -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-black text-slate-900 mb-6">
+          Un sistema de medición diseñado para crecer
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
+          Mi enfoque no consiste únicamente en configurar GTM una vez y desaparecer. La idea es construir una infraestructura que pueda evolucionar contigo:
+        </p>
+
+        <p class="text-xl font-bold text-blue-700 bg-slate-50 border border-slate-200 py-4 rounded-2xl mb-8 shadow-xs max-w-xl mx-auto">
+          Nuevos eventos → Nuevas conversiones → Nuevas campañas → Nuevas fuentes → Mejores decisiones
+        </p>
+
+        <p class="text-slate-700 leading-relaxed max-w-xl mx-auto font-semibold">
+          Y cuando sea necesario, podemos conectar la información con herramientas de reporting y análisis para tener una visión más completa del rendimiento.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: ¿Para quién es este servicio? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-black text-slate-900 mb-6 text-center">
+          ¿Para quién es este servicio?
+        </h3>
+        <p class="text-lg text-slate-600 text-center mb-8">
+          Este servicio es especialmente útil para:
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center text-xs font-bold text-slate-800 mb-12">
+          {["Empresas con Google/Meta Ads", "E-commerce", "Empresas B2B", "Clínicas y negocios locales", "Empresas de servicios", "SaaS", "Agencias de marketing", "Sitios con landing pages", "Empresas con CRM"].map((tag) => (
+            <div class="p-3 bg-white rounded-xl border border-slate-150 shadow-xs">
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Deja de preguntarte si tus datos son correctos -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 text-center">
+          Deja de preguntarte si tus datos son correctos
+        </h2>
+        <p class="text-lg text-slate-600 text-center mb-8">
+          Cada día que una empresa toma decisiones basándose en datos incompletos puede significar dinero desperdiciado:
+        </p>
+
+        <div class="space-y-3 max-w-xl mx-auto text-sm text-slate-700 font-semibold mb-12">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            • Una campaña puede parecer mala cuando el tracking está fallando.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            • Un canal puede parecer excelente cuando las conversiones están mal configuradas.
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+            • Un anuncio puede recibir más presupuesto simplemente porque la medición no está capturando el verdadero comportamiento.
+          </div>
+        </div>
+
+        <p class="text-xl font-black text-blue-900 text-center uppercase tracking-wider">
+          Por eso, antes de optimizar tus campañas: primero debemos asegurarnos de que estamos midiendo correctamente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Mi propuesta y CTA -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          Mi propuesta
+        </h2>
+        <p class="text-lg text-slate-700 text-center mb-12 leading-relaxed">
+          Te ayudo a construir, administrar y mejorar una infraestructura profesional de medición basada en Google Tag Manager, conectada con las herramientas que utilizas para adquirir, convertir y analizar clientes.
+        </p>
+
+        <div class="bg-white p-8 rounded-3xl border border-blue-100 max-w-xl mx-auto shadow-sm text-center space-y-4">
+          <p class="text-slate-800 font-bold">
+            Tú te concentras en hacer crecer el negocio. Yo me aseguro de que la información necesaria para tomar decisiones esté correctamente medida.
+          </p>
+          <p class="text-2xl font-black text-blue-900 pt-2">
+            ¿Listo para saber realmente qué está funcionando?
+          </p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Solicita una auditoría de tu Google Tag Manager y descubre qué oportunidades de medición estás dejando sobre la mesa.
+          </p>
+          <div class="font-black text-blue-950 uppercase tracking-wider text-sm space-y-1 pt-4">
+            <p>Menos suposiciones.</p>
+            <p class="text-blue-700">Más datos.</p>
+            <p class="text-blue-900">Mejores decisiones. Mejor crecimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
