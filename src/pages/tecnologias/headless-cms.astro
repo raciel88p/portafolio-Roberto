@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Servicios de Desarrollo de Páginas Web con Headless CMS",
+  "description": "Servicios de desarrollo de páginas web con Headless CMS con tecnología de última generación. Velocidad extrema, seguridad, SEO integrado y automatización.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Desarrollo Web con Headless CMS | Tecnología de Última Generación | Roberto Pérez Salazar"
+  description="Desarrollo de páginas web con Headless CMS. Sistemas digitales de crecimiento con velocidad ultrarrápida, SEO integrado desde el primer día y automatización."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Desarrollo Headless CMS de Última Generación
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Servicios de desarrollo de páginas web con Headless CMS con tecnología de última generación
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Su sitio web debería generar clientes. ¿El suyo lo hace?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Solicitar una Consultoría Estratégica
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Intro / El problema del sitio web tradicional -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            La mayoría de las empresas invierte miles de dólares en una página web que luce bien, pero que no genera oportunidades de negocio. Es un problema más común de lo que parece.
+          </p>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-6 font-semibold">
+            Un sitio lento, difícil de encontrar en Google o incapaz de convertir visitantes en clientes termina siendo simplemente un gasto más.
+          </p>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Mientras tanto, sus competidores ya están utilizando inteligencia artificial, automatización y estrategias avanzadas de posicionamiento para captar clientes todos los días.
+          </p>
+
+          <div class="my-12 p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl shadow-sm not-prose text-center">
+            <p class="text-xl font-bold text-slate-900 mb-2">La diferencia no está en tener una página web.</p>
+            <p class="text-2xl font-black text-blue-900">La diferencia está en tener un sistema diseñado para hacer crecer el negocio.</p>
+          </div>
+
+          <h3 class="text-2xl font-black text-slate-900 text-center mt-12 mb-4">No desarrollamos páginas web. Construimos sistemas digitales de crecimiento.</h3>
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Diseñamos plataformas modernas utilizando arquitectura <strong>Headless CMS</strong>, una tecnología utilizada por empresas que necesitan velocidad, escalabilidad, seguridad y un rendimiento superior.
+          </p>
+          <p class="text-lg text-slate-700 leading-relaxed mb-6">
+            Cada proyecto combina desarrollo web, estrategia SEO, automatización comercial e inteligencia de datos para convertir su presencia digital en un activo que trabaja para usted las 24 horas del día.
+          </p>
+          <p class="text-xl font-black text-blue-700 text-center uppercase tracking-wider">
+            Nuestro objetivo no es entregar un sitio web. Nuestro objetivo es ayudarle a vender más.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Qué puede esperar de nuestra solución? -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué puede esperar de nuestra solución?
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 1. Desarrollo con Headless CMS -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">Desarrollo con Headless CMS</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Creamos plataformas preparadas para el crecimiento. Obtendrá:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-slate-700">
+              {[
+                "Sitios web ultrarrápidos con una experiencia de usuario excepcional.",
+                "Mayor seguridad frente a ataques y vulnerabilidades.",
+                "Arquitectura escalable preparada para el crecimiento de su empresa.",
+                "Integración sencilla con CRM, ERP y herramientas de automatización.",
+                "Flexibilidad para incorporar nuevas funcionalidades sin reconstruir el proyecto."
+              ].map((it) => (
+                <div class="flex items-start gap-2 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-blue-700 pt-2">
+              Su plataforma estará preparada para evolucionar junto con su negocio.
+            </p>
+          </div>
+
+          <!-- 2. SEO integrado desde el primer día -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">SEO integrado desde el primer día</h3>
+            <p class="text-slate-700 leading-relaxed">
+              La mayoría de las agencias desarrolla primero y piensa en SEO después. Nosotros hacemos exactamente lo contrario. Cada decisión técnica está diseñada para facilitar el posicionamiento en Google y en los nuevos motores de búsqueda impulsados por Inteligencia Artificial.
+            </p>
+            <p class="font-bold text-slate-800 text-sm">Implementamos:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-bold text-slate-600">
+              {[
+                "Arquitectura SEO avanzada", "Optimización de Core Web Vitals", "Datos estructurados (Schema Markup)", "Estrategias de enlazado interno", "Optimización para búsquedas IA (GEO)", "SEO programático escalable"
+              ].map((it) => (
+                <div class="flex items-center gap-1.5">
+                  <span class="text-green-500 font-bold">✓</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-slate-900 uppercase tracking-wider pt-2">
+              El resultado es una plataforma preparada para atraer tráfico orgánico durante años.
+            </p>
+          </div>
+
+          <!-- 3. Automatización para vender más con menos esfuerzo -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">Automatización para vender más con menos esfuerzo</h3>
+            <p class="text-slate-700 leading-relaxed">
+              No basta con atraer visitantes. También es necesario convertirlos en clientes. Por eso integramos herramientas que automatizan gran parte del proceso comercial.
+            </p>
+            <p class="font-bold text-slate-800 text-sm">Su empresa podrá:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-slate-600">
+              {[
+                "Capturar prospectos automáticamente.",
+                "Automatizar seguimientos.",
+                "Integrar formularios con su CRM.",
+                "Medir cada interacción del usuario.",
+                "Analizar el rendimiento de sus campañas.",
+                "Identificar oportunidades de mejora mediante datos reales."
+              ].map((it) => (
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-semibold text-slate-600 pt-2">
+              Mientras usted trabaja, su plataforma continúa generando oportunidades de negocio.
+            </p>
+          </div>
+
+          <!-- 4. Una metodología orientada al crecimiento -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-150 shadow-sm space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">Una metodología orientada al crecimiento</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Cada proyecto se construye con una visión empresarial integral. Analizamos:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+              {[
+                "• Cómo atraer más clientes.",
+                "• Cómo mejorar la conversión de visitantes.",
+                "• Cómo reducir la dependencia de la publicidad pagada.",
+                "• Cómo automatizar procesos repetitivos.",
+                "• Cómo crear una plataforma preparada para el crecimiento futuro."
+              ].map((it) => (
+                <div>{it}</div>
+              ))}
+            </div>
+            <p class="text-sm font-black text-blue-900 uppercase tracking-wider pt-2">
+              La tecnología por sí sola no genera resultados. La estrategia correcta sí.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: ¿Para quién es esta solución? & ¿Qué nos diferencia? (Dark Block) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">
+          ¿Para quién es esta solución?
+        </h2>
+        <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+          Trabajamos con empresas que desean:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto mb-16 text-sm text-slate-200 font-semibold">
+          {[
+            "• Incrementar sus ventas mediante canales digitales.",
+            "• Posicionarse por encima de su competencia.",
+            "• Reducir sus costos de adquisición de clientes.",
+            "• Prepararse para el futuro de las búsquedas con IA.",
+            "• Escalar su negocio mediante tecnología moderna y automatización."
+          ].map((item) => (
+            <div class="p-4 bg-slate-800 rounded-xl border border-slate-700">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-xl font-bold text-blue-400 mb-12 max-w-xl mx-auto">
+          Si su empresa quiere crecer de forma sostenible, esta solución ha sido diseñada para usted.
+        </p>
+
+        <hr class="border-slate-800 my-16" />
+
+        <h3 class="text-2xl md:text-3xl font-black mb-6">
+          ¿Qué nos diferencia?
+        </h3>
+        <p class="text-xl font-bold text-white mb-8">
+          No vendemos páginas web. Creamos activos digitales que generan valor.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl mx-auto text-xs font-bold text-blue-300">
+          {["Desarrollo moderno", "SEO estratégico", "Automatización empresarial", "Analítica avanzada", "Inteligencia Artificial", "Optimización continua"].map((it) => (
+            <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+              {it}
+            </div>
+          ))}
+        </div>
+        <p class="text-sm font-semibold text-slate-400 mt-6 max-w-md mx-auto">
+          Todo integrado en una única estrategia enfocada en aumentar la rentabilidad de su empresa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Es momento de transformar su presencia digital -->
+    <section class="py-20 bg-blue-50 border-t border-b border-blue-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">
+          Es momento de transformar su presencia digital
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed mb-8 max-w-2xl mx-auto">
+          Cada día que su sitio web no genera oportunidades, está dejando clientes en manos de su competencia. La buena noticia es que esto puede cambiar.
+        </p>
+
+        <div class="bg-white p-8 rounded-3xl border border-blue-100 max-w-xl mx-auto shadow-sm space-y-4">
+          <p class="text-slate-800 font-bold">
+            Analizaremos su situación actual, identificaremos las oportunidades de crecimiento y diseñaremos una estrategia personalizada para convertir su presencia digital en un sistema capaz de atraer clientes, automatizar procesos y acelerar el crecimiento de su empresa.
+          </p>
+          <p class="text-2xl font-black text-blue-900 pt-2">
+            Solicite una consultoría estratégica
+          </p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Descubra cómo una plataforma moderna, respaldada por SEO, automatización e Inteligencia Artificial, puede convertirse en uno de los activos más rentables para el crecimiento de su negocio.
+          </p>
+          <div class="font-black text-blue-950 uppercase tracking-wider text-sm pt-4 border-t border-slate-100">
+            <p>Desarrollo web. Aplicaciones. IA. Automatización. SEO. Growth.</p>
+            <p class="text-blue-700 text-base mt-2">Su próxima gran oportunidad de crecimiento puede comenzar con una sola conversación.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
