@@ -1,0 +1,470 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Implementación de GoHighLevel (GHL) & Automatización Comercial",
+  "description": "Convierte más prospectos en clientes con un sistema comercial automatizado en GoHighLevel. CRM, workflows, IA, secuencias de seguimiento y embudos de ventas.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="GoHighLevel (GHL) CRM & Automatización Comercial | Roberto Pérez Salazar"
+  description="Convierte más prospectos en clientes con un sistema comercial automatizado. Implementación de GoHighLevel, CRM, pipelines, secuencias de email/SMS e IA."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-full uppercase tracking-wider mb-6">
+          GoHighLevel & Commercial Automation
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte más prospectos en clientes con un sistema comercial automatizado
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Cuántos clientes potenciales estás perdiendo simplemente porque nadie les da seguimiento a tiempo?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agenda una Sesión Estratégica
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Diagnóstico de Fugas Comerciales -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Cada día tu empresa recibe mensajes, formularios, llamadas, consultas y leads provenientes de Google, Meta, WhatsApp y otras fuentes.
+          </p>
+
+          <div class="my-8 p-6 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl not-prose">
+            <p class="text-xl font-bold text-blue-950 mb-2">El problema no siempre es conseguir más prospectos.</p>
+            <p class="text-2xl font-black text-blue-900">El problema es convertir mejor los que ya tienes.</p>
+          </div>
+
+          <p class="text-lg text-slate-700 mb-6">Considera estas situaciones comunes:</p>
+
+          <div class="space-y-3 not-prose mb-10">
+            {[
+              "Un prospecto que no recibe respuesta rápidamente.",
+              "Un cliente que pregunta por tus servicios y nunca recibe seguimiento.",
+              "Una cotización que se envía, pero nadie vuelve a contactar.",
+              "Un cliente antiguo que podría volver a comprar, pero que nunca recibe una nueva oferta."
+            ].map((leak) => (
+              <div class="p-4 bg-red-50 border border-red-100 rounded-xl text-red-950 font-semibold flex items-center gap-3 text-sm">
+                <span class="text-red-500 font-bold">✕</span>
+                <span>{leak}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xl font-black text-slate-900 text-center">
+            Cada uno representa una oportunidad de ingresos que puede estar desapareciendo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: La Solución - GoHighLevel -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400">La solución</span>
+          <h2 class="text-3xl md:text-5xl font-black mt-2">
+            Construir un sistema comercial, no simplemente instalar un CRM
+          </h2>
+          <p class="text-slate-300 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+            Implementamos GoHighLevel como el centro de operaciones de tu proceso comercial. La plataforma permite conectar en un solo sistema:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-bold text-slate-800 mb-12">
+          {[
+            "CRM y gestión de prospectos", "Formularios y landing pages", "Automatizaciones", "Email marketing", "SMS", "Seguimiento de leads", "Calendarios y reservas", "Pipeline de ventas", "Campañas de reactivación", "Seguimiento de clientes", "Reportes y métricas", "Automatizaciones con IA"
+          ].map((item) => (
+            <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl text-slate-200 text-center">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <div class="p-8 bg-slate-800 rounded-3xl border border-slate-700 text-center max-w-2xl mx-auto space-y-2">
+          <p class="text-slate-300">Pero la tecnología por sí sola no genera resultados.</p>
+          <p class="text-xl font-black text-blue-400">
+            La diferencia está en cómo diseñamos el sistema alrededor de tu negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: De prospectos dispersos a un proceso comercial predecible (1 to 5) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          De prospectos dispersos a un proceso comercial predecible
+        </h2>
+
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12">
+          Nuestro trabajo comienza entendiendo cómo funciona actualmente tu negocio. Analizamos:
+        </p>
+
+        <div class="space-y-6">
+
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">1. Captación</span>
+            <h3 class="text-xl font-black text-slate-900">¿De dónde vienen tus prospectos?</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Google, Meta Ads, redes sociales, página web, WhatsApp, referencias, campañas, llamadas u otros canales.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">2. Conversión</span>
+            <h3 class="text-xl font-black text-slate-900">¿Qué ocurre después de que una persona muestra interés?</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Aquí identificamos los puntos donde se pierden oportunidades.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">3. Seguimiento</span>
+            <h3 class="text-xl font-black text-slate-900">¿Cuántas veces y durante cuánto tiempo se contacta a un prospecto?</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Un buen sistema no depende de que un vendedor recuerde hacer seguimiento manualmente.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">4. Cierre</span>
+            <h3 class="text-xl font-black text-slate-900">¿Cómo sabemos qué prospectos están cerca de comprar?</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Construimos un pipeline que permite visualizar cada oportunidad.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-xs space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">5. Retención y reactivación</span>
+            <h3 class="text-xl font-black text-slate-900">¿Qué sucede después de la venta?</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Los clientes existentes pueden convertirse nuevamente en compradores mediante campañas automatizadas de seguimiento y reactivación.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Diseñamos el sistema alrededor de tu proceso (Workflows) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          Diseñamos el sistema alrededor de tu proceso
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12">
+          No creemos en implementar la misma automatización para todas las empresas. Diseñamos workflows específicos para tu modelo de negocio.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+            <h3 class="text-lg font-black text-slate-900">Nuevo lead</h3>
+            <p class="text-xs font-bold text-blue-700 bg-blue-50 p-3 rounded-xl border border-blue-100">
+              Lead entra → CRM → respuesta inmediata → calificación → seguimiento → agenda → vendedor → cierre
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+            <h3 class="text-lg font-black text-slate-900">Lead que no respondió</h3>
+            <p class="text-xs font-bold text-blue-700 bg-blue-50 p-3 rounded-xl border border-blue-100">
+              Primer contacto → recordatorio → segundo contacto → contenido de valor → seguimiento → reactivación
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+            <h3 class="text-lg font-black text-slate-900">Cliente existente</h3>
+            <p class="text-xs font-bold text-blue-700 bg-blue-50 p-3 rounded-xl border border-blue-100">
+              Compra → seguimiento → satisfacción → nueva oferta → recompra → fidelización
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+            <h3 class="text-lg font-black text-slate-900">Lead perdido</h3>
+            <p class="text-xs font-bold text-blue-700 bg-blue-50 p-3 rounded-xl border border-blue-100">
+              Identificación → campaña de reactivación → nueva propuesta → seguimiento → nueva oportunidad
+            </p>
+          </div>
+
+        </div>
+
+        <div class="p-8 bg-blue-900 text-white rounded-3xl text-center max-w-xl mx-auto space-y-2 shadow-md">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-300">El objetivo es sencillo</span>
+          <p class="text-xl font-black">
+            Que ningún prospecto valioso se pierda por falta de seguimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Automatización + IA -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-5xl font-black">
+            Automatización + IA: más velocidad, menos trabajo manual
+          </h2>
+          <p class="text-slate-300 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+            La siguiente evolución no consiste únicamente en automatizar tareas. Consiste en utilizar IA para mejorar la capacidad comercial del negocio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-slate-200 mb-12">
+          {[
+            "Responder consultas iniciales.",
+            "Clasificar prospectos.",
+            "Identificar intención de compra.",
+            "Personalizar comunicaciones.",
+            "Resumir conversaciones.",
+            "Priorizar oportunidades.",
+            "Activar diferentes workflows según el comportamiento del prospecto.",
+            "Apoyar al equipo comercial en el seguimiento.",
+            "Reactivar leads antiguos.",
+            "Automatizar tareas repetitivas."
+          ].map((aiItem) => (
+            <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl flex items-center gap-2">
+              <span class="text-blue-400 font-bold">•</span>
+              <span>{aiItem}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="p-8 bg-blue-950 border border-blue-800 rounded-3xl text-center max-w-2xl mx-auto">
+          <p class="text-xl font-black text-blue-200">
+            Así, tu equipo puede concentrarse en lo que realmente genera valor: vender, atender y construir relaciones con los clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: El objetivo no es tener más herramientas -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          El objetivo no es tener más herramientas
+        </h2>
+        <p class="text-slate-600 text-center max-w-2xl mx-auto mb-8">
+          Muchas empresas tienen CRM + WhatsApp + email marketing + formularios + calendario + automatizaciones + herramientas de IA + hojas de cálculo. Pero todas funcionan por separado.
+        </p>
+
+        <div class="p-4 bg-red-50 border border-red-200 rounded-2xl text-center font-bold text-red-950 text-sm max-w-2xl mx-auto mb-10">
+          Eso genera: datos duplicados → procesos manuales → falta de seguimiento → pérdida de oportunidades.
+        </div>
+
+        <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl text-center max-w-2xl mx-auto space-y-4">
+          <p class="text-xs font-black uppercase tracking-wider text-slate-400">Nuestro enfoque es diferente: Construimos un sistema conectado</p>
+          <div class="p-4 bg-blue-50 border border-blue-200 rounded-2xl font-black text-blue-950 text-base sm:text-lg">
+            Marketing → Lead → CRM → Automatización → Ventas → Cliente → Retención
+          </div>
+          <p class="text-slate-700 font-bold text-sm">Todo debe formar parte de un mismo proceso.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: ¿Qué podemos implementar? (10 Items) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué podemos implementar?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">CRM & Pipeline</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Organización de prospectos y oportunidades por etapas.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Lead Capture</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Landing pages, formularios y sistemas de captación.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Automated Follow-Up</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Secuencias automáticas para evitar que los leads se enfríen.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Appointment Automation</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Reservas, recordatorios y seguimiento de citas.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Email & SMS Marketing</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Campañas automatizadas según comportamiento.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Lead Nurturing</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Procesos para convertir prospectos que todavía no están preparados para comprar.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Re-activation Campaigns</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Campañas para recuperar prospectos y clientes antiguos.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <h3 class="text-lg font-black text-slate-900">AI Automation</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Automatizaciones inteligentes para reducir tareas manuales y mejorar la velocidad de respuesta.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2 md:col-span-2">
+            <h3 class="text-lg font-black text-slate-900">Reporting</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">Dashboards para entender qué canales, campañas y procesos generan oportunidades y ventas.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: ¿Por qué implementar un sistema así? (Conversion Math) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          ¿Por qué implementar un sistema así?
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">
+          Porque el crecimiento no debería depender únicamente de: <span class="font-bold text-slate-800">“Necesitamos conseguir más leads.”</span> La pregunta correcta es: <strong class="text-blue-900">¿Cuánto más podemos vender con los leads que ya estamos generando?</strong>
+        </p>
+
+        <!-- Conversion math comparative -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-center space-y-2">
+            <p class="text-xs font-bold text-slate-400 uppercase">Conversión Actual (5%)</p>
+            <p class="text-2xl font-black text-slate-800">1,000 leads → 50 clientes</p>
+          </div>
+
+          <div class="p-6 bg-blue-50 border border-blue-200 rounded-2xl text-center space-y-2">
+            <p class="text-xs font-bold text-blue-600 uppercase">Con Seguimiento Automatizado (7%)</p>
+            <p class="text-2xl font-black text-blue-950">1,000 leads → 70 clientes</p>
+          </div>
+        </div>
+
+        <p class="text-center text-slate-700 font-bold max-w-xl mx-auto">
+          Sin necesariamente aumentar el presupuesto de adquisición. Ese es el tipo de oportunidad que buscamos identificar.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 9: Nuestro enfoque (01 to 06) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 text-center">
+          Nuestro enfoque
+        </h2>
+        <p class="text-slate-600 text-center max-w-xl mx-auto mb-16">
+          No comenzamos con la herramienta. Comenzamos con el negocio.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">01 — Diagnose</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Analizamos tu proceso comercial actual.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">02 — Strategy</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Identificamos fugas, oportunidades y procesos que pueden automatizarse.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">03 — Build</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Construimos el CRM, pipelines, workflows, campañas y automatizaciones.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">04 — Integrate</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Conectamos tus canales y herramientas existentes.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">05 — Optimise</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Medimos resultados y mejoramos continuamente el sistema.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-blue-600 uppercase tracking-widest">06 — Scale</span>
+            <p class="text-slate-700 text-sm leading-relaxed">Una vez validado el proceso, podemos ampliar la automatización y utilizar IA para aumentar la capacidad operativa.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Closing Value Proposition & CTA -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+          No te vendemos GoHighLevel. Construimos tu sistema de crecimiento.
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto mb-8">
+          GoHighLevel es la tecnología. La estrategia, arquitectura, automatización y optimización son las que generan el valor.
+        </p>
+
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl max-w-xl mx-auto text-xs font-black text-blue-900 uppercase tracking-wider mb-10">
+          Captar más → responder más rápido → hacer mejor seguimiento → convertir más → retener más → escalar con menos trabajo manual
+        </div>
+
+        <div class="bg-blue-900 text-white p-8 rounded-3xl shadow-lg max-w-xl mx-auto space-y-6">
+          <h3 class="text-2xl font-black text-white">
+            ¿Cuánto te están costando actualmente los leads que no reciben seguimiento?
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Antes de invertir más dinero en publicidad, vale la pena responder una pregunta: <strong class="text-white">¿Estamos aprovechando al máximo las oportunidades que ya tenemos?</strong>
+          </p>
+
+          <p class="text-lg font-black text-blue-300">
+            GoHighLevel + Automatización + IA + Estrategia Comercial
+          </p>
+          <p class="text-xs text-slate-300">
+            Convierte tu proceso de ventas en un sistema que trabaja incluso cuando tu equipo no está conectado.
+          </p>
+
+          <div class="pt-2">
+            <a href="#contacto" class="inline-block bg-white text-blue-950 px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-all shadow-md">
+              Agenda una Sesión Estratégica
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
