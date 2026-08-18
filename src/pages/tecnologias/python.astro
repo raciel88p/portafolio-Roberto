@@ -1,0 +1,385 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automatización SEO con Python e Inteligencia Artificial",
+  "description": "Automatiza tu SEO con Python y deja que tu equipo se enfoque en crecer. Creación de workflows con APIs, IA, crawlers y scripts a medida para automatizar el SEO.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Automatización SEO con Python e Inteligencia Artificial | Roberto Pérez Salazar"
+  description="Automatiza tu SEO con Python y libera tiempo para tareas de alto valor. Scripts personalizados, auditorías automatizadas, keyword intelligence, APIs e IA."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-emerald-100 text-emerald-800 rounded-full uppercase tracking-wider mb-6">
+          Python + SEO Automation + AI
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Automatiza tu SEO con Python y deja que tu equipo se enfoque en crecer
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Cuántas horas al mes pierde tu equipo haciendo tareas SEO que podrían ejecutarse automáticamente?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Identificar Oportunidades de Automatización
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Diagnóstico e Introducción -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Extracción de datos, análisis de keywords, revisión de URLs, generación de reportes, detección de errores, análisis de competidores, optimización de contenido, creación de metadatos…
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 mb-4">
+            El problema no es que estas tareas sean difíciles.
+          </p>
+          <p class="text-xl font-black text-red-600 mb-8">
+            El problema es que consumen tiempo, se repiten constantemente y aumentan el riesgo de errores humanos.
+          </p>
+
+          <div class="my-10 p-8 bg-emerald-50 border-l-4 border-emerald-600 rounded-r-2xl not-prose shadow-xs">
+            <h3 class="text-xl font-black text-emerald-950 mb-3">
+              De tareas manuales a procesos automatizados
+            </h3>
+            <p class="text-slate-700 leading-relaxed">
+              Con <strong class="text-emerald-900">Python + automatización + IA</strong>, podemos convertir procesos SEO repetitivos en sistemas que trabajan automáticamente y entregan información accionable para tu equipo.
+            </p>
+          </div>
+
+          <!-- Feature Checklist Grid -->
+          <h3 class="text-2xl font-black text-slate-900 mb-6 not-prose">
+            Imagina tener un sistema capaz de:
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose mb-12">
+            {[
+              "Analizar miles de URLs en minutos.",
+              "Detectar automáticamente problemas técnicos de SEO.",
+              "Extraer y organizar keywords y datos de competidores.",
+              "Identificar oportunidades de contenido.",
+              "Analizar titles, meta descriptions, headings y contenido.",
+              "Detectar páginas con contenido duplicado o problemas de indexación.",
+              "Crear reportes SEO automáticamente.",
+              "Procesar grandes cantidades de datos de Google Search Console, GA4, APIs y crawlers.",
+              "Clasificar keywords por intención de búsqueda.",
+              "Detectar oportunidades de internal linking.",
+              "Automatizar análisis de páginas y contenidos.",
+              "Conectar diferentes herramientas SEO en un único workflow.",
+              "Utilizar IA para analizar y clasificar los datos obtenidos."
+            ].map((feature) => (
+              <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-800 flex items-start gap-3">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-2xl font-black text-center text-blue-900">
+            Eso es lo que podemos construir con Python.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: ¿Por qué Python para SEO? -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-6">
+          ¿Por qué Python para SEO?
+        </h2>
+        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+          Python permite crear automatizaciones mucho más flexibles que depender exclusivamente de herramientas SEO tradicionales.
+        </p>
+
+        <div class="p-8 bg-slate-800 rounded-3xl border border-slate-700 max-w-3xl mx-auto text-left space-y-4 mb-10">
+          <p class="text-slate-200 text-lg leading-relaxed">
+            Podemos conectar <strong class="text-emerald-400">APIs, bases de datos, crawlers, hojas de cálculo, sistemas internos, herramientas de IA y plataformas SEO</strong> para crear un flujo de trabajo adaptado específicamente a tu negocio.
+          </p>
+          <p class="text-slate-300 text-base">
+            En lugar de pagar por múltiples herramientas y realizar procesos manualmente, podemos diseñar automatizaciones personalizadas para tu operación SEO.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Algunos ejemplos -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          Algunos ejemplos de lo que podemos automatizar
+        </h2>
+
+        <div class="space-y-8">
+
+          <!-- Auditoría SEO automatizada -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">Auditoría SEO automatizada</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Introduce un dominio y el sistema puede analizar miles de URLs para identificar problemas técnicos, contenido, indexación, metadata y estructura.
+            </p>
+          </div>
+
+          <!-- Keyword Intelligence -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">Keyword Intelligence</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Procesa miles de keywords y las clasifica automáticamente por:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-bold text-slate-800">
+              {["Search intent", "Topic", "Funnel stage", "URL potencial", "Keyword cluster", "Oportunidad SEO"].map((item) => (
+                <div class="p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-950 flex items-center gap-2">
+                  <span>•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Internal Linking Automation -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">Internal Linking Automation</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Analiza el contenido existente y encuentra oportunidades relevantes para crear enlaces internos estratégicos.
+            </p>
+          </div>
+
+          <!-- Content Analysis + AI -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">Content Analysis + AI</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Combina Python con IA para analizar grandes cantidades de contenido y detectar:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-bold text-slate-800">
+              {["Gaps de contenido", "Temas faltantes", "Contenido débil", "Cannibalisation", "Intención de búsqueda", "Oportunidades de actualización"].map((item) => (
+                <div class="p-3 bg-blue-50 border border-blue-100 rounded-xl text-blue-950 flex items-center gap-2">
+                  <span>•</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Automated SEO Reporting -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <h3 class="text-2xl font-black text-slate-900 mb-3">Automated SEO Reporting</h3>
+            <p class="text-slate-700 leading-relaxed">
+              En lugar de pasar horas preparando reportes, podemos crear un sistema que recopile los datos automáticamente y genere reportes periódicos con los KPIs que realmente importan.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: No necesitas otra herramienta. Necesitas un sistema. -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          No necesitas otra herramienta. Necesitas un sistema.
+        </h2>
+
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-8">
+          Muchas empresas tienen acceso a:
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-2 text-xs font-bold text-slate-800 mb-10 max-w-2xl mx-auto">
+          {["Screaming Frog", "Semrush", "Ahrefs", "GSC", "GA4", "Looker Studio", "WordPress", "APIs", "IA"].map((tool) => (
+            <span class="p-2.5 bg-slate-100 rounded-lg border border-slate-200">{tool}</span>
+          ))}
+        </div>
+
+        <div class="p-8 bg-amber-50 border border-amber-200 rounded-3xl text-center max-w-2xl mx-auto space-y-4">
+          <p class="text-slate-800 text-base">
+            Pero el problema es que todas estas herramientas están separadas. El verdadero valor aparece cuando conseguimos que trabajen juntas automáticamente.
+          </p>
+          <p class="text-xl font-black text-amber-950">
+            Python puede convertirse en la capa que conecta toda esta información.
+          </p>
+        </div>
+
+        <!-- El Resultado Grid -->
+        <div class="mt-16 text-center">
+          <h3 class="text-2xl font-black text-slate-900 mb-8">El resultado:</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-sm font-bold text-slate-800">
+            {["Menos trabajo manual.", "Menos errores.", "Más datos procesados.", "Decisiones SEO más rápidas.", "Más capacidad para escalar."].map((res) => (
+              <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-emerald-950">
+                {res}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Automatización diseñada para tu proceso & Math Saving -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          Automatización diseñada para tu proceso
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">
+          No creo en soluciones genéricas cuando cada empresa tiene una operación SEO diferente. Primero identificamos las tareas que consumen más tiempo y tienen mayor potencial de automatización.
+        </p>
+
+        <!-- Process steps -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-black text-emerald-800 mb-16">
+          {["Analizamos", "Automatizamos", "Integramos", "Probamos", "Optimizamos", "Escalamos"].map((st, i) => (
+            <div class="flex items-center gap-2">
+              <span class="px-4 py-2 bg-emerald-100 rounded-xl">{st}</span>
+              {i < 5 && <span class="text-slate-400 font-bold">→</span>}
+            </div>
+          ))}
+        </div>
+
+        <!-- Math Block -->
+        <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl max-w-3xl mx-auto shadow-xl">
+          <h3 class="text-2xl font-black text-center text-emerald-400 mb-6">
+            ¿Cuánto puede ahorrar una automatización?
+          </h3>
+          <p class="text-slate-300 text-center leading-relaxed mb-6">
+            Supongamos que tu equipo dedica <strong class="text-white">20 horas al mes</strong> a una tarea repetitiva. Si automatizamos el 80% del proceso:
+          </p>
+
+          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 text-center font-black text-xl mb-6">
+            <span class="text-red-400 line-through">20 horas</span>
+            <span class="text-slate-400 mx-3">→</span>
+            <span class="text-emerald-400">4 horas</span>
+          </div>
+
+          <p class="text-slate-200 text-center text-lg leading-relaxed">
+            Eso significa recuperar aproximadamente <strong class="text-emerald-300">16 horas cada mes</strong> para tareas de mayor valor. Ahora imagina hacer esto con 5, 10 o 20 procesos diferentes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Ideal para agencias SEO y equipos internos -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-12 text-center">
+          Ideal para agencias SEO y equipos internos
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Agencias SEO</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Automatiza procesos repetitivos de múltiples clientes y aumenta la capacidad de tu equipo sin aumentar proporcionalmente las horas de trabajo.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">E-commerce</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Procesa miles de productos, categorías y URLs para identificar problemas y oportunidades de optimización.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Empresas con grandes sitios web</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Automatiza auditorías, análisis de contenido, metadata, enlaces internos e indexación.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Programmatic SEO</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Automatiza procesamiento de keywords, clustering, generación de estructuras, análisis de SERPs y control de calidad.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2 md:col-span-2">
+            <h3 class="text-lg font-black text-slate-900">Equipos de marketing</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Centraliza información de diferentes fuentes y conviértela en información útil para tomar decisiones.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="p-8 bg-blue-50 border border-blue-200 rounded-3xl text-center max-w-2xl mx-auto space-y-3">
+          <p class="text-xl font-black text-blue-950">
+            Tu equipo debería estar haciendo estrategia, no copiando y pegando datos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Empecemos por identificar tus oportunidades -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 text-center">
+          Empecemos por identificar tus oportunidades de automatización
+        </h2>
+        <p class="text-lg text-slate-700 text-center leading-relaxed mb-10">
+          Puedo analizar tu proceso SEO actual y ayudarte a identificar qué tareas pueden automatizarse con Python, APIs e IA. Te entregaré una visión clara de:
+        </p>
+
+        <div class="space-y-3 max-w-xl mx-auto font-bold text-slate-800 text-sm mb-12">
+          {[
+            "1. Qué podemos automatizar.",
+            "2. Cómo funcionaría el workflow.",
+            "3. Qué herramientas y APIs necesitamos.",
+            "4. Qué procesos deberían mantenerse bajo supervisión humana.",
+            "5. Qué impacto potencial puede tener la automatización."
+          ].map((item) => (
+            <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-2xs">
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <div class="p-8 bg-white border border-emerald-200 rounded-3xl shadow-sm text-center space-y-4 max-w-xl mx-auto">
+          <p class="text-2xl font-black text-emerald-900">
+            Convierte tu operación SEO en un sistema escalable.
+          </p>
+          <div class="font-bold text-slate-700 text-sm space-y-1">
+            <p>Menos tareas repetitivas.</p>
+            <p>Más velocidad.</p>
+            <p>Más datos procesados.</p>
+            <p class="text-blue-600 font-black">Más capacidad para crecer.</p>
+          </div>
+          <p class="text-lg font-black text-slate-900 pt-2">
+            Hablemos de qué podemos automatizar en tu SEO.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
