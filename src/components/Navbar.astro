@@ -1,29 +1,48 @@
 ---
 const industries = [
-  "Industria Tech", "Real State", "Salud", "Startups", "Betting",
-  "Poker Online", "Espiritual", "eCommerce", "Saas",
-  "Ciber Seguridad", "Investigación y desarrollo", "Seguros", "Turismo"
+  { title: "Tecnología", slug: "industria-tech" },
+  { title: "Bienes Raíces", slug: "real-state" },
+  { title: "Salud", slug: "salud" },
+  { title: "Startups", slug: "startups" },
+  { title: "Apuestas en Línea", slug: "betting" },
+  { title: "Póker en Línea", slug: "poker-online" },
+  { title: "Espiritualidad", slug: "espiritual" },
+  { title: "Comercio Electrónico", slug: "ecommerce" },
+  { title: "SaaS", slug: "saas" },
+  { title: "Ciberseguridad", slug: "ciber-seguridad" },
+  { title: "Investigación y Desarrollo", slug: "investigacion-y-desarrollo" },
+  { title: "Seguros", slug: "seguros" },
+  { title: "Turismo", slug: "turismo" }
 ];
 
 const services = [
-  { title: "Ai Growth Strategy", slug: "ai-growth-strategy" },
-  { title: "GEO Optimization", slug: "geo-optimization" },
-  { title: "Marketing Analytics y CRO", slug: "marketing-analytics-cro" },
-  { title: "Web Analytics", slug: "web-analytics" },
-  { title: "Local SEO", slug: "local-seo" },
-  { title: "Youtube SEO", slug: "youtube-seo" },
-  { title: "Wordpress SEO", slug: "wordpress-seo" },
-  { title: "Headless CMS SEO", slug: "headless-cms-seo" },
+  { title: "Estrategia de Crecimiento con IA", slug: "ai-growth-strategy" },
+  { title: "Optimización GEO (Motor Generativo)", slug: "geo-optimization" },
+  { title: "Analítica de Marketing y CRO", slug: "marketing-analytics-cro" },
+  { title: "Analítica Web", slug: "web-analytics" },
+  { title: "SEO Local", slug: "local-seo" },
+  { title: "SEO para YouTube", slug: "youtube-seo" },
+  { title: "SEO para WordPress", slug: "wordpress-seo" },
+  { title: "SEO para CMS Desacoplados", slug: "headless-cms-seo" },
   { title: "Consultoría SEO", slug: "consultor-seo" },
-  { title: "Desarrollo Web & Apps", slug: "desarrollo-web-apps" },
-  { title: "Programmatic SEO", slug: "programmatic-seo" },
+  { title: "Desarrollo Web y Aplicaciones", slug: "desarrollo-web-apps" },
+  { title: "SEO Programático", slug: "programmatic-seo" },
   { title: "SEO para Directorios", slug: "seo-directorios" },
-  { title: "Servicio de SEM", slug: "servicio-sem" }
+  { title: "Servicios de SEM", slug: "servicio-sem" }
 ];
 
 const technologies = [
-  "WordPress", "Headless CMS", "Python", "Webflow", "GoHighLevel",
-  "Automatizaciones agenticas", "Asistentes agenticos", "N8n", "Looker", "Google Tag Manager", "Google Analytics 4"
+  { title: "WordPress", slug: "wordpress" },
+  { title: "Headless CMS", slug: "headless-cms" },
+  { title: "Python", slug: "python" },
+  { title: "Webflow", slug: "webflow" },
+  { title: "GoHighLevel", slug: "gohighlevel" },
+  { title: "Automatizaciones Agénticas", slug: "automatizaciones-agenticas" },
+  { title: "Asistentes Agénticos", slug: "asistentes-agenticos" },
+  { title: "n8n", slug: "n8n" },
+  { title: "Looker Studio", slug: "looker" },
+  { title: "Google Tag Manager", slug: "google-tag-manager" },
+  { title: "Google Analytics 4", slug: "google-analytics-4" }
 ];
 ---
 <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
@@ -55,8 +74,8 @@ const technologies = [
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {industries.map(industry => (
-                  <a href={`/industrias/${industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
-                    {industry}
+                  <a href={`/industrias/${industry.slug}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                    {industry.title}
                   </a>
                 ))}
               </div>
@@ -91,8 +110,8 @@ const technologies = [
             <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 py-2">
               <div class="grid grid-cols-1 gap-1 px-2">
                 {technologies.map(tech => (
-                  <a href={`/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
-                    {tech}
+                  <a href={`/tecnologias/${tech.slug}`} class="block px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                    {tech.title}
                   </a>
                 ))}
               </div>
@@ -122,8 +141,8 @@ const technologies = [
         </button>
         <div id="mobile-industries-list" class="hidden pl-4 mt-2 grid grid-cols-1 gap-2">
           {industries.map(industry => (
-            <a href={`/industrias/${industry.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="block py-2 text-slate-600 text-sm">
-              {industry}
+            <a href={`/industrias/${industry.slug}`} class="block py-2 text-slate-600 text-sm">
+              {industry.title}
             </a>
           ))}
         </div>
@@ -156,8 +175,8 @@ const technologies = [
         </button>
         <div id="mobile-tech-list" class="hidden pl-4 mt-2 grid grid-cols-1 gap-2">
           {technologies.map(tech => (
-            <a href={`/tecnologias/${tech.toLowerCase().replace(/\s+/g, '-')}`} class="block py-2 text-slate-600 text-sm">
-              {tech}
+            <a href={`/tecnologias/${tech.slug}`} class="block py-2 text-slate-600 text-sm">
+              {tech.title}
             </a>
           ))}
         </div>
