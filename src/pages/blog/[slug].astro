@@ -8,7 +8,7 @@ import { sanityClient } from 'sanity:client';
 
 // Generate static paths for ES posts
 export async function getStaticPaths() {
-  const query = `*[_type == "post" && language == "es" && defined(slug.current)] {
+  const query = `*[_type == "post" && (!defined(language) || language == "es" || language == null) && defined(slug.current)] {
     "slug": slug.current
   }`;
 
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 // Fetch full post details
-const query = `*[_type == "post" && language == "es" && slug.current == $slug][0] {
+const query = `*[_type == "post" && (!defined(language) || language == "es" || language == null) && slug.current == $slug][0] {
   title,
   excerpt,
   mainImage {
@@ -37,15 +37,23 @@ const query = `*[_type == "post" && language == "es" && slug.current == $slug][0
   },
   body,
   publishedAt,
-  "author": author->{
-    name,
-    image {
-      asset->{
-        url
-      }
+  "author": select(
+    defined(author->name) => {
+      "name": author->name,
+      "image": author->image { asset->{ url } },
+      "bio": author->bio
     },
-    bio
-  },
+    defined(author) => {
+      "name": author,
+      "image": null,
+      "bio": null
+    },
+    {
+      "name": "Roberto Pérez Salazar",
+      "image": null,
+      "bio": null
+    }
+  ),
   "categories": categories[]->title
 }`;
 

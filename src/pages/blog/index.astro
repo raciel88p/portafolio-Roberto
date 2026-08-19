@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { sanityClient } from 'sanity:client';
 
 // GROQ Query to fetch published posts in Spanish
-const query = `*[_type == "post" && language == "es"] | order(publishedAt desc) {
+const query = `*[_type == "post" && (!defined(language) || language == "es" || language == null)] | order(publishedAt desc) {
   title,
   "slug": slug.current,
   excerpt,
@@ -16,7 +16,11 @@ const query = `*[_type == "post" && language == "es"] | order(publishedAt desc) 
     }
   },
   publishedAt,
-  "author": author->name,
+  "author": select(
+    defined(author->name) => author->name,
+    defined(author) => author,
+    "Roberto Pérez Salazar"
+  ),
   "categories": categories[]->title
 }`;
 
