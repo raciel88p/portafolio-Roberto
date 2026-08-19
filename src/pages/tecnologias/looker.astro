@@ -1,0 +1,363 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Administración y Gestión Profesional de Looker Studio",
+  "description": "Convierte tus datos de Looker en decisiones que generan resultados. Dashboards ejecutivos, integración de fuentes de datos (GA4, Ads, CRM), automatización de reporting y control de KPIs.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Administración y Gestión Profesional de Looker Studio | Roberto Pérez Salazar"
+  description="Convierte tus datos de Looker Studio en decisiones de negocio. Dashboards interactivos, integración de fuentes, automatización de reporting y control de KPIs."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-full uppercase tracking-wider mb-6">
+          Looker Studio & Business Intelligence
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte tus datos de Looker en decisiones que generan resultados
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          Administración y Gestión Profesional de Looker Studio para empresas que necesitan controlar su negocio, no simplemente mirar reportes.
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agenda una Conversación
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: El Diagnóstico -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            ¿Tienes dashboards en Looker Studio, pero cada semana tienes que revisar datos, corregir reportes, actualizar fuentes o intentar entender qué está pasando con el negocio?
+          </p>
+
+          <div class="my-8 p-6 bg-slate-900 text-white rounded-2xl not-prose text-center">
+            <p class="text-lg font-bold text-slate-300 mb-2">El problema no es tener datos.</p>
+            <p class="text-2xl font-black text-blue-400">El problema es no convertirlos en decisiones.</p>
+          </div>
+
+          <p class="text-lg text-slate-700 leading-relaxed mb-8">
+            Muchas empresas invierten en Google Analytics, Google Ads, Meta Ads, Search Console, CRM y otras plataformas, pero terminan con información fragmentada, dashboards desactualizados y reportes que nadie utiliza para tomar decisiones.
+          </p>
+
+          <p class="text-2xl font-black text-blue-900 text-center">
+            Ahí es donde puedo ayudarte.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Deja de administrar dashboards. Empieza a administrar tu información. -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+          Deja de administrar dashboards. Empieza a administrar tu información.
+        </h2>
+        <p class="text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto mb-8">
+          Ofrezco un servicio de administración y gestión integral de Looker Studio, diseñado para mantener tus sistemas de reporting funcionando correctamente y convertir tus datos en información útil para la dirección del negocio.
+        </p>
+
+        <div class="p-8 bg-white border border-blue-200 rounded-3xl shadow-xs max-w-xl mx-auto space-y-2">
+          <p class="text-slate-600 font-bold text-sm uppercase tracking-wider">Mi objetivo</p>
+          <p class="text-xl font-black text-slate-900">
+            No es simplemente crear gráficos. Es construir un sistema de información que te permita saber qué está funcionando, qué está fallando y dónde debes actuar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: ¿Qué incluye el servicio? (1 to 4) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué incluye el servicio?
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 1. Administración de Looker Studio -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">1. Administración de Looker Studio</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Mantengo y optimizo tus dashboards para que la información esté disponible, organizada y actualizada.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-bold text-slate-800">
+              {[
+                "Creación y actualización de dashboards",
+                "Mantenimiento de reportes existentes",
+                "Organización de fuentes de información",
+                "Corrección de errores en conexiones",
+                "Optimización de visualizaciones",
+                "Gestión de usuarios y permisos",
+                "Estandarización de reportes"
+              ].map((it) => (
+                <div class="p-2.5 bg-white rounded-lg border border-slate-200 flex items-center gap-1.5">
+                  <span class="text-blue-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- 2. Integración de fuentes de datos -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">2. Integración de fuentes de datos</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Centralizamos la información que necesitas para gestionar tu negocio. Podemos trabajar con fuentes como:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-bold text-slate-800">
+              {[
+                "Google Analytics 4", "Google Ads", "Meta Ads", "Google Search Console", "CRM", "Google Sheets", "Bases de datos", "Plataformas de marketing", "Fuentes mediante conectores"
+              ].map((src) => (
+                <div class="p-2.5 bg-blue-50 border border-blue-100 rounded-lg text-blue-950 flex items-center gap-1.5">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <span>{src}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-xs font-bold text-slate-600 pt-2">
+              El objetivo es reducir el trabajo manual y crear una fuente de información más consistente para la toma de decisiones.
+            </p>
+          </div>
+
+          <!-- 3. Automatización del reporting -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">3. Automatización del reporting</h3>
+            <p class="text-slate-700 leading-relaxed">
+              ¿Por qué perder horas preparando reportes que pueden actualizarse automáticamente? Diseño procesos para reducir tareas repetitivas y facilitar que los dashboards estén disponibles con la información más reciente.
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 text-xs font-black text-slate-800 pt-2">
+              {["Menos Excel.", "Menos copiar y pegar.", "Menos trabajo manual.", "Más tiempo para analizar y actuar."].map((p) => (
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full">{p}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- 4. Control de KPIs -->
+          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">4. Control de KPIs</h3>
+            <p class="text-slate-700 leading-relaxed">
+              No necesitas 50 métricas para administrar una empresa. Necesitas identificar las métricas que realmente explican el rendimiento del negocio. Por eso estructuro dashboards alrededor de KPIs como:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-900">
+              {[
+                "Revenue", "Leads", "Conversion Rate", "CAC", "ROAS", "CPA", "Organic Traffic", "Paid Traffic", "Cost per Lead", "Sales Pipeline", "Revenue by Channel"
+              ].map((kpi) => (
+                <span class="px-3 py-1.5 bg-blue-100/80 rounded-lg">{kpi}</span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: De los datos a la acción -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          De los datos a la acción
+        </h2>
+        <p class="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+          Un buen dashboard debería responder rápidamente preguntas como:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left font-bold text-sm text-slate-200 max-w-2xl mx-auto mb-10">
+          {[
+            "• ¿Estamos creciendo?",
+            "• ¿Qué canal está generando más ingresos?",
+            "• ¿Dónde estamos perdiendo dinero?",
+            "• ¿Qué campañas están funcionando?",
+            "• ¿Qué está cambiando respecto al período anterior?",
+            "• ¿Dónde deberíamos invertir más?",
+            "• ¿Qué debemos corregir esta semana?"
+          ].map((q) => (
+            <div class="p-3.5 bg-slate-800 rounded-xl border border-slate-700">
+              {q}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-slate-300 font-bold text-base max-w-xl mx-auto">
+          Si tu dashboard no puede ayudarte a responder estas preguntas, probablemente tienes un problema de reporting, no de datos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Un servicio pensado para acompañar al negocio -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 text-center">
+          Un servicio pensado para acompañar al negocio
+        </h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12">
+          No quiero ser simplemente la persona que "actualiza el Looker". Mi enfoque es trabajar como un partner de gestión de datos y reporting:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Administración mensual de Looker</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Mantén tus dashboards, fuentes y reportes funcionando sin tener que dedicar recursos internos a esta tarea.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Optimización de dashboards existentes</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Si ya tienes Looker Studio pero tus reportes son complicados, lentos o poco útiles, puedo reorganizarlos para hacerlos más claros y accionables.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Implementación de reporting</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Si actualmente dependes de Excel, reportes manuales o múltiples plataformas desconectadas, puedo ayudarte a construir una estructura centralizada.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <h3 class="text-lg font-black text-slate-900">Reporting para Marketing & Sales</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Integra información de Google Ads, Meta Ads, GA4, Search Console y CRM para obtener una visión completa del funnel.
+            </p>
+          </div>
+
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-2 md:col-span-2">
+            <h3 class="text-lg font-black text-slate-900">Reporting ejecutivo</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Dashboards diseñados para que gerentes y propietarios puedan entender rápidamente el estado del negocio sin revisar cientos de métricas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: ¿Qué cambia después? (Before vs After) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-12 text-center">
+          ¿Qué cambia después?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+          <div class="p-8 bg-white border border-slate-200 rounded-3xl space-y-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Antes</span>
+            <div class="p-4 bg-slate-50 rounded-2xl text-xs font-semibold text-slate-600 leading-relaxed">
+              Datos → Excel → copiar/pegar → preparar reporte → revisar → enviar → tomar decisiones
+            </div>
+          </div>
+
+          <div class="p-8 bg-blue-900 text-white rounded-3xl space-y-3 shadow-md">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-300">Después</span>
+            <div class="p-4 bg-blue-950 rounded-2xl text-xs font-bold text-blue-200 leading-relaxed border border-blue-800">
+              Datos → Looker → KPI → análisis → decisión → acción
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-center text-slate-700 font-bold max-w-xl mx-auto">
+          La diferencia no está solamente en el dashboard. Está en el tiempo que recuperas y en la velocidad con la que puedes tomar decisiones.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: ¿Por qué trabajar conmigo? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 text-center">
+          ¿Por qué trabajar conmigo?
+        </h2>
+        <p class="text-slate-600 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+          Combino experiencia en SEO, marketing digital, analytics, tracking, paid media, automatización y estrategia de crecimiento. Eso significa que no veo Looker como una herramienta aislada. Lo veo como una pieza dentro de todo el sistema de medición y crecimiento de una empresa.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-bold text-slate-800 max-w-2xl mx-auto mb-12">
+          {[
+            "Google Analytics", "Google Tag Manager", "Google Ads", "Meta Ads", "Search Console", "Looker Studio", "CRM", "Tracking conversiones", "SEO", "Automatización", "AI & Procesos"
+          ].map((skill) => (
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center">
+              {skill}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-center font-black text-blue-900 uppercase tracking-wider text-sm">
+          Esto permite conectar marketing + datos + tecnología + negocio en un mismo sistema.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 8: Closing & CTA -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-black text-slate-900 mb-6">
+          Tu empresa ya está generando datos. La pregunta es:
+        </h2>
+        <p class="text-xl font-bold text-blue-900 mb-8">
+          ¿Los estás utilizando realmente para tomar mejores decisiones?
+        </p>
+
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-md max-w-xl mx-auto space-y-4">
+          <p class="text-slate-800 text-sm leading-relaxed">
+            Si la respuesta es "no siempre", podemos cambiarlo. Puedo ayudarte a transformar Looker Studio de un simple sistema de reportes en una herramienta de gestión y crecimiento para tu negocio.
+          </p>
+
+          <p class="text-xl font-black text-slate-900 pt-2">
+            Agenda una conversación
+          </p>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Cuéntame qué herramientas utilizas actualmente, qué dashboards tienes y qué problemas estás enfrentando. Analizamos tu sistema actual y definimos qué podemos automatizar, mejorar y medir.
+          </p>
+
+          <div class="font-black text-slate-900 uppercase tracking-wider text-xs space-y-1 pt-2">
+            <p>Menos tiempo preparando reportes.</p>
+            <p class="text-blue-600">Más claridad para tomar decisiones.</p>
+            <p class="text-blue-900">Más control sobre el negocio.</p>
+          </div>
+
+          <p class="text-sm font-black text-slate-950 border-t border-slate-100 pt-4">
+            Hablemos sobre cómo convertir tus datos en una ventaja competitiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
