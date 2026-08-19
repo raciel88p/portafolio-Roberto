@@ -1,0 +1,67 @@
+---
+const projects = [
+  {
+    title: "AI Agents & Autonomous Workflows",
+    tech: ["OpenAI", "Claude", "n8n", "Python"],
+    desc: "Agentes autónomos que califican leads, actualizan CRM y gestionan comunicaciones 24/7 sin supervisión humana continua.",
+    status: "Operativo"
+  },
+  {
+    title: "Generative Engine Optimization (GEO/AEO)",
+    tech: ["Perplexity", "ChatGPT", "SearchGPT", "Schema"],
+    desc: "Modelos semánticos y arquitectura de datos diseñados para lograr recomendaciones prioritarias en motores de IA.",
+    status: "Desplegado"
+  },
+  {
+    title: "Programmatic SEO + LLM Automation",
+    tech: ["Astro", "Sanity CMS", "Python", "APIs"],
+    desc: "Sistemas de generación masiva y estructurada de landings optimizadas para motores de búsqueda tradicionales y conversacionales.",
+    status: "En Producción"
+  },
+  {
+    title: "Real-Time Executive Dashboards & Analytics",
+    tech: ["GA4", "Looker Studio", "Google Tag Manager"],
+    desc: "Tableros unificados de control de ingresos, CAC, ROAS y atribución multicanal en tiempo real.",
+    status: "Activo"
+  }
+];
+---
+
+<section id="ai-lab" class="py-24 bg-white border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="px-4 py-1.5 text-xs font-bold bg-purple-100 text-purple-800 rounded-full uppercase tracking-wider">
+        Laboratorio de Innovación Aplicada
+      </span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6">
+        AI Growth Lab™
+      </h2>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Espacio de experimentación e implementación donde transformo avances de Inteligencia Artificial y automatización avanzada en sistemas comerciales escalables.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((p) => (
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-purple-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-3 py-1 rounded-full">
+                {p.status}
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">{p.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">{p.desc}</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-200">
+            {p.tech.map((t) => (
+              <span class="text-[11px] font-bold bg-white text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200">
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
