@@ -1,0 +1,72 @@
+---
+const impactCriteria = [
+  {
+    title: "Revenue Impact",
+    desc: "Aumento directo en la generación de pipeline, tasa de conversión y valor de vida del cliente (LTV).",
+    icon: "💰"
+  },
+  {
+    title: "Operational Efficiency",
+    desc: "Reducción de horas dedicadas a tareas manuales mediante automatizaciones y workflows agénticos.",
+    icon: "⚙️"
+  },
+  {
+    title: "Customer Experience",
+    desc: "Respuestas instantáneas, flujos hiperpersonalizados y atención predecible 24/7.",
+    icon: "🤝"
+  },
+  {
+    title: "Automation & Scalability",
+    desc: "Capacidad de multiplicar por 10 el volumen operativo sin aumentar proporcionalmente la nómina.",
+    icon: "📈"
+  },
+  {
+    title: "Data Quality & Attribution",
+    desc: "Decisiones basadas en datos confiables, eventos sin puntos ciegos y modelos de atribución multicanal.",
+    icon: "📊"
+  },
+  {
+    title: "Competitive Advantage",
+    desc: "Construcción de activos digitales propios, GEO/AEO e infraestructura propietaria difícil de replicar.",
+    icon: "🛡️"
+  }
+];
+---
+
+<section id="impacto" class="py-24 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="px-4 py-1.5 text-xs font-bold bg-blue-500/10 text-blue-400 rounded-full uppercase tracking-wider">
+        Filosofía de Crecimiento
+      </span>
+      <h2 class="text-4xl md:text-5xl font-black mt-4 mb-6">
+        Business Impact Framework™
+      </h2>
+      <p class="text-lg text-slate-300 leading-relaxed">
+        No tomo decisiones basadas en modas ni opiniones. Toda estrategia se diseña, implementa y prioriza según su impacto económico real.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {impactCriteria.map((c) => (
+        <div class="p-8 bg-slate-800/80 border border-slate-700/60 rounded-3xl hover:border-blue-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="text-4xl mb-4">{c.icon}</div>
+            <h3 class="text-2xl font-bold text-white mb-3">{c.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{c.desc}</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-700/40 flex items-center gap-2 text-xs font-bold text-blue-400">
+            <span>Orientado a Resultados</span>
+            <span>→</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 bg-gradient-to-r from-blue-900/60 to-indigo-900/60 border border-blue-500/30 p-8 rounded-3xl text-center max-w-3xl mx-auto">
+      <p class="text-lg md:text-xl font-bold text-blue-200 leading-relaxed">
+        "Si una iniciativa no incrementa ingresos, reduce costos o amplía la ventaja competitiva, se descarta inmediatamente."
+      </p>
+    </div>
+  </div>
+</section>

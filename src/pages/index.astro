@@ -2,23 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
+import BusinessImpact from '../components/BusinessImpact.astro';
 import Services from '../components/Services.astro';
-import Testimonials from '../components/Testimonials.astro';
-import About from '../components/About.astro';
+import AILab from '../components/AILab.astro';
 import Portfolio from '../components/Portfolio.astro';
+import About from '../components/About.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Industries from '../components/Industries.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
+<Layout
+  title="Roberto Pérez Salazar | Arquitecto de Sistemas de Crecimiento con IA & Marketing Operations"
+  description="Diseño e implemento sistemas de crecimiento impulsados por Inteligencia Artificial, Technical SEO, GEO/AEO, Marketing Operations y Analytics para generar impacto de negocio medible."
+>
 	<Navbar />
 	<main>
 		<Hero />
+		<BusinessImpact />
 		<Services />
-		<Testimonials />
-		<About />
+		<AILab />
 		<Portfolio />
+		<About />
+		<Testimonials />
 		<Industries />
 		<Contact />
 	</main>
