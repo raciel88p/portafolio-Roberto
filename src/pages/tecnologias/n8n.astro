@@ -1,0 +1,382 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Administración y Desarrollo de Automatizaciones con n8n",
+  "description": "Convierte n8n en un sistema que trabaja para tu empresa. Diseño, administración, optimización e integración de workflows de n8n con IA, CRM y APIs.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Administración y Automatizaciones con n8n | Roberto Pérez Salazar"
+  description="Convierte n8n en un sistema que trabaja para tu empresa. Automatiza workflows, integra tus herramientas, CRM, APIs e Inteligencia Artificial."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-rose-100 text-rose-800 rounded-full uppercase tracking-wider mb-6">
+          n8n Workflow & Automation Engine
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Convierte n8n en un sistema que trabaja para tu empresa
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          ¿Cuánto tiempo y dinero está perdiendo tu empresa en tareas que podrían estar automatizadas?
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Empieza con una Auditoría
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-rose-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Diagnóstico -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-slate max-w-none">
+          <p class="text-xl text-slate-700 leading-relaxed mb-6">
+            Cada día, tu equipo dedica horas a copiar información, mover datos entre plataformas, enviar correos, actualizar CRM, generar reportes, dar seguimiento a clientes y ejecutar procesos repetitivos.
+          </p>
+
+          <p class="text-xl font-bold text-slate-900 mb-4">
+            El problema no es que tu equipo no trabaje lo suficiente.
+          </p>
+          <p class="text-xl font-black text-red-600 mb-8">
+            El problema es que muchas tareas todavía dependen de intervención humana cuando podrían ejecutarse automáticamente.
+          </p>
+
+          <div class="my-10 p-8 bg-rose-50 border-l-4 border-rose-600 rounded-r-2xl not-prose shadow-xs">
+            <p class="text-slate-800 text-lg leading-relaxed">
+              Con <strong class="text-rose-950">n8n</strong>, podemos convertir esos procesos manuales en workflows automatizados, conectando las herramientas que tu empresa ya utiliza y creando un sistema operativo de automatización diseñado alrededor de tu negocio.
+            </p>
+          </div>
+
+          <p class="text-lg text-slate-700 font-medium leading-relaxed mb-6">
+            No vendemos simplemente workflows de n8n.
+          </p>
+          <p class="text-xl font-black text-slate-900 leading-relaxed text-center">
+            Diseñamos, administramos y optimizamos sistemas de automatización que generan eficiencia, reducen errores y liberan a tu equipo para concentrarse en actividades de mayor valor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: De tareas manuales a procesos inteligentes (Flow Example) -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-6">
+          De tareas manuales a procesos inteligentes
+        </h2>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
+          Imagina que cuando un cliente llena un formulario:
+        </p>
+
+        <div class="p-6 bg-slate-800 border border-slate-700 rounded-3xl max-w-3xl mx-auto font-black text-rose-300 text-xs sm:text-sm md:text-base leading-relaxed mb-10 shadow-lg">
+          Lead entra → CRM se actualiza → cliente recibe respuesta → equipo recibe notificación → lead se clasifica → seguimiento se programa → información queda registrada.
+        </div>
+
+        <p class="text-xl font-bold text-white max-w-xl mx-auto">
+          Todo esto puede suceder automáticamente. Y no necesitas contratar más personas para ejecutar las mismas tareas repetitivas. Necesitas diseñar mejor el proceso.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: ¿Qué hacemos por tu empresa? (1 to 5) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          ¿Qué hacemos por tu empresa?
+        </h2>
+
+        <div class="space-y-12">
+
+          <!-- 1. Administración de n8n -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">1. Administración de n8n</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Nos encargamos de que tu infraestructura de automatización funcione de forma estable y organizada.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-bold text-slate-800">
+              {[
+                "Administración de workflows", "Monitoreo de ejecuciones", "Resolución de errores", "Gestión de credenciales", "Optimización del rendimiento", "Mantenimiento integraciones", "Documentación de workflows", "Revisión de procesos"
+              ].map((it) => (
+                <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-1">
+                  <span class="text-rose-500">•</span>
+                  <span>{it}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-sm font-bold text-rose-900 pt-2">
+              Tu equipo utiliza la automatización. Nosotros nos encargamos de que funcione.
+            </p>
+          </div>
+
+          <!-- 2. Diseño y desarrollo de workflows -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">2. Diseño y desarrollo de workflows</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Analizamos tus procesos actuales y determinamos qué puede automatizarse. Podemos conectar n8n con herramientas como:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-800">
+              {[
+                "CRM", "Google Sheets", "Gmail", "Slack", "WhatsApp", "APIs", "Bases de datos", "Formularios", "E-commerce", "Plataformas de marketing", "Sistemas internos", "Herramientas de IA", "Webhooks"
+              ].map((tool) => (
+                <span class="px-3 py-1.5 bg-rose-50 border border-rose-100 text-rose-950 rounded-lg">{tool}</span>
+              ))}
+            </div>
+            <p class="text-sm font-black text-slate-900 pt-2">
+              El objetivo no es crear automatizaciones por crear automatizaciones. El objetivo es eliminar cuellos de botella.
+            </p>
+          </div>
+
+          <!-- 3. Automatización con Inteligencia Artificial -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">3. Automatización con Inteligencia Artificial</h3>
+            <p class="text-slate-700 leading-relaxed">
+              La combinación de n8n + IA permite ir mucho más allá de las automatizaciones tradicionales. Por ejemplo:
+            </p>
+
+            <div class="max-w-xl mx-auto space-y-2 text-xs font-bold text-slate-800">
+              {[
+                "Un nuevo lead entra",
+                "↓ La IA analiza la información",
+                "↓ Clasifica el lead según potencial",
+                "↓ Genera una respuesta personalizada",
+                "↓ Actualiza el CRM",
+                "↓ Notifica al vendedor",
+                "↓ Programa el siguiente seguimiento",
+                "↓ Genera información para el dashboard"
+              ].map((step) => (
+                <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-center">
+                  {step}
+                </div>
+              ))}
+            </div>
+            <p class="text-xs font-bold text-slate-500 text-center pt-2">
+              Sin que una persona tenga que ejecutar manualmente cada paso.
+            </p>
+          </div>
+
+          <!-- 4. Optimización de procesos -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+            <h3 class="text-2xl font-black text-slate-900">4. Optimización de procesos</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Antes de automatizar, analizamos el proceso. Porque automatizar un proceso malo simplemente hace que el proceso malo sea más rápido.
+            </p>
+            <div class="p-4 bg-slate-900 text-white rounded-2xl text-center font-black text-sm">
+              Analizar → Simplificar → Automatizar → Medir → Optimizar
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-semibold text-slate-600 pt-2">
+              {[
+                "Tareas repetitivas", "Procesos duplicados", "Errores humanos", "Puntos de espera", "Dependencia de personas", "Entrada manual de datos", "Sistemas desconectados", "Oportunidades de IA"
+              ].map((pt) => (
+                <div class="p-2 bg-slate-50 rounded-lg text-center">
+                  • {pt}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- 5. Mantenimiento y soporte continuo -->
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <h3 class="text-2xl font-black text-slate-900">5. Mantenimiento y soporte continuo</h3>
+            <p class="text-slate-700 leading-relaxed">
+              Una automatización no termina cuando el workflow funciona por primera vez. Las empresas cambian. Las APIs cambian. Las herramientas cambian. Los procesos cambian.
+            </p>
+            <p class="text-sm font-black text-rose-950 pt-2">
+              Por eso ofrecemos administración continua para mantener tu ecosistema de automatización funcionando y evolucionando.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: ¿Cuánto puede ahorrar tu empresa? (Hours Saved) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 text-center">
+          ¿Cuánto puede ahorrar tu empresa?
+        </h2>
+
+        <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl max-w-3xl mx-auto shadow-xl text-center space-y-6 mb-12">
+          <p class="text-slate-300 text-base leading-relaxed">
+            Supongamos que <strong class="text-white">5 empleados</strong> dedican solamente <strong class="text-white">1 hora diaria</strong> a tareas repetitivas:
+          </p>
+
+          <div class="p-4 bg-slate-800 rounded-2xl border border-slate-700 font-black text-lg max-w-xl mx-auto">
+            5 horas × 22 días = 110 horas mensuales
+          </div>
+
+          <p class="text-slate-300 text-sm">
+            Ahora imagina que podemos automatizar el 60% de esas tareas:
+          </p>
+
+          <div class="p-4 bg-rose-950 border border-rose-800 text-rose-300 rounded-2xl font-black text-2xl max-w-xl mx-auto">
+            Liberando 66 horas de trabajo al mes
+          </div>
+
+          <p class="text-slate-200 text-sm leading-relaxed max-w-xl mx-auto">
+            Pero el verdadero valor no son solamente las horas ahorradas. Es lo que tu equipo puede hacer con esas horas:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs font-bold text-slate-200">
+            {["Más ventas", "Más clientes", "Mejor servicio", "Más análisis", "Más innovación"].map((b) => (
+              <div class="p-2.5 bg-slate-800 rounded-lg border border-slate-700">{b}</div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ROI Evaluation -->
+        <div class="p-8 bg-rose-50 border border-rose-200 rounded-3xl text-center max-w-2xl mx-auto space-y-3">
+          <p class="text-xs font-black uppercase tracking-wider text-rose-600">La automatización debe generar ROI</p>
+          <p class="text-lg font-bold text-slate-900">
+            Cada proyecto debe responder una pregunta: ¿Qué impacto tendrá esta automatización en el negocio?
+          </p>
+          <div class="p-3 bg-white rounded-xl text-xs font-black text-rose-950 border border-rose-100">
+            Tiempo ahorrado + reducción de errores + capacidad adicional + impacto en ingresos = valor potencial
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Nuestro enfoque (Phases 1 to 5) -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16 text-center">
+          Nuestro enfoque
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-rose-600 uppercase tracking-widest">Fase 1 — Discovery</span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              Analizamos cómo funciona actualmente tu empresa. Identificamos procesos, herramientas, sistemas, integraciones y cuellos de botella.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-rose-600 uppercase tracking-widest">Fase 2 — Roadmap</span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              Creamos un mapa de oportunidades y priorizamos las automatizaciones según impacto vs. complejidad.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-rose-600 uppercase tracking-widest">Fase 3 — Implementation</span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              Construimos los workflows en n8n, integramos tus herramientas y realizamos pruebas.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2">
+            <span class="text-xs font-black text-rose-600 uppercase tracking-widest">Fase 4 — Monitoring</span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              Supervisamos el funcionamiento y detectamos errores o comportamientos inesperados.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-2 lg:col-span-2">
+            <span class="text-xs font-black text-rose-600 uppercase tracking-widest">Fase 5 — Continuous Improvement</span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              Optimizamos los workflows y encontramos nuevas oportunidades de automatización.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: ¿Por qué contratar administración? -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <h2 class="text-3xl font-black text-slate-900">
+          ¿Por qué contratar administración en lugar de simplemente contratar un desarrollador?
+        </h2>
+        <p class="text-slate-700 leading-relaxed">
+          Porque construir un workflow es solamente una parte del problema. Una verdadera estrategia de automatización necesita:
+        </p>
+
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl font-black text-rose-950 text-xs sm:text-sm">
+          Procesos + Tecnología + Datos + Integración + IA + Mantenimiento + Medición
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Nuestro enfoque combina estas áreas para convertir n8n en una infraestructura de automatización para tu empresa, no simplemente en una colección de workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Empieza con una auditoría & CTA -->
+    <section class="py-20 bg-slate-50 border-t border-b border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+          Tu empresa no necesita más procesos manuales. Necesita procesos que trabajen solos.
+        </h2>
+
+        <p class="text-slate-700 text-base leading-relaxed mb-8">
+          Mientras tu equipo está concentrado en vender, atender clientes y hacer crecer el negocio, tus automatizaciones pueden encargarse de gran parte del trabajo operativo que ocurre detrás.
+        </p>
+
+        <div class="p-6 bg-white border border-slate-200 rounded-2xl max-w-xl mx-auto text-sm font-bold text-slate-800 space-y-2 mb-10">
+          <p class="text-slate-400 text-xs uppercase font-black">Es momento de dejar de preguntar:</p>
+          <p class="text-red-600 line-through">“¿Cómo podemos hacer esta tarea más rápido?”</p>
+          <p class="text-rose-900 font-black text-base pt-1">Y empezar a preguntar: “¿Por qué alguien todavía tiene que hacer esta tarea?”</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-rose-200 shadow-md max-w-xl mx-auto space-y-4">
+          <h3 class="text-2xl font-black text-slate-900">
+            Empieza con una auditoría de automatización
+          </h3>
+          <p class="text-slate-700 text-xs leading-relaxed">
+            Analizamos tus procesos actuales y encontramos las oportunidades donde n8n + automatización + IA pueden generar mayor impacto. Te entregamos:
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-left text-xs font-semibold text-slate-700 pt-2">
+            <div>• Identificación de procesos</div>
+            <div>• Priorización por impacto</div>
+            <div>• Oportunidades de integración</div>
+            <div>• Automatizaciones con IA</div>
+            <div>• Recomendaciones técnicas</div>
+            <div>• Roadmap de implementación</div>
+          </div>
+
+          <p class="text-xs font-bold text-slate-600 pt-2">
+            No necesitas automatizar toda tu empresa. Necesitas empezar por las automatizaciones que pueden generar mayor impacto.
+          </p>
+
+          <p class="text-base font-black text-rose-900 pt-2">
+            Agenda una sesión de diagnóstico y descubramos qué procesos de tu empresa podrían estar funcionando automáticamente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
