@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+
+const industriesList = [
+  {
+    title: "Bienes Raíces e Inmobiliaria",
+    slug: "real-state",
+    icon: "🏠",
+    desc: "Transformación del sitio web inmobiliario en un motor de captación directa de compradores e inversionistas calificados.",
+    challenge: "Invisibilidad frente a compradores de alto valor que investigan antes de hablar con un asesor.",
+    solution: "Sistemas de SEO geolocalizado, optimización para motores de IA y embudos de conversión automatizados.",
+    impact: "+86% en captación de prospectos calificados y reducción de dependencia en portales pagados."
+  },
+  {
+    title: "SaaS y Empresas de Software",
+    slug: "saas",
+    icon: "⚙️",
+    desc: "Estrategias de adquisición orgánica basada en intención de búsqueda y reducción sostenible del costo de adquisición de clientes (CAC).",
+    challenge: "Costos publicitarios crecientes y alta tasa de cancelación por falta de alineación en el perfil de cliente ideal.",
+    solution: "SEO programático orientado a características del producto y mapas de intención comercial.",
+    impact: "Reducción del CAC en un 35% y aceleración de demos calificados."
+  },
+  {
+    title: "Salud y Clínicas Médicas",
+    slug: "salud",
+    icon: "🏥",
+    desc: "Posicionamiento de autoridad médica, generación de confianza y sistemas de agendamiento automatizado de pacientes.",
+    challenge: "Baja conversión de visitantes a citas efectivas y desconfianza en canales digitales.",
+    solution: "Arquitectura de contenidos de autoridad bajo criterios EEAT y agentes de atención 24/7.",
+    impact: "Incremento del 120% en agendas confirmadas y reducción del trabajo administrativo manual."
+  },
+  {
+    title: "Ciberseguridad y Servicios B2B",
+    slug: "ciber-seguridad",
+    icon: "🛡️",
+    desc: "Generación de oportunidades de alto valor corporativo mediante autoridad técnica y liderazgo de pensamiento.",
+    challenge: "Ciclos de venta largos y dificultad para transmitir valor técnico a tomadores de decisión C-Suite.",
+    solution: "Clusters de contenido especializado, optimización GEO para consultas complejas y nutrición de prospectos.",
+    impact: "Aumento en la tasa de cierre de contratos corporativos de alto valor."
+  },
+  {
+    title: "Comercio Electrónico (eCommerce)",
+    slug: "ecommerce",
+    icon: "🛍️",
+    desc: "Optimización de la tasa de conversión (CRO), SEO transaccional a escala y automatización de la retención.",
+    challenge: "Abandono de carritos y dependencia excesiva en campañas publicitarias de pago por clic.",
+    solution: "Arquitectura de catálogo escalable, SEO programático de categorías y secuencias automatizadas de recompra.",
+    impact: "Aumento del valor promedio de pedido y flujo constante de tráfico orgánico comprador."
+  },
+  {
+    title: "Turismo y Hospitalidad",
+    slug: "turismo",
+    icon: "🏨",
+    desc: "Captación directa de viajeros internacionales y reducción de comisiones pagadas a intermediarios.",
+    challenge: "Alta dependencia en agencias de viaje en línea (OTAs) y baja rentabilidad directa.",
+    solution: "Estrategia de posicionamiento por destino, SEO multilingüe y motores de reserva directa.",
+    impact: "Aumento del 45% en reservas directas y reducción significativa de comisiones."
+  },
+  {
+    title: "Investigación y Desarrollo (I+D)",
+    slug: "investigacion-y-desarrollo",
+    icon: "🔬",
+    desc: "Validación de oportunidades de negocio, prototipado de innovación y transformación de incertidumbre en certezas.",
+    challenge: "Riesgo financiero al invertir en proyectos o tecnologías sin evidencia previa de mercado.",
+    solution: "Proceso estructurado de investigación, pruebas de concepto y experimentos ágiles antes de escalar.",
+    impact: "Minimización del riesgo de capital y aceleración del tiempo de salida al mercado."
+  },
+  {
+    title: "Tecnología y Nearshore",
+    slug: "industria-tech",
+    icon: "💻",
+    desc: "Estrategias de posicionamiento global para empresas de ingeniería, desarrollo de software y servicios nearshore.",
+    challenge: "Competencia agresiva en mercados internacionales y dificultad para destacar diferenciadores técnicos.",
+    solution: "Arquitectura web multilingüe, SEO de entidades y demostración cuantitativa de casos de éxito.",
+    impact: "Captación de clientes corporativos en mercados de alta demanda."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Soluciones de Crecimiento por Industria y Sector Empresarial",
+  "description": "Estrategias de crecimiento, IA, automatización y posicionamiento adaptadas a los desafíos específicos de cada industria.",
+  "provider": {
+    "@type": "Person",
+    "name": "Roberto Pérez Salazar"
+  },
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title="Soluciones de Crecimiento por Industria | Roberto Pérez Salazar"
+  description="Estrategias de crecimiento, IA, automatización y posicionamiento diseñadas para resolver los desafíos específicos de cada sector empresarial."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Navbar />
+
+  <main class="pt-24 bg-white text-slate-900">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
+          Especialización por Sector Empresarial
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Soluciones de Crecimiento Diseñadas para los Desafíos de su Industria
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
+          No aplicamos fórmulas genéricas. Construimos sistemas de adquisición y operaciones adaptados al modelo de negocio de su sector.
+        </p>
+        <div class="mt-10">
+          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Agendar Sesión de Diagnóstico por Industria
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      </div>
+    </section>
+
+    <!-- Industry Grid -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">
+            Sectores que Acompañamos
+          </h2>
+          <p class="text-lg text-slate-600">
+            Cada industria exige un enfoque distinto. Analizamos los problemas comerciales más comunes y diseñamos sistemas que generan impacto financiero real.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {industriesList.map((ind) => (
+            <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-blue-300 transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <span class="text-4xl bg-white p-3 rounded-2xl border border-slate-150 shadow-xs">{ind.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-black text-slate-900">{ind.title}</h3>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Solución Especializada</span>
+                  </div>
+                </div>
+
+                <p class="text-slate-700 font-semibold mb-6 leading-relaxed text-base">
+                  {ind.desc}
+                </p>
+
+                <div class="space-y-3 text-xs md:text-sm text-slate-600 mb-8">
+                  <div class="p-3 bg-white rounded-xl border border-slate-150">
+                    <strong class="text-slate-900 block mb-1">Desafío Principal:</strong>
+                    <span>{ind.challenge}</span>
+                  </div>
+                  <div class="p-3 bg-white rounded-xl border border-slate-150">
+                    <strong class="text-slate-900 block mb-1">Estrategia Aplicada:</strong>
+                    <span>{ind.solution}</span>
+                  </div>
+                  <div class="p-3 bg-blue-50/80 border border-blue-100 rounded-xl text-blue-950 font-bold">
+                    <strong class="text-blue-900 block mb-1">Impacto Esperado:</strong>
+                    <span>{ind.impact}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-200">
+                <a href={`/industrias/${ind.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                  Ver estrategia completa para {ind.title}
+                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Summary Section -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-6">
+          Nuestra Filosofía por Sector
+        </h2>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
+          No vendemos tecnología aislada ni horas de consultoría. Diseñamos la arquitectura que conecta la necesidad de sus clientes con los objetivos financieros de su empresa.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
+            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">01. Diagnóstico</span>
+            <p class="text-white font-bold text-base mb-2">Análisis de Fricción</p>
+            <p class="text-xs text-slate-400 leading-relaxed">Identificamos los cuellos de botella que frenan las ventas en su sector específico.</p>
+          </div>
+          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
+            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">02. Estrategia</span>
+            <p class="text-white font-bold text-base mb-2">Diseño del Sistema</p>
+            <p class="text-xs text-slate-400 leading-relaxed">Construimos la combinación exacta de SEO, IA, automatización y analítica.</p>
+          </div>
+          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
+            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">03. Resultados</span>
+            <p class="text-white font-bold text-base mb-2">Impacto Medible</p>
+            <p class="text-xs text-slate-400 leading-relaxed">Evaluamos el éxito por la aceleración de ingresos y la reducción de costos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
