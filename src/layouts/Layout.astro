@@ -5,37 +5,77 @@ import CookieBanner from '../components/CookieBanner.astro';
 interface Props {
 	title?: string;
 	description?: string;
+	image?: string;
 }
 
 const {
 	title = "Roberto Pérez Salazar | Arquitecto de Sistemas de Crecimiento con IA & Marketing Operations",
-	description = "Roberto Pérez Salazar - Arquitecto de Sistemas de Crecimiento con Inteligencia Artificial, Technical SEO, GEO/AEO, Marketing Operations y Analytics."
+	description = "Roberto Pérez Salazar - Arquitecto de Sistemas de Crecimiento con Inteligencia Artificial, Technical SEO, GEO/AEO, Marketing Operations y Analytics.",
+	image = "https://cdn.sanity.io/images/2grwsc7l/production/8ccdba849ad165213ef0e90c7da59093ea319163-500x500.jpg"
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://robertoperez.com').href;
+
+const schemaData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Person",
+			"@id": "https://robertoperez.com/#person",
+			"name": "Roberto Pérez Salazar",
+			"jobTitle": "Arquitecto de Sistemas de Crecimiento con IA & Marketing Operations",
+			"url": "https://robertoperez.com",
+			"image": image,
+			"sameAs": [
+				"https://www.linkedin.com/in/roberto88/",
+				"https://www.youtube.com/@recursosparaemprendedores88"
+			]
+		},
+		{
+			"@type": "WebSite",
+			"@id": "https://robertoperez.com/#website",
+			"url": "https://robertoperez.com",
+			"name": "Roberto Pérez Salazar",
+			"description": description,
+			"publisher": {
+				"@id": "https://robertoperez.com/#person"
+			}
+		}
+	]
+};
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
 
-		<script is:inline type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"name": "Roberto Pérez Salazar",
-				"jobTitle": "Arquitecto de Sistemas de Crecimiento con IA & Marketing Operations",
-				"url": "https://robertoperez.com",
-				"sameAs": [
-					"https://www.linkedin.com/in/roberto88/",
-					"https://www.youtube.com/@recursosparaemprendedores88"
-				]
-			}
-		</script>
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:site_name" content="Roberto Pérez Salazar" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+
+		<!-- JSON-LD Schema Markup -->
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
