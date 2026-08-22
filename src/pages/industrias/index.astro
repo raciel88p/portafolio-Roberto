@@ -4,78 +4,342 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import Contact from '../../components/Contact.astro';
 
-const industriesList = [
+const industriesData = [
   {
     title: "Bienes Raíces e Inmobiliaria",
     slug: "real-state",
     icon: "🏠",
-    desc: "Transformación del sitio web inmobiliario en un motor de captación directa de compradores e inversionistas calificados.",
-    challenge: "Invisibilidad frente a compradores de alto valor que investigan antes de hablar con un asesor.",
-    solution: "Sistemas de SEO geolocalizado, optimización para motores de IA y embudos de conversión automatizados.",
-    impact: "+86% en captación de prospectos calificados y reducción de dependencia en portales pagados."
+    executiveSummary: "Sector de altos montos de transacción y ciclos de decisión prolongados donde la confianza y la visibilidad temprana definen la cuota de mercado.",
+    challenges: [
+      "Baja generación de demanda directa y alta dependencia en portales inmobiliarios de terceros.",
+      "Alto costo de adquisición de prospectos no calificados que saturan al equipo comercial.",
+      "Procesos manuales de seguimiento que resultan en pérdida de oportunidades de alta intención."
+    ],
+    opportunities: [
+      "Captar inversionistas y compradores en etapas iniciales de búsqueda mediante activos digitales propios.",
+      "Automatizar la calificación y asignación de prospectos en tiempo real.",
+      "Dominar las búsquedas geolocalizadas e inteligencias artificiales de descubrimiento inmobiliario."
+    ],
+    recommendedStrategies: [
+      "Optimización SEO geolocalizada y estructurada para proyectos inmobiliarios.",
+      "Embudos de adquisición y calificación automatizada de prospectos.",
+      "Sistemas de IA para atención 24/7 y agendamiento de visitas virtuales o presenciales."
+    ],
+    expectedImpact: [
+      "Incremento del 85% en captación de prospectos calificados directos.",
+      "Reducción del 40% en costos de comisiones a plataformas intermediarias.",
+      "Aceleración del ciclo de ventas en un 30% mediante calificación automatizada."
+    ],
+    caseStudy: {
+      initial: "Desarrolladora inmobiliaria regional con alta inversión en portales externos y baja conversión en sitio web.",
+      problem: "Incapacidad para captar compradores directos y dependencia de comisiones elevadas.",
+      strategy: "Despliegue de arquitectura SEO local, páginas de proyectos de carga ultrarrápida y agentes de calificación automatizada.",
+      result: "+110% en solicitudes de cotización directas y reducción del CAC en un 38% en 6 meses."
+    },
+    relatedServices: [
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Local SEO", url: "/servicios/local-seo" },
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" }
+    ],
+    relatedTech: [
+      { name: "Webflow SEO", url: "/tecnologias/webflow" },
+      { name: "GoHighLevel CRM", url: "/tecnologias/gohighlevel" },
+      { name: "Google Analytics 4", url: "/tecnologias/google-analytics-4" }
+    ]
   },
   {
     title: "SaaS y Empresas de Software",
     slug: "saas",
     icon: "⚙️",
-    desc: "Estrategias de adquisición orgánica basada en intención de búsqueda y reducción sostenible del costo de adquisición de clientes (CAC).",
-    challenge: "Costos publicitarios crecientes y alta tasa de cancelación por falta de alineación en el perfil de cliente ideal.",
-    solution: "SEO programático orientado a características del producto y mapas de intención comercial.",
-    impact: "Reducción del CAC en un 35% y aceleración de demos calificados."
-  },
-  {
-    title: "Salud y Clínicas Médicas",
-    slug: "salud",
-    icon: "🏥",
-    desc: "Posicionamiento de autoridad médica, generación de confianza y sistemas de agendamiento automatizado de pacientes.",
-    challenge: "Baja conversión de visitantes a citas efectivas y desconfianza en canales digitales.",
-    solution: "Arquitectura de contenidos de autoridad bajo criterios EEAT y agentes de atención 24/7.",
-    impact: "Incremento del 120% en agendas confirmadas y reducción del trabajo administrativo manual."
-  },
-  {
-    title: "Ciberseguridad y Servicios B2B",
-    slug: "ciber-seguridad",
-    icon: "🛡️",
-    desc: "Generación de oportunidades de alto valor corporativo mediante autoridad técnica y liderazgo de pensamiento.",
-    challenge: "Ciclos de venta largos y dificultad para transmitir valor técnico a tomadores de decisión C-Suite.",
-    solution: "Clusters de contenido especializado, optimización GEO para consultas complejas y nutrición de prospectos.",
-    impact: "Aumento en la tasa de cierre de contratos corporativos de alto valor."
+    executiveSummary: "Modelos de ingresos recurrentes donde el costo de adquisición (CAC) y el valor del ciclo de vida del cliente (LTV) determinan la valoración de la empresa.",
+    challenges: [
+      "Costos publicitarios pagados en constante aumento que erosionan los márgenes operativos.",
+      "Alta tasa de cancelación (churn) debido a prospectos atraídos sin alineación con el perfil de cliente ideal.",
+      "Falta de atribuibilidad clara entre puntos de contacto orgánicos y demos agendadas."
+    ],
+    opportunities: [
+      "Construir motores de adquisición orgánica escalables basados en la intención de búsqueda del usuario.",
+      "Implementar SEO programático para cubrir miles de casos de uso y comparativas de producto.",
+      "Optimizar embudos de conversión self-serve y solicitudes de demostración ejecutiva."
+    ],
+    recommendedStrategies: [
+      "SEO programático enfocado en casos de uso, integraciones y alternativas de software.",
+      "Arquitectura de analítica avanzada para medición exacta de atribución de ingresos.",
+      "Automatización de operaciones de marketing y secuencias de educación para prospectos B2B."
+    ],
+    expectedImpact: [
+      "Reducción del CAC en un 35% a través de canales orgánicos propios.",
+      "Aumento del 60% en la tasa de conversión de visitante a solicitud de demostración.",
+      "Crecimiento sostenible del valor recurrente mensual (MRR) sin depender proporcionalmente de pauta."
+    ],
+    caseStudy: {
+      initial: "Empresa de software B2B con fuerte dependencia de campañas de búsqueda pagada y CAC insostenible.",
+      problem: "Escalabilidad limitada por el costo por clic y falta de posicionamiento orgánico en términos clave.",
+      strategy: "Arquitectura de contenidos basada en intención comercial, matriz de comparación competitiva y optimización GEO.",
+      result: "Reducción del 42% en CAC y duplicación de demostraciones calificadas en 90 días."
+    },
+    relatedServices: [
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Estrategia de Crecimiento con IA", url: "/servicios/ai-growth-strategy" },
+      { name: "Analítica Web", url: "/servicios/web-analytics" }
+    ],
+    relatedTech: [
+      { name: "Python para Automatización", url: "/tecnologias/python" },
+      { name: "n8n Flujos de Trabajo", url: "/tecnologias/n8n" },
+      { name: "Looker Studio", url: "/tecnologias/looker" }
+    ]
   },
   {
     title: "Comercio Electrónico (eCommerce)",
     slug: "ecommerce",
     icon: "🛍️",
-    desc: "Optimización de la tasa de conversión (CRO), SEO transaccional a escala y automatización de la retención.",
-    challenge: "Abandono de carritos y dependencia excesiva en campañas publicitarias de pago por clic.",
-    solution: "Arquitectura de catálogo escalable, SEO programático de categorías y secuencias automatizadas de recompra.",
-    impact: "Aumento del valor promedio de pedido y flujo constante de tráfico orgánico comprador."
+    executiveSummary: "Entorno de alta competencia transaccional donde el margen bruto depende de la optimización del valor promedio de pedido y la frecuencia de compra.",
+    challenges: [
+      "Tasa elevada de abandono de carritos y bajos porcentajes de conversión global.",
+      "Dependencia crítica de pauta publicitaria en redes sociales y motores de búsqueda.",
+      "Dificultad para indexar y posicionar miles de páginas de producto e inventarios dinámicos."
+    ],
+    opportunities: [
+      "Capturar tráfico transaccional de alta intención orgánica mediante SEO técnico de catálogo.",
+      "Personalizar la experiencia del cliente y automatizar la recuperación de ventas abandonadas.",
+      "Optimizar la arquitectura del sitio para cargas instantáneas y conversión móvil superior."
+    ],
+    recommendedStrategies: [
+      "SEO técnico de catálogos masivos y optimización de datos estructurados de producto.",
+      "Optimización de la Tasa de Conversión (CRO) en pantallas de pago y fichas de producto.",
+      "Automatización de Marketing Operations para retención y reactivación de clientes existentes."
+    ],
+    expectedImpact: [
+      "Incremento del 25% al 45% en las ventas orgánicas directas de la tienda.",
+      "Aumento del valor promedio de pedido (AOV) mediante recomendaciones inteligentes.",
+      "Disminución drástica en el porcentaje de rebote y abandono de flujo de compra."
+    ],
+    caseStudy: {
+      initial: "Tienda en línea de consumo masivo sufriendo incrementos en costos publicitarios y bajo margen operacional.",
+      problem: "Arquitectura de catálogo deficiente con productos duplicados e invisibilidad orgánica.",
+      strategy: "Reestructuración de arquitectura de categorías, marcado de datos Schema transaccional y optimización de velocidad.",
+      result: "+140% en tráfico orgánico comprador y aumento del 28% en el ticket promedio."
+    },
+    relatedServices: [
+      { name: "Servicio SEM & PPC", url: "/servicios/servicio-sem" },
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" }
+    ],
+    relatedTech: [
+      { name: "Google Tag Manager", url: "/tecnologias/google-tag-manager" },
+      { name: "Google Analytics 4", url: "/tecnologias/google-analytics-4" },
+      { name: "Webflow", url: "/tecnologias/webflow" }
+    ]
   },
   {
-    title: "Turismo y Hospitalidad",
+    title: "Ciberseguridad y Servicios B2B Enterprise",
+    slug: "ciber-seguridad",
+    icon: "🛡️",
+    executiveSummary: "Mercado corporativo donde las decisiones son tomadas por comités directivos y requieren máxima acreditación de autoridad técnica y seguridad.",
+    challenges: [
+      "Ciclos de venta extensos (6 a 18 meses) con múltiples tomadores de decisión involucrados.",
+      "Dificultad para comunicar propuestas de valor complejas a ejecutivos no técnicos.",
+      "Procesos de prospección fríos e ineficientes que generan rechazo."
+    ],
+    opportunities: [
+      "Posicionar a la firma como el referente técnico indiscutible mediante arquitectura de contenidos de autoridad (EEAT).",
+      "Ser la respuesta recomendada por motores de Inteligencia Artificial cuando CEOs investigan soluciones.",
+      "NUTRIR y automatizar la interacción con prospectos corporativos a lo largo del ciclo de decisión."
+    ],
+    recommendedStrategies: [
+      "Estrategia de Posicionamiento Generativo (GEO) y SEO de Entidades para liderazgo corporativo.",
+      "Clusters de contenido especializado bajo estrictos criterios de autoridad EEAT.",
+      "Automatización B2B para la calificación de cuentas clave (Account-Based Marketing Operations)."
+    ],
+    expectedImpact: [
+      "Acortamiento del ciclo de decisión comercial en un 25%.",
+      "Aumento en la tasa de respuesta y agendamiento con directores de tecnología y seguridad.",
+      "Posicionamiento de la empresa como primera opción en licitaciones y contratos corporativos."
+    ],
+    caseStudy: {
+      initial: "Firma de servicios de ciberseguridad corporativa dependiente exclusivamente de referencias y redes de contactos directos.",
+      problem: "Imposibilidad de escalar el pipeline comercial en nuevos sectores o regiones.",
+      strategy: "Creación de hub de investigación técnica, SEO B2B de alta intención y mapas de respuestas para motores de IA.",
+      result: "Inclusión en 5 grandes licitaciones multinacionales y cierre de 3 contratos enterprise clave en el primer año."
+    },
+    relatedServices: [
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Estrategia de Crecimiento con IA", url: "/servicios/ai-growth-strategy" },
+      { name: "Analítica Web", url: "/servicios/web-analytics" }
+    ],
+    relatedTech: [
+      { name: "Asistentes Agénticos", url: "/tecnologias/asistentes-agenticos" },
+      { name: "n8n", url: "/tecnologias/n8n" },
+      { name: "Looker Studio", url: "/tecnologias/looker" }
+    ]
+  },
+  {
+    title: "Salud, Clínicas y Hospitales",
+    slug: "salud",
+    icon: "🏥",
+    executiveSummary: "Sector regulado bajo exigencias estrictas de confianza, credibilidad institucional y experiencia impecable del paciente.",
+    challenges: [
+      "Baja conversión de visitantes digitales en citas médicas confirmadas.",
+      "Pérdida de pacientes por atención lenta o ausente fuera del horario de oficina.",
+      "Penalizaciones en buscadores por contenidos de salud sin rigor o verificación profesional."
+    ],
+    opportunities: [
+      "Captar pacientes que investigan síntomas y tratamientos especializados con intención de consulta.",
+      "Implementar atención inmediata 24/7 para el agendamiento y confirmación de citas.",
+      "Construir un perfil de reputación y autoridad médica digital inquebrantable."
+    ],
+    recommendedStrategies: [
+      "Optimización de la autoridad médica digital bajo los estándares Your Money Your Life (YMYL) y EEAT.",
+      "Asistentes inteligentes de IA para triaje primario y reserva automatizada de citas.",
+      "SEO Local de alta precisión para centros de salud y especialidades médicas."
+    ],
+    expectedImpact: [
+      "Aumento del 120% en agendas de consulta confirmadas.",
+      "Reducción del 70% en carga de trabajo administrativo de recepción.",
+      "Eliminación del ausentismo mediante confirmaciones y recordatorios automatizados."
+    ],
+    caseStudy: {
+      initial: "Red de clínicas de especialidad con teléfonos saturados y pérdida masiva de solicitudes nocturnas.",
+      problem: "Baja tasa de agendamiento efectivo y competidores captando las búsquedas locales.",
+      strategy: "Agente conversacional de reserva 24/7 conectado al sistema de la clínica e infraestructura SEO YMYL.",
+      result: "+135% en citas mensuales agendadas y tasa de asistencia del 92% a consultas."
+    },
+    relatedServices: [
+      { name: "Local SEO", url: "/servicios/local-seo" },
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" },
+      { name: "Estrategia de Crecimiento con IA", url: "/servicios/ai-growth-strategy" }
+    ],
+    relatedTech: [
+      { name: "Automatizaciones Agénticas", url: "/tecnologias/automatizaciones-agenticas" },
+      { name: "WordPress SEO", url: "/tecnologias/wordpress" },
+      { name: "GoHighLevel", url: "/tecnologias/gohighlevel" }
+    ]
+  },
+  {
+    title: "Turismo, Hoteles y Hospitalidad",
     slug: "turismo",
     icon: "🏨",
-    desc: "Captación directa de viajeros internacionales y reducción de comisiones pagadas a intermediarios.",
-    challenge: "Alta dependencia en agencias de viaje en línea (OTAs) y baja rentabilidad directa.",
-    solution: "Estrategia de posicionamiento por destino, SEO multilingüe y motores de reserva directa.",
-    impact: "Aumento del 45% en reservas directas y reducción significativa de comisiones."
+    executiveSummary: "Sector donde las comisiones de agencias de viajes en línea (OTAs) reducen significativamente la rentabilidad de las propiedades y destinos.",
+    challenges: [
+      "Alta dependencia de canales de terceros (Booking, Expedia) que cobran hasta el 25% de comisión.",
+      "Dificultad para atraer al viajero internacional en el momento en que planifica sus vacaciones.",
+      "Presupuestos de pauta desperdiciados en tráfico que no reserva directamente."
+    ],
+    opportunities: [
+      "Posicionar la marca directa como la opción preferida por precio, paquetes y experiencia garantizada.",
+      "Captar la intención de viaje mediante contenidos de destino, guías e itinerarios optimizados.",
+      "Facilitar la reserva directa en un flujo rápido, seguro y disponible en múltiples idiomas."
+    ],
+    recommendedStrategies: [
+      "SEO multilingüe enfocado en intención de reserva directa y guías de destino.",
+      "Optimización de motores de reserva directa e integración con plataformas de pago.",
+      "Secuencias automatizadas de comunicación para fidelización y venta cruzada pre-estancia."
+    ],
+    expectedImpact: [
+      "Aumento del 45% en el volumen de reservas directas sin intermediarios.",
+      "Recuperación inmediata de margen operativo antes pagado en comisiones a OTAs.",
+      "Mayor valor de vida del cliente mediante reservas recurrentes y servicios adicionales."
+    ],
+    caseStudy: {
+      initial: "Hotel boutique de playa con el 80% de su ocupación proveniente de comisiones a agencias de viaje en línea.",
+      problem: "Márgenes netos comprimidos a pesar de tener alta ocupación anual.",
+      strategy: "Sitio web de ultra alta velocidad en 3 idiomas, SEO para experiencias locales y motor de reservas sin fricción.",
+      result: "Inversión de la ecuación: 65% de reservas directas e incremento del 32% en margen neto global."
+    },
+    relatedServices: [
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Local SEO", url: "/servicios/local-seo" },
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" }
+    ],
+    relatedTech: [
+      { name: "Webflow", url: "/tecnologias/webflow" },
+      { name: "Google Analytics 4", url: "/tecnologias/google-analytics-4" },
+      { name: "GoHighLevel", url: "/tecnologias/gohighlevel" }
+    ]
   },
   {
     title: "Investigación y Desarrollo (I+D)",
     slug: "investigacion-y-desarrollo",
     icon: "🔬",
-    desc: "Validación de oportunidades de negocio, prototipado de innovación y transformación de incertidumbre en certezas.",
-    challenge: "Riesgo financiero al invertir en proyectos o tecnologías sin evidencia previa de mercado.",
-    solution: "Proceso estructurado de investigación, pruebas de concepto y experimentos ágiles antes de escalar.",
-    impact: "Minimización del riesgo de capital y aceleración del tiempo de salida al mercado."
+    executiveSummary: "Proyectos de innovación donde reducir el riesgo de capital y validar la demanda de mercado antes de construir es el factor determinante del éxito.",
+    challenges: [
+      "Inversión de capital en proyectos tecnológicos o de producto sin validación comercial previa.",
+      "Desconexión entre el desarrollo de producto y las verdaderas necesidades expresadas por los usuarios.",
+      "Ciclos de prueba lentos que aumentan el costo de oportunidad del equipo."
+    ],
+    opportunities: [
+      "Diseñar experimentos ágiles de demanda utilizando analítica e Inteligencia Artificial antes de programar soluciones complejas.",
+      "Extraer Inteligencia de Mercado directa a partir del comportamiento de búsqueda real de los usuarios.",
+      "Validar propuestas de valor en días en lugar de meses."
+    ],
+    recommendedStrategies: [
+      "Pruebas de concepto digitales y prototipado rápido de captación de demanda.",
+      "Investigación de mercado basada en datos de intención de búsqueda y comportamiento de usuario.",
+      "Analítica avanzada para la evaluación cualitativa y cuantitativa de interacción."
+    ],
+    expectedImpact: [
+      "Minimización drástica del riesgo de pérdida de capital en desarrollos inviables.",
+      "Aceleración del tiempo de salida al mercado (Time-to-Market) para iniciativas validadas.",
+      "Fundamentación de decisiones de inversión estratégica en datos reales comprobados."
+    ],
+    caseStudy: {
+      initial: "Corporativo evaluando una nueva línea de negocio digital con una estimación de presupuesto inicial masiva.",
+      problem: "Incertidumbre sobre si los clientes potenciales pagarían por la nueva solución.",
+      strategy: "Despliegue de un prototipo de captación en 2 semanas con campañas controladas de prueba y analítica de comportamiento.",
+      result: "Identificación del nicho exacto con disposicion real de pago, ajustando el producto antes del desarrollo final."
+    },
+    relatedServices: [
+      { name: "Estrategia de Crecimiento con IA", url: "/servicios/ai-growth-strategy" },
+      { name: "Analítica Web", url: "/servicios/web-analytics" },
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" }
+    ],
+    relatedTech: [
+      { name: "Python para Automatización", url: "/tecnologias/python" },
+      { name: "Looker Studio", url: "/tecnologias/looker" },
+      { name: "n8n", url: "/tecnologias/n8n" }
+    ]
   },
   {
-    title: "Tecnología y Nearshore",
+    title: "Tecnología, Nearshore y Desarrollo",
     slug: "industria-tech",
     icon: "💻",
-    desc: "Estrategias de posicionamiento global para empresas de ingeniería, desarrollo de software y servicios nearshore.",
-    challenge: "Competencia agresiva en mercados internacionales y dificultad para destacar diferenciadores técnicos.",
-    solution: "Arquitectura web multilingüe, SEO de entidades y demostración cuantitativa de casos de éxito.",
-    impact: "Captación de clientes corporativos en mercados de alta demanda."
+    executiveSummary: "Empresas de exportación de servicios de ingeniería donde destacar diferenciadores técnicos y transmitir solidez institucional es indispensable para ganar contratos globales.",
+    challenges: [
+      "Competencia intensa y globalizada con propuestas que reducen precios.",
+      "Dificultad para demostrar la profundidad técnica del equipo antes de la primera llamada.",
+      "Páginas web corporativas genéricas que no generan diferenciación ni confianza frente a compradores C-Suite internacionales."
+    ],
+    opportunities: [
+      "Posicionar la empresa en búsquedas de alta especialización técnica (ej. desarrollo especializado, arquitectura cloud, IA).",
+      "Demostrar autoridad mediante casos de uso cuantitativos e infraestructura web de nivel superior.",
+      "Automatizar la prospección calificada de cuentas objetivo en mercados de alto poder adquisitivo."
+    ],
+    recommendedStrategies: [
+      "SEO Técnico internacional e infraestructura multilingüe de ultra rápida velocidad.",
+      "Arquitectura de demostración de casos de estudio orientada a resultados financieros.",
+      "Integración de CRM y automatización de seguimiento comercial para cuentas de alto valor."
+    ],
+    expectedImpact: [
+      "Incremento en el valor promedio de los contratos de desarrollo e ingeniería.",
+      "Aumento en las solicitudes entrantes (Inbound) de clientes calificados en EE.UU., Canadá y Europa.",
+      "Posicionamiento de la marca como socio estratégico de ingeniería y no como proveedor reemplazable."
+    ],
+    caseStudy: {
+      initial: "Empresa de desarrollo software nearshore compitiendo por precio frente a agencias de bajo costo.",
+      problem: "Incapacidad para acceder a clientes enterprise que buscan calidad y arquitectura avanzada.",
+      strategy: "Rediseño completo de propuesta de valor en Astro, SEO B2B especializado por stack tecnológico y matriz de casos de éxito.",
+      result: "Aumento del 80% en el tamaño promedio de los contratos cerrados en Norteamérica."
+    },
+    relatedServices: [
+      { name: "Desarrollo Web & Apps", url: "/servicios/desarrollo-web-apps" },
+      { name: "Consultor SEO", url: "/servicios/consultor-seo" },
+      { name: "Estrategia de Crecimiento con IA", url: "/servicios/ai-growth-strategy" }
+    ],
+    relatedTech: [
+      { name: "Headless CMS", url: "/tecnologias/headless-cms" },
+      { name: "Python para Automatización", url: "/tecnologias/python" },
+      { name: "Google Analytics 4", url: "/tecnologias/google-analytics-4" }
+    ]
   }
 ];
 
@@ -83,130 +347,263 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Soluciones de Crecimiento por Industria y Sector Empresarial",
-  "description": "Estrategias de crecimiento, IA, automatización y posicionamiento adaptadas a los desafíos específicos de cada industria.",
+  "description": "Estrategias de crecimiento, IA, automatización, posicionamiento y analítica adaptadas a resolver problemas reales de negocio en sectores clave.",
   "provider": {
     "@type": "Person",
     "name": "Roberto Pérez Salazar"
   },
   "areaServed": "Global"
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué elegir una estrategia adaptada a la industria en lugar de un servicio genérico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada sector empresarial posee dinámicas de compra, márgenes operacionales y regulaciones distintas. Una estrategia adaptada aborda los problemas específicos de negocio como reducción del costo de adquisición o automatización comercial, garantizando un retorno de inversión directo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tipo de resultados financieros se pueden esperar al implementar estas soluciones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los proyectos están diseñados para generar un impacto directo en el negocio: incremento de ingresos orgánicos, reducción del costo de adquisición de clientes (CAC), aceleración del ciclo de ventas y disminución de costos operativos mediante automatización."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Soluciones de Crecimiento por Industria | Roberto Pérez Salazar"
-  description="Estrategias de crecimiento, IA, automatización y posicionamiento diseñadas para resolver los desafíos específicos de cada sector empresarial."
+  title="Soluciones de Crecimiento e Impacto por Industria | Roberto Pérez Salazar"
+  description="Diseño de sistemas de captación, automatización, IA y analítica adaptados a resolver los desafíos comerciales y financieros específicos de su industria."
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Navbar />
 
   <main class="pt-24 bg-white text-slate-900">
     <!-- Hero Section -->
-    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
-          Especialización por Sector Empresarial
+    <section class="relative py-20 md:py-28 bg-slate-900 text-white overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full uppercase tracking-wider mb-6">
+          Estrategia & Crecimiento por Sector
         </span>
-        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
-          Soluciones de Crecimiento Diseñadas para los Desafíos de su Industria
+        <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white">
+          Soluciones de Negocio Diseñadas para los Desafíos Reales de su Industria
         </h1>
-        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
-          No aplicamos fórmulas genéricas. Construimos sistemas de adquisición y operaciones adaptados al modelo de negocio de su sector.
+        <p class="text-lg md:text-2xl font-normal text-slate-300 mt-8 max-w-4xl mx-auto leading-relaxed">
+          No implementamos herramientas aisladas ni fórmulas prefabricadas. Analizamos los cuellos de botella comerciales de su sector para construir sistemas que reducen costos, aceleran las ventas y mejoran la rentabilidad.
         </p>
-        <div class="mt-10">
-          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-            Agendar Sesión de Diagnóstico por Industria
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/50689871245" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-green-500 text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-400 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            💬 Agendar Sesión de Diagnóstico
+          </a>
+          <a href="#sectores" class="inline-flex items-center justify-center border border-slate-700 text-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-800 transition-all">
+            Explorar Sectores Empresariales
           </a>
         </div>
       </div>
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
-      </div>
     </section>
 
-    <!-- Industry Grid -->
-    <section class="py-20 bg-white">
+    <!-- Executive Strategic Framework -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">
-            Sectores que Acompañamos
-          </h2>
-          <p class="text-lg text-slate-600">
-            Cada industria exige un enfoque distinto. Analizamos los problemas comerciales más comunes y diseñamos sistemas que generan impacto financiero real.
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">Filosofía de Trabajo Consultivo</h2>
+          <p class="text-2xl md:text-3xl font-black text-slate-900">
+            Toda decisión debe justificarse por el impacto que genera en el negocio
           </p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {industriesList.map((ind) => (
-            <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-blue-300 transition-all flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-4 mb-6">
-                  <span class="text-4xl bg-white p-3 rounded-2xl border border-slate-150 shadow-xs">{ind.icon}</span>
-                  <div>
-                    <h3 class="text-2xl font-black text-slate-900">{ind.title}</h3>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Solución Especializada</span>
-                  </div>
-                </div>
-
-                <p class="text-slate-700 font-semibold mb-6 leading-relaxed text-base">
-                  {ind.desc}
-                </p>
-
-                <div class="space-y-3 text-xs md:text-sm text-slate-600 mb-8">
-                  <div class="p-3 bg-white rounded-xl border border-slate-150">
-                    <strong class="text-slate-900 block mb-1">Desafío Principal:</strong>
-                    <span>{ind.challenge}</span>
-                  </div>
-                  <div class="p-3 bg-white rounded-xl border border-slate-150">
-                    <strong class="text-slate-900 block mb-1">Estrategia Aplicada:</strong>
-                    <span>{ind.solution}</span>
-                  </div>
-                  <div class="p-3 bg-blue-50/80 border border-blue-100 rounded-xl text-blue-950 font-bold">
-                    <strong class="text-blue-900 block mb-1">Impacto Esperado:</strong>
-                    <span>{ind.impact}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-slate-200">
-                <a href={`/industrias/${ind.slug}`} class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
-                  Ver estrategia completa para {ind.title}
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          ))}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <span class="text-2xl mb-4 block">📈</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Incremento de Ingresos</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Sistemas de captación directa de alta intención de compra que escalan el pipeline comercial sin incrementar los costos publicitarios.</p>
+          </div>
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <span class="text-2xl mb-4 block">📉</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Reducción del CAC</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Disminución del costo de adquisición de clientes mediante canales orgánicos propios y automatización de la calificación.</p>
+          </div>
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <span class="text-2xl mb-4 block">🤖</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Eficiencia Operativa</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Eliminación de tareas repetitivas e integración de datos entre marketing, ventas y operaciones con Inteligencia Artificial.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Methodology Summary Section -->
-    <section class="py-20 bg-slate-900 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-5xl font-black mb-6">
-          Nuestra Filosofía por Sector
-        </h2>
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-          No vendemos tecnología aislada ni horas de consultoría. Diseñamos la arquitectura que conecta la necesidad de sus clientes con los objetivos financieros de su empresa.
-        </p>
+    <!-- Detailed Industry Sections -->
+    <section id="sectores" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        {industriesData.map((ind, index) => (
+          <div id={ind.slug} class="p-8 md:p-12 bg-slate-50 border border-slate-200 rounded-3xl space-y-10 hover:border-blue-300 transition-all">
+            <!-- Header Industry -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-slate-200 pb-8">
+              <div class="flex items-center gap-5">
+                <span class="text-5xl bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">{ind.icon}</span>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Sector {index + 1}</span>
+                  <h2 class="text-3xl md:text-4xl font-black text-slate-900">{ind.title}</h2>
+                </div>
+              </div>
+              <a href={`/industrias/${ind.slug}`} class="inline-flex items-center text-sm font-bold bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-colors">
+                Ver Análisis Completo
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
-          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">01. Diagnóstico</span>
-            <p class="text-white font-bold text-base mb-2">Análisis de Fricción</p>
-            <p class="text-xs text-slate-400 leading-relaxed">Identificamos los cuellos de botella que frenan las ventas en su sector específico.</p>
+            <!-- Block 1: Executive Description -->
+            <div>
+              <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">1. Resumen Ejecutivo del Sector</h3>
+              <p class="text-lg text-slate-800 font-semibold leading-relaxed">
+                {ind.executiveSummary}
+              </p>
+            </div>
+
+            <!-- Block 2 & 3: Challenges & Opportunities -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="p-6 bg-red-50/60 border border-red-100 rounded-2xl">
+                <h3 class="text-sm font-bold text-red-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>⚠️</span> 2. Desafíos Frecuentes
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-700">
+                  {ind.challenges.map(item => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-red-500 font-bold">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="p-6 bg-emerald-50/60 border border-emerald-100 rounded-2xl">
+                <h3 class="text-sm font-bold text-emerald-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>💡</span> 3. Oportunidades de Crecimiento
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-700">
+                  {ind.opportunities.map(item => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Block 4 & 5: Recommended Strategies & Expected Impact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>🎯</span> 4. Estrategias Recomendadas
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-700">
+                  {ind.recommendedStrategies.map(item => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-blue-600 font-bold">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="p-6 bg-blue-50/60 border border-blue-100 rounded-2xl">
+                <h3 class="text-sm font-bold text-blue-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>📊</span> 5. Impacto Esperado en el Negocio
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-800 font-semibold">
+                  {ind.expectedImpact.map(item => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-blue-600 font-bold">↑</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Block 6: Practical Case Study -->
+            <div class="p-6 bg-slate-900 text-white rounded-2xl space-y-4">
+              <h3 class="text-xs font-bold text-blue-400 uppercase tracking-wider">6. Caso Práctico Aplicado</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm">
+                <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+                  <strong class="text-slate-400 block mb-1 uppercase tracking-wider text-[10px]">Situación Inicial</strong>
+                  <span>{ind.caseStudy.initial}</span>
+                </div>
+                <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+                  <strong class="text-amber-400 block mb-1 uppercase tracking-wider text-[10px]">Problema</strong>
+                  <span>{ind.caseStudy.problem}</span>
+                </div>
+                <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+                  <strong class="text-blue-400 block mb-1 uppercase tracking-wider text-[10px]">Estrategia</strong>
+                  <span>{ind.caseStudy.strategy}</span>
+                </div>
+                <div class="p-3 bg-slate-800 rounded-xl border border-slate-700">
+                  <strong class="text-emerald-400 block mb-1 uppercase tracking-wider text-[10px]">Resultado</strong>
+                  <span class="font-bold text-white">{ind.caseStudy.result}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block 7 & 8: Related Services & Related Tech -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200 text-xs md:text-sm">
+              <div>
+                <strong class="text-slate-900 block mb-2 font-bold uppercase tracking-wider text-xs">7. Servicios Relacionados:</strong>
+                <div class="flex flex-wrap gap-2">
+                  {ind.relatedServices.map(srv => (
+                    <a href={srv.url} class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
+                      {srv.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <strong class="text-slate-900 block mb-2 font-bold uppercase tracking-wider text-xs">8. Tecnologías Relacionadas:</strong>
+                <div class="flex flex-wrap gap-2">
+                  {ind.relatedTech.map(tech => (
+                    <a href={tech.url} class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
+                      {tech.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">02. Estrategia</span>
-            <p class="text-white font-bold text-base mb-2">Diseño del Sistema</p>
-            <p class="text-xs text-slate-400 leading-relaxed">Construimos la combinación exacta de SEO, IA, automatización y analítica.</p>
+        ))}
+      </div>
+    </section>
+
+    <!-- FAQ Section for Authority & Search Engines -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-black text-slate-900 mb-4">Preguntas Frecuentes sobre Estrategia por Industria</h2>
+          <p class="text-slate-600">Resolviendo objeciones antes de iniciar la transformación digital.</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">¿Por qué elegir una estrategia adaptada a la industria en lugar de un servicio genérico?</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Cada sector empresarial posee dinámicas de compra, márgenes operacionales y regulaciones distintas. Una estrategia adaptada aborda los problemas específicos de negocio como reducción del costo de adquisición o automatización comercial, garantizando un retorno de inversión directo.
+            </p>
           </div>
-          <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
-            <span class="text-blue-400 font-bold text-xs uppercase tracking-wider block mb-2">03. Resultados</span>
-            <p class="text-white font-bold text-base mb-2">Impacto Medible</p>
-            <p class="text-xs text-slate-400 leading-relaxed">Evaluamos el éxito por la aceleración de ingresos y la reducción de costos.</p>
+
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">¿Qué tipo de resultados financieros se pueden esperar al implementar estas soluciones?</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Los proyectos están diseñados para generar un impacto directo en el negocio: incremento de ingresos orgánicos, reducción del costo de adquisición de clientes (CAC), aceleración del ciclo de ventas y disminución de costos operativos mediante automatización.
+            </p>
           </div>
         </div>
       </div>

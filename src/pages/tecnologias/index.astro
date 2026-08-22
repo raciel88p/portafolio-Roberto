@@ -6,32 +6,122 @@ import Contact from '../../components/Contact.astro';
 
 const techGroups = [
   {
-    category: "Medición, Analítica y Toma de Decisiones",
-    desc: "Infraestructura para transformar datos dispersos en decisiones de inversión claras y rentables.",
-    tools: [
-      { name: "Google Analytics 4", slug: "google-analytics-4", desc: "Modelos de atribución multicanal y seguimiento avanzado del recorrido del cliente." },
-      { name: "Google Tag Manager", slug: "google-tag-manager", desc: "Gestión centralizada de eventos, conversiones y etiquetas de medición sin fricción técnica." },
-      { name: "Looker Studio", slug: "looker", desc: "Paneles ejecutivos interactivos para el control de ingresos, costos de adquisición y KPIs." }
+    category: "Medición y Toma de Decisiones",
+    objective: "Transformar datos fragmentados en claridad estratégica sobre el retorno de inversión y el costo de adquisición.",
+    description: "Infraestructura analítica para auditar el desempeño de los canales de venta, entender el recorrido del cliente y tomar decisiones de inversión basadas en evidencia financiera.",
+    technologies: [
+      {
+        name: "Google Analytics 4",
+        slug: "google-analytics-4",
+        problem: "Incapacidad para rastrear el verdadero origen de los clientes y falta de visibilidad del embudo de conversión multicanal.",
+        solution: "Modelos de atribución avanzados, seguimiento unificado de eventos clave e integración con bases de datos comerciales.",
+        impact: "Claridad total sobre el retorno de inversión publicitaria (ROAS) y decisiones de presupuesto fundamentadas."
+      },
+      {
+        name: "Google Tag Manager",
+        slug: "google-tag-manager",
+        problem: "Dependencia constante de equipos de desarrollo para implementar etiquetas de medición y pérdida de datos de conversión.",
+        solution: "Arquitectura centralizada de seguimiento de eventos en servidor y cliente sin alterar el código fuente.",
+        impact: "Implementación rápida de mediciones y precisión del 99% en el rastreo de eventos de conversión."
+      },
+      {
+        name: "Looker Studio",
+        slug: "looker",
+        problem: "Reportes manuales dispersos en hojas de cálculo que consumen tiempo y no ofrecen visibilidad ejecutiva en tiempo real.",
+        solution: "Paneles de control ejecutivos interactivos conectados directamente a fuentes de datos comerciales y financieras.",
+        impact: "Ahorro de horas semanales en reportes e identificación inmediata de cuellos de botella operacionales."
+      }
     ]
   },
   {
-    category: "Automatización e Inteligencia Artificial",
-    desc: "Sistemas inteligentes que eliminan tareas repetitivas y convierten la empresa en una operación 24/7.",
-    tools: [
-      { name: "Automatizaciones Agénticas", slug: "automatizaciones-agenticas", desc: "Agentes autónomos de IA que califican prospectos, gestionan clientes y coordinan flujos complejos." },
-      { name: "Asistentes Agénticos", slug: "asistentes-agenticos", desc: "Copilotos especializados con contexto profundo para la toma de decisiones y atención comercial." },
-      { name: "n8n", slug: "n8n", desc: "Motor de automatización de flujos de trabajo que conecta CRM, APIs y herramientas internas." },
-      { name: "Python para Automatización", slug: "python", desc: "Scripts personalizados e Inteligencia Artificial para el procesamiento masivo de datos y auditorías." },
-      { name: "GoHighLevel", slug: "gohighlevel", desc: "Plataforma unificada de CRM, embudos, secuencias de seguimiento y automatización comercial." }
+    category: "Automatización y Eficiencia Operativa",
+    objective: "Eliminar fricciones manuales en el flujo comercial y convertir la empresa en una operación continua 24/7.",
+    description: "Conexión de herramientas, plataformas CRM y procesos de negocio mediante flujos inteligentes que reducen costos de gestión y aceleran el tiempo de respuesta al cliente.",
+    technologies: [
+      {
+        name: "n8n (Automatización de Flujos)",
+        slug: "n8n",
+        problem: "Procesos manuales repetitivos entre el sitio web, el CRM y los sistemas de atención al cliente que generan errores humanos y demoras.",
+        solution: "Flujos de trabajo automatizados que conectan APIs, bases de datos y sistemas de mensajería sin costos por ejecución exorbitantes.",
+        impact: "Reducción del 80% en tiempo administrativo manual y velocidad de respuesta instantánea a prospectos."
+      },
+      {
+        name: "GoHighLevel (CRM & Automatización Comercial)",
+        slug: "gohighlevel",
+        problem: "Prospectos calificados que se pierden por falta de seguimiento oportuno y herramientas comerciales desconectadas.",
+        solution: "Plataforma unificada para la gestión de relaciones con clientes, embudos de conversión y secuencias multicanal.",
+        impact: "Aumento de la tasa de cierre comercial y nutrición automática de prospectos B2B."
+      },
+      {
+        name: "Python para Automatización de Datos",
+        slug: "python",
+        problem: "Necesidad de procesar volúmenes masivos de datos, auditorías SEO a gran escala y tareas analíticas complejas que exceden las herramientas tradicionales.",
+        solution: "Scripts personalizados y algoritmos avanzados para el procesamiento, extracción y estructuración masiva de información.",
+        impact: "Ejecución de auditorías y análisis complejos en minutos en lugar de semanas de trabajo manual."
+      }
     ]
   },
   {
-    category: "SEO Técnico y Búsqueda en Motores Generativos (GEO/AEO)",
-    desc: "Visibilidad constante en motores de búsqueda tradicionales y plataformas de Inteligencia Artificial.",
-    tools: [
-      { name: "SEO para WordPress", slug: "wordpress", desc: "Optimización especializada de velocidad, arquitectura y posicionamiento para entornos WordPress." },
-      { name: "Webflow SEO & Gestión", slug: "webflow", desc: "Plataformas web de alto rendimiento, optimizadas para conversión y velocidad de carga extrema." },
-      { name: "SEO para CMS Desacoplados", slug: "headless-cms", desc: "Arquitecturas Headless CMS rápidas, seguras y preparadas para posicionamiento masivo." }
+    category: "SEO Técnico y Búsqueda Generativa (GEO/AEO)",
+    objective: "Asegurar que la empresa sea descubierta y recomendada tanto por buscadores tradicionales como por motores de Inteligencia Artificial.",
+    description: "Sistemas web de ultra alto rendimiento y arquitecturas de contenido estructurado preparadas para el posicionamiento orgánico masivo y el descubrimiento generativo.",
+    technologies: [
+      {
+        name: "WordPress SEO Especializado",
+        slug: "wordpress",
+        problem: "Sitios en WordPress lentos, vulnerables y mal estructurados que no logran posicionar en búsquedas comerciales competitivas.",
+        solution: "Optimización profunda de código, arquitectura de información clara y marcado de datos Schema para motores de búsqueda.",
+        impact: "Carga veloz, mejor posicionamiento orgánico y mayor conversión de visitas a clientes."
+      },
+      {
+        name: "Webflow para Plataformas de Alta Conversión",
+        slug: "webflow",
+        problem: "Páginas corporativas rígidas o de lenta actualización que impiden iterar campañas comerciales con agilidad.",
+        solution: "Desarrollo web moderno con velocidad de carga extrema, seguridad integrada y flexibilidad de diseño comercial.",
+        impact: "Tiempos de carga menores a 1 segundo y aumento en la tasa de conversión global del sitio."
+      },
+      {
+        name: "Headless CMS & Arquitecturas Escalables",
+        slug: "headless-cms",
+        problem: "Sistemas de contenido tradicionales incapaces de escalar a múltiples canales o soportar catálogos masivos sin perder velocidad.",
+        solution: "Arquitecturas desacopladas que separan la gestión de contenido de la capa de presentación de ultra alta velocidad.",
+        impact: "Seguridad impenetrable, rendimiento óptimo y preparación para distribución multicanal."
+      }
+    ]
+  },
+  {
+    category: "Inteligencia Artificial y Sistemas Agénticos",
+    objective: "Crear ventajas competitivas mediante copilotos inteligentes y agentes autónomos que califican y ejecutan tareas complejas.",
+    description: "Implementación de IA con contexto profundo de la empresa para la atención al cliente, calificación de prospectos y soporte en la toma de decisiones estratégicas.",
+    technologies: [
+      {
+        name: "Asistentes Agénticos de IA",
+        slug: "asistentes-agenticos",
+        problem: "Incapacidad para atender consultas comerciales especializadas fuera del horario de oficina con respuestas precisas.",
+        solution: "Copilotos entrenados con la base de conocimiento y oferta de la empresa para guiar al usuario hasta la conversión.",
+        impact: "Atención ejecutiva 24/7 y respuesta inmediata a dudas complejas de compradores potenciales."
+      },
+      {
+        name: "Automatizaciones Agénticas",
+        slug: "automatizaciones-agenticas",
+        problem: "Flujos de trabajo que requieren toma de decisiones condicionales y no pueden ser resueltos con reglas simples de automatización.",
+        solution: "Agentes autónomos capaces de razonar, interpretar datos ambiguos y ejecutar acciones en sistemas externos.",
+        impact: "Automatización de procesos complejos antes reservados para intervención humana."
+      }
+    ]
+  },
+  {
+    category: "Desarrollo Moderno y Arquitectura Web",
+    objective: "Construir activos digitales sostenibles, ultra rápidos y mantenibles que proyectan la máxima solidez empresarial.",
+    description: "Uso de marcos de trabajo de última generación para garantizar que cada milisegundo de carga trabaje a favor de la conversión y el posicionamiento.",
+    technologies: [
+      {
+        name: "Astro & Tecnologías Jamstack",
+        slug: "desarrollo-web-apps",
+        problem: "Sitios web pesados sobrecargados de scripts inutilizados que ralentizan la experiencia del usuario y penalizan el SEO.",
+        solution: "Generación de sitios estáticos ultrarrápidos con envío cero de JavaScript innecesario al navegador.",
+        impact: "Puntuaciones perfectas en Core Web Vitals y mejor posicionamiento en buscadores."
+      }
     ]
   }
 ];
@@ -40,69 +130,122 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Infraestructura Tecnológica Orientada al Crecimiento Empresarial",
-  "description": "Agrupación estratégica de tecnologías por objetivos de negocio: medición, automatización, Inteligencia Artificial y posicionamiento orgánico.",
+  "description": "Agrupación estratégica de tecnologías seleccionadas por su capacidad para resolver problemas de negocio en medición, automatización, IA y SEO.",
   "provider": {
     "@type": "Person",
     "name": "Roberto Pérez Salazar"
   },
   "areaServed": "Global"
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo determinan qué tecnologías necesita mi empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evaluamos primero los objetivos financieros y los cuellos de botella operacionales de su empresa. La tecnología se selecciona estrictamente si demuestra que reducirá costos, automatizará procesos o acelerará el ingreso comercial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es necesario reemplazar todos mis sistemas actuales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Priorizamos la integración y optimización de su infraestructura existente mediante herramientas de automatización como n8n y APIs, minimizando la disrupción operativa."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Tecnologías e Infraestructura de Crecimiento | Roberto Pérez Salazar"
-  description="Herramientas y tecnologías seleccionadas para resolver problemas reales de negocio: Inteligencia Artificial, automatización, analítica y SEO."
+  title="Tecnologías e Infraestructura Orientada al Impacto Empresarial | Roberto Pérez Salazar"
+  description="No vendemos herramientas aisladas. Agrupamos tecnologías por su capacidad para resolver problemas de negocio en medición, automatización, IA y posicionamiento."
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Navbar />
 
   <main class="pt-24 bg-white text-slate-900">
     <!-- Hero Section -->
-    <section class="relative py-20 md:py-28 bg-slate-50 border-b border-slate-100 overflow-hidden">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider mb-6">
-          Infraestructura Tecnológica
+    <section class="relative py-20 md:py-28 bg-slate-900 text-white overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full uppercase tracking-wider mb-6">
+          Infraestructura de Crecimiento
         </span>
-        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
-          La Tecnología es Únicamente el Medio. El Impacto en el Negocio es el Objetivo.
+        <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white">
+          La Tecnología es Únicamente el Medio. El Impacto Empresarial es el Objetivo.
         </h1>
-        <p class="text-xl md:text-2xl font-bold text-slate-600 mt-8 max-w-3xl mx-auto leading-relaxed">
-          No implementamos herramientas por tendencia. Agrupamos tecnologías según el problema comercial que resuelven y el valor que generan.
+        <p class="text-lg md:text-2xl font-normal text-slate-300 mt-8 max-w-4xl mx-auto leading-relaxed">
+          No recomendamos herramientas por moda ni acumulamos licencias innecesarias. Agrupamos capacidades tecnológicas según el problema comercial que resuelven y el retorno de inversión que generan.
         </p>
-        <div class="mt-10">
-          <a href="#contacto" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-            Evaluar Arquitectura de su Empresa
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/50689871245" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-green-500 text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-400 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            💬 Evaluar Arquitectura Tecnológica
+          </a>
+          <a href="#tecnologias" class="inline-flex items-center justify-center border border-slate-700 text-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-800 transition-all">
+            Ver Objetivos Empresariales
           </a>
         </div>
       </div>
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-40">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+    </section>
+
+    <!-- Core Governance Framework -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">Criterio de Selección Tecnológica</h2>
+        <p class="text-2xl md:text-3xl font-black text-slate-900 mb-6">
+          ¿Cómo evaluamos cada herramienta antes de su implementación?
+        </p>
+        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+          Cada tecnología integrada en la arquitectura de su empresa debe responder afirmativamente a al menos uno de estos principios: <strong>¿Generará más ingresos? ¿Reducirá costos operacionales? ¿Automatizará tareas repetitivas? ¿Facilitará la toma de decisiones C-Suite?</strong>
+        </p>
       </div>
     </section>
 
-    <!-- Technology Groups Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-        {techGroups.map((group, idx) => (
-          <div class="space-y-8">
-            <div class="border-l-4 border-blue-600 pl-6">
-              <span class="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-1">Categoría 0{idx + 1}</span>
+    <!-- Technology Groups Sections -->
+    <section id="tecnologias" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        {techGroups.map((group, groupIdx) => (
+          <div class="space-y-10">
+            <!-- Group Header -->
+            <div class="border-l-4 border-blue-600 pl-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-blue-600 block">Objetivo Empresarial 0{groupIdx + 1}</span>
               <h2 class="text-3xl font-black text-slate-900">{group.category}</h2>
-              <p class="text-slate-600 text-base mt-2 max-w-2xl">{group.desc}</p>
+              <p class="text-blue-900 font-bold text-base md:text-lg">{group.objective}</p>
+              <p class="text-slate-600 text-sm md:text-base max-w-3xl leading-relaxed">{group.description}</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {group.tools.map((tool) => (
-                <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl hover:border-blue-300 transition-all flex flex-col justify-between">
-                  <div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">{tool.name}</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">{tool.desc}</p>
+            <!-- Technology Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {group.technologies.map((tech) => (
+                <div class="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-blue-300 transition-all flex flex-col justify-between space-y-6">
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-black text-slate-900">{tech.name}</h3>
+
+                    <div class="p-3 bg-red-50/60 border border-red-100 rounded-xl text-xs space-y-1">
+                      <strong class="text-red-900 font-bold block uppercase tracking-wider">Problema Comercial:</strong>
+                      <p class="text-slate-700 leading-relaxed">{tech.problem}</p>
+                    </div>
+
+                    <div class="p-3 bg-white border border-slate-200 rounded-xl text-xs space-y-1">
+                      <strong class="text-slate-900 font-bold block uppercase tracking-wider">Solución Aplicada:</strong>
+                      <p class="text-slate-700 leading-relaxed">{tech.solution}</p>
+                    </div>
+
+                    <div class="p-3 bg-blue-50/80 border border-blue-100 rounded-xl text-xs space-y-1">
+                      <strong class="text-blue-900 font-bold block uppercase tracking-wider">Impacto en el Negocio:</strong>
+                      <p class="text-blue-950 font-bold leading-relaxed">{tech.impact}</p>
+                    </div>
                   </div>
 
                   <div class="pt-4 border-t border-slate-200">
-                    <a href={`/tecnologias/${tool.slug}`} class="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors">
-                      Ver solución con {tool.name}
+                    <a href={`/tecnologias/${tech.slug}`} class="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                      Ver solución con {tech.name}
                       <svg class="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
@@ -116,23 +259,49 @@ const schema = {
       </div>
     </section>
 
-    <!-- Value Statement Section -->
+    <!-- Unified Architecture Statement -->
     <section class="py-20 bg-slate-900 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <h2 class="text-3xl md:text-4xl font-black">
-          ¿Por qué Este Enfoque Tecnológico es Diferente?
+          Infraestructura Integrada vs. Herramientas Desconectadas
         </h2>
-        <p class="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
-          La mayoría de las empresas terminan con herramientas desconectadas que generan duplicidad de datos y procesos manuales. Nuestro trabajo es construir un ecosistema unificado:
+        <p class="text-slate-300 text-lg leading-relaxed">
+          La acumulación de licencias de software sin una arquitectura clara genera silos de información y duplicidad de esfuerzo. Diseñamos ecosistemas donde cada componente se comunica con los demás:
         </p>
 
-        <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 font-bold text-blue-300 text-sm md:text-base max-w-xl mx-auto">
-          Captación → Calificación → CRM → Automatización → Medición → Optimización
+        <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 font-bold text-blue-300 text-sm md:text-base tracking-wide">
+          Atracción Orgánica → Calificación Automatizada → CRM & Seguimiento → Medición de Atribución
         </div>
 
         <p class="text-slate-400 text-sm">
-          Toda herramienta integrada debe reducir costos, aumentar la productividad o acelerar los ingresos de la empresa.
+          Resultado: Menores costos de licencias, mayor velocidad de ejecución y claridad absoluta para la junta directiva.
         </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-black text-slate-900 mb-4">Preguntas Frecuentes sobre Selección Tecnológica</h2>
+          <p class="text-slate-600">Resolviendo dudas sobre la implementación de arquitectura de sistemas.</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">¿Cómo determinan qué tecnologías necesita mi empresa?</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Evaluamos primero los objetivos financieros y los cuellos de botella operacionales de su empresa. La tecnología se selecciona estrictamente si demuestra que reducirá costos, automatizará procesos o acelerará el ingreso comercial.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">¿Es necesario reemplazar todos mis sistemas actuales?</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              No. Priorizamos la integración y optimización de su infraestructura existente mediante herramientas de automatización como n8n y APIs, minimizando la disrupción operativa.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
