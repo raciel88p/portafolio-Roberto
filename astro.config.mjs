@@ -4,12 +4,12 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import sanityIntegration from '@sanity/astro';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://robertoperez.com',
-  output: 'server',
+  output: 'static',
   adapter: vercel(),
   integrations: [
     sitemap(),
